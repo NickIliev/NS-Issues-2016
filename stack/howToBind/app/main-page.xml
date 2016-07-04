@@ -1,0 +1,7 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="onLoaded" actionBarHidden="true" backgroundSpanUnderStatusBar="true">
+    <StackLayout>
+        <Label text="{{ magnitude }}" />
+        <Button text="button" tap=""  id="myButton"/>
+        
+    </StackLayout>
+</Page>ticket_

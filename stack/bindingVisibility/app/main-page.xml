@@ -1,0 +1,11 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <DockLayout id="menu">
+        <ListView items="{{ menuItems }}"  loaded="onLoaded" itemLoading="onItemLoading" itemTap="onItemTap">
+            <ListView.itemTemplate>
+                <StackLayout>
+                    <Image src="res://icon" stretch="none" visibility="{{ $value.visibility ? 'visible' : 'collapsed' }}" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </DockLayout>
+</Page>

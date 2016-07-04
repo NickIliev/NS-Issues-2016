@@ -1,0 +1,17 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="navigatingTo">
+  <Page.actionBar>
+      <ActionBar title="Title" icon="">
+          <NavigationButton text="Back" icon="" tap="" />
+          <ActionBar.actionItems>
+              <ActionItem android.position="popup" text="search" android.systemIcon="ic_menu_search"/>
+              <ActionItem android.position="popup" text="share" android.systemIcon="ic_menu_share"/>
+              <ActionItem android.position="popup" text="home" android.systemIcon="ic_menu_home"/>
+          </ActionBar.actionItems>
+      </ActionBar>
+  </Page.actionBar>
+  <StackLayout>
+    <Label text="Issue 2292" class="title"/>
+    <ListPicker items="{{ items }}" selectedIndex="0" id="picker"></ListPicker>
+    <Button text="tap" tap="onTap" />
+  </StackLayout>
+</Page>

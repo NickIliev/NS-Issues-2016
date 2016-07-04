@@ -1,0 +1,25 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" navigatingTo="navigatingTo">
+        <Page.actionBar>
+                <ActionBar title="{{ pageTitle }}">
+                        <NavigationButton tap="onNavigateBack" icon="res://ic_arrow_back_white_24dp"  />
+                </ActionBar>
+        </Page.actionBar>
+        <GridLayout row="*">
+            <ListView items="{{ listItems }}" class="webinarlistview"  itemTap="onWebinarItemTap" itemLoading="onListViewLoadingFixSelectState" separatorColor="transparent">
+                <ListView.itemTemplate>
+                    <GridLayout columns="60, *" class="list-item">
+                        <StackLayout col="0" class="date-wrapper-outer">
+                            <StackLayout class="date-wrapper-inner">
+                                <Label textWrap="false" text="{{ Day + ' ' + Month }}" class="daymonth" />
+                                <Label textWrap="true" text="{{ Year }}" class="year" />
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout col="1">
+                            <Label textWrap="false" text="{{ Title }}"  class="webinar-title" />
+                            <Label textWrap="true" text="{{ Summary }}"  class="webinar-summary" />
+                        </StackLayout>
+                    </GridLayout>
+                </ListView.itemTemplate>
+            </ListView>
+        </GridLayout>
+</Page>

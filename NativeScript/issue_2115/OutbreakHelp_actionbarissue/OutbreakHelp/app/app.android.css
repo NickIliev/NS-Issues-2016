@@ -1,0 +1,32 @@
+﻿@import url('~/common.css');
+
+SegmentedBar{
+    font-size: 12;
+    padding: 10;
+}
+
+.list-item{
+	margin: 5 0;
+	padding: 5 10;
+}
+
+.drawericon{
+    padding-top: 8;
+}
+
+.actionbaricon{
+    padding: 0 10;
+}
+
+.social{
+    text-align: center;
+    width: 30;
+    padding-top:5;
+    padding-bottom:5;
+    margin-left: 5;
+    margin-right: 5;
+}
+
+HtmlView{
+    padding: 5;
+}

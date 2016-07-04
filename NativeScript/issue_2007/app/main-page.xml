@@ -1,0 +1,24 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <TabView id="tabViewContainer">
+      <TabView.items>
+          <TabViewItem title="Tab 1" id="">
+              <TabViewItem.view>
+
+
+    <!--<Repeater items="{{ colors }}">
+      <Repeater.itemsLayout>
+        <StackLayout orientation="horizontal" />
+      </Repeater.itemsLayout>
+      <Repeater.itemTemplate>
+
+         
+      </Repeater.itemTemplate>
+    </Repeater>-->
+
+
+              </TabViewItem.view>
+          </TabViewItem>
+
+      </TabView.items>
+  </TabView>
+</Page>

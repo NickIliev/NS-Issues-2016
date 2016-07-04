@@ -1,0 +1,62 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:FAB="nativescript-floatingactionbutton" loaded="pageLoaded" navigatingFrom="navigatingFrom" navigatingTo="navigatingTo">
+    
+    <Page.actionBar>
+        <ActionBar title="{{ pageTitle }}">
+            <NavigationButton icon="res://ic_arrow_back_white_24dp" tap="onNavigateBack" />
+            <ActionBar.actionItems>
+                <ActionItem ios.position="right" tap="onBookmarkClick" ios.position="right" android.position="right"  visibility="{{ isLoading ? 'visible' : 'collapsed' }}">
+                    <ActionItem.actionView>
+                        <ActivityIndicator  busy="true" class="loader" width="15" height="15"  />
+                    </ActionItem.actionView>
+                </ActionItem>
+                <ActionItem ios.position="right" tap="onBookmarkClick" ios.position="right" android.position="right">
+                    <ActionItem.actionView>
+                        <Label text="&#xE866;" class="materialdesign actionbaricon" />
+                    </ActionItem.actionView>
+                </ActionItem>
+                  <!--<ActionItem text="{{ firstIcon }}" tap="onShareUrl" class="materialdesign actionbaricon" ios.position="right" />
+                  <ActionItem text="{{ secondIcon }}" tap="toggleFavorite" class="materialdesign actionbaricon" ios.position="right" />       -->
+            </ActionBar.actionItems>
+        </ActionBar>
+    </Page.actionBar>
+    <GridLayout id="layout" rows="40, *, auto" columns="*">
+        <SearchBar row="0" id="searchResources" class="search" hint="{{ searchHint }}" submit="performSearch" clear="clearSearch" text="{{ searchText }}" />
+        <GridLayout row="1" rows="*" >
+            <ListView row="0" id="resourceList" items="{{ resourceItems }}"  loadMoreItems="loadMoreItems" itemLoading="onListViewLoadingFixSelectState" itemTap="onListViewItemTap" visibility="{{ hasResults ? 'visible' : 'collapsed' }}">
+                <ListView.itemTemplate>
+                    <StackLayout class="">
+                        <GridLayout columns="50,*" rows="auto" class="list-item">
+                            <StackLayout col="0" class="resource-list-item-wrapper"> 
+                                <Label text="{{ Type, Type | toIcon() }}" textWrap="false" class="resource-item-icon primary-backgroundcolor fontawesome" />
+                            </StackLayout>
+                            <StackLayout col="1">
+                                <Label text="{{ Title }}" textWrap="true" class="list-title"/>
+                            </StackLayout>
+                        </GridLayout>
+                    </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
+        </GridLayout>
+        <StackLayout row="1" class="no-results-wrapper" visibility="{{ hasResults ? 'collapsed' : 'visible' }}">
+                    <Label text="{{ noResults }}" textWrap="true"  class="no-results" />
+                    <Button text="{{ refineFilters }}" tap="onPickFilters" class="refine-filter-button" />
+        </StackLayout>
+        <StackLayout row="2" class="has-filter-zone" visibility="{{ hasFilter ? 'visible' : 'collapsed' }}">
+            <GridLayout rows="auto" columns="*, auto">
+                <Label text="{{ totalResources + ' ' + resultsAreFiltered }}" textWrap="false" col="0"  />
+                <Label text="{{ clear }}" textWrap="false" col="1" tap="onClearFilters" />
+            </GridLayout>
+        </StackLayout>
+        
+        <FAB:fab
+            id="fabButton"
+            tap="onPickFilters"
+            row="1"
+            android:icon="res://ic_filter_list_white_24dp" ios:icon="res://ic_filter_list_white"
+            backColor="#BD5680"
+            rippleColor="#448AFF"
+            class="fab-button" />
+        
+    </GridLayout>
+</Page>    
+ 

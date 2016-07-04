@@ -1,0 +1,8 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" loaded="onLoaded">
+  <StackLayout>
+    <Label text="Issue 2077" class="title"/>
+    <grid-layout id="background" scaleX="1.6" scaleY="1.6">
+      <Image src="res://icon" stretch ="none" />
+    </grid-layout>
+  </StackLayout>
+</Page>

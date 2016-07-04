@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
+        <TabView id="tabView" style="color:green;" selectedColor="green">
+            <TabView.items>
+                <TabViewItem title="Near">
+                    <TabViewItem.view>
+                        <Label id="mu" text="label"/>
+                    </TabViewItem.view>
+                </TabViewItem>
+                <TabViewItem id="districtsTab" title="Districts" >
+                    <TabViewItem.view>
+                        <Label id="mu" text="blah blahs"/>
+                    </TabViewItem.view>
+                </TabViewItem>
+                <TabViewItem title="As List">
+                    <TabViewItem.view>
+                        <Label text="blah blahs"/>
+                    </TabViewItem.view>
+                </TabViewItem>
+                <TabViewItem title="On Map">
+                    <TabViewItem.view>
+                        <Label id="mu" text="blah blahs"/>
+                    </TabViewItem.view>
+                </TabViewItem>
+            </TabView.items>
+        </TabView>
+</Page>

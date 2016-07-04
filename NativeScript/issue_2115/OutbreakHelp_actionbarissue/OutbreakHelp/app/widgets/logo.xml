@@ -1,0 +1,6 @@
+<StackLayout class="logo-label">
+    <GridLayout rows="auto" columns="auto, auto">
+        <Label row="0" col="0" text="{{ BrandPrefix }}" fontAttributes="Bold" class="prefix" />
+        <Label  row="0" col="1" text="{{ BrandPostfix }}" fontAttributes="Bold" class="postfix" />
+    </GridLayout>
+</StackLayout>

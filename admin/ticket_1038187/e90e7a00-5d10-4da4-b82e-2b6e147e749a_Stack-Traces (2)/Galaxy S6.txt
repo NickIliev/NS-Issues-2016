@@ -1,0 +1,46 @@
+java.lang.RuntimeException: Unable to create application com.tns.NativeScriptApplication: com.tns.NativeScriptException: 
+Error calling module function 
+
+TypeError: Cannot read property 'os' of undefined
+File: "<unknown>, line: 1, column: 265
+
+StackTrace: 
+Frame: function:'', file:'/data/data/com.telerik.ISITimecard/files/app/tns_modules/globals/globals.js', line: 73, column: 20
+Frame: function:'require', file:'', line: 1, column: 266
+Frame: function:'', file:'/data/data/com.telerik.ISITimecard/files/app/tns_modules/application/application-common.js', line: 1, column: 61
+Frame: function:'require', file:'', line: 1, column: 266
+Frame: function:'', file:'/data/data/com.telerik.ISITimecard/files/app/tns_modules/application/application.js', line: 1, column: 77
+
+
+at android.app.ActivityThread.handleBindApplication(ActivityThread.java:6324)
+at android.app.ActivityThread.access$1800(ActivityThread.java:222)
+at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1861)
+at android.os.Handler.dispatchMessage(Handler.java:102)
+at android.os.Looper.loop(Looper.java:158)
+at android.app.ActivityThread.main(ActivityThread.java:7229)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1230)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1120)
+Caused by: com.tns.NativeScriptException: 
+Error calling module function 
+
+TypeError: Cannot read property 'os' of undefined
+File: "<unknown>, line: 1, column: 265
+
+StackTrace: 
+Frame: function:'', file:'/data/data/com.telerik.ISITimecard/files/app/tns_modules/globals/globals.js', line: 73, column: 20
+Frame: function:'require', file:'', line: 1, column: 266
+Frame: function:'', file:'/data/data/com.telerik.ISITimecard/files/app/tns_modules/application/application-common.js', line: 1, column: 61
+Frame: function:'require', file:'', line: 1, column: 266
+Frame: function:'', file:'/data/data/com.telerik.ISITimecard/files/app/tns_modules/application/application.js', line: 1, column: 77
+
+
+at com.tns.Platform.runModule(Native Method)
+at com.tns.Platform.runModule(Platform.java:180)
+at com.tns.Platform.createJSInstance(Platform.java:361)
+at com.tns.Platform.initInstance(Platform.java:343)
+at com.tns.RuntimeHelper.initRuntime(RuntimeHelper.java:112)
+at com.tns.NativeScriptApplication.onCreate(NativeScriptApplication.java:15)
+at android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1036)
+at android.app.ActivityThread.handleBindApplication(ActivityThread.java:6321)
+... 8 more

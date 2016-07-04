@@ -1,0 +1,7 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" >
+  <!-- this won't work! -->
+    <AbsoluteLayout>
+      <GridLayout zIndex="99" height="100" width="100" backgroundColor="red"></GridLayout>
+      <GridLayout zIndex="1" height="200" width="200" backgroundColor="green"></GridLayout>
+    </AbsoluteLayout>
+</Page>

@@ -1,0 +1,27 @@
+﻿Page {
+    background-color: black;
+}
+
+.stack {
+    border-width:4;
+    border-radius: 200;
+    border-color: darkblue;
+    height: 200;
+    width: 200;
+    background-color: darkgray;
+}
+
+.counter {
+    font-size: 30;
+    horizontal-align: center;
+}
+
+.views {
+    font-size: 24;
+    horizontal-align: center;
+}
+
+.image  {
+    margin: 20;
+    horizontal-align: center;
+}

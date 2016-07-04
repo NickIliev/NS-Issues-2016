@@ -1,0 +1,53 @@
+Page{
+    background-color: #f0eff4;
+}
+
+.logoPlaceHolder{
+    
+    horizontal-align: center;
+    vertical-align: center;
+    margin-bottom: 30;
+}
+
+.indicator{
+    height: 50;
+    width: 50;
+    color: #448AFF;
+    margin-top: 20;
+}
+
+.splash-logo{
+    horizontal-align: center;
+}
+
+.prefix-en{
+    font-size: 60;
+}
+
+.postfix-en{
+    margin-top: -30;
+    font-size: 130;
+}
+
+.prefix-fr{
+    font-size: 120;
+}
+
+.postfix-fr{
+    margin-top: -20;
+    font-size: 60;
+}
+
+
+.footer{
+    horizontal-align: center;
+    color: #a0a0a0;
+    font-size: 10;
+    font-weight: bold;
+    padding: 20;
+    background-color: #FFF;
+}
+
+.nccmtlogo{
+    vertical-align: center;
+}

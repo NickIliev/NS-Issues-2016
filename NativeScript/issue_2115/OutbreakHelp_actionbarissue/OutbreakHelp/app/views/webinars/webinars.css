@@ -1,0 +1,44 @@
+Page {
+	background-color: #FFF;
+}
+
+.list-item{
+    margin-top: 10;
+    margin-left: 10;
+    margin-right: 10;
+    margin-bottom: 30;
+}
+
+.webinar-title{
+    font-weight: bold;
+}
+
+.webinar-summary{
+    color: #666;
+    font-size: 12;
+}
+
+.date-wrapper-outer{
+    vertical-align: top;    
+    horizontal-align: center;
+}
+
+.date-wrapper-inner{
+    text-align: center;
+    background-color: #BD5680;
+    color: #FFF;
+    height: 50;
+    width: 50;
+    margin-right: 10;
+    vertical-align: top;    
+    horizontal-align: center;
+}
+
+.daymonth{
+    font-size: 12;
+    margin-top: 5;
+}
+
+
+.year{
+}

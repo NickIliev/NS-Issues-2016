@@ -1,0 +1,7 @@
+<Page
+  xmlns="http://schemas.nativescript.org/tns.xsd"
+  class="my-page">
+      <WrapLayout horizontalAlignment="center">
+          <Button text="NEW ACCOUNT" tap="onTapAction" visibility="{{ noAccounts ? 'visible' : 'collapsed' }}" />
+      </WrapLayout>
+</Page>

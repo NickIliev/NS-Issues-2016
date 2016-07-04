@@ -1,0 +1,141 @@
+Page {
+    background-color: #f0eff4;
+    font-size: 13;
+}
+
+TabView {
+    background-color: #f0eff4;
+}
+
+Switch{
+    margin-right: 10;
+    padding-right:20;
+}
+
+.filter-group{
+    margin-top: 1;
+
+}
+
+.type-header{
+    background-color: #545454;
+    color: #FFF;
+    padding: 10 10;
+    margin-top: 10;
+}
+
+.filter-header{
+    background-color: #545454;
+    color: #FFF;
+    padding: 10 10;
+}
+
+
+
+.filter-item{
+    background-color: #fff;
+    color: #545454;
+    vertical-align: center;
+    padding-top: 16;
+}
+
+.filter-item-selected{
+    background-color: #448AFF;
+    color: #FFF;
+    vertical-align: center;
+    padding-top: 16;
+}
+
+
+.filter-item-control{
+    background-color: #fff;
+    color: #545454;
+    vertical-align: top;
+}
+
+
+
+.filter-child{
+    padding-left: 30;
+}
+
+.filter-bottom{
+    border-color: #d4d4d7;
+    border-width: 1;
+    height: 1;
+    vertical-align: bottom;
+    margin-top: 15;
+}
+
+.filter-bottom-selected{
+    border-color: #FFF;
+    border-width: 1;
+    height: 1;
+    vertical-align: bottom;
+    margin-top: 15;
+}
+
+.filter-commands{
+    horizontal-align: center;
+}
+
+.text{
+    vertical-align: center;    
+    padding-left: 10;
+}
+
+
+.text-no-padding{
+    vertical-align: center;    
+}
+
+.type-icon{
+    horizontal-align: center;
+}
+
+.count{
+    padding-right: 10;
+    text-align: right;
+    color: #d4d4d7;
+}
+
+.selection-icon{
+    horizontal-align: right;
+    font-family: "MaterialIcons-Regular";
+    font-size: 20;    
+}
+
+
+.control{
+    padding-right: 10;
+}
+
+.general-wrapper{
+    margin-top: 16;
+}
+
+.clear-button{
+    margin: 10;
+    border-color: #BD5680;
+    border-width: 1;
+    background-color: #FFF;
+    color: #BD5680;
+    padding: 10 0;
+}
+
+.apply-button{
+    margin: 10;
+    border-color: #BD5680;
+    border-width: 1;
+    background-color: #BD5680;
+    color: #FFF;
+    padding: 10 0;
+}
+
+.clearallbutton{
+    background-color: #f24437;
+    color: #FFF;
+    width: 100;
+    margin: 10 0;
+    border-radius: 10;
+}

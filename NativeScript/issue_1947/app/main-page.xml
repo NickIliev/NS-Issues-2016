@@ -1,0 +1,6 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>   
+    <Button text="TAP" tap="onTap" />
+    <Image src="~/res/logo.png" stretch ="none" id="logo" />
+  </StackLayout>
+</Page>

@@ -1,0 +1,11 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" >
+  <!--<StackLayout>
+    <TimePicker id="TimePickerA" time="{{ checkInTime }}" hour="{{ TimePickerAHour }}" minute="{{ TimePickerAMinute }}"></TimePicker>
+    <TimePicker id="TimePickerB" time="{{ checkOutTime }}" hour="{{ TimePickerBHour }}" minute="{{ TimePickerBMinute }}"></TimePicker>
+  </StackLayout>-->
+  <StackLayout>
+      <TimePicker hour="5" minute="10" maxHour="7" maxMinutes="15" minHour="3" minMinutes="5"/>
+  </StackLayout>
+</Page>
+
+<!--navigatingTo="navigatingTo"-->

@@ -1,0 +1,10 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <Label text="ticket 1036691" class="title"/>
+    <Switch checked="{{ optionPolish }}" id="sw-polish"/>
+    <Switch checked="{{ optionWash }}" id="sw-wash" />
+    
+    <Label text="{{ 'Total cost: ' + cost }}" textWrap="true" class="title"/>
+
+  </StackLayout>
+</Page>

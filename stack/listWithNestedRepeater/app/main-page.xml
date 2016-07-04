@@ -1,0 +1,26 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="onLoaded">
+  <StackLayout>
+    <Label text="List view with nested repeater" class="title"/>
+
+        <ListView id="listview" items="{{ groups }}" itemTap="listViewItemTap">
+            <ListView.itemTemplate>
+                <StackLayout>
+
+                  <Repeater items="{{ $parents[ListView].groups[0] }}" >
+                    <Repeater.itemsLayout>
+                      <WrapLayout />
+                    </Repeater.itemsLayout>
+                    <Repeater.itemTemplate>
+                      <Label text="{{ $value.year }}"  margin="10" onTap="test"/>
+                    </Repeater.itemTemplate>
+                  </Repeater>
+                  
+                  
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+
+
+  </StackLayout>
+</Page>
+

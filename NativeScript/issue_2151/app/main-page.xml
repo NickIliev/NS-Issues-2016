@@ -1,0 +1,10 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <AbsoluteLayout width="400" height="400">
+        <GridLayout width="200" height="200" backgroundColor="red" id="mr-red" top="20" left="20"/>
+        <GridLayout width="200" height="200" backgroundColor="green" id="mr-green" />
+        <GridLayout width="50" height="50" backgroundColor="blue" id="mr-blue"  top="210" left="50"/>
+    </AbsoluteLayout>
+    <Button text="change zIndex" tap="onTap" />
+  </StackLayout>
+</Page>

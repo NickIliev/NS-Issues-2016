@@ -1,0 +1,13 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <Label text="All Employees" />
+    <ListView items="{{ employees }}" loaded="onLoaded" itemTap="onItemTap">
+        <ListView.itemTemplate>
+            <StackLayout>
+                <Label text="{{ firstName }}" textWrap="true" />
+                <Label text="{{ lastName }}" textWrap="true" />  
+            </StackLayout> 
+        </ListView.itemTemplate>
+    </ListView>
+  </StackLayout>
+</Page>

@@ -1,0 +1,10 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout class="stack">
+    <!--native source for images-->
+    <Image src="res://icon" stretch ="none" class="image" />
+    <!--alternative source for image-->
+    <!--<Image src="~/your-folder/your-image.png" stretch ="none" / >-->
+    <Label text="25789" class="counter"/>
+    <Label text="views" class="views"/>
+  </StackLayout>
+</Page>

@@ -1,0 +1,16 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="onLoaded">
+  <StackLayout id="myStack">
+    <Label text="Issue 2097"/>
+    <Label>
+        <Label.formattedText>
+          <FormattedString>
+            <FormattedString.spans>
+              <Span text="First Span ... " fontAttributes="Italic" foregroundColor="red"/>
+              <Span text=" and Second span .. " fontAttributes="Bold" foregroundColor="green"/>
+              <Span text=" Third Span" fontAttributes="Normal" foregroundColor="blue"/>
+            </FormattedString.spans>
+          </FormattedString>
+        </Label.formattedText>
+     </Label>  
+  </StackLayout>
+</Page>

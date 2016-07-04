@@ -1,0 +1,55 @@
+<Page navigatingTo="navigatingTo" navigatedFrom="navigatedFrom">
+        <Page.actionBar>
+                <ActionBar title="{{ pageTitle }}">
+                        <NavigationButton icon="res://ic_arrow_back_white_24dp" tap="onNavigateBack" />
+                </ActionBar>
+        </Page.actionBar>
+        <GridLayout rows="auto, auto, 10, *" class="detail-page">
+                <Label row="0" text="{{ brief.Title }}" class="title" textWrap="true" />
+                <SegmentedBar row="1" selectedIndex="{{ selectedIndex }}">
+                    <SegmentedBar.items>
+                        <SegmentedBarItem title="{{ General }}" />
+                        <SegmentedBarItem title="{{ Related }}" />
+                    </SegmentedBar.items>
+                </SegmentedBar>
+                 <StackLayout row="2" class="border-line"></StackLayout>
+                <ScrollView row="3" visibility="{{ selectedIndex == 0 ? 'visible' : 'collapsed' }}">
+                     <StackLayout>
+                        <Label text="Issue and research question" class="label" textWrap="true" visibility="{{ brief.IssueAndResearchQuestion ? 'visible' : 'collapsed' }}" />
+                        <HtmlView id="IssueAndResearchQuestion" html="{{ brief.IssueAndResearchQuestion }}" visibility="{{ brief.IssueAndResearchQuestion ? 'visible' : 'collapsed' }}" />
+                        
+                        <Label text="Summary of recommendations" class="label" textWrap="true" visibility="{{ brief.SummaryOfRecommendations ? 'visible' : 'collapsed' }}" />
+                        <HtmlView id="SummaryOfRecommendations" html="{{ brief.SummaryOfRecommendations }}" visibility="{{ brief.SummaryOfRecommendations ? 'visible' : 'collapsed' }}" />
+                        
+                        <Label text="Target user" class="label" textWrap="true" visibility="{{ brief.TargetUser ? 'visible' : 'collapsed' }}" />
+                        <HtmlView id="TargetUser" html="{{ brief.TargetUser }}" visibility="{{ brief.TargetUser ? 'visible' : 'collapsed' }}" />
+                        
+                        <Label text="Type and quality of evidence" class="label" textWrap="true" visibility="{{ brief.TypeAndQualityOfEvidence ? 'visible' : 'collapsed' }}" />
+                        <HtmlView id="TypeAndQualityOfEvidence" html="{{ brief.TypeAndQualityOfEvidence }}" visibility="{{ brief.TypeAndQualityOfEvidence ? 'visible' : 'collapsed' }}" />
+                        
+                        <Label text="Main findings" class="label" textWrap="true" visibility="{{ brief.MainFindings ? 'visible' : 'collapsed' }}" />
+                        <HtmlView id="MainFindings" html="{{ brief.MainFindings }}" visibility="{{ brief.MainFindings ? 'visible' : 'collapsed' }}" />
+                        
+                        <Label text="Recommendations for future research" class="label" textWrap="true" visibility="{{ brief.RecommendationsForFutureResearch ? 'visible' : 'collapsed' }}" />
+                        <HtmlView id="RecommendationsForFutureResearch" html="{{ brief.RecommendationsForFutureResearch }}" visibility="{{ brief.RecommendationsForFutureResearch ? 'visible' : 'collapsed' }}" />
+                    </StackLayout>
+                </ScrollView>
+
+                <GridLayout row="3"  rows="*" visibility="{{ selectedIndex == 1 ? 'visible' : 'collapsed' }}">
+                    <ListView items="{{ brief.RelatedResources }}" itemTap="onRelatedResourceItemTap" itemLoading="onListViewLoadingFixSelectState" >
+                        <ListView.itemTemplate>
+                            <StackLayout class="list-item">
+                                <GridLayout columns="50,*" rows="auto">
+                                    <StackLayout col="0" class="resource-list-item-wrapper"> 
+                                        <Label text="{{ Type.Text, Type.Text | toIcon() }}" textWrap="false" class="resource-item-icon primary-backgroundcolor fontawesome" />
+                                    </StackLayout>
+                                    <StackLayout col="1">
+                                        <Label text="{{ Title }}" textWrap="true" class="list-title"/>
+                                    </StackLayout>
+                                </GridLayout>
+                            </StackLayout>
+                        </ListView.itemTemplate>
+                    </ListView>
+                </GridLayout>
+    </GridLayout>
+</Page>

@@ -1,0 +1,87 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" shownModally="shownModally">
+   <GridLayout rows="*, auto" columns="*">
+        <TabView id="tabViewContainer" row="0" selectedIndex="{{ selectedIndex }}">
+            <TabView.items>
+                <TabViewItem title="{{ labels.general }}">
+                    <TabViewItem.view>
+                        <GridLayout rows="auto, auto, *" class="filter-item-control">
+                            <StackLayout row="0" class="general-wrapper">
+                                <GridLayout rows="*" columns="*, 100">
+                                    <Label text="{{ labels.executiveSummaries }}" class="text" row="0" col="0" />
+                                    <Switch checked="{{ needSummary }}" row="0" col="1" class="control" />
+                                </GridLayout>
+                                <StackLayout class="filter-bottom" />
+                            </StackLayout>
+                            <Label row="2" text="{{ labels.resourceType }}" textWrap="false" class="filter-header" />
+                            <GridLayout row="3" rows="*">
+                                <ListView row="0" id="typeRepeater" items="{{ types }}">
+                                    <ListView.itemsLayout>
+                                        <StackLayout class="filter-group" />
+                                    </ListView.itemsLayout>
+                                    <ListView.itemTemplate>
+                                        <StackLayout class="filter-item" tap="onTypeTap">
+                                            <GridLayout rows="*" columns="30, 30, *, 80">
+                                                <Label row="0" col="0" text="{{ IsSelected ? '&#xe834;' : '&#xe835;' }}" class="selection-icon" />
+                                                <Label row="0" col="1" text="{{ Text, Text | toIcon() }}" textWrap="false" class="fontawesome type-icon" />
+                                                <Label row="0" col="2" text="{{ Text }}" class="text-no-padding" />
+                                                <Label row="0" col="3" text="{{ Count }}" class="count" />
+                                            </GridLayout>
+                                            <StackLayout class="filter-bottom" />
+                                        </StackLayout>
+                                    </ListView.itemTemplate>
+                                </ListView>
+                            </GridLayout>
+                        </GridLayout>
+                    </TabViewItem.view>
+                </TabViewItem>
+                <TabViewItem title="{{ labels.topics }}">
+                    <TabViewItem.view>
+                       <GridLayout rows="*" columns="*">
+                            <ListView row="0"  id="categoryRepeater" items="{{ topics }}" itemTap="onCategoryTap" visibility="{{ isBinding ? 'collapsed' : 'visible' }}">
+                                <ListView.itemTemplate>
+                                    <StackLayout class="filter-item" tap="onCategoryTap">
+                                        <StackLayout class="{{ IsChild ? 'filter-child' : '' }}">
+                                                <GridLayout rows="*" columns="30, *">
+                                                    <Label row="0" col="0" text="{{ IsSelected ? '&#xe834;' : '&#xe835;' }}" class="selection-icon" />
+                                                    <Label row="0" col="1" text="{{ Title }}" class="text" />
+                                                </GridLayout>
+                                        </StackLayout>
+                                    <StackLayout class="filter-bottom" />
+                                    </StackLayout>
+                                </ListView.itemTemplate>
+                            </ListView>
+                            <ActivityIndicator row="1" width="30" height="30" busy="{{ isBinding }}" />
+                        </GridLayout>
+                    </TabViewItem.view>
+                </TabViewItem>
+                <TabViewItem title="{{ labels.jurisdictions }}">
+                    <TabViewItem.view>
+                        <GridLayout rows="*" columns="*">
+                            <ListView row="0" id="jurisdictionRepeater" items="{{ jurisdictions }}" itemTap="onJurisdictionTap" visibility="{{ isBinding ? 'collapsed' : 'visible' }}">
+                                <ListView.itemTemplate>
+                                    <StackLayout class="filter-item" tap="onJurisdictionTap">
+                                    <StackLayout class="{{ IsChild ? 'filter-child' : '' }}">
+                                            <GridLayout rows="*" columns="30, *">
+                                                <Label row="0" col="0" text="{{ IsSelected ? '&#xe834;' : '&#xe835;' }}" class="selection-icon" />
+                                                <Label row="0" col="1" text="{{ Title }}" class="text" />
+                                            </GridLayout>
+                                    </StackLayout>
+                                    <StackLayout class="filter-bottom" />
+                                    </StackLayout>
+                                </ListView.itemTemplate>
+                            </ListView>
+                            <ActivityIndicator row="1" width="30" height="30" busy="{{ isBinding }}" />
+                        </GridLayout>
+                    </TabViewItem.view>
+                </TabViewItem>
+            </TabView.items>
+        </TabView>
+        <StackLayout row="1" class="filter-commands">
+         <GridLayout rows="*" columns="*, *">
+            <Button row="0" col="0" text="{{ apply }}" tap="onDoneClick" class="apply-button" />
+            <Button row="0" col="1" text="{{ cancel }}" tap="onCancelClick" class="clear-button" />
+         </GridLayout>
+      </StackLayout>
+   </GridLayout>
+</Page>    
+ 

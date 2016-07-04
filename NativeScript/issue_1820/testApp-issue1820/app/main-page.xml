@@ -1,0 +1,7 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatedTo="onNavigatedTo">
+  <StackLayout>
+    <Label text="Admob test issue" class="title"/>
+    <Button text="next page" tap="buttonClicked" />   
+    <Button text="interstitial" tap="{{ doCreateInterstitial }}" />
+  </StackLayout>
+</Page>

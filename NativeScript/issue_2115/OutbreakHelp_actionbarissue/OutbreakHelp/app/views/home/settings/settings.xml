@@ -1,0 +1,38 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded" >
+    <Page.actionBar>
+        <ActionBar title="{{ pageTitle }}" >
+            <NavigationButton tap="onNavigateBack" icon="res://ic_arrow_back_white_24dp"  />
+        </ActionBar>
+    </Page.actionBar>
+    <ScrollView>
+        <StackLayout class="settings">
+            <StackLayout class="setting-item" orientation="horizontal">
+                <GridLayout rows="auto" columns="*, auto">
+                    <Label row="0" col="0" text="{{ language }}" textWrap="true" class="" />
+                    <StackLayout tap="onChangeLanguage" row="0" col="1" orientation="horizontal">
+                        <Label text="{{ currentCulture }}" class="setting-text" />
+                        <Label text="&#xe409;" class="materialdesign navarrow" />
+                    </StackLayout>          
+                </GridLayout>
+            </StackLayout>
+            <StackLayout class="setting-border" />
+            <StackLayout class="setting-item" orientation="horizontal" tap="onGettingStarted" >
+                <GridLayout rows="auto" columns="*, auto">
+                    <Label row="0" col="0" text="{{ GettingStarted }}" textWrap="true" class="" />
+                    <StackLayout tap="onGettingStarted" row="0" col="1" orientation="horizontal">
+                        <Label text="{{ Tutorial }}" class="setting-text" />
+                        <Label text="&#xe409;" class="materialdesign navarrow" />
+                    </StackLayout>          
+                </GridLayout>
+            </StackLayout>
+            <StackLayout class="setting-border" />
+            <Button text="{{ clearCache }}" tap="onClearCache" class="clearCacheButton btn btn-primary" />
+            <StackLayout class="about">
+                <Label text="{{ 'v' + version }}" textWrap="true" class="about-item" />
+                <Label text="{{ developedBy }}" textWrap="true" class="about-item" />
+                <Label text="http://www.leaplearning.ca" textWrap="false" class="about-item link" tap="onTakeALeap" />
+                <Label text="{{ TermsOfUse }}" textWrap="false" class="about-item termsOfUse link" tap="onTermsOfUse" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView> 
+</Page>

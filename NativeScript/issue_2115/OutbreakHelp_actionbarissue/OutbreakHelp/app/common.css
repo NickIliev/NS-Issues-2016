@@ -1,0 +1,294 @@
+﻿page {
+	color: #333;
+	/*font-size: 16;
+	font-family: 'Lato'; */
+}
+
+ActionBar{
+	background-color: #BD5680;
+	color: white;
+}
+
+SegmentedBar{
+    background-color: #FFF;
+    border-color: #448AFF;
+    color: #448AFF;
+}
+
+.primary-color{
+    color: #448AFF;
+}
+
+.accent-color{
+    color: #BD5680;
+}
+
+.primary-backgroundcolor{
+    background-color: #448AFF;
+}
+
+.accent-backgroundcolor{
+    background-color: #BD5680;
+}
+
+.segmented-bar-wrapper{
+    background-color: #FFF;
+    padding-bottom: 3;
+}
+
+.segmented-bar-icon{
+	color: #607d8b;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.customtitleview{
+	font-size: 18;
+}
+
+.actionbaricon{
+    font-size: 20;
+}
+
+.fontawesome,
+.font-awesome{
+	font-family: "FontAwesome";
+}
+
+.materialdesign{
+	font-family: "MaterialIcons-Regular";
+}
+
+.btn{
+	font-size: 16;
+	padding: 5 10;
+	margin-bottom: 20;
+	/*border-radius: 4;*/
+}
+
+.btn-primary{
+	background-color: #BD5680;
+    border-color: #BD5680;
+    color: #ffffff;
+
+}
+
+.filterbar{
+    background-color: #e0e0e0;
+}
+
+.filterbutton{
+    color: #607d8b;
+}
+
+
+
+.clearAll{
+    margin-top: 20;    
+    color: #FFF;
+}
+
+.selectedicon{
+    color: #448AFF;
+}
+
+Switch{
+    /*background-color: #BD5680;*/
+}
+
+.badge{
+	background-color: #BD5680;
+    border-color: #BD5680;
+    color: #ffffff;
+    font-size: 10;
+    border-radius: 5;
+    padding: 5;
+    margin-top:5;
+}
+
+.executives-summary-label{
+    vertical-align: bottom;
+    font-size: 10;
+    horizontal-align: center;
+}
+
+.repeater-item {
+	padding-top:15;
+	padding-bottom: 15;
+	padding-left: 10;
+	padding-right: 10;
+}
+
+
+.btn-default{
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.detail-page{
+	padding-left: 10;
+	padding-right: 10;
+	padding-top:10;
+}
+
+.title{
+	font-weight: bold;
+	font-size: 20;
+	color: #B4517A;
+	margin-bottom: 10;
+}
+
+
+.sub-title{
+	font-weight: bold;
+	font-size: 18;
+	color: #666666;
+	margin-bottom: 10;
+}
+
+.list-title{
+    font-size: 12;
+}
+
+
+.text-muted{
+	    color: #999999;
+}
+
+
+
+.loading-icon{
+    margin-top: 20;
+}
+
+.prefix{
+	color: #333;
+    font-weight: bold;
+}
+.postfix{
+	color:#bd5680;
+    font-weight: bold;
+}
+
+.text-white{
+	color:white;
+}
+
+.resource-item-icon{
+   color: #FFF;
+   horizontal-align: center;
+   margin-top: 7;
+}
+
+.resource-list-item-wrapper{
+   background-color: #448AFF;
+   width: 30;
+   height: 30;
+   border-radius: 15;   
+   vertical-align: top;   
+}
+
+.border-line{
+    border-width: 2;
+    height: 1;
+    border-color: #e0e0e0;
+    margin: 10 0;
+}
+
+.no-results-wrapper{
+    horizontal-align: center;
+    vertical-align: top;
+}
+
+.no-results{
+    margin-bottom: 20;
+    border-radius: 10;
+    padding: 20 50;
+    font-size: 40;
+}
+
+
+.list-item{
+    margin: 5 0;
+    padding: 0 0;
+}
+
+.custom-action-bar{
+	background-color:#bd5680;
+	color:white;
+}
+
+.no-results{
+    font-size: 16;
+    margin-top: 50;
+}
+
+.languageButton{
+	color: #23527c;
+	margin-top: 20;
+	text-align: right;
+	border-width: 0;
+	padding: 10;
+}
+
+
+.label{
+    color: #BD5680;
+    margin-bottom: 4;
+}
+
+.card-link{
+    
+}
+
+.link{
+	color: #23527c;
+}
+
+.related{
+	margin-bottom: 20;
+}
+
+.visible{
+	visibility: visible;
+}
+
+.hidden{
+	visibility: collapsed;
+}
+
+
+.text-align-right{
+    horizontal-align: right;
+}
+
+.text-align-left{
+    horizontal-align: left;
+}
+
+.margin-top-5 { margin-top: 5; }
+.margin-top-10 { margin-top: 10; }
+.margin-top-20 { margin-top: 20; }
+.margin-top-30 { margin-top: 30; }
+.margin-top-40 { margin-top: 40; }
+
+.margin-left-5 { margin-left: 5; }
+.margin-left-10 { margin-left: 10; }
+.margin-left-20 { margin-left: 20; }
+.margin-left-30 { margin-left: 30; }
+.margin-left-40 { margin-left: 40; }
+
+.margin-right-5 { margin-right: 5; }
+.margin-right-10 { margin-right: 10; }
+.margin-right-20 { margin-right: 20; }
+.margin-right-30 { margin-right: 30; }
+.margin-right-40 { margin-right: 40; }
+
+.margin-bottom-5 { margin-bottom: 5; }
+.margin-bottom-10 { margin-bottom: 10; }
+.margin-bottom-20 { margin-bottom: 20; }
+.margin-bottom-30 { margin-bottom: 30; }
+.margin-bottom-40 { margin-bottom: 40; }

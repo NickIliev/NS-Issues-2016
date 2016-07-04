@@ -1,0 +1,7 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatedTo="onNavigatedTo" loaded="pageLoaded" xmlns:app="./Share">
+  <GridLayout>
+    <!-- Add UI declaration here -->
+    <ListPicker id="test"
+              verticalAlignment="center" horizontalAlignment="center"/>
+  </GridLayout>
+</Page>

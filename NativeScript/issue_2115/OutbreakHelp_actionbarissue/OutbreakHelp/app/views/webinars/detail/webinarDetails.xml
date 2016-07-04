@@ -1,0 +1,48 @@
+<Page navigatingTo="navigatingTo" navigatedFrom="navigatedFrom">
+        <Page.actionBar>
+                <ActionBar title="{{ pageTitle }}">
+                        <NavigationButton icon="res://ic_arrow_back_white_24dp" tap="onNavigateBack" />
+                        <ActionBar.actionItems>
+                            <ActionItem ios.position="right" tap="onShareUrl" ios.position="right" android.position="right">
+                                <ActionItem.actionView>
+                                    <Label text="&#xE80D;" class="materialdesign actionbaricon" />
+                                </ActionItem.actionView>
+                            </ActionItem>
+                        </ActionBar.actionItems>
+                </ActionBar>
+        </Page.actionBar>
+        <GridLayout rows="auto, *">
+            <StackLayout row="0" class=" header">
+                <GridLayout rows="*" columns="50, *">
+                    <StackLayout col="0">
+                        
+                    </StackLayout>
+                    <StackLayout col="1">
+                        <Label text="{{ webinar.Title }}" class="webinar-title" />
+                        <Label text="{{ webinar.FormattedDate }}" class="webinar-date date-item" />
+                        <Label text="{{ webinar.FormattedTime }}" class="webinar-time date-item" />
+                        <Button text="{{ viewButton }}" class="view-button" tap="onOpenLink" />
+                    </StackLayout>
+                </GridLayout>                    
+            </StackLayout>
+            <ScrollView row="1">
+                <StackLayout class="detail-page">
+                    <HtmlView id="summaryHtmlView" html="{{ webinar.Summary }}" />
+                    <HtmlView id="descriptionHtmlView" html="{{ webinar.Description }}" />
+                    <Repeater items="{{ webinar.Documents }}">
+                        <Repeater.itemsLayout>
+                            <StackLayout />
+                        </Repeater.itemsLayout>
+                        <Repeater.itemTemplate>
+                            <StackLayout class="file-download" tap="onDownloadFileTap">
+                                <StackLayout orientation="horizontal">
+                                    <Label text="&#xf0ed;" textWrap="false" class="icon fontawesome" />
+                                    <Label text="{{ Title }}" textWrap="false" />    
+                                </StackLayout>
+                            </StackLayout>
+                        </Repeater.itemTemplate>
+                    </Repeater>                
+                </StackLayout>
+            </ScrollView>
+        </GridLayout>
+</Page>

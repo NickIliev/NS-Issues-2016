@@ -1,0 +1,21 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" xmlns:widgets="widgets" loaded="pageLoaded" navigatingTo="navigatingTo" class="splash" actionBarHidden="true">
+    <GridLayout rows="*, 150" columns="*">
+        <StackLayout class="logoPlaceHolder" row="0" visibility="{{ isEnglish ? 'visible' : 'collapsed' }}">
+            <GridLayout rows="auto, auto" columns="*">
+                <Label row="0" col="0" text="{{ BrandPrefix }}" fontAttributes="Bold" class="prefix prefix-en splash-logo" />
+                <Label  row="1" col="0" text="{{ BrandPostfix }}" fontAttributes="Bold" class="postfix postfix-en splash-logo" />
+            </GridLayout>
+            <ActivityIndicator id="indicator" class="indicator" busy="true" />
+        </StackLayout>
+        <StackLayout class="logoPlaceHolder" row="0" visibility="{{ isEnglish ? 'collapsed' : 'visible' }}">
+            <GridLayout rows="auto, auto" columns="*">
+                <Label row="0" col="0" text="{{ BrandPrefix }}" fontAttributes="Bold" class="prefix prefix-fr splash-logo" />
+                <Label  row="1" col="0" text="{{ BrandPostfix }}" fontAttributes="Bold" class="postfix postfix-fr splash-logo" />
+            </GridLayout>
+            <ActivityIndicator id="indicator" class="indicator" busy="true" />
+        </StackLayout>
+        <StackLayout row="1" class="footer">
+            <Image android:src="res://nccmt_logo" ios:src="res://nccmt_logo.jpg" stretch ="aspectFit" class="nccmtlogo" />
+        </StackLayout>
+    </GridLayout>
+</Page>

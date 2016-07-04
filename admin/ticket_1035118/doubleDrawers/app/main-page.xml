@@ -1,0 +1,50 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+      navigatingTo="navigatingTo">
+      
+  <drawer:RadSideDrawer id="sideDrawer" drawerLocation="Left">
+      <drawer:RadSideDrawer.drawerContent>      
+          <StackLayout >
+            <StackLayout >
+              <Label text="Navigation Menu"/>
+            </StackLayout>
+            <ScrollView>
+              <StackLayout class="st-drawer">
+                <Label text="Primary" />
+                <Label text="Social" />
+                <Label text="Promotions"/>
+                <Label text="Labels" />
+              </StackLayout>
+            </ScrollView>
+          </StackLayout>
+      </drawer:RadSideDrawer.drawerContent>
+      <drawer:RadSideDrawer.mainContent>
+          <StackLayout style="vertical-align : bottom">
+                <drawer:RadSideDrawer id="sideDrawerBottom" drawerLocation="bottom">
+                  <drawer:RadSideDrawer.drawerContent>      
+                      <StackLayout >
+                        <StackLayout >
+                          <Label text="Navigation Menu"/>
+                        </StackLayout>
+                        <ScrollView>
+                          <StackLayout class="st-drawer">
+                            <Label text="Bottom Primary" />
+                            <Label text="Bottom Social" />
+                            <Label text="Bottom Promotions"/>
+                            <Label text="Bottom Labels" />
+                          </StackLayout>
+                        </ScrollView>
+                      </StackLayout>
+                  </drawer:RadSideDrawer.drawerContent>
+                  <drawer:RadSideDrawer.mainContent>
+                      <StackLayout style="vertical-align : bottom">
+                          <Button text="Delete" textWrap="true" />
+                          <Button text="Facebook" textWrap="true" />
+                          <Button text="Twitter" textWrap="true" />
+                      </StackLayout>
+                  </drawer:RadSideDrawer.mainContent>
+              </drawer:RadSideDrawer>
+          </StackLayout>
+      </drawer:RadSideDrawer.mainContent>
+  </drawer:RadSideDrawer>
+</Page>

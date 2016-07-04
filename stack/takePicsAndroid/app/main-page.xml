@@ -1,0 +1,6 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <Label text="Camera" class="title"/>
+    <Button text="TAKE SHOT" tap="onTakeShot" />
+  </StackLayout>
+</Page>

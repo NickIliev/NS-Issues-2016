@@ -1,0 +1,190 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <StackLayout>
+  <ScrollView>
+    <GridLayout id="background" backgroundColor="#99000000"  >
+</GridLayout>
+<GridLayout columns="*, *, *" rows="auto, auto, auto" id="submenu" backgroundColor="white" >   
+        <Button text="1" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_1X2" margin="5" horizontalAlignment="stretch"/> 
+        <Button text="2" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="3" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_Parlay" col="2" margin="5" horizontalAlignment="stretch"/>  
+        <Button text="4" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_CS" row="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="5" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_TG" row="1" col="1" margin="5" horizontalAlignment="stretch"/>    
+        <Button text="6" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_HF" row="1" col="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="7" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2Parlay" row="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="8" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_1GW" row="2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="9" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_DG" row="2" col="2" margin="5" horizontalAlignment="stretch"/>
+</GridLayout> 
+<GridLayout id="background" backgroundColor="#99000000"  >
+</GridLayout>
+<GridLayout columns="*, *, *" rows="auto, auto, auto" id="submenu" backgroundColor="white" >   
+        <Button text="1" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_1X2" margin="5" horizontalAlignment="stretch"/> 
+        <Button text="2" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="3" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_Parlay" col="2" margin="5" horizontalAlignment="stretch"/>  
+        <Button text="4" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_CS" row="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="5" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_TG" row="1" col="1" margin="5" horizontalAlignment="stretch"/>    
+        <Button text="6" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_HF" row="1" col="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="7" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2Parlay" row="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="8" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_1GW" row="2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="9" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_DG" row="2" col="2" margin="5" horizontalAlignment="stretch"/>
+</GridLayout> 
+<GridLayout id="background" backgroundColor="#99000000"  >
+</GridLayout>
+<GridLayout columns="*, *, *" rows="auto, auto, auto" id="submenu" backgroundColor="white" >   
+        <Button text="1" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_1X2" margin="5" horizontalAlignment="stretch"/> 
+        <Button text="2" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="3" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_Parlay" col="2" margin="5" horizontalAlignment="stretch"/>  
+        <Button text="4" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_CS" row="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="5" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_TG" row="1" col="1" margin="5" horizontalAlignment="stretch"/>    
+        <Button text="6" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_HF" row="1" col="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="7" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2Parlay" row="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="8" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_1GW" row="2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="9" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_DG" row="2" col="2" margin="5" horizontalAlignment="stretch"/>
+</GridLayout> 
+<GridLayout id="background" backgroundColor="#99000000"  >
+</GridLayout>
+<GridLayout columns="*, *, *" rows="auto, auto, auto" id="submenu" backgroundColor="white" >   
+        <Button text="1" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_1X2" margin="5" horizontalAlignment="stretch"/> 
+        <Button text="2" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="3" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_Parlay" col="2" margin="5" horizontalAlignment="stretch"/>  
+        <Button text="4" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_CS" row="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="5" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_TG" row="1" col="1" margin="5" horizontalAlignment="stretch"/>    
+        <Button text="6" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_HF" row="1" col="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="7" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2Parlay" row="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="8" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_1GW" row="2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="9" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_DG" row="2" col="2" margin="5" horizontalAlignment="stretch"/>
+</GridLayout> 
+<GridLayout id="background" backgroundColor="#99000000"  >
+</GridLayout>
+<GridLayout columns="*, *, *" rows="auto, auto, auto" id="submenu" backgroundColor="white" >   
+        <Button text="1" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_1X2" margin="5" horizontalAlignment="stretch"/> 
+        <Button text="2" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="3" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_Parlay" col="2" margin="5" horizontalAlignment="stretch"/>  
+        <Button text="4" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_CS" row="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="5" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_TG" row="1" col="1" margin="5" horizontalAlignment="stretch"/>    
+        <Button text="6" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_HF" row="1" col="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="7" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2Parlay" row="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="8" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_1GW" row="2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="9" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_DG" row="2" col="2" margin="5" horizontalAlignment="stretch"/>
+</GridLayout> 
+<GridLayout id="background" backgroundColor="#99000000"  >
+</GridLayout>
+<GridLayout columns="*, *, *" rows="auto, auto, auto" id="submenu" backgroundColor="white" >   
+        <Button text="1" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_1X2" margin="5" horizontalAlignment="stretch"/> 
+        <Button text="2" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="3" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_Parlay" col="2" margin="5" horizontalAlignment="stretch"/>  
+        <Button text="4" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_CS" row="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="5" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_TG" row="1" col="1" margin="5" horizontalAlignment="stretch"/>    
+        <Button text="6" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_HF" row="1" col="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="7" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2Parlay" row="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="8" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_1GW" row="2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="9" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_DG" row="2" col="2" margin="5" horizontalAlignment="stretch"/>
+</GridLayout> 
+<GridLayout id="background" backgroundColor="#99000000"  >
+</GridLayout>
+<GridLayout columns="*, *, *" rows="auto, auto, auto" id="submenu" backgroundColor="white" >   
+        <Button text="1" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_1X2" margin="5" horizontalAlignment="stretch"/> 
+        <Button text="2" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="3" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_Parlay" col="2" margin="5" horizontalAlignment="stretch"/>  
+        <Button text="4" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_CS" row="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="5" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_TG" row="1" col="1" margin="5" horizontalAlignment="stretch"/>    
+        <Button text="6" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_HF" row="1" col="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="7" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2Parlay" row="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="8" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_1GW" row="2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="9" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_DG" row="2" col="2" margin="5" horizontalAlignment="stretch"/>
+</GridLayout> 
+<GridLayout id="background" backgroundColor="#99000000"  >
+</GridLayout>
+<GridLayout columns="*, *, *" rows="auto, auto, auto" id="submenu" backgroundColor="white" >   
+        <Button text="1" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_1X2" margin="5" horizontalAlignment="stretch"/> 
+        <Button text="2" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="3" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_Parlay" col="2" margin="5" horizontalAlignment="stretch"/>  
+        <Button text="4" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_CS" row="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="5" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_TG" row="1" col="1" margin="5" horizontalAlignment="stretch"/>    
+        <Button text="6" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_HF" row="1" col="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="7" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2Parlay" row="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="8" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_1GW" row="2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="9" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_DG" row="2" col="2" margin="5" horizontalAlignment="stretch"/>
+</GridLayout> 
+<GridLayout id="background" backgroundColor="#99000000"  >
+</GridLayout>
+<GridLayout columns="*, *, *" rows="auto, auto, auto" id="submenu" backgroundColor="white" >   
+        <Button text="1" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_1X2" margin="5" horizontalAlignment="stretch"/> 
+        <Button text="2" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="3" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_Parlay" col="2" margin="5" horizontalAlignment="stretch"/>  
+        <Button text="4" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_CS" row="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="5" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_TG" row="1" col="1" margin="5" horizontalAlignment="stretch"/>    
+        <Button text="6" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_HF" row="1" col="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="7" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2Parlay" row="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="8" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_1GW" row="2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="9" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_DG" row="2" col="2" margin="5" horizontalAlignment="stretch"/>
+</GridLayout> 
+<GridLayout id="background" backgroundColor="#99000000"  >
+</GridLayout>
+<GridLayout columns="*, *, *" rows="auto, auto, auto" id="submenu" backgroundColor="white" >   
+        <Button text="1" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_1X2" margin="5" horizontalAlignment="stretch"/> 
+        <Button text="2" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="3" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_Parlay" col="2" margin="5" horizontalAlignment="stretch"/>  
+        <Button text="4" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_CS" row="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="5" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_TG" row="1" col="1" margin="5" horizontalAlignment="stretch"/>    
+        <Button text="6" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_HF" row="1" col="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="7" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2Parlay" row="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="8" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_1GW" row="2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="9" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_DG" row="2" col="2" margin="5" horizontalAlignment="stretch"/>
+</GridLayout> 
+<GridLayout id="background" backgroundColor="#99000000"  >
+</GridLayout>
+<GridLayout columns="*, *, *" rows="auto, auto, auto" id="submenu" backgroundColor="white" >   
+        <Button text="1" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_1X2" margin="5" horizontalAlignment="stretch"/> 
+        <Button text="2" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="3" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_Parlay" col="2" margin="5" horizontalAlignment="stretch"/>  
+        <Button text="4" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_CS" row="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="5" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_TG" row="1" col="1" margin="5" horizontalAlignment="stretch"/>    
+        <Button text="6" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_HF" row="1" col="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="7" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2Parlay" row="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="8" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_1GW" row="2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="9" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_DG" row="2" col="2" margin="5" horizontalAlignment="stretch"/>
+</GridLayout> 
+<GridLayout id="background" backgroundColor="#99000000"  >
+</GridLayout>
+<GridLayout columns="*, *, *" rows="auto, auto, auto" id="submenu" backgroundColor="white" >   
+        <Button text="1" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_1X2" margin="5" horizontalAlignment="stretch"/> 
+        <Button text="2" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="3" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_Parlay" col="2" margin="5" horizontalAlignment="stretch"/>  
+        <Button text="4" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_CS" row="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="5" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_TG" row="1" col="1" margin="5" horizontalAlignment="stretch"/>    
+        <Button text="6" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_HF" row="1" col="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="7" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2Parlay" row="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="8" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_1GW" row="2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="9" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_DG" row="2" col="2" margin="5" horizontalAlignment="stretch"/>
+</GridLayout> 
+<GridLayout id="background" backgroundColor="#99000000"  >
+</GridLayout>
+<GridLayout columns="*, *, *" rows="auto, auto, auto" id="submenu" backgroundColor="white" >   
+        <Button text="1" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_1X2" margin="5" horizontalAlignment="stretch"/> 
+        <Button text="2" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="3" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_Parlay" col="2" margin="5" horizontalAlignment="stretch"/>  
+        <Button text="4" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_CS" row="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="5" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_TG" row="1" col="1" margin="5" horizontalAlignment="stretch"/>    
+        <Button text="6" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_HF" row="1" col="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="7" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2Parlay" row="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="8" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_1GW" row="2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="9" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_DG" row="2" col="2" margin="5" horizontalAlignment="stretch"/>
+</GridLayout> 
+<GridLayout id="background" backgroundColor="#99000000"  >
+</GridLayout>
+<GridLayout columns="*, *, *" rows="auto, auto, auto" id="submenu" backgroundColor="white" >   
+        <Button text="1" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_1X2" margin="5" horizontalAlignment="stretch"/> 
+        <Button text="2" backgroundColor="white" color="black"  borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="3" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_Parlay" col="2" margin="5" horizontalAlignment="stretch"/>  
+        <Button text="4" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_CS" row="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="5" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_TG" row="1" col="1" margin="5" horizontalAlignment="stretch"/>    
+        <Button text="6" backgroundColor="white" color="black"   borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_HF" row="1" col="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="7" backgroundColor="white" color="black"   borderWidth="1" borderColor="#DBDBDB" borderRadius="5" id="JZ_AH1X2Parlay" row="2" margin="5" horizontalAlignment="stretch"/>
+        <Button text="8" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_1GW" row="2" col="1" margin="5" horizontalAlignment="stretch"/>
+        <Button text="9" backgroundColor="white" color="black"  borderWidth="1"  borderColor="#DBDBDB" borderRadius="5" id="JZ_DG" row="2" col="2" margin="5" horizontalAlignment="stretch"/>
+</GridLayout> 
+
+     </ScrollView>
+  </StackLayout>
+  
+</Page>

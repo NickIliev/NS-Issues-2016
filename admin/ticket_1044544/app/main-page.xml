@@ -1,0 +1,3 @@
+<Page loaded="pageLoaded">
+  <Progress value="50" maxValue="150" class="progress" id="myProgress"/>
+</Page>

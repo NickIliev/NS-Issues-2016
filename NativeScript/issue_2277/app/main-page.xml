@@ -1,0 +1,10 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <AbsoluteLayout>
+      <GridLayout backgroundColor="green" width="200" height="200" top="0"  right="0" />
+
+      <GridLayout backgroundColor="red" width="200" height="200" top="200"  right="0" />
+
+      <Image src="res://icon" stretch="none" top="180"  right="0"/>
+      
+  </AbsoluteLayout>
+</Page>

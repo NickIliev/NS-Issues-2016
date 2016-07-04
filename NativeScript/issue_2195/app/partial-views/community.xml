@@ -1,0 +1,3 @@
+<StackLayout>
+    <Label text="Community page" textWrap="true"  class="title"/>  
+</StackLayout>

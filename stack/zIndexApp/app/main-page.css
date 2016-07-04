@@ -1,0 +1,6 @@
+.lower-grid {
+    z-index: 1;
+}
+.upper-grid {
+    z-index: 99;
+}

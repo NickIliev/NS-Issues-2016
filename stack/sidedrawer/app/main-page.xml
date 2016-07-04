@@ -1,0 +1,5 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:drawer="nativescript-telerik-ui/sidedrawer"  navigatingTo="navigatingTo" loaded="onLoaded">
+    <StackLayout id="swipable" class="swipable">
+        <Label text="Swipe to nabigate to next" textWrap="true" />  
+    </StackLayout>
+</Page>

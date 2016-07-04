@@ -1,0 +1,120 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" navigatingTo="navigatingTo" loaded="pageLoaded" navigatedTo="navigatedTo" navigatedFrom="navigatedFrom">
+    <Page.actionBar>
+            <ActionBar title="{{ pageTitle }}">
+                    <NavigationButton icon="res://ic_arrow_back_white_24dp" tap="onNavigateBack" />
+<ActionBar.actionItems>
+<ActionItem ios.position="right" android.position="right">
+    <ActionItem.actionView>
+        <StackLayout tap="onShareUrl" >
+            <Label text="&#xE80D;" class="materialdesign actionbaricon" />
+        </StackLayout>
+    </ActionItem.actionView>
+</ActionItem>
+<ActionItem ios.position="right" android.position="right">
+    <ActionItem.actionView>
+        <StackLayout tap="toggleFavorite" >
+            <Label text="&#xE866;" class="materialdesign actionbaricon" />
+        </StackLayout>
+    </ActionItem.actionView>
+</ActionItem>
+                                                
+<!--<ActionItem text="&#xE80D;" tap="onShareUrl" class="materialdesign actionbaricon" ios.position="left" />
+<ActionItem text="&#xE866;" tap="toggleFavorite" class="materialdesign actionbaricon" ios.position="left" />
+                    -->
+                    </ActionBar.actionItems>
+            </ActionBar>
+    </Page.actionBar>
+    <GridLayout rows="*">
+        <TabView id="tabViewContainer" row="0">
+            <TabView.items>
+                <TabViewItem title="{{ Resource }}">
+                    <TabViewItem.view>
+                    <GridLayout rows="*">
+                        <ScrollView row="0" >
+                            <StackLayout class="tabpage" visibility="{{ isLoading ? 'collapsed' : 'visible' }}">
+                                <Label text="{{ data.Title }}" textWrap="true" class="title" />
+                                
+                                <SegmentedBar selectedIndex="{{ segmentedBarIndex }}">
+                                    <SegmentedBar.items>
+                                        <SegmentedBarItem title="{{ General }}" />
+                                        <SegmentedBarItem title="{{ Details }}" />
+                                    </SegmentedBar.items>
+                                </SegmentedBar>
+                                <ios>
+                                    <StackLayout class="border-line"></StackLayout>
+                                </ios>
+                                <StackLayout class="segmented-item" visibility="{{ segmentedBarIndex == 0 ? 'visible' : 'collapsed' }}" >
+                                    <StackLayout visibility="{{ isLoading ? 'collapsed' : 'visible' }}">
+                                        <GridLayout rows="auto" columns="*, auto">
+                                            <Label col="0" text="{{ data.ArbitraryDateString }}" textWrap="true" class="date" />
+                                            <Label col="1" text="&#xf005;" class="fontawesome favorite" visibility="{{ isFavorite ? 'visible' : 'collapsed' }}" />
+                                        </GridLayout>
+                                        <Label text="{{ ExecutiveSummaries }}" class="label" visibility="{{ data.HasExecutiveSummary ? 'visible' : 'collapsed' }}" />
+                                        <HtmlView id="summaryHtmlView" html="{{ data.ExecutiveSummary  }}" class="margin-bottom-10 webview evidence-summary" visibility="{{ data.HasExecutiveSummary ? 'visible' : 'collapsed' }}" />
+                                        <HtmlView id="contentHtmlView" html="{{ data.Content }}" class="margin-bottom-10 webview" visibility="{{ data.Content ? 'visible' : 'collapsed' }}" />             
+                                    </StackLayout>
+                                    <Button text="{{ downloadTitle }}" textWrap="true" tap="onOpenUrl" class="downloadLink" />
+                                </StackLayout>
+                                <StackLayout class="segmented-item" visibility="{{ segmentedBarIndex == 1 ? 'visible' : 'collapsed' }}" >
+
+                                    <StackLayout class="type-wrapper">
+                                        <GridLayout rows="auto" columns="40, auto">
+                                            <Label text="{{ data.Type.Text, data.Type.Text | toIcon() }}" textWrap="true" class="resource-icon primary-backgroundcolor fontawesome" col="0" />
+                                            <Label text="{{ data.Type.Text }}" textWrap="true" class="" col="1"  />
+                                        </GridLayout>
+                                    </StackLayout>                                   
+                                       
+                                    <Label text="{{ data.Author }}" textWrap="true" class="margin-bottom-20 author"  />
+                                    
+                                    <Label text="Level of evidence" class="label" textWrap="true" visibility="{{ data.ShowLoe ? 'visible' : 'collapsed' }}" />
+                                    <Label text="{{ data.LevelOfEvidenceString }}" textWrap="true" class="margin-bottom-10 loe-statement" visibility="{{ data.ShowLoe ? 'visible' : 'collapsed' }}"   />                                    
+                                    
+                                    <Label text="Topics" class="label" textWrap="true" />
+                                    <Repeater items="{{ data.Categories }}">
+                                        <Repeater.itemsLayout>
+                                            <StackLayout class="taxalist" />
+                                        </Repeater.itemsLayout>
+                                        <Repeater.itemTemplate>
+                                            <Label text="{{ Title }}" textWrap="true" class="taxa-item" />
+                                        </Repeater.itemTemplate>
+                                    </Repeater>
+                                    
+                                    <Label text="Jurisdictions" class="label" textWrap="true" />
+                                    <Repeater items="{{ data.Jurisdictions }}">
+                                        <Repeater.itemsLayout>
+                                            <StackLayout class="taxalist" />
+                                        </Repeater.itemsLayout>
+                                        <Repeater.itemTemplate>
+                                            <Label text="{{ Title }}" textWrap="true" class="taxa-item" />
+                                        </Repeater.itemTemplate>
+                                    </Repeater>
+                                </StackLayout>
+                            </StackLayout>
+                        </ScrollView>
+                        </GridLayout>
+                    </TabViewItem.view>
+                </TabViewItem>
+                <TabViewItem title="{{ Related }}">
+                    <TabViewItem.view>
+                        <GridLayout rows="*">
+                            <ListView row="0" items="{{ data.RelatedResources }}" itemTap="onRelatedResourceItemTap" itemLoading="onListViewLoadingFixSelectState">
+                                    <ListView.itemTemplate>
+                                        <StackLayout class="list-item">
+                                            <GridLayout columns="50,*" rows="auto">
+                                                <StackLayout col="0" class="resource-list-item-wrapper"> 
+                                                    <Label text="{{ Type.Text, Type.Text | toIcon() }}" textWrap="false" class="resource-item-icon primary-backgroundcolor fontawesome" />
+                                                </StackLayout>
+                                                <StackLayout col="1">
+                                                    <Label text="{{ Title }}" textWrap="true" class="list-title"/>
+                                                </StackLayout>
+                                            </GridLayout>
+                                        </StackLayout>
+                                    </ListView.itemTemplate>
+                                </ListView>
+                        </GridLayout>
+                    </TabViewItem.view>
+                </TabViewItem>
+            </TabView.items>
+        </TabView>
+    </GridLayout>
+</Page> 

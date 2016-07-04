@@ -1,0 +1,8 @@
+{
+	"nativescript": {
+		"id": "org.nativescript.testNodeFive"
+	},
+	"dependencies": {
+		"tns-core-modules": "2.0.0"
+	}
+}

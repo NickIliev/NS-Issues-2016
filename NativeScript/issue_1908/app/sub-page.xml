@@ -1,0 +1,5 @@
+<Page actionBarHidden="false">
+  <GridLayout>
+    <Label id="name" text="Action Bar Visbile" />
+  </GridLayout>
+</Page>

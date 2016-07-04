@@ -1,0 +1,14 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="onLoaded" 
+      xmlns:t1="partial-views">
+  <StackLayout>
+      <StackLayout >
+        <t1:explore     id="explore"    visibility="{{ currentActive == 'explore' ? 'visible' : 'collapsed' }}" />
+        <t1:community   id="community"  visibility="{{ currentActive == 'community' ? 'visible' : 'collapsed' }}"/>
+      </StackLayout>
+
+      <StackLayout>
+          <Image src="{{ currentActive == 'explore' ? '~/img/icon.png' : '~/img/icon.png' }}"  tap="loadexplore" stretch="none"/>
+          <Image src="{{ currentActive == 'community' ? '~/img/icon-red.png' : '~/img/icon-red.png' }}" tap="loadcommunity" stretch="none"/>
+      </StackLayout>
+  </StackLayout>
+</Page>

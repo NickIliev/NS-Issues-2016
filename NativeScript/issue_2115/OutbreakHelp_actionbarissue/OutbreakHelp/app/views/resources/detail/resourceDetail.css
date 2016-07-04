@@ -1,0 +1,76 @@
+Page{
+	background-color: #FFF;
+    padding: 10;
+}
+
+.segmented-item{
+    margin-top: 20;
+}
+
+.tabpage{
+    margin-bottom: 40;
+    padding: 20;
+}
+
+.loe-statement {
+    
+}
+
+.resource-icon{
+    border-radius: 13;
+    horizontal-align: center;
+    color: #FFF;
+    padding: 6;
+    margin-right: 5;
+}
+
+.favorite{
+    text-align: right;
+    horizontal-align: right;
+    font-size: 18;
+    color: #bdbc26;
+}
+
+.author{
+    color: #666;
+    font-size: 14;
+}
+
+.type-wrapper{
+   margin-bottom: 8;
+}
+
+.related-item {
+   font-size: 14;
+   padding: 10 10; 
+}
+
+.downloadLink{
+    margin: 20 0;
+    background-color: #BD5680;
+    color: white;
+    padding: 10 20;
+    border-radius: 5;
+}
+
+
+.taxalist{
+    margin-bottom: 10;
+    font-size: 12;
+    color: #666;
+}
+
+.taxa-item{
+    padding: 3;
+    background-color: #e6e6e6;
+    margin-bottom: 3;
+    border-radius: 5;
+}
+
+.date{
+    margin-bottom: 10;
+}
+
+.evidence-summary{
+    background-color: #f0f0f0;
+}

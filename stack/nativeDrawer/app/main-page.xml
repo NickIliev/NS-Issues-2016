@@ -1,0 +1,6 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <Placeholder creatingView="creatingView"/>
+  <!--<StackLayout>
+    <Label text="Using Native SideDrawer - android" class="title"/>
+  </StackLayout>-->
+</Page>

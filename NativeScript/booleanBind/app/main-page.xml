@@ -1,0 +1,5 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <StackLayout>
+        <Label text="{{ history }}" class="title" color="{{ history ? '#00FF00' : '#ff0000' }}"/>
+    </StackLayout>
+</Page>

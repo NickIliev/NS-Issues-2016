@@ -1,0 +1,3 @@
+<StackLayout>
+    <Label text="Explore page" textWrap="true" class="title"/> 
+</StackLayout>

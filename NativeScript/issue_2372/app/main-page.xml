@@ -1,0 +1,16 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <!--<Page.actionBar>-->
+    <ActionBar title="Custom Title">
+        <StackLayout orientation="horizontal"
+                    ios:horizontalAlignment="center"
+                    android:horizontalAlignment="left">
+            <Image src="res://nativescript_logo" class="action-image"></Image>
+            <Label text="NativeScript"  class="action-label"></Label>
+        </StackLayout>
+    </ActionBar>
+  <!--</Page.actionBar>-->
+  <StackLayout>
+    <Label text="Issue 2372" class="title"/>
+  </StackLayout>
+</Page>
+

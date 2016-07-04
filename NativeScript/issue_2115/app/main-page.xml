@@ -1,0 +1,24 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo"> 
+  <Page.actionBar>
+      <ActionBar title="Title" icon="">
+          <NavigationButton text="Back" icon="" tap="" />
+          <ActionBar.actionItems>
+              <ActionItem tap="onShareUrl" ios.position="right" android.position="right">
+                  <ActionItem.actionView>
+                      <Label text="FIRST" class="materialdesign actionbaricon" />
+                  </ActionItem.actionView>
+              </ActionItem>
+              <ActionItem tap="toggleFavorite" ios.position="right" android.position="right">
+                  <ActionItem.actionView>
+                      <Label text="SECOND" class="materialdesign actionbaricon" />
+                  </ActionItem.actionView>
+              </ActionItem>
+          </ActionBar.actionItems>
+      </ActionBar>
+  </Page.actionBar>
+  <StackLayout>
+    <Label text="Tap the button" class="title"/>
+    <Button text="TAP" tap="{{ onTap }}" />
+    <Label text="{{ message }}" class="message" textWrap="true"/>
+  </StackLayout>
+</Page>

@@ -1,0 +1,51 @@
+{
+  "project_info": {
+    "project_id": "outbreakhelp-analytics",
+    "project_number": "262516638968",
+    "name": "Outbreak Analytics"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:262516638968:android:7fff3a04a7f5c7bb",
+        "client_id": "android:ca.leaplearning.NccmtOutbreakHelp",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "ca.leaplearning.NccmtOutbreakHelp",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "262516638968-e6hvsag8q8gpq5up3i7gbe57qqmara43.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-59296321-3"
+          }
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 1
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}

@@ -1,0 +1,61 @@
+Page {
+    background-color: #f0eff4;
+    font-size: 16;
+}
+
+SegmentedBar{
+    margin-bottom: 10;
+}
+
+.settings{
+    
+}
+
+.setting-item{
+    background-color: #FFF;
+    padding: 20;
+}
+
+.setting-border{
+    height: 1;
+    width: 100%;
+    background-color: #e6e6e6;
+}
+
+.about{
+    margin-top: 40;
+    font-size: 12px;
+    color: #b0b0b0;
+    horizontal-align: center;
+}
+
+.about-item{
+    horizontal-align: center;
+    margin-bottom: 5;
+}
+
+.label{
+    horizontal-align: left;
+}
+
+.setting-text{
+    horizontal-align: center;
+    color: #cccbc8;
+}
+
+.navarrow{
+    color: #cccbc8;
+    font-size: 25;
+    padding-left: 5;
+}
+
+.clearCacheButton{
+    horizontal-align: center;
+    font-size: 12;
+    padding: 5 20;
+    margin-top: 20;
+}
+
+.termsOfUse{
+    
+}

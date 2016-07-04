@@ -1,0 +1,32 @@
+
+
+<Page loaded="onNavigatingTo" xmlns:lv="nativescript-telerik-ui/listview" xmlns="http://www.nativescript.org/tns.xsd">
+    <Page.actionBar>
+        <ActionBar>
+            <ActionBar.titleView>
+                <Label text="DEMO" class="logo" />
+            </ActionBar.titleView>
+            <ActionBar.actionItems>                
+                <ActionItem tap="otherpage">
+                    <ActionItem.actionView>
+                        <StackLayout>
+                            <Label text="&#xf013;" class="font-awesome-icon nav-icon"  />
+                        </StackLayout>
+                    </ActionItem.actionView>
+                </ActionItem>                
+                <ActionItem tap="otherpage">
+                    <ActionItem.actionView>
+                        <StackLayout>
+                            <Label text="&#xf013;" class="font-awesome-icon nav-icon"  />
+                        </StackLayout>
+                    </ActionItem.actionView>
+                </ActionItem>
+            </ActionBar.actionItems>            
+        </ActionBar>
+    </Page.actionBar>         
+    <StackLayout>
+        <Label text="main page" textWrap="true" />
+        
+    </StackLayout>
+
+</Page>

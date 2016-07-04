@@ -1,0 +1,31 @@
+﻿.material-icon {
+   font-family: 'MaterialIcons-Regular-1';
+}
+
+.font-awesome-icon{
+    font-family: 'FontAwesome';
+}
+ 
+.logo{
+    font-size: 40;
+    margin-top: 20;
+    font-family: 'ChangaOne-Italic';
+}
+.nav-icon{
+    font-size: 20;
+}
+
+ActionBar{
+    background-color: #2980b9;
+    color:#fff;
+    font-family: 'Montserrat-Regular';
+    font-size: 14;    
+}
+
+Page {
+    background-color: #f0f0f0;
+    font-size: 14;
+    color: #343f4b;
+    padding-bottom: 20;
+    font-family: 'Montserrat-Regular';
+}

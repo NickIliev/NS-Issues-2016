@@ -1,0 +1,60 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" xmlns:widgets="widgets" loaded="pageLoaded" navigatingTo="navigatingTo">
+    <Page.actionBar>
+        <ActionBar title="">
+            <ActionBar.actionItems>
+                <ActionItem ios.position="right" tap="onOpenSettings">
+                    <ActionItem.actionView>
+                        <Label id="settingsIcon" text="&#xE8B8;" class="materialdesign settings" />
+                    </ActionItem.actionView>
+                </ActionItem>
+            </ActionBar.actionItems>
+        </ActionBar>
+    </Page.actionBar>
+    <GridLayout rows="*, auto, 40">
+        <GridLayout row="0"  rows="*, 50" class="city-image" >
+            <widgets:logo row="0" />
+            <Button row="1" text="{{ ContactUs }}" textWrap="false" tap="onOpenZendeskContact" class="contact" />
+        </GridLayout>
+        <StackLayout row="1" class="commands">
+            <!--<GridLayout rows="*" columns="2, *, 20">
+                <Label col="0" text="" class="colorbar" />
+                <Label col="1" text="{{ MenuKB }}" class="command-item clickable" tap="onLoadBriefs" />
+                <Label col="2" text="&#xf105;" class="fontawesome arrow clickable" tap="onLoadBriefs" />
+            </GridLayout>-->
+            <StackLayout class="seperator" />
+            <GridLayout rows="*" columns="2, *, 20">
+                <Label col="0" text="" class="colorbar" />
+                <Label col="1"  text="{{ MenuResources }}" class="command-item clickable" tap="onLoadResources"  />
+                <Label col="2"  text="&#xf105;" class="fontawesome arrow clickable" tap="onLoadResources"  />
+            </GridLayout>
+            <StackLayout class="seperator" />
+            <GridLayout rows="*" columns="2, *, 20">
+                <Label col="0" text="" class="colorbar" />
+                <Label col="1" text="{{ MenuKB }}" class="command-item clickable" tap="onLoadZendeskBriefs" />
+                <Label col="2" text="&#xf105;" class="fontawesome arrow clickable" tap="onLoadZendeskBriefs" />
+            </GridLayout>
+            <StackLayout class="seperator" />
+            <GridLayout rows="*" columns="2, *, 20">
+                <Label col="0" text="" class="colorbar" />
+                <Label col="1" text="{{ MenuWebinars }}" class="command-item clickable" tap="onLoadWebinars" />
+                <Label col="2" text="&#xf105;" class="fontawesome arrow clickable" tap="onLoadWebinars" />
+            </GridLayout>
+            <StackLayout class="seperator" />
+            <GridLayout rows="*" columns="2, *, 20">
+                <Label col="0" text="" class="colorbar" />
+                <Label col="1" text="{{ LatestNewsletter }}" class="command-item clickable" tap="onLoadNewsletters" />
+                <Label col="2" text="&#xf105;" class="fontawesome arrow clickable" tap="onLoadNewsletters" />
+            </GridLayout>
+        </StackLayout>
+        <StackLayout row="2" class="footer">
+            <GridLayout rows="auto" columns="*, auto, auto">
+                <StackLayout col="0" orientation="horizontal" tap="onOpenNCCMT">
+                    <Label text="&#xf1f9;" class="fontawesome circle-link copy" />
+                    <Label text="{{ NCCMTLabel }}" class="" />
+                </StackLayout>
+                <Label col="1" tap="onOpenTwitter" text="&#xF099;" class="fontawesome circle-link social" />
+                <Label col="2" tap="onOpenFacebook" text="&#xF09a;" class="fontawesome circle-link social" />        
+            </GridLayout>
+        </StackLayout>
+    </GridLayout>
+</Page>

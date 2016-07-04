@@ -1,0 +1,34 @@
+﻿@import url('~/common.css');
+
+SegmentedBar{
+	margin-top: 5;
+	border-radius: 0;
+	margin-left: 5;
+	margin-right: 5;
+}
+
+Switch {
+    background-color: #448AFF;
+    color: #666666;
+}
+
+.list-item{
+	margin-top:10;
+	margin-bottom: 10;
+	padding-right: 10;
+}
+
+.btn{
+	padding-top: 15;
+	padding-bottom: 15;
+	font-size: 20;
+}
+
+.social{
+    text-align: center;
+    width: 40;
+    padding-top:5;
+    padding-bottom:5;
+    margin-left: 5;
+    margin-right: 5;
+}

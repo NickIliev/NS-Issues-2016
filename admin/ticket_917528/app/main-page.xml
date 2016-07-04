@@ -1,0 +1,13 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <StackLayout>
+    <Label text="Ticket 917528" class="title"/>
+    <ListView items="{{ listItems }}"  loaded="onLoaded" itemLoading="onItemLoading" itemTap="onItemTap">
+        <ListView.itemTemplate>
+            <StackLayout>
+                <Label text="{{ date }}" textWrap="true" />
+                <Label text="{{ resonForHoliday }}" textWrap="true" />
+            </StackLayout>
+        </ListView.itemTemplate>
+    </ListView>
+  </StackLayout>
+</Page>

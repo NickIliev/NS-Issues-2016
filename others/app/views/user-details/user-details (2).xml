@@ -1,0 +1,12 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded">
+	<Page.actionBar>
+		<ActionBar title="User Details">			
+		</ActionBar>
+	</Page.actionBar>
+	<StackLayout>
+		<StackLayout>
+			<Label text="{{ name }}" textWrap="true" class="userName"/>
+			<Button text="{{ followBtnText }}" tap="followUser" visibility="{{ hideFollow ? 'collapsed' : 'visible' }}" id="follow-btn" />
+		</StackLayout>
+	</StackLayout>   
+</Page>

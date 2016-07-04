@@ -1,0 +1,6 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <StackLayout>
+        <Label text="Main page" textWrap="true" id="label"/>
+        <Button text="Go to sub-page with backStackVisbile=False" tap="onTap" />
+    </StackLayout>
+</Page>

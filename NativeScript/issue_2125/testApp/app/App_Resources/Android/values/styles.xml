@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+	<style name="AppThemeBase" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="toolbarStyle">@style/NativeScriptToolbarStyle</item>
+        
+		<item name="colorPrimary">@color/ns_primary</item>
+    	<item name="colorPrimaryDark">@color/ns_primaryDark</item>
+		<item name="colorAccent">@color/ns_accent</item>
+    </style>
+    
+  
+
+    <style name="NativeScriptToolbarStyleBase" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/ns_primary</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.ActionBar</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat</item>
+    </style>
+    
+	<style name="NativeScriptToolbarStyle" parent="NativeScriptToolbarStyleBase">
+    </style>
+	
+	    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+ 
+    <!-- Application theme. -->
+    <style name="SplashTheme" parent="AppBaseTheme">
+        <!-- Disable window features like ActionBar, Title and Overlay. -->
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@drawable/splashscreen</item>
+    </style>
+ 
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+ 
+</resources> 

@@ -1,0 +1,31 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
+  <StackLayout>
+    <Label text="Test label" />
+    <TimePicker hour="5" minute="20"></TimePicker>
+  </StackLayout>
+</Page>
+
+<!--Css works
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
+  <StackLayout>
+    <Label text="Tap the button" class="title"/>
+    <Button text="TAP" tap="{{ onTap }}" />
+  </StackLayout>
+</Page>-->
+
+
+<!--Css doesn't work
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
+  <StackLayout>
+    <Button text="TAP" tap="{{ onTap }}" />
+  </StackLayout>
+</Page>-->
+
+<!--button {
+    background-color: brown;
+    
+    color:#ffffff; 
+    font-style:italic;
+    font-size: 50;
+    font-weight: bold;
+}-->

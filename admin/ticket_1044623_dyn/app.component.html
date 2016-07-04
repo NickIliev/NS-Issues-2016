@@ -1,0 +1,16 @@
+<StackLayout>
+    <!--<Label text="Tap the button" class="title"></Label>
+    
+    <Button text="TAP" (tap)="onTap()"></Button>
+
+    <Label [text]="message" class="message" textWrap="true"></Label>-->
+<!--<DropDown backroundColor="red" [items]="items" [selectedIndex]="selectedIndex"></DropDown>-->
+<SegmentedBar [items]='segmItems'>
+</SegmentedBar>
+    <GridLayout rows="auto, auto, *" columns="auto, *">
+        <DropDownView #dd backroundColor="red" [items]="items" [selectedIndex]="selectedIndex"   (selectedIndexChange)="onchange(dd.selectedIndex)" row="0" colSpan="2"></DropDownView>
+        <Label text="Selected Index:" row="1" col="0" fontSize="18" verticalAlignment="bottom"></Label>
+        <TextField [text]="selected" row="1" col="1" ></TextField>
+    </GridLayout>
+
+</StackLayout>

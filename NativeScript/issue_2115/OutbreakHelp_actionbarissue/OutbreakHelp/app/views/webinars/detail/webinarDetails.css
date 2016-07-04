@@ -1,0 +1,49 @@
+
+.header{
+    background-color: #BD5680;
+    color: #FFF;
+    padding: 40 0;
+}
+
+.file-download{
+    margin-bottom: 10;
+    font-size: 12;
+    background-color: #f0f0f0;
+    padding: 10;
+}
+
+.icon{
+    padding-right: 10;
+    font-size: 20;
+}
+
+.openlink{
+    margin-top: 20;
+}
+
+.webinar-title{
+    font-weight: bold;
+    font-size: 20;
+    margin-bottom: 20;
+}
+
+.date-item{
+    margin-bottom: 10;
+    font-size: 15;
+}
+
+.webinar-date{
+    
+}
+
+.webinar-time{
+    
+}
+
+.view-button{
+    horizontal-align: left;
+    background-color: #B03366;
+    color: #FFF;
+    font-size: 13;
+    padding: 5 10;
+}

@@ -1,0 +1,12 @@
+{
+  "nativescript": {
+    "id": "org.nativescript.uiPrinterPopOver"
+  },
+  "dependencies": {
+    "tns-core-modules": "1.7.1"
+  },
+  "devDependencies": {
+    "nativescript-dev-typescript": "^0.3.0",
+    "typescript": "^1.8.10"
+  }
+}

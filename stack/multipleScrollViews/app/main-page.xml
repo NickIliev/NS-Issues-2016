@@ -1,0 +1,20 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+    loaded="pageLoaded"
+    actionBarHidden="false">
+    <StackLayout>
+        <ScrollView id="scroller1" orientation="horizontal">
+            <StackLayout orientation="horizontal" width="auto" >
+                <Button text="Click me 1" textWrap="true" style="font-size: 12;" height="90" width="550"
+                        borderRadius="0" borderWidth="0.1" borderColor="blue" />
+            </StackLayout>
+        </ScrollView>
+        <GridLayout height="100" width="100" backgroundColor="red" >    
+        </GridLayout>
+                <ScrollView id="scroller2" orientation="horizontal" >
+            <StackLayout orientation="horizontal" width="auto" >
+                <Button text="Click me 4" textWrap="true" style="font-size: 12;" height="90" width="550"
+                        borderRadius="0" borderWidth="0.1" borderColor="blue" />
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</Page>

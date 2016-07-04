@@ -1,0 +1,6 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <StackLayout>
+    <Label text="Share intent Android" class="title"/>
+    <Button text="share" tap="onShare" />
+  </StackLayout>
+</Page>

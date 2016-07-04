@@ -1,0 +1,20 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" navigatingTo="navigatingTo">
+        <Page.actionBar>
+                <ActionBar title="{{ pageTitle }}" >
+                        <NavigationButton tap="onNavigateBack" icon="res://ic_arrow_back_white_24dp"  />
+                </ActionBar>
+        </Page.actionBar>
+        <ListView items="{{ listItems }}" itemTap="onBriefsItemTap" separatorColor="#e5e5e5" itemLoading="onListViewLoadingFixSelectState">
+            <ListView.itemTemplate>
+                <StackLayout class="card">
+                    <StackLayout class="card-inner">
+                        <Image src="{{ HeroImageUrlThumb }}" stretch="aspectFill" style="height: 150" />
+                        
+                        <Label textWrap="true" text="{{ Title }}" class="title" />
+                        
+                        <Label textWrap="true" text="{{ Summary }}" class="summary" />
+                    </StackLayout>
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+</Page>

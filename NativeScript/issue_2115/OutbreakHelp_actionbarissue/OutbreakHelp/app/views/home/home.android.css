@@ -1,0 +1,29 @@
+@import url('~/views/home/common.css');
+
+.circle-link{
+    color: #f4f4f4;
+    horizontal-align: center;
+    vertical-align: center;
+}
+
+
+.copy{
+    padding-right: 5;
+    margin-top: 3;
+}
+
+.contact{
+    text-align: center;
+    background-color: #bd5680;
+    color: #FFF;
+    font-size: 16;
+    horizontal-align: right;
+    margin-right: 20;
+    vertical-align: bottom;
+}
+
+.settings{
+    font-size: 25;
+    padding-right: 10;
+}
+

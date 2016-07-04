@@ -1,0 +1,8 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <Label text="Issue 2238" class="title"/>
+    <Frame id="mainFrame"> 
+  </StackLayout>
+</Page>
+
+

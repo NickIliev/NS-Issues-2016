@@ -1,0 +1,49 @@
+{
+  "name": "tns-template-master-detail",
+  "main": "app.js",
+  "version": "1.6.0",
+  "author": {
+    "name": "Telerik",
+    "email": "support@telerik.com"
+  },
+  "description": "Nativescript master-detail project template",
+  "license": "BSD",
+  "keywords": [
+    "telerik",
+    "mobile",
+    "nativescript",
+    "{N}",
+    "tns",
+    "appbuilder",
+    "template"
+  ],
+  "repository": {
+    "url": "https://github.com/NativeScript/NativeScript/commit/185b4c2480d8b08b569d23ebc1e533f684e434a4"
+  },
+  "_id": "tns-template-master-detail@1.6.0",
+  "_shasum": "2d68a67eade23d30fb21c666075ba85d33ef7ec6",
+  "_resolved": "https://registry.npmjs.org/tns-template-master-detail/-/tns-template-master-detail-1.6.0.tgz",
+  "_from": "tns-template-master-detail@latest",
+  "scripts": {},
+  "_npmVersion": "2.14.7",
+  "_nodeVersion": "4.2.2",
+  "_npmUser": {
+    "name": "enchev",
+    "email": "vladimir.enchev@gmail.com"
+  },
+  "dist": {
+    "shasum": "2d68a67eade23d30fb21c666075ba85d33ef7ec6",
+    "tarball": "http://registry.npmjs.org/tns-template-master-detail/-/tns-template-master-detail-1.6.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "enchev",
+      "email": "vladimir.enchev@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-9-west.internal.npmjs.com",
+    "tmp": "tmp/tns-template-master-detail-1.6.0.tgz_1455722183491_0.4456875186879188"
+  },
+  "directories": {}
+}

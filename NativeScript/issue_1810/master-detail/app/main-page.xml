@@ -1,0 +1,13 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      loaded="pageLoaded">
+  <GridLayout rows="auto, *" cols="auto">
+    <Label text="Items Page" class="title" />
+    <ListView items="{{ items }}" itemTap="listViewItemTap" row="1">
+      <ListView.itemTemplate>
+        <GridLayout rows="auto" columns="auto">
+            <Label text="{{ title }}" class="listItem" />
+        </GridLayout>
+      </ListView.itemTemplate>
+    </ListView>
+  </GridLayout>
+</Page>

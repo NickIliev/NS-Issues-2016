@@ -1,0 +1,22 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      navigatingTo="navigatingTo" 
+      loaded="onPageLoaded" 
+      xmlns:chart="nativescript-telerik-ui-pro/chart">
+    <chart:RadCartesianChart id="cartesianChart">
+        <chart:RadCartesianChart.series>
+                     
+            <chart:BarSeries.horizontalAxis>
+                <chart:CategoricalAxis/>
+            </chart:BarSeries.horizontalAxis>
+            <chart:BarSeries.verticalAxis>
+                <chart:LinearAxis minimum="-10" maximum="25"/>
+            </chart:BarSeries.verticalAxis>
+        
+        
+            <chart:BarSeries items="{{ countriesSource }}" categoryProperty="Country" valueProperty="Amount" />
+            <chart:LineSeries items="{{ yearSource }}" categoryProperty="Country" valueProperty="SecondVal" />
+
+        </chart:RadCartesianChart.series>
+        
+    </chart:RadCartesianChart>
+</Page>

@@ -1,0 +1,6 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <Label text="Camera + bakcgroundHTTP" class="title"/>
+    <Button text="PHOTO Upload" tap="onTap" />
+  </StackLayout>
+</Page>

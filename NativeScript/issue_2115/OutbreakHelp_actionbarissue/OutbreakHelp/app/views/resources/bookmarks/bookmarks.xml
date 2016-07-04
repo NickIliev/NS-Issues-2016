@@ -1,0 +1,27 @@
+<Page loaded="pageLoaded" navigatingFrom="navigatingFrom" navigatingTo="navigatingTo">
+    <Page.actionBar>
+            <ActionBar title="{{ pageTitle }}">
+                    <NavigationButton icon="res://ic_arrow_back_white_24dp" tap="onNavigateBack" />
+            </ActionBar>
+    </Page.actionBar>
+    <GridLayout rows="*" >
+        <ListView items="{{ favorites }}" itemLoading="onListViewLoadingFixSelectState" visibility="{{ hasBookMarks ? 'visible' : 'collapsed' }}" row="0" >
+            <ListView.itemTemplate>
+                <StackLayout class="list-item">
+                    <GridLayout columns="50,*, 40" rows="auto">
+                        <StackLayout col="0" class="resource-list-item-wrapper" tap="onFavoriteItemTap"> 
+                            <Label text="{{ Type.Text, Type.Text | toIcon() }}" textWrap="false" class="resource-item-icon primary-backgroundcolor fontawesome" />
+                        </StackLayout>
+                        <StackLayout col="1" tap="onFavoriteItemTap">
+                            <Label text="{{ Title }}" textWrap="true" class="list-title"/>
+                        </StackLayout>
+                        <Label text="&#xf056;" textWrap="true" class="fontawesome clearicon" col="2" tap="onClearFavorite" />
+                    </GridLayout>
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+        <StackLayout class="no-results-wrapper" visibility="{{ hasBookMarks ? 'collapsed' : 'visible' }}" row="0">
+            <Label text="No Bookmarks" textWrap="true" class="no-bookmarks no-results" />
+        </StackLayout>
+    </GridLayout>
+ </Page>    

@@ -1,0 +1,7 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    </ActionBar.actionItems>
+    <StackLayout>
+        <TimePicker id="TimePickerA" hour="12" minute="30"></TimePicker>
+        <TimePicker id="TimePickerB" hour="17" minute="30"></TimePicker>
+    </StackLayout>
+</Page>

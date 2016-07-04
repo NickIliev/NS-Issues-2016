@@ -1,0 +1,8 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <AbsoluteLayout>
+      <GridLayout width="300" height="300" id="myGrid" backgroundColor="transparent">
+      </GridLayout>
+      <Button text="Tap me" tap="onTap" />
+      <Button text="Or Tap me" tap="onAnotherTap" />
+  </AbsoluteLayout>
+</Page>
