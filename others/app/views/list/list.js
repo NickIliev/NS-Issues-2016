@@ -48,26 +48,12 @@ function startSelection(context) {
     .then(function(selection) {        
         console.log("Selection done:");        
         selection.forEach(function(selected) {
-            console.log("----------------");
-            console.log("uri: " + selected.uri); 
 
-            // No Idea how to tranfer it to base64 in order to 
-            // be uloaded to Telerik Backend Services
-            
-            // selected can give you imageSource with getImage
-            // (which returns a promise in which I have included all the code that follows)
             selected.getImage().then(function(seletedImgSource) {
 
-                // debugger;    
                 var imageAsBase64String = seletedImgSource.toBase64String("JPG");
-                
-                // the result is one BIG string!!!!
-                console.log("result is " + imageAsBase64String);
-                
-                // next step is http://docs.nativescript.org/api-reference/classes/_image_source_.imagesource.html#tobase64string
-                // Class ImageSource.toBase64String
-                // navigation.goToAddPage();
-            });// imageSource.fromFile(normalizedPath);
+
+            });
 
         });
     }).catch(function (e) {

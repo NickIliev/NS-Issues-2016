@@ -1,5 +1,0 @@
-<Page loaded="loaded">
-	<StackLayout orientation="vertical">
-		<Button text="Login with facebook" tap="loginFB" class="loginBtn"/>
-	</StackLayout>	
-</Page>

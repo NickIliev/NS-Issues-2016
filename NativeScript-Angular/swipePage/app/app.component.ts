@@ -24,6 +24,7 @@ export class AppComponent  {
         this._page.actionBarHidden = true;
 
         var that = this;
+        
         this._page.on("swipe", function(args: gestures.SwipeGestureEventData) {
             console.log("Swipe Direction From event function: " + args.direction);
 
