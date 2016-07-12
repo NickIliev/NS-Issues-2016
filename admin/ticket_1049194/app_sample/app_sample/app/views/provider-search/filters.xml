@@ -1,0 +1,66 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      showingModally="onShowingModally"
+      shownModally="onShownModally"   
+      loaded="onLoaded"
+      unloaded="onUnloaded"
+      cssFile="~/views/provider-search/filters.css"
+      codeFile="~/views/provider-search/filters-view.js"
+      xmlns:dd="nativescript-uh-drop-down"
+      xmlns:lv="nativescript-telerik-ui/listview">
+  <StackLayout id="filtersPopup">
+
+    <StackLayout orientation="horizontal">
+        <Label text="Gender: " />
+        <dd:DropDown id="ddlGenderFilter" items="{{ Gender.Genders }}" selectedIndex="{{ Gender.SelectedIndex }}" />
+    </StackLayout>
+
+    <StackLayout orientation="horizontal" id="sectionButtons">
+        <Button id="btnInsurance" text="Insurance" onTap="onInsuranceButtonTap" />
+        <Button id="btnCondition" text="Condition" onTap="onConditionButtonTap" />
+    </StackLayout>
+
+    <StackLayout visibility="{{ showInsurance == false ? 'collapsed' : 'visible' }}">
+      <StackLayout orientation="horizontal">
+          <Label text="Insurance: " />
+          <TextField id="txtInsuranceSearchBox" text="{{ Insurance.SearchTerm }}" />
+      </StackLayout>
+      <StackLayout orientation="horizontal">
+          <Label text="{{ 'Selected: ' + Insurance.SelectedInsurance.InsuranceName }}" />
+          <Button text="X" onTap="clearSelectedInsurance" visibility="{{ Insurance.SelectedInsurance.InsuranceId != null ? 'visible' : 'collapsed' }}" />
+      </StackLayout>
+      <StackLayout cssClass="filtersListView">
+        <lv:RadListView items="{{ Insurance.Insurances.Data }}" id="lvInsurance" itemTap="test" loadOnDemandMode="{{ listViewInsurnacesOnDemandMode }}" loadMoreItems="{{ loadMoreInsurnaces }}" selectionBehavior="Press">            
+            <lv:RadListView.listViewLayout>
+                <lv:RadListView.ListViewLinearLayout scrollDirection="Vertical" itemHeight="60" />
+            </lv:RadListView.listViewLayout>
+            <lv:RadListView.itemTemplate>
+              <StackLayout>
+                <Label text="{{ InsuranceName }}" />
+              </StackLayout>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+      </StackLayout>
+    </StackLayout>
+
+    <StackLayout visibility="{{ showInsurance == true ? 'collapsed' : 'visible' }}">
+      <StackLayout orientation="horizontal">
+          <Label text="Condition: " />
+          <TextField id="txtConditionSearchBox" text="{{ Condition.SearchTerm }}" />
+      </StackLayout>
+      <StackLayout cssClass="filtersListView">
+        <lv:RadListView items="{{ Condition.Conditions.Data }}" id="lvCondition" itemTap="test" loadOnDemandMode="{{ listViewConditionsOnDemandMode }}" loadMoreItems="{{ loadMoreConditions }}">            
+            <lv:RadListView.listViewLayout>
+                <lv:RadListView.ListViewLinearLayout scrollDirection="Vertical" itemHeight="50" />
+            </lv:RadListView.listViewLayout>
+            <lv:RadListView.itemTemplate>
+              <StackLayout>
+                <Label text="{{ ConditionName }}" />
+              </StackLayout>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+      </StackLayout>
+    </StackLayout>
+
+    <Button id="searchButton" text="Search" tap="onSearchButtonTap"/>
+  </StackLayout>
+</Page>

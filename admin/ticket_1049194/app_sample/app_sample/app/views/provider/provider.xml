@@ -1,0 +1,132 @@
+<page loaded="loaded"
+      codeFile="~/views/provider/provider-view.js"
+      xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+      xmlns:customControls="~/components/drawer-menu"
+      xmlns:action-bar="~/components/action-bar">
+    <page.actionBar>
+        <action-bar:actionBar />
+    </page.actionBar>
+
+	<drawer:rad-side-drawer id="drawer" drawerLocation="Left">
+		<drawer:rad-side-drawer.drawerTransition>
+            <drawer:SlideInOnTopTransition />
+		</drawer:rad-side-drawer.drawerTransition>
+
+		<drawer:rad-side-drawer.mainContent>
+            <GridLayout rows="*">
+                <AbsoluteLayout row="0" id="backToResults">
+                    <StackLayout orientation="horizontal" tap="goBackToResults">
+                        <Label text="&#xf104;" class="icon" />
+                        <Label text="Back to Results" class="text" />
+                    </StackLayout>
+                </AbsoluteLayout>
+                <TabView row="0" selectedColor="#85dadf" tabsBackgroundColor="#f9f9f9" id="providerTabView" cssClass="tabView" visibility="{{ isLoading ? 'collapsed' : 'visible' }}">
+                    <TabView.items>
+                        <TabViewItem title="Overview">
+                            <TabViewItem.view>
+                                <ScrollView>
+                                    <GridLayout rows="auto" id="main-content" class="tabViewContent">
+                                        <ActivityIndicator busy="{{ isLoading }}" row="0" />
+                                        <StackLayout row="0">
+                                            <StackLayout id="providerHeader" class="section">
+                                                <Label id="providerName" text="{{ selectedProvider.FullName + ' ' + selectedProvider.Degree }}" />
+                                                <Label text="{{ selectedProvider.Specialties }}" textWrap="true" id="providerSpecialties" />
+                                            </StackLayout>
+                                            <StackLayout class="horizontalLine"></StackLayout>
+                                            <StackLayout id="providerAppointmentNumber" class="section">
+                                                <StackLayout orientation="horizontal" tap="callAppointmentNumber">
+                                                    <Label text="Appointment Number" />
+                                                    <Label id="providerAppointmentNumberValue" text="(216) 844-3951" />
+                                                </StackLayout>
+                                            </StackLayout>
+                                            <StackLayout class="horizontalLine"></StackLayout>
+                                            <StackLayout id="providerPofile" orientation="horizontal">
+                                                <Image id="providerImage" src="{{ selectedProvider.Image != null ? ('data:image/png;base64,' + selectedProvider.Image) : '~/images/profile.png' }}" />
+                                                <StackLayout id="providerDetails">
+                                                    <StackLayout id="providerCerts">
+                                                        <label class="sectionHeader" text="Board Certifications" />
+                                                        <Repeater items="{{ selectedProvider.Certifications }}">
+                                                            <Repeater.itemTemplate>
+                                                                <Label text="{{ Name }}" textWrap="true" class="providerCert" />
+                                                            </Repeater.itemTemplate>
+                                                        </Repeater>
+                                                    </StackLayout>
+                                                    <StackLayout id="providerEdus">
+                                                        <label class="sectionHeader" text="Education &amp; Training" />
+                                                        <Repeater items="{{ selectedProvider.Educations }}">
+                                                            <Repeater.itemTemplate>
+                                                                <StackLayout class="providerEducation">
+                                                                    <!--<Label text="{{ Facility }}" textWrap="true" />-->
+                                                                    <Label text="{{ Details }}" textWrap="true" />
+                                                                    <!--<Label text="{{ Dates }}" textWrap="true" />-->
+                                                                </StackLayout>
+                                                            </Repeater.itemTemplate>
+                                                        </Repeater>
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </GridLayout>
+                                </ScrollView>
+                            </TabViewItem.view>
+                        </TabViewItem>
+                        <TabViewItem title="Bio">
+                            <TabViewItem.view>
+                                <ScrollView>
+                                    <StackLayout class="pageContent">
+                                        <Label text="Biography goes here" />
+                                        <!--<Placeholder creatingView="creatingVideo" />-->
+                                    </StackLayout>
+                                </ScrollView>
+                            </TabViewItem.view>
+                        </TabViewItem>
+                        <TabViewItem title="Office Locations">
+                            <TabViewItem.view>
+                                <ListView items="{{ selectedProvider.Locations }}" itemTap="getDirections">
+                                    <ListView.itemTemplate>
+                                        <StackLayout class="providerLocation section">
+                                            <Label text="{{ Name }}" textWrap="true" class="locationName" />
+                                            <Label text="{{ Address }}" textWrap="true" class="locationAddress" />
+                                            <Label text="{{ AppointmentPhone }}" textWrap="true" class="locationAppointmentPhone" />
+                                            <StackLayout class="providerLocationAvailability">
+                                                <Label text="Availability" textWrap="true" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </ListView.itemTemplate>
+                                </ListView>
+                            </TabViewItem.view>
+                        </TabViewItem>
+                        <TabViewItem title="Awards">
+                            <TabViewItem.view>
+                                <ScrollView>
+                                    <StackLayout class="pageContent">
+                                        <Label text="Awards" />
+                                    </StackLayout>
+                                </ScrollView>
+                            </TabViewItem.view>
+                        </TabViewItem>
+                    </TabView.items>
+                </TabView>
+                
+                <StackLayout row="0" id="bottomButtons">
+                    <StackLayout orientation="horizontal">
+                        <StackLayout orientation="horizontal" id="bottomButtonLeft" tap="requestAnAppointment">
+                            <Label text="Request an Appointment" />
+                            <Label text="&#xf105;" class="icon" />
+                        </StackLayout>
+                        <StackLayout orientation="horizontal" id="bottomButtonRight" tap="callAppointmentNumber">
+                            <Label text="Call to Schedule" />
+                            <Label text="&#xf105;" class="icon" />
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+
+            </GridLayout>
+		</drawer:rad-side-drawer.mainContent>
+
+		<drawer:rad-side-drawer.drawerContent>
+            <customControls:drawer-menu />
+		</drawer:rad-side-drawer.drawerContent>
+
+	</drawer:rad-side-drawer>
+</page>

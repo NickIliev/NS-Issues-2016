@@ -1,0 +1,10 @@
+<TabView #tabs [(ngModel)]="selectedIndex" cssClass="elephant">>
+    <StackLayout #tabOne *tabItem="{ title: 'First'}" >
+        <Label text="You are in Tab 1"></Label>
+        <Label [text]="selectedIndex"></Label>
+    </StackLayout>
+    <StackLayout #tabTwo *tabItem="{ title: 'Second'}" >
+        <Label text="You are in Tab 2"></Label>
+        <Label [text]="selectedIndex"></Label>
+    </StackLayout>
+</TabView>

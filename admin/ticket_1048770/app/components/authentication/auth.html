@@ -1,0 +1,31 @@
+<StackLayout #loginlayout>
+  <Label [text]="authentication.message" class="message"></Label>
+
+<Textfield
+  #mylogin:
+  [text]="authentication.username",
+  hint="username">
+<Textfield>
+
+<Textfield
+  #mypassword:
+  [text]="authentication.password"
+  hint="password"
+  secure=true>
+<Textfield>
+
+<Button *ng-if="!authentication.loggedIn"
+  (tap)="onLoginTap(loginlayout, mylogin.text, mypassword.text)"
+  width="150px"
+  text="login"
+  dock="left">
+</Button>
+
+<Button
+  *ng-if="!authentication.loggedIn"
+  (tap)="authentication.logout()"
+  width="150px"
+  text="login"
+  dock="left">
+</Button>
+</StackLayout>

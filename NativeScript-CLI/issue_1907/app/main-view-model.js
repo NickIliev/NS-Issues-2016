@@ -5,7 +5,7 @@ var HelloWorldModel = (function (_super) {
     function HelloWorldModel() {
         _super.call(this);
         // Initialize default values.
-        this._counter = 400;
+        this._counter = 100;
         this.updateMessage();
     }
     Object.defineProperty(HelloWorldModel.prototype, "message", {

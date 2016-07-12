@@ -1,0 +1,18 @@
+<GridLayout rows="*" id="main-content">
+    <ActivityIndicator busy="{{ isLoading }}" row="0" />
+    <DockLayout row="0" stretchLastChild="true">
+        <Image dock="top" src="~/images/welcome/welcomeImage.png" />
+        <StackLayout dock="bottom" orientation="horizontal" width="100%">
+            <Button dock="left" id="iconPHR" onTap="findPHRTap" backgroundImage="~/images/welcome/iconPHR.png" width="50%" />
+            <StackLayout width="50%">
+                <StackLayout orientation="horizontal" height="50%">
+                    <Button id="iconFindProvider" onTap="findProviderTap" backgroundImage="~/images/welcome/iconFindProvider.png" width="50%" />
+                    <Button id="iconFindLocation" onTap="findLocationTap" backgroundImage="~/images/welcome/iconFindLocation.png" width="50%" />
+                </StackLayout>
+                <StackLayout height="50%">
+                    <Button id="iconFindER" onTap="test" backgroundImage="~/images/welcome/iconFindER.png" height="100%" />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </DockLayout>
+</GridLayout>

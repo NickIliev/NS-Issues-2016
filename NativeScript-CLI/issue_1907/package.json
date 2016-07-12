@@ -10,6 +10,7 @@
     }
   },
   "dependencies": {
+    "nativescript-telerik-ui-pro": "^1.2.0",
     "tns-core-modules": "2.1.0"
   },
   "devDependencies": {

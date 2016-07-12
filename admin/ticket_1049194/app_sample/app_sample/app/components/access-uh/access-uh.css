@@ -1,0 +1,32 @@
+#iconPHR,
+#iconFindProvider,
+#iconFindLocation,
+#iconFindER {
+    background-repeat: no-repeat;
+    background-position: center;
+    border-style: solid;
+    border-color:#e3e3e3;
+    border-width: 1;
+}
+
+#iconFindProvider,
+#iconFindLocation,
+#iconFindER {
+    background-color: #f9f9f9;
+}
+
+#iconPHR {
+    background-size: 178 132;
+}
+
+#iconFindProvider {
+    background-size: 86 124;
+}
+
+#iconFindLocation {
+    background-size: 108 126;
+}
+
+#iconFindER {
+    background-size: 284 62;
+}

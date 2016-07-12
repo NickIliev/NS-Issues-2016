@@ -19,7 +19,7 @@ export class HelloWorldModel extends observable.Observable {
         super();
 
         // Initialize default values.
-        this._counter = 400;
+        this._counter = 100;
         this.updateMessage();
     }
 

@@ -7,15 +7,26 @@ export function navigatingTo(args: EventData) {
     var page = <Page>args.object;
 }
 
-var firebase = require("nativescript-plugin-firebase");
+// var firebase = require("nativescript-plugin-firebase");
 
-firebase.init({
-    persist: true // Allow disk persistence. Default false.
-    }).then(
-        function (instance) {
-            console.log("firebase.init done");
-        },
-        function (error) {
-            console.log("firebase.init error: " + error);
-        }
+// firebase.init({
+//     persist: true // Allow disk persistence. Default false.
+//     }).then(
+//         function (instance) {
+//             console.log("firebase.init done");
+//         },
+//         function (error) {
+//             console.log("firebase.init error: " + error);
+//         }
+// );
+
+import firebase = require("nativescript-plugin-firebase");
+
+firebase.init(<firebase.InitOptions>{}).then(
+  (instance) => {
+    console.log("firebase.init done");
+  },
+  (error) => {
+    console.log("firebase.init error: " + error);
+  }
 );

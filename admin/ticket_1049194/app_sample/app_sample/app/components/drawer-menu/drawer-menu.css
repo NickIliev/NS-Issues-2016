@@ -1,0 +1,46 @@
+#drawer-content {
+	padding: 0;
+	margin: 0;
+	background-color: white;
+}
+
+#drawer-content Image {
+	width: 228;
+	horizontal-align: center;
+	vertical-align: center;
+}
+
+#drawer-content .menuItem {
+	color: #fff;
+	border-style: solid;
+	border-width: .5;
+	border-color: #9e0425;
+    margin: 0;
+}
+
+#drawer-content .menuItem StackLayout {
+	vertical-align: center;
+}
+
+#drawer-content .menuItem StackLayout.menuItemLabel {
+	padding-left: 30;
+	width: 80%;
+	font-size: 12;
+}
+
+#drawer-content .menuItem StackLayout.menuItemLabel Label {
+	horizontal-align: left;
+}
+
+#drawer-content .menuItem StackLayout.menuItemIcon {
+	padding-right: 30;
+	width: 20%;
+}
+
+#drawer-content .menuItem StackLayout.menuItemIcon Label {
+	horizontal-align: right;
+}
+
+#drawer-content .menuItem Label {
+	color: #fff;
+}

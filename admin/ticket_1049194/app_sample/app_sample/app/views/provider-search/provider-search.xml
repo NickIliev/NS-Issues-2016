@@ -1,0 +1,144 @@
+<page loaded="loaded"
+      codeFile="~/views/provider-search/provider-search-view.js"
+      xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+      xmlns:lv="nativescript-telerik-ui/listview"
+      xmlns:dd="nativescript-uh-drop-down"
+      xmlns:customControls="~/components/drawer-menu"
+      xmlns:action-bar="~/components/action-bar"
+      xmlns:access-uh="~/components/access-uh">
+    <page.actionBar>
+        <action-bar:actionBar />
+    </page.actionBar>
+
+	<drawer:rad-side-drawer id="drawer" drawerLocation="Left">
+		<drawer:rad-side-drawer.drawerTransition>
+            <drawer:SlideInOnTopTransition />
+		</drawer:rad-side-drawer.drawerTransition>
+
+		<drawer:rad-side-drawer.mainContent>
+            <android>
+                <TabView id="mainTabs" selectedColor="#85dadf" tabsBackgroundColor="#f9f9f9" cssClass="tabView">
+                    <TabView.items>
+
+                        <TabViewItem title="Access UH">
+                            <TabViewItem.view>
+                                <GridLayout rows="auto, *" id="main-content">
+                                    <Label id="lblNoRecordsFound" text="There are no search results to display." row="1" visibility="{{ searchResults.Count == 0 && !loadingResults ? 'visible' : 'collapsed' }}" />
+                                    <StackLayout row="1" visibility="{{ searchResults.Count != 0 || loadingResults ? 'visible' : 'collapsed' }}">
+                                        <lv:RadListView items="{{ searchResults.Data }}" id="providers-list" itemTap="selectProvider" loadOnDemandMode="{{ listViewOnDemandMode }}" loadMoreDataRequested="{{ loadMoreResults }}">            
+                                            <lv:RadListView.listViewLayout>
+                                                <lv:RadListView.ListViewLinearLayout scrollDirection="Vertical" itemHeight="50" />
+                                            </lv:RadListView.listViewLayout>
+                                            <lv:RadListView.itemTemplate>
+                                                <GridLayout columns="auto, *, auto" rows="auto, auto, auto, auto" class="searchResultItem">
+                                                    <Image class="providerImage" src="{{ Image != null ? ('data:image/png;base64,' + Image) : '~/images/profile.png' }}" col="0" row="1" horizontalAlignment="left" />
+                                                    <StackLayout col="1" row="1" class="providerDetails" textwrap="true">
+                                                        <Label class="providerResultText" textWrap="true">
+                                                            <FormattedString>
+                                                                <Span text="{{ FullName }}" fontAttributes="Bold"></Span>
+                                                                <Span text=" - " visibility="{{ SpecialtiesText !== '' ? 'visible' : 'collapsed' }}"></Span>
+                                                                <Span text="{{ SpecialtiesText }}" class="providerSpecialtiesText"></Span>
+                                                            </FormattedString>
+                                                        </Label>
+                                                    </StackLayout>
+                                                </GridLayout>
+                                            </lv:RadListView.itemTemplate>
+                                        </lv:RadListView>
+                                    </StackLayout>
+                                    <StackLayout row="0" id="searchSection">
+                                        <Label text="Find a Provider" class="pageTitle" />
+                                        <GridLayout rows="auto" cols="auto, *">
+                                            <TextField row="0" col="1" colSpan="2" id="txtSearchBox" text="{{ searchTerm }}" hint="Search for a provider" returnKeyType="search" returnPress="search" />
+                                            <Button row="0" col="2" id="btnSearchIcon" class="icon" text="&#xf002;" onTap="search" />
+                                        </GridLayout>
+                                        <StackLayout>
+                                            <DockLayout width="100%" id="slBtnFilters" orientation="horizontal" onTap="showFilters">
+                                                <Label dock="left" text="Filter and Sort Locations by" id="lblBtnFilters" />
+                                                <Label dock="right" text="+" id="lblBtnFiltersIcon" />
+                                            </DockLayout>
+                                            <Label dock="right" id="lblResultsCount"
+                                                    visibility="{{ searchResults.Count === -1 ? 'collapsed' : 'visible' }}"
+                                                    text="{{ searchResults.Count + ' result' + (searchResults.Count === 1 ? '' : 's') + ' found.' }}" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <!--<ActivityIndicator busy="{{ isLoading }}" row="1" />-->
+                                </GridLayout>
+                            </TabViewItem.view>
+                        </TabViewItem>
+
+                        <TabViewItem title="Explore Health Issues">
+							<TabViewItem.view>
+                                <Label text="Explore Health Issues" />
+                        		<!--<access-uh:explore-health />-->
+                            </TabViewItem.view>
+    					</TabViewItem>
+                        
+                    </TabView.items>
+                </TabView>
+            </android>
+            <!-- TODO: modularize the segmentedbar and tabview menu -->
+            <ios>
+               <StackLayout>
+                <SegmentedBar id="tabView" SelectedIndex="{{ selectedScreen }}" cssClass="segmentedBar" selectedBackgroundColor="#BD3839" color="#BD3839">
+                  <SegmentedBar.items>
+                    <SegmentedBarItem title="Access UH" />
+                    <SegmentedBarItem title="Explore Health Issues" />
+                  </SegmentedBar.items>
+                </SegmentedBar>
+
+                <StackLayout visibility="{{ selectedScreen === 0 ? 'visible' : 'collapsed' }}" >
+                    <GridLayout rows="auto, *" id="main-content">
+                        <Label id="lblNoRecordsFound" text="There are no search results to display." row="1" visibility="{{ searchResults.Count == 0 && !isLoading ? 'visible' : 'collapsed' }}" />
+                        <StackLayout row="1" visibility="{{ searchResults.Count != 0 ? 'visible' : 'collapsed' }}">
+                            <lv:RadListView items="{{ searchResults.Data }}" id="providers-list" itemTap="selectProvider" loadOnDemandMode="{{ listViewOnDemandMode }}" loadMoreDataRequested="{{ loadMoreResults }}">            
+                                <lv:RadListView.listViewLayout>
+                                    <lv:RadListView.ListViewLinearLayout scrollDirection="Vertical" itemHeight="50" />
+                                </lv:RadListView.listViewLayout>
+                                <lv:RadListView.itemTemplate>
+                                    <GridLayout columns="auto, *, auto" rows="auto, auto, auto, auto" class="searchResultItem">
+                                        <Image class="providerImage" src="{{ Image != null ? ('data:image/png;base64,' + Image) : '~/images/profile.png' }}" col="0" row="1" horizontalAlignment="left" />
+                                        <StackLayout col="1" row="1" class="providerDetails" textwrap="true">
+                                            <Label class="providerResultText" textWrap="true">
+                                                <FormattedString>
+                                                    <Span text="{{ FullName }}" fontAttributes="Bold"></Span>
+                                                    <Span text=" - " visibility="{{ SpecialtiesText !== '' ? 'visible' : 'collapsed' }}"></Span>
+                                                    <Span text="{{ SpecialtiesText }}" class="providerSpecialtiesText"></Span>
+                                                </FormattedString>
+                                            </Label>
+                                        </StackLayout>
+                                    </GridLayout>
+                                </lv:RadListView.itemTemplate>
+                            </lv:RadListView>
+                        </StackLayout>
+                        <StackLayout row="0" id="searchSection">
+                            <Label text="Find a Provider" class="pageTitle" />
+                            <GridLayout rows="auto" cols="auto, *">
+                                <TextField row="0" col="1" colSpan="2" id="txtSearchBox" text="{{ searchTerm }}" hint="Search for a provider" returnKeyType="search" returnPress="search" />
+                                <Button row="0" col="2" id="btnSearchIcon" class="icon" text="&#xf002;" onTap="search" />
+                            </GridLayout>
+                            <StackLayout>
+                                <DockLayout width="100%" id="slBtnFilters" orientation="horizontal" onTap="showFilters">
+                                    <Label dock="left" text="Filter and Sort Locations by" id="lblBtnFilters" />
+                                    <Label dock="right" text="+" id="lblBtnFiltersIcon" />
+                                </DockLayout>
+                                <Label dock="right" id="lblResultsCount"
+                                        visibility="{{ searchResults.Count === -1 ? 'collapsed' : 'visible' }}"
+                                        text="{{ searchResults.Count + ' result' + (searchResults.Count === 1 ? '' : 's') + ' found.' }}" />
+                            </StackLayout>
+                        </StackLayout>
+                        <!--<ActivityIndicator busy="{{ isLoading }}" row="1" />-->
+                    </GridLayout>
+                </StackLayout>
+                <StackLayout visibility="{{ selectedScreen === 1 ? 'visible' : 'collapsed' }}" >
+                    <access-uh:explore-health />
+                </StackLayout>
+              </StackLayout>
+            </ios>
+		</drawer:rad-side-drawer.mainContent>
+
+		<drawer:rad-side-drawer.drawerContent>
+            <customControls:drawer-menu />
+		</drawer:rad-side-drawer.drawerContent>
+
+	</drawer:rad-side-drawer>
+</page>

@@ -1,0 +1,32 @@
+.ehiSection {
+    padding: 0 30;
+    margin-top: 27;
+}
+
+.ehiTop {
+    margin-top: 30;
+    margin-bottom: 27
+}
+
+.ehiSection {
+    font-size: 14;
+}
+
+.ehiSection Button {
+    margin-top: 18;
+    background-image: none;
+    background-color: #bf0d32;
+    color: #fff;
+    border-radius: 25;
+    text-transform: capitalize;
+}
+
+.ehiSectionTitle {
+    font-size: 16;
+    color: #ed3942;
+    margin-bottom: 5;
+}
+
+.sectionDivider {
+    margin: 0 15;
+}

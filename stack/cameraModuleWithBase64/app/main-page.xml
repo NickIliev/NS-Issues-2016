@@ -1,0 +1,7 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+
+    <Button text="Take Pic" tap="takePicture" />
+
+  </StackLayout>
+</Page>

@@ -1,0 +1,165 @@
+#providerTabView {
+    margin-bottom: 45;
+    margin-top: 30;
+}
+
+.section {
+    padding: 9 17;
+}
+
+.sectionHeader {
+    font-size: 14;
+    font-weight: bold;
+}
+
+#backToResults {
+    padding: 0 17;
+    width: 100%;
+    height: 30;
+    vertical-align: top;
+    border-style: solid;
+    border-width: .5;
+    border-color: #eeeae1;
+}
+
+#backToResults StackLayout {
+    height: 100%;
+}
+
+#backToResults StackLayout Label {
+    vertical-align: center;
+}
+
+#backToResults Label.text {
+    font-size: 14;
+    font-weight: normal;
+    color: #929292;
+}
+
+#backToResults Label.icon {
+    margin-right: 15;
+    font-size: 20;
+    color: #bf0d32;
+}
+
+#providerHeader {
+    padding-top: 15;
+    padding-bottom: 10;
+}
+
+#providerName {
+    font-size: 16;
+    font-weight: bold;
+}
+
+#providerAppointmentNumber Label {
+    font-size: 14;
+}
+
+#providerSpecialties {
+    font-size: 14;
+}
+
+#providerAppointmentNumber {
+    padding-top: 9;
+    padding-bottom: 9;
+    font-weight: bold;
+}
+
+#providerAppointmentNumberValue {
+    margin-left: 5;
+    color: #bf0d32;
+}
+
+#providerPofile {
+    padding: 9 17;
+}
+
+#providerPofile Image,
+#providerPofile StackLayout {
+    vertical-align: top;
+}
+
+#providerImage {
+    width: 113;
+    height: 124;
+}
+
+#providerDetails {
+    margin-left: 10;
+}
+
+#providerCerts {
+    margin-bottom: 10;
+}
+
+.providerCert,
+.providerEducation Label {
+    font-size: 12;
+}
+
+#bottomButtons {
+    height: 100%;
+    width: 100%;
+    vertical-align: bottom;
+}
+
+#bottomButtons StackLayout {
+    height: 45;
+}
+
+#bottomButtons StackLayout Label {
+    margin: 15 0;
+    font-size: 14;
+    font-weight: bold;
+    color: #fff;
+}
+
+#bottomButtons StackLayout Label.icon {
+    margin-left: 10;
+    font-size: 16;
+}
+
+#bottomButtonLeft,
+#bottomButtonRight {
+    horizontal-align: center;
+}
+
+#bottomButtonLeft {
+    background-color: #bf0d32;
+    width: 58%;
+}
+
+#bottomButtonRight {
+    background-color: #9e0425;
+    width: 43%;
+}
+
+.providerLocation {
+    font-size: 12;
+}
+
+.locationName {
+    font-weight: bold;
+    font-size: 14;
+}
+
+.locationAppointmentPhone {
+    color: #bf0d32;
+}
+
+.providerLocationAvailability {
+    margin-top: 8;
+}
+
+.test {
+    border-width: 1;
+    border-style: solid;
+    border-color: blue;
+}
+
+.test2 {
+    border-width: 1;
+    border-style: solid;
+    border-color: green;
+}

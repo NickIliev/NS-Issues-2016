@@ -1,0 +1,234 @@
+<Page loaded="pageLoaded"
+  navigatingTo="navigatingTo"
+ xmlns:dd="nativescript-drop-down"
+ xmlns:chart="nativescript-telerik-ui-pro/chart"
+ xmlns:Slides="nativescript-slides" actionBarHidden="true">
+      
+  <!-- <ActionBar>
+    <ActionBar.titleView>
+     <NavigationButton visibility="collapsed"/>
+      <GridLayout columns="auto, auto" rows="*,*" cssClass="header">
+        <Image src="~/images/logo_tagline.png" col="0" row="0" horizontalAlignment="left" verticalAlignment="center" cssClass="logo"/>
+        <Image src="~/images/profile_picture.png" col="1" row="0" horizontalAlignment="right" verticalAlignment="center" cssClass="profilePic" />
+      </GridLayout>
+    </ActionBar.titleView>
+  </ActionBar>  -->
+      <ScrollView>
+        <GridLayout rows="180, 410, 100" columns="*">
+          <GridLayout rows="*, *,*" columns="*, *, *, *" orientation="vertical"> 
+            <GridLayout row="0" col="0" colSpan="4" height="70">
+              <Image src="~/images/logo_tagline.png" horizontalAlignment="left" verticalAlignment="center" cssClass="logo" />
+              <Image src="~/images/profile_picture.png" horizontalAlignment="right" verticalAlignment="center" cssClass="profilePic" tap="pieChart" />
+            </GridLayout>
+            <GridLayout row="1" col="0" colSpan="4" style.backgroundColor="#9E3293"  height="50">
+              <Label width="70%" text="Accounts Profit and Loss Statement" cssClass="textCenter" horizontalAlignment="left" verticalAlignment="center" />
+              <GridLayout width="30%" height="40" style.backgroundColor="#CDCDCD" horizontalAlignment="right" verticalAlignment="center" cssClass="dropDown">
+                <dd:DropDown items="{{ items }}" selectedIndex="{{ selectedIndex }}" cssClass="dropIcon"/>
+              </GridLayout>
+            </GridLayout>
+            <GridLayout row="2" col="0" colSpan="4">
+              <StackLayout style.backgroundColor="#BDBDBD" cssClass="dropDownlength">
+                <dd:DropDown items="{{ cash }}" selectedIndex="{{ selectedIndex }}" cssClass="dropDetails"/>
+              </StackLayout>
+            </GridLayout>
+          </GridLayout>
+          <GridLayout row="1" height="500">
+            <Slides:SlideContainer id="slideContainer" loop="true" height="400">
+              <Slides:Slide  height="500">
+                <chart:RadCartesianChart id="" selectionMode="Single" height="500">
+                  <chart:RadCartesianChart.series>
+                      <chart:BarSeries seriesName="Bar1"  categoryProperty="name" items="{{ info.chartSource1 }}" valueProperty="ExpenseDirect" selectionMode="Series" stackMode="Stack" showLabels="true" />
+                      <chart:BarSeries seriesName="Bar" items="{{ info.chartSource1 }}" valueProperty="ExpenseExceptDirect" selectionMode="Series" stackMode="Stack" categoryProperty="name" showLabels="true" />
+                       <chart:BarSeries seriesName="Bar2" valueProperty="netProfit" items="{{ info.chartSource1 }}" selectionMode="Series" stackMode="Stack" categoryProperty="name" showLabels="true" />
+                  </chart:RadCartesianChart.series>
+                  <chart:RadCartesianChart.horizontalAxis>
+                      <chart:CategoricalAxis labelTextColor="#cb4b16" labelSize="10" lineThickness="2" lineColor="Red" />
+                  </chart:RadCartesianChart.horizontalAxis>
+                  <chart:RadCartesianChart.verticalAxis>
+                      <chart:LinearAxis labelTextColor="Green" lineThickness="2" lineColor="Red" />
+                  </chart:RadCartesianChart.verticalAxis>
+                  <chart:RadCartesianChart.grid>
+                    <chart:RadCartesianChartGrid 
+                        horizontalLinesVisible="true" 
+                        verticalLinesVisible="false" 
+                        verticalStripLinesVisible="false"
+                        horizontalStrokeColor="#e5e5e5"
+                        verticalStripLineColor="#00000000, #00000000"
+                        horizontalStripLineColor="#f8f8f8, #00000000"/>
+                  </chart:RadCartesianChart.grid>
+                  <chart:RadCartesianChart.palettes>
+                    <chart:Palette seriesName="Bar">
+                        <chart:Palette.entries>
+                            <chart:PaletteEntry fillColor="#F37122" strokeWidth="0" android:strokeColor="#F37122" />
+                        </chart:Palette.entries>
+                    </chart:Palette>
+                    <chart:Palette seriesName="Bar1">
+                        <chart:Palette.entries>
+                            <chart:PaletteEntry fillColor="#9E3293" strokeWidth="0" android:strokeColor="#9E3293" />
+                        </chart:Palette.entries>
+                    </chart:Palette>
+                    <chart:Palette seriesName="Bar2">
+                      <chart:Palette.entries>
+                        <chart:PaletteEntry fillColor="#616161" strokeWidth="0" android:strokeColor="#616161" />
+                      </chart:Palette.entries>
+                    </chart:Palette>
+                  </chart:RadCartesianChart.palettes>
+                </chart:RadCartesianChart>
+              </Slides:Slide>
+
+              <Slides:Slide>
+                <chart:RadCartesianChart id="chart" selectionMode="Single" height="500">
+                  <chart:RadCartesianChart.series>
+                      <chart:BarSeries seriesName="Bar1"  categoryProperty="name" items="{{ source.chartSource2 }}" valueProperty="ExpenseDirect" selectionMode="Series" stackMode="Stack" showLabels="true" />
+                      <chart:BarSeries seriesName="Bar" items="{{ source.chartSource2 }}" valueProperty="ExpenseExceptDirect" selectionMode="Series" stackMode="Stack" categoryProperty="name" showLabels="true" />
+                       <chart:BarSeries seriesName="Bar2" valueProperty="netProfit" items="{{ source.chartSource2 }}" selectionMode="Series" stackMode="Stack" categoryProperty="name" showLabels="true" />
+                  </chart:RadCartesianChart.series>
+                  <chart:RadCartesianChart.horizontalAxis>
+                      <chart:CategoricalAxis labelTextColor="#cb4b16" labelSize="10" lineThickness="2" lineColor="Red" />
+                  </chart:RadCartesianChart.horizontalAxis>
+                  <chart:RadCartesianChart.verticalAxis>
+                      <chart:LinearAxis labelTextColor="Green" lineThickness="2" lineColor="Red" />
+                  </chart:RadCartesianChart.verticalAxis>
+                  <chart:RadCartesianChart.grid>
+                    <chart:RadCartesianChartGrid 
+                        horizontalLinesVisible="true" 
+                        verticalLinesVisible="false" 
+                        verticalStripLinesVisible="false"
+                        horizontalStrokeColor="#e5e5e5"
+                        verticalStripLineColor="#00000000, #00000000"
+                        horizontalStripLineColor="#f8f8f8, #00000000"/>
+                  </chart:RadCartesianChart.grid>
+                  <chart:RadCartesianChart.palettes>
+                    <chart:Palette seriesName="Bar">
+                        <chart:Palette.entries>
+                            <chart:PaletteEntry fillColor="#F37122" strokeWidth="0" android:strokeColor="#F37122" />
+                        </chart:Palette.entries>
+                    </chart:Palette>
+                    <chart:Palette seriesName="Bar1">
+                        <chart:Palette.entries>
+                            <chart:PaletteEntry fillColor="#9E3293" strokeWidth="0" android:strokeColor="#9E3293" />
+                        </chart:Palette.entries>
+                    </chart:Palette>
+                    <chart:Palette seriesName="Bar2">
+                      <chart:Palette.entries>
+                        <chart:PaletteEntry fillColor="#616161" strokeWidth="0" android:strokeColor="#616161" />
+                      </chart:Palette.entries>
+                    </chart:Palette>
+                  </chart:RadCartesianChart.palettes>
+                </chart:RadCartesianChart>
+              </Slides:Slide>
+
+              <Slides:Slide>
+
+              <chart:RadCartesianChart id="chart" selectionMode="Single" height="500">
+                  <chart:RadCartesianChart.series>
+                      <chart:BarSeries seriesName="Bar1"  categoryProperty="name" items="{{ chart3.chartSource3 }}" valueProperty="ExpenseDirect" selectionMode="Series" stackMode="Stack" showLabels="true" />
+                      <chart:BarSeries seriesName="Bar" items="{{ chart3.chartSource3 }}" valueProperty="ExpenseExceptDirect" selectionMode="Series" stackMode="Stack" categoryProperty="name" showLabels="true" />
+                       <chart:BarSeries seriesName="Bar2" valueProperty="netProfit" items="{{ chart3.chartSource3 }}" selectionMode="Series" stackMode="Stack" categoryProperty="name" showLabels="true" />
+                  </chart:RadCartesianChart.series>
+                  <chart:RadCartesianChart.horizontalAxis>
+                      <chart:CategoricalAxis labelTextColor="#cb4b16" labelSize="10" lineThickness="2" lineColor="Red" />
+                  </chart:RadCartesianChart.horizontalAxis>
+                  <chart:RadCartesianChart.verticalAxis>
+                      <chart:LinearAxis labelTextColor="Green" lineThickness="2" lineColor="Red" />
+                  </chart:RadCartesianChart.verticalAxis>
+                  <chart:RadCartesianChart.grid>
+                    <chart:RadCartesianChartGrid 
+                        horizontalLinesVisible="true" 
+                        verticalLinesVisible="false" 
+                        verticalStripLinesVisible="false"
+                        horizontalStrokeColor="#e5e5e5"
+                        verticalStripLineColor="#00000000, #00000000"
+                        horizontalStripLineColor="#f8f8f8, #00000000"/>
+                  </chart:RadCartesianChart.grid>
+                  <chart:RadCartesianChart.palettes>
+                    <chart:Palette seriesName="Bar">
+                        <chart:Palette.entries>
+                            <chart:PaletteEntry fillColor="#F37122" strokeWidth="0" android:strokeColor="#F37122" />
+                        </chart:Palette.entries>
+                    </chart:Palette>
+                    <chart:Palette seriesName="Bar1">
+                        <chart:Palette.entries>
+                            <chart:PaletteEntry fillColor="#9E3293" strokeWidth="0" android:strokeColor="#9E3293" />
+                        </chart:Palette.entries>
+                    </chart:Palette>
+                    <chart:Palette seriesName="Bar2">
+                      <chart:Palette.entries>
+                        <chart:PaletteEntry fillColor="#616161" strokeWidth="0" android:strokeColor="#616161" />
+                      </chart:Palette.entries>
+                    </chart:Palette>
+                  </chart:RadCartesianChart.palettes>
+                </chart:RadCartesianChart>   
+              </Slides:Slide>
+
+              <Slides:Slide>
+
+              <chart:RadCartesianChart id="chart" selectionMode="Single" height="500">
+                  <chart:RadCartesianChart.series>
+                      <chart:BarSeries seriesName="Bar1"  categoryProperty="name" items="{{ chart4.chartSource4 }}" valueProperty="ExpenseDirect" selectionMode="Series" stackMode="Stack" showLabels="true" />
+                      <chart:BarSeries seriesName="Bar" items="{{ chart4.chartSource4 }}" valueProperty="ExpenseExceptDirect" selectionMode="Series" stackMode="Stack" categoryProperty="name" showLabels="true" />
+                       <chart:BarSeries seriesName="Bar2" valueProperty="netProfit" items="{{ chart4.chartSource4 }}" selectionMode="Series" stackMode="Stack" categoryProperty="name" showLabels="true" />
+                  </chart:RadCartesianChart.series>
+                  <chart:RadCartesianChart.horizontalAxis>
+                      <chart:CategoricalAxis labelTextColor="#cb4b16" labelSize="10" lineThickness="2" lineColor="Red" />
+                  </chart:RadCartesianChart.horizontalAxis>
+                  <chart:RadCartesianChart.verticalAxis>
+                      <chart:LinearAxis labelTextColor="Green" lineThickness="2" lineColor="Red" />
+                  </chart:RadCartesianChart.verticalAxis>
+                  <chart:RadCartesianChart.grid>
+                    <chart:RadCartesianChartGrid 
+                        horizontalLinesVisible="true" 
+                        verticalLinesVisible="false" 
+                        verticalStripLinesVisible="false"
+                        horizontalStrokeColor="#e5e5e5"
+                        verticalStripLineColor="#00000000, #00000000"
+                        horizontalStripLineColor="#f8f8f8, #00000000"/>
+                  </chart:RadCartesianChart.grid>
+                  <chart:RadCartesianChart.palettes>
+                    <chart:Palette seriesName="Bar">
+                        <chart:Palette.entries>
+                            <chart:PaletteEntry fillColor="#F37122" strokeWidth="0" android:strokeColor="#F37122" />
+                        </chart:Palette.entries>
+                    </chart:Palette>
+                    <chart:Palette seriesName="Bar1">
+                        <chart:Palette.entries>
+                            <chart:PaletteEntry fillColor="#9E3293" strokeWidth="0" android:strokeColor="#9E3293" />
+                        </chart:Palette.entries>
+                    </chart:Palette>
+                    <chart:Palette seriesName="Bar2">
+                      <chart:Palette.entries>
+                        <chart:PaletteEntry fillColor="#616161" strokeWidth="0" android:strokeColor="#616161" />
+                      </chart:Palette.entries>
+                    </chart:Palette>
+                  </chart:RadCartesianChart.palettes>
+                </chart:RadCartesianChart>   
+              </Slides:Slide>
+            </Slides:SlideContainer>
+          </GridLayout>
+
+          <GridLayout row="2"  rows="*,*" columns="*,*,*" backgroundColor="#fff">
+            <StackLayout row="0" colSpan="3" col="0" orientation="horizontal" horizontalAlignment="center" style="margin-top:10;">
+              <Image src="~/images/left.png" tap="prev" cssClass="arrowLeft" />
+             <!--  <Button tap="prev"  text="prev" class="btnMain" /> -->
+              <StackLayout orientation="vertical" horizontalAlignment="center">
+                <Label text=" 2ND QUARTER - 015" cssClass="slideLabel" />
+              </StackLayout>
+              <Image src="~/images/right.png" tap="next" cssClass="arrowRight" />
+            </StackLayout>
+
+            <StackLayout row="1" col="0" orientation="horizontal" cssClass="containerCalender">
+              <Label text=""  cssClass="colorBox" />
+              <Label text="Accounts Receiveables" cssClass="ChartColor" verticalAlignment="center" />
+            </StackLayout>
+            <StackLayout row="1" col="1" orientation="horizontal" cssClass="containerCalender">
+              <Label text=""  cssClass="colorBox1" />
+              <Label text="Accounts Payables" cssClass="ChartColor" verticalAlignment="center" />
+            </StackLayout>
+            <StackLayout row="1" col="2" orientation="horizontal" cssClass="containerCalender">
+              <Label text=""  cssClass="colorBox2" />
+              <Label text="Cumulative Net Cash" cssClass="ChartColor" verticalAlignment="center" />
+            </StackLayout> 
+          </GridLayout>
+        </GridLayout>
+      </ScrollView>
+</Page>

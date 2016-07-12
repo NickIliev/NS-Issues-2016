@@ -1,0 +1,79 @@
+
+#searchSection {
+    background-color: #eee;
+}
+
+#txtSearchBox,
+#btnSearchIcon {
+    border-style: solid;
+    border-color: #ddd5cf;
+    border-width: 1;
+}
+
+#txtSearchBox {
+    margin: 0;
+    padding-left: 30;
+    color: #9e0425;
+}
+
+#btnSearchIcon {
+    width: 50;
+    margin: 0;
+    padding: 10;
+    horizontal-align: right;
+    background-image: none;
+    background-color: #bf0d32;
+    color: #fff;
+}
+
+#provider-list {
+	margin: 5;
+	opacity: 0;
+}
+
+.searchResultItem {
+    height: 59;
+    padding-top: 4;
+    padding-bottom: 7;
+    padding-left: 30;
+    padding-right: 30;
+}
+
+.providerResultText,
+.providerSpecialty,
+.providerGender,
+.providerImage {
+    margin: 0;
+}
+
+.providerImage {
+    height: 48;
+}
+
+.providerDetails {
+    margin-left: 12;
+    vertical-align: center;
+}
+
+.providerResultText {
+    font-size: 12;
+}
+
+#lblNoRecordsFound {
+    horizontal-align: center;
+}
+
+#slBtnFilters {
+    padding: 10 17;
+}
+
+#lblBtnFilters {
+    width: 70%;
+    horizontal-align: left;
+}
+
+#lblBtnFiltersIcon {
+    width: 30%;
+    text-align: right;
+    font-size: 14;
+}

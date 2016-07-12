@@ -1,0 +1,12 @@
+<StackLayout orientation="vertical" width="310" height="610">
+  <SegmentedBar #tabs [items]="items" [selectedIndex]="selectedIndex" ></SegmentedBar>
+  <GridLayout #firstTabContent width="300" height="500" backgroundColor="orange" fontSize="40">
+        <Label text="FIRST" textWrap="true"></Label>
+  </GridLayout>
+  <GridLayout #secondTabContent width="300" height="500" backgroundColor="red" fontSize="40">
+        <Label text="SECOND" textWrap="true"></Label>
+  </GridLayout>
+  <GridLayout #thirdTabContent width="300" height="500" backgroundColor="green" fontSize="40">
+        <Label text="THIRD" textWrap="true"></Label>
+  </GridLayout>    
+</StackLayout>
