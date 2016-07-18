@@ -1,0 +1,16 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+<StackLayout>
+  <SegmentedBar id="seg-bar" selectedIndex="{{ segBaritemSelectedIndex }}">
+    <SegmentedBar.items>
+      <SegmentedBarItem title="Item 1" />
+      <SegmentedBarItem title="Item 2" />
+      <SegmentedBarItem title="Item 3" />
+    </SegmentedBar.items>
+  </SegmentedBar>
+  <AbsoluteLayout>
+      <GridLayout id="Item-1-container" width="400" height="400" visibility="{{ isItemOneVisible ? 'visible' : 'collapse' }}" backgroundColor="red"></GridLayout>
+      <GridLayout id="Item-2-container" width="400" height="400" visibility="{{ isItemTwoVisible ? 'visible' : 'collapse' }}"  backgroundColor="green"></GridLayout>
+      <GridLayout id="Item-3-container" width="400" height="400" visibility="{{ isItemThreeVisible ? 'visible' : 'collapse' }}"  backgroundColor="yellow"></GridLayout>
+  </AbsoluteLayout>
+</StackLayout>
+</Page>
