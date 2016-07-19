@@ -4,11 +4,34 @@ import { HelloWorldModel } from "./main-view-model";
 
 var vm = new HelloWorldModel();;
 
+vm.set("productName", "Top"); // initial value set
 
 // Event handler for Page "navigatingTo" event attached in main-page.xml
 export function onNavigatedTo(args: EventData) {
     // Get the event sender
     var page = <Page>args.object;
+
+
+    vm.set("categoricalSource", generateSource());
+
+    page.bindingContext = vm;
+
+}
+
+export function changeProduct() {
+    vm.set("productName", "Pants");
+}
+
+export function toggleProduct() {
+    if (vm.get("productName").toString() === "Top") {
+        vm.set("productName", "Pants");
+    } else if (vm.get("productName").toString() === "Pants") {
+        vm.set("productName", "Top");
+    }
+}
+
+
+function generateSource() {
 
     var initialObject = {
         "chartSource": [
@@ -34,8 +57,5 @@ export function onNavigatedTo(args: EventData) {
         console.log(JSON.stringify(element));
     });
 
-    vm.set("categoricalSource", chartSourceArray);
-
-    page.bindingContext = vm;
-
+    return chartSourceArray;
 }

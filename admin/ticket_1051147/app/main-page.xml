@@ -1,16 +1,20 @@
 
 <Page xmlns="http://www.nativescript.org/tns.xsd"  xmlns:chart="nativescript-telerik-ui-pro/chart"  loaded="onLoaded" navigatedTo="onNavigatedTo">
-    <chart:RadCartesianChart id="cartesianChart">
-        <chart:RadCartesianChart.series>
-            <chart:BarSeries items="{{ categoricalSource }}" categoryProperty="name" valueProperty="Top">
+    <StackLayout>
+            <Button text="Change Product" tap="toggleProduct" />
+    
+            <chart:RadCartesianChart id="cartesianChart">
+                <chart:RadCartesianChart.series>
+                    <chart:BarSeries items="{{ categoricalSource }}" categoryProperty="name" valueProperty="{{productName}}">
 
-                <chart:BarSeries.horizontalAxis>
-                    <chart:CategoricalAxis/>
-                </chart:BarSeries.horizontalAxis>
-                <chart:BarSeries.verticalAxis>
-                    <chart:LinearAxis/>
-                </chart:BarSeries.verticalAxis>
-            </chart:BarSeries>
-        </chart:RadCartesianChart.series>
-    </chart:RadCartesianChart>
+                        <chart:BarSeries.horizontalAxis>
+                            <chart:CategoricalAxis/>
+                        </chart:BarSeries.horizontalAxis>
+                        <chart:BarSeries.verticalAxis>
+                            <chart:LinearAxis/>
+                        </chart:BarSeries.verticalAxis>
+                    </chart:BarSeries>
+                </chart:RadCartesianChart.series>
+            </chart:RadCartesianChart>
+    </StackLayout>
 </Page>

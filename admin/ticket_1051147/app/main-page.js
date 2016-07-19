@@ -2,10 +2,29 @@
 var main_view_model_1 = require("./main-view-model");
 var vm = new main_view_model_1.HelloWorldModel();
 ;
+vm.set("productName", "Top"); // initial value set
 // Event handler for Page "navigatingTo" event attached in main-page.xml
 function onNavigatedTo(args) {
     // Get the event sender
     var page = args.object;
+    vm.set("categoricalSource", generateSource());
+    page.bindingContext = vm;
+}
+exports.onNavigatedTo = onNavigatedTo;
+function changeProduct() {
+    vm.set("productName", "Pants");
+}
+exports.changeProduct = changeProduct;
+function toggleProduct() {
+    if (vm.get("productName").toString() === "Top") {
+        vm.set("productName", "Pants");
+    }
+    else if (vm.get("productName").toString() === "Pants") {
+        vm.set("productName", "Top");
+    }
+}
+exports.toggleProduct = toggleProduct;
+function generateSource() {
     var initialObject = {
         "chartSource": [
             { "name": "April", "Dresses": 100000, "Pants": 200000, "Top": 300000, "Skirts": 400000, "Jackets": 500000 },
@@ -24,8 +43,6 @@ function onNavigatedTo(args) {
     chartSourceArray.forEach(function (element) {
         console.log(JSON.stringify(element));
     });
-    vm.set("categoricalSource", chartSourceArray);
-    page.bindingContext = vm;
+    return chartSourceArray;
 }
-exports.onNavigatedTo = onNavigatedTo;
 //# sourceMappingURL=main-page.js.map
