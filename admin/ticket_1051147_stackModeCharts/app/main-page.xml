@@ -1,0 +1,36 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      navigatingTo="navigatingTo"
+      loaded="onPageLoaded"
+      xmlns:chart="nativescript-telerik-ui-pro/chart" >
+      <StackLayout>
+          <StackLayout>
+            <Label text="Legend" textWrap="true" />
+            <Label text="Dresses" backgroundColor="blue" textWrap="true" />
+            <Label text="Pants" backgroundColor="green" textWrap="true" />
+            <Label text="Top" backgroundColor="yellow" textWrap="true" />
+            <Label text="Skirts" backgroundColor="red" textWrap="true" />
+            <Label text="Jackets" backgroundColor="purple"  textWrap="true" />
+          </StackLayout>
+          <chart:RadCartesianChart id="cartesianChart">
+            <chart:RadCartesianChart.series>
+                <chart:BarSeries  items="{{ firstSeries }}" stackMode="Stack" categoryProperty="name" valueProperty="Dresses">
+                </chart:BarSeries>
+                <chart:BarSeries items="{{ firstSeries }}" stackMode="Stack" categoryProperty="name" valueProperty="Pants">
+                </chart:BarSeries>
+                <chart:BarSeries items="{{ firstSeries }}" stackMode="Stack" categoryProperty="name" valueProperty="Top">
+                </chart:BarSeries>
+                <chart:BarSeries items="{{ firstSeries }}" stackMode="Stack" categoryProperty="name" valueProperty="Skirts">
+                </chart:BarSeries>
+                <chart:BarSeries items="{{ firstSeries }}" stackMode="Stack" categoryProperty="name" valueProperty="Jackets">
+                </chart:BarSeries>
+            </chart:RadCartesianChart.series>
+            <chart:RadCartesianChart.horizontalAxis>
+                <chart:CategoricalAxis/>
+            </chart:RadCartesianChart.horizontalAxis>
+            <chart:RadCartesianChart.verticalAxis>
+                <chart:LinearAxis/>
+            </chart:RadCartesianChart.verticalAxis>
+        </chart:RadCartesianChart>
+      </StackLayout>
+</Page>
+
