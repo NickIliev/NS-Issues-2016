@@ -16,3 +16,7 @@ button {
     margin: 0 20;
     text-align: center;
 }
+
+.negative-margin {
+    margin-left: -50;
+}

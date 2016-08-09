@@ -1,0 +1,46 @@
+﻿
+.wi {
+  font-family: 'Weather Icons', weathericons-regular-webfont;
+    font-size:95;
+}
+
+.fa{
+	font-family: 'FontAwesome', fontawesome-webfont;
+	font-size: 25;
+}
+
+
+
+Page, .action-bar, #container-wrapper{
+    background-color:#8ba892;
+}
+.action-bar, .nav-bar{
+	color:#fff;
+}
+
+.morning{
+	background-color: #e3bb88;
+}
+	.morning-icon{
+		color: #d89864;
+	}
+
+.day{
+	background-color: #d89864
+}
+	.day-icon{
+		color: #644749;
+	}
+.evening{
+	background-color: #b1695a;
+}
+	.evening-icon{
+		color: #e3bb88;
+	}
+
+.night{
+	background-color: #644749;
+}
+	.night-icon{
+		color:#d89864;
+	}

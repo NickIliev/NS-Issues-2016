@@ -1,5 +1,6 @@
 "use strict";
 var main_view_model_1 = require("./main-view-model");
+var label_1 = require("ui/label");
 var vm = new main_view_model_1.HelloWorldModel();
 ;
 vm.set("productName", "Top"); // initial value set
@@ -9,6 +10,8 @@ function onNavigatedTo(args) {
     var page = args.object;
     vm.set("categoricalSource", generateSource());
     page.bindingContext = vm;
+    var label = new label_1.Label();
+    console.log(label.android.view);
 }
 exports.onNavigatedTo = onNavigatedTo;
 function changeProduct() {

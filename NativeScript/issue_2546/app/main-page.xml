@@ -1,0 +1,11 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <ScrollView>
+      <ListView items="{{ source }}" height="500" rowHeight="50" loaded="onLoaded" itemLoading="onItemLoading" itemTap="onItemTap">
+          <ListView.itemTemplate>
+              <Label text="{{ $value }}" textWrap="true" />  
+              <Label text="te" textWrap="true" />
+              
+          </ListView.itemTemplate>
+      </ListView>
+  </ScrollView>
+</Page>

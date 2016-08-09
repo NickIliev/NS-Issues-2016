@@ -8,4 +8,3 @@ export function onPageLoaded(args) {
     var page = args.object;
     page.bindingContext = vm;
 }
-

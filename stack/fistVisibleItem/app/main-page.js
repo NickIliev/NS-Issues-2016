@@ -11,8 +11,6 @@ function onLoaded(args) {
     page.bindingContext = viewModel;
     var list = page.getViewById("list");
     console.log(list.android.getFirstVisiblePosition());
-    // var firstItem = list.android.getItemAtPosition(1);
-    // console.log(firstItem);
 }
 exports.onLoaded = onLoaded;
 function listViewItemTap(args) {

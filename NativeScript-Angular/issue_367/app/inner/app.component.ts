@@ -1,9 +1,8 @@
 import {Component} from "@angular/core";
 
 @Component({
-    moduleId: module.id,
     selector: "my-app",
-    templateUrl: "./app.component.html",
+    templateUrl: "inner/app.component.html",
 })
 export class AppComponent {
     public counter: number = 16;
@@ -15,7 +14,7 @@ export class AppComponent {
             return "Hoorraaay! \nYou are ready to start building!";
         }
     }
-    
+
     public onTap() {
         this.counter--;
     }

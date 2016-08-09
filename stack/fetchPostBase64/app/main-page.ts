@@ -32,4 +32,26 @@ export function navigatingTo(args: EventData) {
     }, function (e) {
         console.log("Error occurred " + e);
     });
+
+
+    //    var data = {
+    //        "codes":["7898422746759"],
+    //        "id_store":1
+    //     };
+
+    //     fetch("http://requestb.in/192hwpt1", {
+    //         method: "POST",
+    //         headers: {
+    //             'Accept': 'application/json,text/plain, */*',
+    //             'Content-Type': 'application/json;charset=UTF-8;'
+    //         },
+    //         body: JSON.stringify(data)
+    //     }).then(r => {
+    //         return r;
+    //     }).then(function (r) {
+    //         console.log("response");
+    //         console.log(JSON.stringify(r));
+    //     }, function (e) {
+    //         console.log("Error occurred " + e);
+    //     });
 }

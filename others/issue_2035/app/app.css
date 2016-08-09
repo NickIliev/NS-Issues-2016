@@ -1,0 +1,11 @@
+﻿.first {
+    color: #FF0000;
+}
+
+.second {
+    color: #00FF00;
+}
+
+.first.second {
+    color: #0000FF;
+}

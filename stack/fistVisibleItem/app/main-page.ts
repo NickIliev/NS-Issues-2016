@@ -26,8 +26,7 @@ export function onLoaded(args: EventData) {
 
     var list = <ListView>page.getViewById("list");
     console.log(list.android.getFirstVisiblePosition());
-    // var firstItem = list.android.getItemAtPosition(1);
-    // console.log(firstItem);
+
 }
 
 export function listViewItemTap(args:ItemEventData) {

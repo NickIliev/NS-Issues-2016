@@ -2,6 +2,8 @@ import { EventData } from "data/observable";
 import { Page } from "ui/page";
 import { HelloWorldModel } from "./main-view-model";
 
+import { Label } from "ui/label";
+
 var vm = new HelloWorldModel();;
 
 vm.set("productName", "Top"); // initial value set
@@ -15,7 +17,6 @@ export function onNavigatedTo(args: EventData) {
     vm.set("categoricalSource", generateSource());
 
     page.bindingContext = vm;
-
 }
 
 export function changeProduct() {

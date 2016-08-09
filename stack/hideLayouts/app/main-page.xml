@@ -1,0 +1,11 @@
+<Page loaded="loaded">
+	<StackLayout>
+		<Button text="{{ showDetails ? 'Hide' : 'Show' }}" tap="toggle" />
+    <GridLayout width="200" height="200" backgroundColor="red" visibility="{{ showDetails ? 'visible' : 'collapsed' }}" >
+      <Label text="{{ showDetails }}" textWrap="true" />
+    </GridLayout>
+    <GridLayout width="200" height="200" backgroundColor="gray" >
+      <Label  text="{{msg}}" textWrap="true" />
+    </GridLayout>  
+	</StackLayout>
+</Page>
