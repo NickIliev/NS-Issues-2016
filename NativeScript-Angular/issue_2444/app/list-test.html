@@ -1,0 +1,10 @@
+<GridLayout rows="*">
+    <ListView [items]="myItems" (itemTap)="onItemTap($event)">
+        <template let-item="item" let-i="index" let-odd="odd" let-even="even">
+            <StackLayout [class.odd]="odd" [class.even]="even">
+                <Label [text]='"index: " + i'></Label>
+                <Label [text]='"[" + item.id +"] " + item.name'></Label>
+            </StackLayout>
+        </template>
+    </ListView>
+</GridLayout>

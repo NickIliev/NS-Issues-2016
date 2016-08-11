@@ -1,0 +1,16 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <TabView id="tabViewContainer">
+      <TabView.items>
+          <TabViewItem title="Tab 1">
+              <TabViewItem.view>
+                  <Label text="01234" id="lbl" />
+              </TabViewItem.view>
+          </TabViewItem>
+          <TabViewItem title="Tab 2">
+              <TabViewItem.view>
+                  <Label text="001234" />
+              </TabViewItem.view>
+          </TabViewItem>
+      </TabView.items>
+  </TabView>
+</Page>

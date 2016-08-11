@@ -1,0 +1,11 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+
+    <StackLayout>
+      <Button text="&#xf2f4;" tap="prev" fontSize="22"  />
+        <StackLayout>
+          <Label text="{{sliderFooter}}" />
+        </StackLayout>
+      <Button text="&#xf2f6;" tap="next" />
+    </StackLayout>
+
+</Page>

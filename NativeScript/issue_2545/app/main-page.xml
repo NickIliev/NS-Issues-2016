@@ -1,0 +1,6 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <Label id="lb" text="{{labeltext}}" textWrap="true" />
+    <TextField id="tf" hint="Enter something" text="{{ text }}" />
+  </StackLayout>
+</Page>

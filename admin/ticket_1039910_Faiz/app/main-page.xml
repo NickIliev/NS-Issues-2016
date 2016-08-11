@@ -1,0 +1,53 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      xmlns:chart="nativescript-telerik-ui-pro/chart"
+      navigatingTo="onNavigatingTo">
+  <chart:RadCartesianChart id="chart" selectionMode="Single" height="350" showLabels="true">
+      <chart:RadCartesianChart.series>
+          <chart:BarSeries 
+            seriesName="Bar" 
+            categoryProperty="name" 
+            items="{{ info.chartSource1 }}" 
+            valueProperty="{{item1[0]}}"
+            selectionMode="Series" 
+            stackMode="Stack" 
+            showLabels="true">
+                <chart:BarSeries.horizontalAxis>
+                        <chart:CategoricalAxis/>
+                </chart:BarSeries.horizontalAxis>
+                <chart:BarSeries.verticalAxis>
+                        <chart:LinearAxis/>
+                </chart:BarSeries.verticalAxis>
+          </chart:BarSeries>  
+          <chart:BarSeries 
+            seriesName="Bar1" 
+            items="{{ info.chartSource1 }}" 
+            valueProperty="{{item1[1]}}"
+            selectionMode="Series" 
+            stackMode="Stack" 
+            categoryProperty="name" 
+            showLabels="true">
+                <chart:BarSeries.horizontalAxis>
+                        <chart:CategoricalAxis/>
+                </chart:BarSeries.horizontalAxis>
+                <chart:BarSeries.verticalAxis>
+                        <chart:LinearAxis/>
+                </chart:BarSeries.verticalAxis>
+          </chart:BarSeries>  
+          <chart:BarSeries 
+            seriesName="Bar2"
+            items="{{ source.chartSource1 }}" 
+            valueProperty="{{item1[2]}}" 
+            selectionMode="Series" 
+            stackMode="Stack" 
+            categoryProperty="name" 
+            showLabels="true" >
+                <chart:BarSeries.horizontalAxis>
+                        <chart:CategoricalAxis/>
+                </chart:BarSeries.horizontalAxis>
+                <chart:BarSeries.verticalAxis>
+                        <chart:LinearAxis/>
+                </chart:BarSeries.verticalAxis>
+          </chart:BarSeries>  
+      </chart:RadCartesianChart.series>
+   </chart:RadCartesianChart>   
+</Page>

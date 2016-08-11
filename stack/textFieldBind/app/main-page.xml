@@ -1,0 +1,6 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <TextView hint="" text="{{ msg }}" editable="true" />
+    <TextField hint="" text="{{ msg }}" />
+  </StackLayout>
+</Page>

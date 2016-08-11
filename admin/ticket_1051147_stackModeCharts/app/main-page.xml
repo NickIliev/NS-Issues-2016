@@ -1,0 +1,52 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      navigatingTo="navigatingTo"
+      loaded="onPageLoaded"
+      xmlns:chart="nativescript-telerik-ui-pro/chart" >
+      <StackLayout>
+          <StackLayout>
+            <Label text="Legend" textWrap="true" />
+            <Label text="Dresses" backgroundColor="blue" textWrap="true" />
+            <Label text="Pants" backgroundColor="green" textWrap="true" />
+            <Label text="Top" backgroundColor="yellow" textWrap="true" />
+            <Label text="Skirts" backgroundColor="red" textWrap="true" />
+            <Label text="Jackets" backgroundColor="purple"  textWrap="true" />
+          </StackLayout>
+          <chart:RadCartesianChart id="cartesianChart" class="negative-margin">
+            <chart:RadCartesianChart.series>
+<chart:BarSeries  items="{{ firstSeries }}" showLabels="true" stackMode="Stack" categoryProperty="name" valueProperty="Dresses">
+            <chart:BarSeries.labelStyle>
+                <chart:PointLabelStyle margin="10" fontStyle="Bold" fillColor="#FC6060" textSize="10" textColor="White"  />
+            </chart:BarSeries.labelStyle>
+</chart:BarSeries>
+<chart:BarSeries items="{{ firstSeries }}" showLabels="true" stackMode="Stack" categoryProperty="name" valueProperty="Pants">
+           <chart:BarSeries.labelStyle>
+               <chart:PointLabelStyle margin="10" fontStyle="Bold" fillColor="#FC6060" textSize="10" textColor="White"  />
+           </chart:BarSeries.labelStyle>
+</chart:BarSeries>
+<chart:BarSeries items="{{ firstSeries }}" showLabels="true" stackMode="Stack" categoryProperty="name" valueProperty="Top">
+           <chart:BarSeries.labelStyle>
+               <chart:PointLabelStyle margin="10" fontStyle="Bold" fillColor="#FC6060" textSize="10" textColor="White"  />
+           </chart:BarSeries.labelStyle>
+</chart:BarSeries>
+<chart:BarSeries items="{{ firstSeries }}" showLabels="true" stackMode="Stack" categoryProperty="name" valueProperty="Jackets">
+           <chart:BarSeries.labelStyle>
+               <chart:PointLabelStyle margin="10" fontStyle="Bold" fillColor="#FC6060" textSize="10" textColor="White"  />
+           </chart:BarSeries.labelStyle>
+</chart:BarSeries>
+<chart:LineSeries seriesName="Line" items="{{ firstSeries }}" categoryProperty="name" valueProperty="Skirts" showLabels="true">  
+            <chart:LineSeries.labelStyle>
+                <chart:PointLabelStyle margin="20" fontStyle="normal" fillColor="#ff3344" textSize="18" textColor="#ddd333"  />
+            </chart:LineSeries.labelStyle>
+</chart:LineSeries>
+
+            </chart:RadCartesianChart.series>
+            <chart:RadCartesianChart.horizontalAxis>
+                <chart:CategoricalAxis/>
+            </chart:RadCartesianChart.horizontalAxis>
+            <chart:RadCartesianChart.verticalAxis>
+                <chart:LinearAxis />
+            </chart:RadCartesianChart.verticalAxis>
+
+</chart:RadCartesianChart>
+      </StackLayout>
+</Page>

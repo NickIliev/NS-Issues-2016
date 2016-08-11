@@ -1,0 +1,19 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      xmlns:chart="nativescript-telerik-ui-pro/chart"  
+      navigatingTo="navigatingTo">
+  <GridLayout>
+        <chart:RadCartesianChart id="cartesianChart">
+            <chart:RadCartesianChart.series>
+                <chart:BarSeries items="{{ categoricalSource }}" categoryProperty="Country" valueProperty="Amount">
+
+                    <chart:BarSeries.horizontalAxis>
+                        <chart:CategoricalAxis/>
+                    </chart:BarSeries.horizontalAxis>
+                    <chart:BarSeries.verticalAxis>
+                        <chart:LinearAxis maximum="100" minimum="20"/>
+                    </chart:BarSeries.verticalAxis>
+                </chart:BarSeries>
+            </chart:RadCartesianChart.series>
+        </chart:RadCartesianChart>
+  </GridLayout>
+</Page>

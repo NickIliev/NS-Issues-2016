@@ -1,0 +1,7 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <StackLayout>
+    <Label text="First class applied" class="first"/>
+    <Label text="Second class applied" class="second"/>
+    <Label text="Both classes applied" class="first second"/>
+  </StackLayout>
+</Page>

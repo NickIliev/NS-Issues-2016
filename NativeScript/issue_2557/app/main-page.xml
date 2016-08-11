@@ -1,0 +1,20 @@
+<Page 
+  xmlns="http://www.nativescript.org/tns.xsd" 
+  xmlns:collapsingHeader="nativescript-collapsing-header" 
+  xmlns:FAB="nativescript-floatingactionbutton" actionBarHidden="true" loaded="onLoaded">
+  <ActionBar>
+    <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap=""/>
+  </ActionBar>
+  <StackLayout>
+
+    <GridLayout id="webviewGridLayout" rows="*, auto, auto, *" columns="auto, *, auto" opacity="0">
+      <!--<ScrollView id="webviewScrollView" row="0" rowSpan="4" colSpan="3">-->
+      <WebView id="webview" url="http://www.google.com" row="0" col="0" rowSpan="4" colSpan="3" height="100%" />
+      <!--</ScrollView>-->
+      <Button row="1" col="1" marginRight="15" text="&#xf394;" tap="" class="ionicon btn-transparent" />
+      <Button row="1" col="2" android:text="&#xf3ac;" ios:text="&#xf220;" tap="" class="ionicon btn-transparent" />
+      <Button row="2" col="1" android:text="&#xf2ca;" ios:text="&#xf3cf;" tap="" class="ionicon btn-transparent" />
+      <Button row="2" col="2" android:text="&#xf30f;" ios:text="&#xf3d1;" tap="" class="ionicon btn-transparent" />
+    </GridLayout>
+  </StackLayout>
+</Page>

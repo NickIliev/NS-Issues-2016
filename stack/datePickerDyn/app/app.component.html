@@ -1,0 +1,9 @@
+<StackLayout>
+    <ListView dock="top">
+    </ListView>
+
+    <Button dock="bottom" text="add work schedule" class="add-work-button" (tap)="addTime()"></Button>
+
+    <DatePicker *ngIf="isVisible" [day]="day" [month]="month" [year]="year"></DatePicker>
+    
+</StackLayout>
