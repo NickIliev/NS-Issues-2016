@@ -1,0 +1,6 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <Label text="Issue 2578" class="title"/>
+    <Button text="Continue with Facebook" tap="" />
+  </StackLayout>
+</Page>

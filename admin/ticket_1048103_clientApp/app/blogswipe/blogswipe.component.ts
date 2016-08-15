@@ -20,6 +20,7 @@ import { Blog } from "../blogs/blog.interface";
 import * as FrameModule from "ui/frame";
 
 import listViewModule = require("nativescript-telerik-ui/listview");
+import utilsModule = require("utils/utils");
 
 var selectedItemIndex; // will use this to cache your args.itemIndex where we can get it (lazy loading)
 
@@ -159,10 +160,9 @@ export class BlogSwipeComponent implements OnInit {
         var listview = FrameModule.topmost().currentPage.getViewById("blogslist");
 
         console.log("Swipe Started");
-
-        swipeLimits.threshold = listview.getMeasuredWidth();
+        console.log(listview.getMeasuredWidth()); 
+        swipeLimits.threshold = listview.getMeasuredWidth()/4;
         swipeLimits.left = listview.getMeasuredWidth();
-        swipeLimits.right = 0;
     }
 
     public onSwipeCellFinished(args: listViewModule.ListViewEventData) {
@@ -215,4 +215,8 @@ export class BlogSwipeComponent implements OnInit {
     public onNavigationButtonTap() {
         this.location.back();
     }
+}
+
+function getSwipeThreshold() {
+  return 100 * utilsModule.layout.getDisplayDensity();
 }

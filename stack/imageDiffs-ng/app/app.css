@@ -1,0 +1,55 @@
+﻿.logo {
+  horizontal-align: center;
+  margin-top: 130;
+}
+
+.login-container {
+  padding: 28;
+  background-color: #F5F5F5;
+  width: 100%;
+}
+
+.input {
+  width: 310;
+  border: none;
+  color: #BDBDBD;
+  background-color: #efefef;
+}
+
+.input-wrapper {
+  padding: 10;
+  background-color: #efefef;
+  margin-bottom: 4px;
+}
+
+button {
+  background-color: #22252b;
+  color: #ffffff;
+  height: 75; 
+  width: 340;
+  vertical-align: center;
+  font-size: 13;
+  margin-top: 7;
+}
+
+.bottom-text {
+  horizontal-align: center;
+}
+
+.welcome-message {
+  font-size: 20; 
+}
+
+.sign-in {
+  margin-bottom: 8px;
+}
+
+.social-button {
+  width: 100; 
+  height: 100;
+}
+
+.register {
+  margin-top: 7px;
+  color: #ffffff;
+}

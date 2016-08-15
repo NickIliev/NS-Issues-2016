@@ -1,0 +1,15 @@
+﻿
+Button {
+    width: 400;
+    background-color:blue;
+    color: white;
+    font-family: sans-serif;
+    font-size: 18;
+    horizontal-align: center;
+    text-align:center;
+
+    background-image: url("res://icon");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

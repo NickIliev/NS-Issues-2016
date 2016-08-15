@@ -11,6 +11,7 @@ require('rxjs/Rx');
 require('rxjs/add/operator/map');
 var blog_interface_1 = require("../blogs/blog.interface");
 var FrameModule = require("ui/frame");
+var utilsModule = require("utils/utils");
 var selectedItemIndex; // will use this to cache your args.itemIndex where we can get it (lazy loading)
 var BlogSwipeComponent = (function () {
     //get instance of the page in the constructor
@@ -85,9 +86,9 @@ var BlogSwipeComponent = (function () {
         var swipeLimits = args.data.swipeLimits;
         var listview = FrameModule.topmost().currentPage.getViewById("blogslist");
         console.log("Swipe Started");
-        swipeLimits.threshold = listview.getMeasuredWidth();
+        console.log(listview.getMeasuredWidth());
+        swipeLimits.threshold = listview.getMeasuredWidth() / 4;
         swipeLimits.left = listview.getMeasuredWidth();
-        swipeLimits.right = 0;
     };
     BlogSwipeComponent.prototype.onSwipeCellFinished = function (args) {
         if (args.data.x > 200) {
@@ -144,4 +145,7 @@ var BlogSwipeComponent = (function () {
     return BlogSwipeComponent;
 }());
 exports.BlogSwipeComponent = BlogSwipeComponent;
+function getSwipeThreshold() {
+    return 100 * utilsModule.layout.getDisplayDensity();
+}
 //# sourceMappingURL=blogswipe.component.js.map

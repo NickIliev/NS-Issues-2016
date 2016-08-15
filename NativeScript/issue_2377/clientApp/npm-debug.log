@@ -1,0 +1,47 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'nativescript' ]
+2 info using npm@2.15.5
+3 info using node@v4.4.5
+4 verbose install initial load of C:\Program Files\nodejs\package.json
+5 verbose readDependencies loading dependencies from C:\Program Files\nodejs\package.json
+6 silly cache add args [ 'nativescript', null ]
+7 verbose cache add spec nativescript
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'nativescript',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: 'nativescript',
+8 silly cache add   spec: 'C:\\Program Files\\nodejs\\nativescript',
+8 silly cache add   type: 'local' }
+9 silly addLocalTarball shasum (computed) 05a7cd597a56929916ec011f61df26c77a4f8883
+10 verbose addTmpTarball C:\Program Files\nodejs\nativescript not in flight; adding
+11 verbose correctMkdir C:\Users\niliev\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+12 verbose makeDirectory C:\Users\niliev\AppData\Roaming\npm-cache creation not in flight; initializing
+13 verbose makeCacheDir UID & GID are irrelevant on win32
+14 verbose addTmpTarball validating metadata from C:\Program Files\nodejs\nativescript
+15 verbose tar unpack C:\Program Files\nodejs\nativescript
+16 verbose tar unpacking to C:\Users\niliev\AppData\Local\Temp\npm-11516-ce4ef871\unpack-d3e14c501bba
+17 silly gentlyRm C:\Users\niliev\AppData\Local\Temp\npm-11516-ce4ef871\unpack-d3e14c501bba is being purged
+18 verbose gentlyRm don't care about contents; nuking C:\Users\niliev\AppData\Local\Temp\npm-11516-ce4ef871\unpack-d3e14c501bba
+19 silly gunzTarPerm modes [ '777', '666' ]
+20 error not a package C:\Program Files\nodejs\nativescript
+21 error addLocal Could not install C:\Program Files\nodejs\nativescript
+22 verbose stack Error: ENOENT: no such file or directory, open 'C:\Users\niliev\AppData\Local\Temp\npm-11516-ce4ef871\unpack-d3e14c501bba\package.json'
+22 verbose stack     at Error (native)
+23 verbose cwd D:\issues\NativeScript\issue_2377\clientApp
+24 error Windows_NT 6.3.9600
+25 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "nativescript"
+26 error node v4.4.5
+27 error npm  v2.15.5
+28 error path C:\Users\niliev\AppData\Local\Temp\npm-11516-ce4ef871\unpack-d3e14c501bba\package.json
+29 error code ENOENT
+30 error errno -4058
+31 error syscall open
+32 error enoent ENOENT: no such file or directory, open 'C:\Users\niliev\AppData\Local\Temp\npm-11516-ce4ef871\unpack-d3e14c501bba\package.json'
+32 error enoent This is most likely not a problem with npm itself
+32 error enoent and is related to npm not being able to find a file.
+33 verbose exit [ -4058, true ]

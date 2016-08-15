@@ -1,0 +1,47 @@
+﻿
+.fa{
+	font-family: 'FontAwesome';
+	font-size: 25;
+}
+
+.white
+{
+	color: white;
+}
+
+.focus-title{
+	color: red; 
+}
+
+.odd {
+    background-color:  #e3bb88;
+}
+.even {
+    background-color:  #d89864;
+}
+
+
+Page, .action-bar, #container-wrapper{
+    background-color:#8ba892;
+}
+.action-bar, .nav-bar{
+	color:#fff;
+}
+
+
+.deleteViewStackLayout{
+    background-color: red;
+    color: white;
+      padding: 2;
+}
+
+.focus-summary {
+    animation-name: focus-summary;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes focus-summary {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

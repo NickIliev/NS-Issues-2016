@@ -1,0 +1,30 @@
+<GridLayout scaleX="1.0" scaleY="1.0" class="background" rows="auto, auto, auto, auto" columns="*, *">
+    <StackLayout colSpan="2">
+      <Image class="logo" stretch="none" src="res://icon"></Image>
+    </StackLayout>
+
+    <GridLayout colSpan="2" class="login-container" row="1" rows="auto, auto, auto, auto, auto" columns="*">
+      <StackLayout class="input-wrapper" row="0">
+        <TextField class="input" hint="Email" [(ngModel)]="email"></TextField>
+      </StackLayout>
+
+      <StackLayout class="input-wrapper" row="1">
+        <TextField class="input" hint="Password" [(ngModel)]="password"></TextField>
+      </StackLayout>
+
+      <Button colSpan="2" class="sign-in" row="3" cssClass="hello" (tap)="doLogin()" text="Sign in"></Button>
+
+      <StackLayout row="4">
+        <Label class="bottom-text" text="Forgot your password?"></Label>
+      </StackLayout>
+    </GridLayout>
+
+    <GridLayout colSpan="2" row="2" rows="100" columns="*, *">
+      <Image width="100" height="100" stretce="aspectFit" row="0" col="0" src="res://facebook"></Image>
+      <Image width="100" height="100" stretch="aspectFit" row="0" col="1" src="res://instagram"></Image>
+    </GridLayout>
+
+    <StackLayout colSpan="2" row="3">
+      <Label class="register" text="Are you new? Create a new account now!"></Label>
+    </StackLayout>
+</GridLayout>
