@@ -1,11 +1,11 @@
 {
 	"nativescript": {
 		"id": "com.telerik.UHNowMobile",
-		"tns-android": {
-			"version": "2.1.1"
-		},
 		"tns-ios": {
 			"version": "2.1.1"
+		},
+		"tns-android": {
+			"version": "1.7.1"
 		}
 	},
 	"dependencies": {

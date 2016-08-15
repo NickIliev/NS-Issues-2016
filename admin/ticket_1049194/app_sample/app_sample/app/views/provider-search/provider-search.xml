@@ -92,7 +92,7 @@
                         <StackLayout row="1" visibility="{{ searchResults.Count != 0 ? 'visible' : 'collapsed' }}">
                             <lv:RadListView items="{{ searchResults.Data }}" id="providers-list" itemTap="selectProvider" loadOnDemandMode="{{ listViewOnDemandMode }}" loadMoreDataRequested="{{ loadMoreResults }}">            
                                 <lv:RadListView.listViewLayout>
-                                    <lv:RadListView.ListViewLinearLayout scrollDirection="Vertical" itemHeight="50" />
+                                    <lv:ListViewLinearLayout scrollDirection="Vertical" itemHeight="50" itemWidth="300" />
                                 </lv:RadListView.listViewLayout>
                                 <lv:RadListView.itemTemplate>
                                     <GridLayout columns="auto, *, auto" rows="auto, auto, auto, auto" class="searchResultItem">
