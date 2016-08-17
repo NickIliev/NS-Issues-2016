@@ -1,0 +1,11 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+      <Label text="SUB PAGE" textWrap="true" />
+  
+      <StackLayout class="wizard-page-leave">
+          <Label text="Some content"></Label>
+      </StackLayout>
+      
+      <Button text="go to mainpage" tap="onTap" />
+  </StackLayout>
+</Page>
