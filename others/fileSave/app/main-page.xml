@@ -1,0 +1,7 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <Label text="saveToFile test" class="title"/>
+    <Button text="Save" tap="saveImage" />
+    <Button text="Load" tap="loadFile" />
+  </StackLayout>
+</Page>

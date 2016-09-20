@@ -1,0 +1,15 @@
+﻿@keyframes hide-to-left {
+    from {
+        transform: translate(0,0);
+    }
+    to {
+        transform: translate(-200,0);
+    }
+}
+.wizard-page-leave {
+    animation-name: hide-to-left;
+    animation-duration: 1.8s;
+    animation-fill-mode: forwards;
+
+    background-color: lightgray;
+}
