@@ -13,7 +13,7 @@
     }
   },
   "dependencies": {
-    "tns-core-modules": "2.3.0"
+    "tns-core-modules": "file:..\\..\\..\\repositories\\nativeScript\\bin\\dist\\tns-core-modules\\tns-core-modules-2.4.0.tgz"
   },
   "devDependencies": {
     "babel-traverse": "6.15.0",

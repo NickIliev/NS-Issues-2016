@@ -1,6 +1,8 @@
 import { EventData } from 'data/observable';
 import { Page } from 'ui/page';
 
+import { ImageFormat } from "ui/enums";
+
 var imageSource = require("image-source");
 var fs = require("file-system");
 
@@ -14,16 +16,16 @@ export function saveImage() {
   var img = imageSource.fromResource("icon");
 
   var folder = fs.knownFolders.temp();
-  var path = fs.path.join(folder.path, "TestIcon.jpeg");
+  var path = fs.path.join(folder.path, "TestIcon.jpg");
 
-  var saved = img.saveToFile(path, "jpeg");
+  var saved = img.saveToFile(path, ImageFormat.jpg);
   console.log(saved);
 }
 
 export function loadFile() {
 
   var folder = fs.knownFolders.temp();
-  var path = fs.path.join(folder.path, "TestIcon.jpeg");
+  var path = fs.path.join(folder.path, "TestIcon.jpg");
   var img = imageSource.fromFile(path);
 
   console.log(img);
