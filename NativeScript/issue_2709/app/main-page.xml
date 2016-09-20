@@ -1,0 +1,9 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="loaded" navigatingTo="navigatingTo">
+  <GridLayout class="row1" row="1" columns="*, auto, auto, auto, auto, auto, *">
+      <Image col="0" src="~/images/clock.png" />
+      <Label col="1" id="startTime" text="{{ StartTime_Formatted }}"  tap="onTimeTap" />
+      <Label col="2" text="to"  />
+      <Image col="3" src="~/images/clock.png" />
+      <Label col="4" id="endTime" text="{{ EndTime_Formatted }}" tap="onTimeTap" />
+  </GridLayout>
+</Page>

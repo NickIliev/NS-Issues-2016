@@ -1,0 +1,47 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="onPageLoaded"> 
+    <!--<AbsoluteLayout> 
+      <GridLayout rows="*,auto">
+        <button ontap="onTap"  text="tap"/>
+        <GridLayout row="1" rows="*" padding="5" backgroundColor="white" columns="*,*,*" > 
+          <StackLayout col="1" horizontalAlignment="center" >
+              <StackLayout orientation="horizontal" horizontalAlignment="right" >
+                  <label text="理论最高奖金(" id="lblRebateText" fontSize="12"  /> 
+                  <label text="0" color="red" id="lblTotalRebate" fontSize="12"  /> 
+                  <label text="元" color="red" fontSize="12"   /> 
+                  <label text=")" fontSize="12" />  
+              </StackLayout>
+              <StackLayout orientation="horizontal" horizontalAlignment="right">
+                  <label text="金额 ："  fontSize="12" /> 
+                  <label id="lblStackAmount"  /> 
+                  <label text="元" color="red" fontSize="12" />
+              </StackLayout>
+              <StackLayout orientation="horizontal" horizontalAlignment="right">
+                  <label text="0" id="lblMultipler" fontSize="9" verticalAlignment="bottom"  /> 
+                  <label text="倍" fontSize="11" /> 
+                  <label text="0" id="lblZhuShu" fontSize="9" verticalAlignment="bottom" /> 
+                  <label text="注" fontSize="11" /> 
+              </StackLayout>
+          </StackLayout>    
+          <StackLayout  col="2">
+              <Button text="购买" cssClass="btn" borderRadius="5" fontSize="20"   />
+          </StackLayout>
+      </GridLayout>
+    </GridLayout> 
+    </AbsoluteLayout> -->
+    <ScrollView>
+    <Repeater id="listview" items="{{ myItems }}"  >
+            <Repeater.itemTemplate>
+                <StackLayout> 
+                   <label text="{{ 'abctext ' + index}}" />             
+                  <Repeater items="{{ myItem2 }}" > 
+                    <Repeater.itemTemplate>
+                        <StackLayout > 
+                        <Label text="{{ $value.item }}" id="{{$value.key}}" margin="10" onTap="test"/> 
+                       </StackLayout> 
+                    </Repeater.itemTemplate>
+                  </Repeater>
+                </StackLayout>
+            </Repeater.itemTemplate>
+        </Repeater>
+        </ScrollView>
+</Page>

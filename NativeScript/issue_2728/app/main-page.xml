@@ -1,0 +1,8 @@
+    <Page
+      xmlns="http://schemas.nativescript.org/tns.xsd"
+      xmlns:componentOne="component/component-one"
+      loaded="onPageLoaded">
+        <StackLayout>
+          <componentOne:component-one />
+        </StackLayout>
+    </Page>

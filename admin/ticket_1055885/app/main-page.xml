@@ -1,0 +1,32 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+      <Button text="toggleVisibility" tap="toggleVisibility" />
+  
+      <TabView id="tabViewContainer">
+          <TabView.items>
+              <TabViewItem title="Tab 1" >
+                  <TabViewItem.view >
+                      <StackLayout visibility="{{ isShown ? 'visible' : 'collapse' }}" >
+                              <Label text="TabViewItem 1" />
+                      </StackLayout>
+                  </TabViewItem.view>
+              </TabViewItem>
+              <TabViewItem title="Tab 2">
+                  <TabViewItem.view>
+                      <StackLayout visibility="{{ isShown ? 'visible' : 'collapse' }}" >
+                          <Label text="TabViewItem 2" />
+                      </StackLayout>
+                  </TabViewItem.view>
+              </TabViewItem>
+              <TabViewItem title="Tab 3">
+                  <TabViewItem.view>
+                      <StackLayout visibility="{{ isShown ? 'visible' : 'collapse' }}" >
+                          <Label text="TabViewItem 2" />
+                      </StackLayout>
+                  </TabViewItem.view>
+              </TabViewItem>
+          </TabView.items>
+      </TabView>
+
+  </StackLayout>
+</Page>

@@ -1,0 +1,13 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:DrawingPad="nativescript-drawingpad" loaded="pageLoaded">
+    <ActionBar title="NativeScript-DrawingPad" />
+    <ScrollView>
+        <StackLayout>
+        
+            <DrawingPad:DrawingPad 
+            height="400" 
+            id="drawingPad" 
+            penColor="{{ penColor }}" penWidth="{{ penWidth }}" />
+            
+        </StackLayout>
+    </ScrollView>
+</Page>

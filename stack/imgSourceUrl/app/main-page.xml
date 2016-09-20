@@ -1,0 +1,6 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <Label text="ImageSource fromUrl example" class="title"/>
+    <Image src="{{ url }}" stretch="none" />
+  </StackLayout>
+</Page>

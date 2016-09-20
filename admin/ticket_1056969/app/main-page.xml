@@ -1,0 +1,15 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      xmlns:lv="nativescript-telerik-ui-pro/listview"
+      navigatingTo="navigatingTo">
+  <lv:RadListView id="itemList" items="{{ items }}" pullToRefresh="true" pullToRefreshInitiated="{{ pullToRefreshInitiated }}">
+    <lv:RadListView.listViewLayout>
+      <lv:ListViewLinearLayout scrollDirection="Vertical" />
+    </lv:RadListView.listViewLayout>
+
+    <lv:RadListView.itemTemplate>
+      <StackLayout>
+        <Label text="{{description}}"/>
+      </StackLayout>
+    </lv:RadListView.itemTemplate>
+  </lv:RadListView>
+</Page>

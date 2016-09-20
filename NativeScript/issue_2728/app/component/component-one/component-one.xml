@@ -1,0 +1,3 @@
+<StackLayout xmlns:componentTwo="component/component-two">
+    <componentTwo:component-two name="John" id="cmp-one"/>
+</StackLayout>

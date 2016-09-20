@@ -1,0 +1,11 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <Label text="Multi pickers" class="title"/>
+    
+    <StackLayout orientation="horizontal">
+        <ListPicker id="lp-one" selectedIndex="0"></ListPicker>
+        <Label text="TO" textWrap="true" />
+        <ListPicker id="lp-two" selectedIndex="3"></ListPicker>
+    </StackLayout>
+  </StackLayout>
+</Page>
