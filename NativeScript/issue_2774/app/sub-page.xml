@@ -1,0 +1,23 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" 
+    xmlns:x="nativescript-statusbar"
+    actionBarHidden="true" 
+    loaded="onLoaded" 
+    navigatedTo="onNavigatedTo">
+    <!--<x:StatusBar ios:barStyle="light" android:barStyle="#33C0F5" />-->
+    <ActionBar title="My SUBBBBBB PAGE Title" />
+
+    <TabView id="tabViewContainer">
+        <TabView.items>
+            <TabViewItem title="Tab 1">
+                <TabViewItem.view>
+                    <Label text="Tab 1" />
+                </TabViewItem.view>
+            </TabViewItem>
+            <TabViewItem title="Tab 2">
+                <TabViewItem.view>
+                    <Label text="Tab 2" />
+                </TabViewItem.view>
+            </TabViewItem>
+        </TabView.items>
+    </TabView>
+</Page>
