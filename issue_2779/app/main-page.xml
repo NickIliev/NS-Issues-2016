@@ -1,0 +1,36 @@
+<Page navigatingTo="onNavigatingTo">
+    <GridLayout class="main" rows="*,auto">
+        <StackLayout row="0" orientation="vertical" verticalAlignment="center">
+            <Label class="desc" text="Please login with your PIN" textWrap="true" />
+        </StackLayout>
+
+        <StackLayout row="1" ios:class="bottom ios" android:class="bottom" orientation="vertical">
+            <StackLayout class="digits" orientation="horizontal" horizontalAlignment="center">
+                <Label text="{{ digits[0] || '_' }}" />
+                <Label text="{{ digits[1] || '_' }}" />
+                <Label text="{{ digits[2] || '_' }}" />
+                <Label text="{{ digits[3] || '_' }}" />
+            </StackLayout>
+            <GridLayout rows="auto" columns="*,*,*">
+                <Button row="0" col="0" text="1" id="btn_1" tap="{{ tapped }}" />
+                <Button row="0" col="1" text="2" id="btn_2" tap="{{ tapped }}" />
+                <Button row="0" col="2" text="3" id="btn_3" tap="{{ tapped }}" />
+            </GridLayout>
+            <GridLayout rows="auto" columns="*,*,*">
+                <Button row="0" col="0" text="4" id="btn_4" tap="{{ tapped }}" />
+                <Button row="0" col="1" text="5" id="btn_5" tap="{{ tapped }}" />
+                <Button row="0" col="2" text="6" id="btn_6" tap="{{ tapped }}" />
+            </GridLayout>
+            <GridLayout rows="auto" columns="*,*,*">
+                <Button row="0" col="0" text="7" id="btn_7" tap="{{ tapped }}" />
+                <Button row="0" col="1" text="8" id="btn_8" tap="{{ tapped }}" />
+                <Button row="0" col="2" text="9" id="btn_9" tap="{{ tapped }}" />
+            </GridLayout>
+            <GridLayout rows="auto" columns="*,*,*">
+                <Button class="ion-icon" ios:text="&#xf11d;" android:text="&#xf28f;" row="0" col="0" tap="{{ clear }}" />
+                <Button row="0" col="1" text="0" id="btn_0" tap="{{ tapped }}" />
+                <Button class="ion-icon not-ready" ios:text="&#xf14a;" android:text="&#xf2bb;" row="0" col="2" tap="{{ submit }}" />
+            </GridLayout>
+        </StackLayout>
+    </GridLayout>
+</Page>
