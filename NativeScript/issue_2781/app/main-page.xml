@@ -1,0 +1,9 @@
+<Page loaded="loaded">
+    <GridLayout rows="*" cols="*" verticalAlignment="center">
+
+        <Button text="Tap me" tap="signIn" />    
+
+        <Label text="Label text" /> 
+
+    </GridLayout>
+</Page>

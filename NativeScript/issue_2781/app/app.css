@@ -1,0 +1,19 @@
+﻿Button {
+    margin: 20;
+    padding: 10;
+    width: 50%;
+    background-color: green;
+    border-color: rgba(255,0,0,0.8); /* Doesn't work */
+    border-color: rgb(255, 0, 0);  /* Doesn't work */
+    /* border-color: red;   */ 
+    /* border-color: #F00;  */
+    border-width: 3;
+}
+
+Label {
+    border-color: rgba(255,0,0,0.8); /* Doesn't work */
+    border-color: rgb(255, 0, 0);  /* Doesn't work */
+    /* border-color: red;   */ 
+    /* border-color: #F00;  */
+    border-width: 3;
+}
