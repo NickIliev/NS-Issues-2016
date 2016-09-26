@@ -10,7 +10,7 @@
     }
   },
   "dependencies": {
-    "calen-view": "file:../nativescript-calendarview",
+    "nativescript-calendarview": "file:../nativescript-calendarview",
     "tns-core-modules": "2.3.0"
   },
   "devDependencies": {
