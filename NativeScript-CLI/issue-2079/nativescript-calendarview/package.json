@@ -1,0 +1,11 @@
+{
+    "name": "nativescript-calendarview",
+    "version": "0.0.1",
+    "description": "GLCalendarView",
+    "main": "index.js",
+    "nativescript": {
+        "platforms": {
+            "ios": "1.3.0"
+            }
+    }
+}

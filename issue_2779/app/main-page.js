@@ -29,8 +29,8 @@ var Index = (function (_super) {
         }
         var btn = args.object;
         var iosButton = btn.ios;
-        // console.log('label.text', label.text)
-        // console.dir('ioslabel.frame.origin', ioslabel.frame.origin)
+        console.log("originX: " + btn.originX);
+        console.log("originY: " + btn.originY);
         console.log("X: " + iosButton.frame.origin.x);
         console.log("Y: " + iosButton.frame.origin.y); // this is always 0
         if (this.digits.length < 4) {

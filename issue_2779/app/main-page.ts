@@ -28,10 +28,14 @@ class Index extends Observable {
 
     tapped(args: GestureEventData) {
         if (this.digits.length == 4) {
-            return
+            return;
         }
         let btn: Button = <Button>args.object;
         let iosButton: UIButton = btn.ios;
+
+        console.log("originX: " + btn.originX);
+        console.log("originY: " + btn.originY);
+
 
         console.log("X: " + iosButton.frame.origin.x);
         console.log("Y: " + iosButton.frame.origin.y); // this is always 0
