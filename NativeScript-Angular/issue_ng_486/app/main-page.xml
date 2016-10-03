@@ -1,0 +1,6 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <Button text="goToSub" tap="goToSub" />
+    <Button text="goToThird" tap="goToThird" />
+  </StackLayout>
+</Page>
