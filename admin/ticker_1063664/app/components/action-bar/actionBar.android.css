@@ -1,0 +1,82 @@
+.custom-action-bar {
+    padding: 0;
+    background-color: #ad0f30;
+    border-style: solid;
+    border-color: #eeeae1;
+}
+#vertRule{
+    width:5%
+}
+#vertRule > label{
+    height:56;
+    width:2;
+    background-color:#f7f3ef 
+}
+
+#titleView {
+    padding: 0;
+    margin: 0;
+}
+
+    #titleView > StackLayout {
+        width: 100%;
+    }
+
+#contactUHContent {
+    vertical-align: center;
+    text-align: right;
+    height: 100%;
+    horizontal-align: right;
+}
+
+    #contactUHContent Label {
+     
+        font-weight: bold;
+        horizontal-align: right;
+        
+    }
+
+    #contactUHContent .contactUHNumber {
+        color: #ed3942;
+      
+    }
+
+#drawerButton {
+    background-image: res://ic_stackmenu;
+    background-color: #ad0f30;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 15;
+    width: 200;
+    overflow:hidden
+}
+
+#tappableLogo {
+   height: 30;
+    width: 55%;
+    height: 100%;
+    horizontal-align: right;
+    margin-left: 3;
+}
+
+#tappableLogo Image {
+    margin: 0;
+    margin-left: 3;
+    vertical-align: center;
+    horizontal-align: right;
+    width: 155;
+    height: 28;
+}
+
+#contactUH {
+    width: 40%;
+    horizontal-align: right;
+}
+    #contactUHContent .contactUHNumber {
+        font-weight: normal;
+    }
+
+    #contactUHContent Label {
+        font-size: 12;
+        padding-right: 7;
+    }

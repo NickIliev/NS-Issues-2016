@@ -1,0 +1,90 @@
+<page loaded="loaded"
+      codeFile="~/views/referral-ease/referral-ease.js"
+      xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+      xmlns:customControls="~/components/drawer-menu"
+      xmlns:action-bar="~/components/action-bar"
+      xmlns:access-uh="~/components/access-uh">
+  <page.actionBar>
+    <action-bar:actionBar />
+  </page.actionBar>
+
+  <drawer:rad-side-drawer id="drawer" drawerLocation="Left">
+    <drawer:rad-side-drawer.drawerTransition>
+      <drawer:SlideInOnTopTransition />
+    </drawer:rad-side-drawer.drawerTransition>
+
+    <drawer:rad-side-drawer.mainContent>
+      <android>
+        <TabView id="mainTabs" selectedColor="#85dadf" tabsBackgroundColor="#f9f9f9" cssClass="tabView">
+          <TabView.items>
+
+            <TabViewItem title="Access UH">
+              <TabViewItem.view>
+                <GridLayout rows="auto,*" width="100%" style="padding:15%" id="scannerMdoule">
+                  <StackLayout row="1" visibility="{{ isLoading == false ? 'visible' : 'collapsed'}}">
+                    <Image src="~/images/scan.png" row="0" tap="scan" height="70%"/>
+                  </StackLayout>
+                  <StackLayout row="2" width="100%" style="vertical-align:bottom" height="30%" visibility="{{ isLoading == false ? 'visible' : 'collapsed'}}">
+                    <Label id="referralCode" text="Scan or Type Referral Order Code" style="text-align:center; width:100%;"/>
+                    <Label text="View Tutorial" style="text-align:center; width:100%; text-decoration:underline; color:#bf0d32" tap="viewTutorial"/>
+                    <!--<Label text="&0xe198;" class="icon" />-->
+                    <TextField id="referralInput" hint="Type in Referral Code" autocorrect="false" keyboardType="number" text="47381811" propertyChange="switchPropertyChange"/>
+                    <StackLayout orientation="horizontal" width="100%" style="horizontal-align:center;text-align:center;margin:10 0 0 0">
+                      <Button text="Scan" tap="scan" style="color:white;margin:0 5 0 0" cssClass="scanBtn" width="48%" propertyChange="onCheckChange"/>
+                      <Button id="submitBtn" text="Submit" tap="verify" style="color:white;margin:0 0 0 5" cssClass="{{ scanCode == null ? 'scanBtnDisabled' : 'scanBtn' }}" width="48%"/>
+                    </StackLayout>
+                  </StackLayout>
+                  <ActivityIndicator busy="{{ isLoading }}" visibility="{{ isLoading == true ? 'visible' : 'collapsed'}}" style="height:100%;width:30%"/>
+                </GridLayout>
+              </TabViewItem.view>
+            </TabViewItem>
+
+            <TabViewItem title="Explore Health Issues">
+              <TabViewItem.view>
+                <access-uh:explore-health />
+              </TabViewItem.view>
+            </TabViewItem>
+
+          </TabView.items>
+        </TabView>
+      </android>
+      <!-- TODO: modularize this menu -->
+      <ios>
+        <StackLayout>
+
+          <StackLayout id="tabView" orientation="horizontal"  width="100%" >
+            <GridLayout rows="*,2"  id="TopLeft"   tap="showAccessUH">
+              <Label row="0" text="Access UH" />
+              <StackLayout row="1" class="horizontalLine" visibility="{{ selectedScreen === 0 ? 'visible' : 'collapsed' }}"></StackLayout>
+            </GridLayout>
+            <GridLayout rows="*,2"  id="TopRight" tap="showEHI"  >
+              <Label row="0" text="Explore Health Issues" textWrap="true" />
+              <StackLayout row="1" class="horizontalLine" visibility="{{ selectedScreen === 1 ? 'visible' : 'collapsed' }}"></StackLayout>
+            </GridLayout>
+          </StackLayout>
+
+          <!--<StackLayout id="tabView" orientation="horizontal"  width="100%" >
+                   <StackLayout orientation="horizontal" id="TopLeft"   tap="showAccessUH" backgroundColor="{{ selectedScreen ? '#f9f9f9' : '#85dadf' }}">
+                     <Label text="Access UH" />
+                   </StackLayout>
+                   <StackLayout orientation="horizontal" id="TopRight" tap="showEHI"   backgroundColor="{{ !selectedScreen ? '#f9f9f9' : '#85dadf' }}">
+                     <Label text="Explore Health Issues" textWrap="true" />
+                   </StackLayout>
+                 </StackLayout>-->
+
+          <StackLayout row="0" visibility="{{ selectedScreen == 0 ? 'visible' : 'collapsed' }}"  >
+            <referral-ease-view-model:referral-ease-view-model />
+          </StackLayout>
+          <StackLayout row="0" visibility="{{ selectedScreen === 1 ? 'visible' : 'collapsed' }}" >
+            <access-uh:explore-health />
+          </StackLayout>
+        </StackLayout>
+      </ios>
+    </drawer:rad-side-drawer.mainContent>
+
+    <drawer:rad-side-drawer.drawerContent>
+      <customControls:drawer-menu />
+    </drawer:rad-side-drawer.drawerContent>
+
+  </drawer:rad-side-drawer>
+</page>

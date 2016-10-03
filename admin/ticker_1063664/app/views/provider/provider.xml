@@ -1,0 +1,360 @@
+<android xmlns:RL="nativescript-ripple">
+  <GridLayout rows="*">
+
+    <AbsoluteLayout row="0" id="backToResults">
+      <StackLayout>
+        <RL:Ripple class="ripple" rippleColor="#acacac" tap="goBackToResults">
+          <StackLayout id="backToResultsContent" orientation="horizontal" onTap="goBackToResults">
+            <Label text="&#xf104;" class="icon" tap="goBackToResults" />
+            <Label text="Back to Results" class="text" tap="goBackToResults" />
+          </StackLayout>
+        </RL:Ripple>
+        <StackLayout class="horizontalLine"></StackLayout>
+        <StackLayout id="providerName">
+          <Label text="{{ selectedProvider.Degree == null ? selectedProvider.FullName : selectedProvider.FullName + ' ' + selectedProvider.Degree }}"  visibility="{{ isLoading ? 'collapsed' : 'visible' }}"/>
+        </StackLayout>
+      </StackLayout>
+    </AbsoluteLayout>
+    <ActivityIndicator busy="{{ isLoading }}" width="50" />
+
+    <TabView row="1" selectedColor="#85dadf" tabsBackgroundColor="#f9f9f9" id="providerTabView" cssClass="tabView" visibility="{{ isLoading ? 'collapsed' : 'visible' }}">
+      <TabView.items>
+        <TabViewItem title="Overview">
+          <TabViewItem.view>
+            <ScrollView>
+              <GridLayout rows="auto" id="main-content">
+                <StackLayout row="0">
+                  <StackLayout id="providerHeader" class="section">
+
+                    <Label text="{{ selectedProvider.Specialties }}" textWrap="true" id="providerSpecialties" />
+                  </StackLayout>
+                  <StackLayout class="horizontalLine"></StackLayout>
+                  <StackLayout>
+
+                  <RL:Ripple class="ripple" rippleColor="#acacac" tap="callAppointmentNumber">
+                    <StackLayout id="providerAppointmentNumber" class="section">
+                        <StackLayout orientation="horizontal">
+                          <Label text="Appointment Number" />
+                          <Label class="providerAppointmentNumberValue" text="{{ selectedProvider.AppointmentPhone }}" visibility="{{ selectedProvider.AppointmentPhone != null ? 'visible' : 'collapsed' }}" />
+                          <Label text="(866)UH4-CARE" textWrap="true" class="providerAppointmentNumberValue" visibility="{{ selectedProvider.AppointmentPhone == null ? 'visible' : 'collapsed' }}" />
+                        </StackLayout>
+                    </StackLayout>
+                  </RL:Ripple>
+                  <StackLayout class="horizontalLine"></StackLayout>
+                  </StackLayout>
+                  <StackLayout id="providerPofile" orientation="horizontal">
+                    <Image id="providerImage" src="{{ selectedProvider.Image != null ? ('data:image/png;base64,' + selectedProvider.Image) : '~/images/profile.png' }}" />
+                    <StackLayout id="providerDetails">
+                      <StackLayout id="providerCerts">
+                        <label class="sectionHeader" text="Board Certifications" />
+                        <Repeater items="{{ selectedProvider.Certifications }}">
+                          <Repeater.itemTemplate>
+                            <Label text="{{ Name }}" textWrap="true" class="providerCert" />
+                          </Repeater.itemTemplate>
+                        </Repeater>
+                      </StackLayout>
+                      <StackLayout id="providerEdus">
+                        <label class="sectionHeader" text="Education &amp; Training" />
+                        <Repeater items="{{ selectedProvider.Educations }}">
+                          <Repeater.itemTemplate>
+                            <StackLayout class="providerEducation">
+                              <Label text="{{ Facility }}" textWrap="true" />
+                              <Label text="{{ Details }}" textWrap="true" />
+                              <Label text="{{ Dates }}" textWrap="true" />
+                              <StackLayout class="horizontalLine"></StackLayout>
+                            </StackLayout>
+                          </Repeater.itemTemplate>
+                        </Repeater>
+                      </StackLayout>
+                    </StackLayout>
+                  </StackLayout>
+                </StackLayout>
+              </GridLayout>
+            </ScrollView>
+          </TabViewItem.view>
+        </TabViewItem>
+        <TabViewItem title="Bio">
+          <TabViewItem.view>
+            <ScrollView>
+              <StackLayout class="tabContent">
+                <HtmlView html="{{ selectedProvider.Bio }}" />
+                <!--<Placeholder creatingView="creatingVideo" />-->
+              </StackLayout>
+            </ScrollView>
+          </TabViewItem.view>
+        </TabViewItem>
+        <TabViewItem title="Office Locations">
+          <TabViewItem.view>
+            <ListView items="{{ selectedProvider.Locations }}" itemTap="getDirections">
+              <ListView.itemTemplate>
+                <StackLayout class="providerLocation section">
+                  <Label text="{{ Name }}" textWrap="true" class="locationName bold" visibility="{{ Name != null ? 'visible' : 'collapsed' }}" />
+                  <Label text="{{ Address }}" textWrap="true" class="locationAddress" />
+                  <Label text="{{ AppointmentPhone }}" textWrap="true" class="locationAppointmentPhone" visibility="{{ AppointmentPhone != null ? 'visible' : 'collapsed' }}" />
+                  <Label text="(866)UH4-CARE" textWrap="true" class="locationAppointmentPhone" visibility="{{ AppointmentPhone == null ? 'visible' : 'collapsed' }}" />
+                  <StackLayout class="providerLocationAvailability">
+                    <Label text="Availability" textWrap="true" />
+                  </StackLayout>
+                </StackLayout>
+              </ListView.itemTemplate>
+            </ListView>
+          </TabViewItem.view>
+        </TabViewItem>
+        <TabViewItem title="Awards">
+          <TabViewItem.view>
+            <ScrollView>
+              <StackLayout class="tabContent">
+                <HtmlView html="{{ selectedProvider.AwardsRecognition }}" />
+              </StackLayout>
+            </ScrollView>
+          </TabViewItem.view>
+        </TabViewItem>
+        <TabViewItem title="Insurances">
+          <TabViewItem.view>
+            <ListView items="{{ selectedProvider.Insurances }}">
+              <ListView.itemTemplate>
+                <StackLayout class="providerInsurance section">
+                  <Label text="{{ $value }}" textWrap="true" class="insuranceName" />
+                </StackLayout>
+              </ListView.itemTemplate>
+            </ListView>
+          </TabViewItem.view>
+        </TabViewItem>
+        <TabViewItem title="Special Interests">
+          <TabViewItem.view>
+            <ListView items="{{ selectedProvider.SpecialInterests }}">
+              <ListView.itemTemplate>
+                <StackLayout class="providerSpecialInterest section">
+                  <Label text="{{ $value }}" textWrap="true" class="specialInterestName" />
+                </StackLayout>
+              </ListView.itemTemplate>
+            </ListView>
+          </TabViewItem.view>
+        </TabViewItem>
+        <TabViewItem title="Industry Relationships">
+          <TabViewItem.view>
+            <StackLayout class="tabContent">
+              <HtmlView html="{{ selectedProvider.IndustryRelationships }}" />
+            </StackLayout>
+          </TabViewItem.view>
+        </TabViewItem>
+      </TabView.items>
+    </TabView>
+
+    <StackLayout row="2" id="bottomButtons">
+      <StackLayout orientation="horizontal">
+        <RL:Ripple id="bottomButtonLeftRipple" rippleColor="#ff9999" tap="requestAnAppointment">
+          <StackLayout orientation="horizontal" id="bottomButtonLeft" tap="requestAnAppointment">
+            <Label text="Request an Appointment" tap="requestAnAppointment" />
+            <Label text="&#xf105;" class="icon" tap="requestAnAppointment" />
+          </StackLayout>
+        </RL:Ripple>
+        <RL:Ripple id="bottomButtonRightRipple" rippleColor="#ff8888" tap="callAppointmentNumber">
+          <StackLayout orientation="horizontal" id="bottomButtonRight" tap="callAppointmentNumber">
+            <Label text="Call to Schedule" tap="callAppointmentNumber" />
+            <Label text="&#xf105;" class="icon" tap="callAppointmentNumber" />
+          </StackLayout>
+        </RL:Ripple>
+      </StackLayout>
+    </StackLayout>
+
+  </GridLayout>
+</android>
+
+
+<ios>
+  <StackLayout class="ContentHeight">
+
+    <AbsoluteLayout>
+      <GridLayout rows="auto,auto,auto" id="backToResults"  class="test">
+
+        <StackLayout row="0" orientation="horizontal" onTap="goBackToResults" id="back">
+          <Label text="&#xf104;" class="icon" />
+          <Label text="Back to Results" class="text" />
+        </StackLayout>
+        <StackLayout row="1" class="horizontalLine" ></StackLayout>
+        <StackLayout row="2" id="providerName">
+          <Label  text="{{ selectedProvider.FullName + ' ' + selectedProvider.Degree }}" />
+        </StackLayout>
+      </GridLayout>
+    </AbsoluteLayout>
+
+    <StackLayout>
+      <ScrollView orientation="horizontal" id="horizontalScroll" backgroundColor="#f9f9f9" >
+        <StackLayout row="1" id="tabView" orientation="horizontal" width="100%"  >
+
+          <StackLayout orientation="vertical" id="tap1" tap="TabViewMenuTap">
+            <Label text="Overview" />
+            <StackLayout class="horizontalLine" visibility="{{ selectedScreen === 'tap1' ? 'visible' : 'collapsed' }}"></StackLayout>
+          </StackLayout>
+
+          <StackLayout orientation="vertical" id="tap2"  tap="TabViewMenuTap" >
+            <Label text="Bio" textWrap="true" />
+            <StackLayout class="horizontalLine" visibility="{{ selectedScreen === 'tap2' ? 'visible' : 'collapsed' }}"></StackLayout>
+          </StackLayout>
+
+          <StackLayout orientation="vertical" id="tap3" tap="TabViewMenuTap" >
+            <Label text="Office Locations" textWrap="true" />
+            <StackLayout class="horizontalLine" visibility="{{ selectedScreen === 'tap3' ? 'visible' : 'collapsed' }}"></StackLayout>
+
+          </StackLayout>
+
+          <StackLayout orientation="vertical"  tap="TabViewMenuTap" id="tap4" >
+            <Label text="Awards" textWrap="true" />
+            <StackLayout class="horizontalLine" visibility="{{ selectedScreen === 'tap4' ? 'visible' : 'collapsed' }}"></StackLayout>
+
+          </StackLayout>
+
+          <StackLayout orientation="vertical"  tap="TabViewMenuTap" id="tap5" >
+            <Label text="Insurances" textWrap="true" />
+            <StackLayout class="horizontalLine" visibility="{{ selectedScreen === 'tap5' ? 'visible' : 'collapsed' }}"></StackLayout>
+          </StackLayout>
+
+          <StackLayout orientation="vertical"  tap="TabViewMenuTap" id="tap6" >
+            <Label text="Special Interests" textWrap="true" />
+            <StackLayout class="horizontalLine" visibility="{{ selectedScreen === 'tap6' ? 'visible' : 'collapsed' }}"></StackLayout>
+          </StackLayout>
+
+          <StackLayout orientation="vertical"  tap="TabViewMenuTap" id="tap7" >
+            <Label text="Industry Relationships" textWrap="true" />
+            <StackLayout class="horizontalLine" visibility="{{ selectedScreen === 'tap7' ? 'visible' : 'collapsed' }}"></StackLayout>
+          </StackLayout>
+
+        </StackLayout>
+      </ScrollView>
+
+      <GridLayout rows="*,60">
+        <GridLayout row="0" rows="*" id="tabs">
+
+          <StackLayout row="0" visibility="{{ selectedScreen == 'tap1' ? 'visible' : 'collapsed' }}" >
+            <ScrollView>
+              <GridLayout rows="auto" id="main-content">
+                <StackLayout row="0">
+                  <StackLayout id="providerHeader" class="section">
+
+                    <Label text="{{ selectedProvider.Specialties }}" textWrap="true" id="providerSpecialties" />
+                  </StackLayout>
+                  <StackLayout class="horizontalLine"></StackLayout>
+                  <StackLayout>
+
+                    <StackLayout id="providerAppointmentNumber" class="section">
+                      <StackLayout orientation="horizontal" onTap="callAppointmentNumber">
+                        <Label text="Appointment Number" />
+                        <Label class="providerAppointmentNumberValue" text="{{ selectedProvider.AppointmentPhone }}" visibility="{{ selectedProvider.AppointmentPhone != null ? 'visible' : 'collapsed' }}" />
+                        <Label text="(866)UH4-CARE" textWrap="true" class="providerAppointmentNumberValue" visibility="{{ selectedProvider.AppointmentPhone == null ? 'visible' : 'collapsed' }}" />
+                      </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout class="horizontalLine"></StackLayout>
+                  </StackLayout>
+                  <StackLayout id="providerPofile" orientation="horizontal">
+                    <Image id="providerImage" src="{{ selectedProvider.Image != null ? ('data:image/png;base64,' + selectedProvider.Image) : '~/images/profile.png' }}" />
+                    <StackLayout id="providerDetails">
+                      <StackLayout id="providerCerts">
+                        <label class="sectionHeader" text="Board Certifications" />
+                        <Repeater items="{{ selectedProvider.Certifications }}">
+                          <Repeater.itemTemplate>
+                            <Label text="{{ Name }}" textWrap="true" class="providerCert" />
+                          </Repeater.itemTemplate>
+                        </Repeater>
+                      </StackLayout>
+                      <StackLayout id="providerEdus">
+                        <label class="sectionHeader" text="Education &amp; Training" />
+                        <Repeater items="{{ selectedProvider.Educations }}">
+                          <Repeater.itemTemplate>
+                            <StackLayout class="providerEducation">
+                              <Label text="{{ Facility }}" textWrap="true" />
+                              <Label text="{{ Details }}" textWrap="true" />
+                              <Label text="{{ Dates }}" textWrap="true" />
+                            </StackLayout>
+                          </Repeater.itemTemplate>
+                        </Repeater>
+                      </StackLayout>
+                    </StackLayout>
+                  </StackLayout>
+                </StackLayout>
+              </GridLayout>
+            </ScrollView>
+
+          </StackLayout>
+
+          <StackLayout row="0" visibility="{{ selectedScreen === 'tap2' ? 'visible' : 'collapsed' }}" >
+            <StackLayout class="tabContent">
+              <HtmlView html="{{ selectedProvider.Bio }}" />
+              <Label text="{{ selectedProvider.Bio }}" textWrap="true" />
+
+              <Placeholder creatingView="creatingVideo" />
+            </StackLayout>
+          </StackLayout>
+
+          <StackLayout row="0" visibility="{{ selectedScreen === 'tap3' ? 'visible' : 'collapsed' }}" >
+        
+                <ListView items="{{ selectedProvider.Locations }}" itemTap="getDirections" class="heightfull" >
+                  <ListView.itemTemplate>
+                    <StackLayout class="providerLocation section">
+                      <Label text="{{ Name }}" textWrap="true" class="locationName bold" />
+                      <Label text="{{ Address }}" textWrap="true" class="locationAddress" />
+                      <Label text="{{ AppointmentPhone }}" textWrap="true" class="locationAppointmentPhone" visibility="{{ AppointmentPhone != null ? 'visible' : 'collapsed' }}" />
+                      <Label text="(866)UH4-CARE" textWrap="true" class="locationAppointmentPhone" visibility="{{ AppointmentPhone == null ? 'visible' : 'collapsed' }}" />
+                      <StackLayout class="providerLocationAvailability">
+                        <Label text="Availability" textWrap="true" />
+                      </StackLayout>
+                    </StackLayout>
+                  </ListView.itemTemplate>
+                </ListView>
+          </StackLayout>
+
+
+          <StackLayout row="0" visibility="{{ selectedScreen === 'tap4' ? 'visible' : 'collapsed' }}" >
+            <StackLayout class="tabContent">
+              <HtmlView html="{{ selectedProvider.AwardsRecognition }}" />
+              <Label text="{{ selectedProvider.AwardsRecognition }}" textWrap="true" />
+            </StackLayout>
+          </StackLayout>
+
+          <StackLayout row="0" visibility="{{ selectedScreen === 'tap5' ? 'visible' : 'collapsed' }}" >
+            <ListView items="{{ selectedProvider.Insurances }}">
+              <ListView.itemTemplate>
+                <StackLayout class="providerInsurance section">
+                  <Label text="{{ $value }}" textWrap="true" class="insuranceName" />
+                </StackLayout>
+              </ListView.itemTemplate>
+            </ListView>
+          </StackLayout>
+
+          <StackLayout row="0" visibility="{{ selectedScreen === 'tap6' ? 'visible' : 'collapsed' }}" >
+            <ListView items="{{ selectedProvider.SpecialInterests }}">
+              <ListView.itemTemplate>
+                <StackLayout class="providerSpecialInterest section">
+                  <Label text="{{ $value }}" textWrap="true" class="specialInterestName" />
+                </StackLayout>
+              </ListView.itemTemplate>
+            </ListView>
+          </StackLayout>
+
+          <StackLayout row="0" visibility="{{ selectedScreen === 'tap7' ? 'visible' : 'collapsed' }}" class="tabContent">
+            <HtmlView html="{{ selectedProvider.IndustryRelationships }}" />
+          </StackLayout>
+
+        </GridLayout>
+
+
+        <StackLayout row="1" id="bottomButtons">
+          <StackLayout orientation="horizontal">
+            <StackLayout orientation="horizontal" id="bottomButtonLeft" tap="requestAnAppointment">
+              <Label text="Request an Appointment" />
+              <Label text="&#xf105;" class="icon" />
+            </StackLayout>
+            <StackLayout orientation="horizontal" id="bottomButtonRight" tap="callAppointmentNumber">
+              <Label text="Call to Schedule" />
+              <Label text="&#xf105;" class="icon" />
+            </StackLayout>
+          </StackLayout>
+
+        </StackLayout>
+
+      </GridLayout>
+
+    </StackLayout>
+  </StackLayout>
+</ios>

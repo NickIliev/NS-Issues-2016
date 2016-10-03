@@ -1,0 +1,5 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <Label text="test" class="title" visibility="{{ isItemVisible ? 'visible' : 'collapsed' }}"/>
+  </StackLayout>
+</Page>

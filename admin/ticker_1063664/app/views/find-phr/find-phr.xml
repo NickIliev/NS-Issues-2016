@@ -1,0 +1,87 @@
+<android xmlns:RL="nativescript-ripple"
+         xmlns:access-uh="~/components/access-uh">
+  <TabView id="mainTabs" selectedColor="#85dadf" tabsBackgroundColor="#f9f9f9" cssClass="tabView">
+    <TabView.items>
+
+      <TabViewItem title="Access UH">
+        <TabViewItem.view>
+          <StackLayout orientation="vertical" horizontalAlign="center" cssStyle="loginForm" >
+            <Label text="My Personal Health Record" style="width:100%;font-size:20" cssClass="subTitle"/>
+            <Label text="Please select your health record login below." style="width:100%;text-align:center;margin:20 0 0 0"/>
+            <Label text="If you are unsure which to select, contact your physician/provider office." style="width:100%;text-align:center;margin:20 0 0 0"/>
+            <Button text="UH Elyria" style="color:white; background-color: #bf0d32;" cssClass="button" tap="tileElyriaPHR"/>
+            <Button text="UH Parma" style="color:white; background-color: #bf0d32;" cssClass="button" tap="tileParmaPHR"/>
+            <Button text="UH Portage" style="color:white; background-color: #bf0d32;" cssClass="button" tap="tilePortagePHR"/>
+            <Button text="UH St. John" style="color:white; background-color: #bf0d32;" cssClass="button" tap="tileStJohnPHR"/>
+            <Button text="All Other Locations" style="color:white; background-color: #513f3c;" cssClass="button" tap="tilePHRTap"/>
+          </StackLayout>
+        </TabViewItem.view>
+      </TabViewItem>
+
+      <TabViewItem title="Explore Health Issues">
+        <TabViewItem.view>
+          <access-uh:explore-health />
+        </TabViewItem.view>
+      </TabViewItem>
+
+    </TabView.items>
+  </TabView>
+</android>
+
+<ios xmlns:access-uh="~/components/access-uh">
+  <StackLayout class="ContentHeight" >
+
+    <StackLayout id="tabView" orientation="horizontal"  width="100%" >
+      <GridLayout rows="*,2"  id="TopLeft"   tap="showAccessUH">
+        <Label row="0" text="Access UH" />
+        <StackLayout row="1" class="horizontalLine" visibility="{{ selectedScreen === 0 ? 'visible' : 'collapsed' }}"></StackLayout>
+      </GridLayout>
+      <GridLayout rows="*,2"  id="TopRight" tap="showEHI"  >
+        <Label row="0" text="Explore Health Issues" textWrap="true" />
+        <StackLayout row="1" class="horizontalLine" visibility="{{ selectedScreen === 1 ? 'visible' : 'collapsed' }}"></StackLayout>
+      </GridLayout>
+    </StackLayout>
+
+
+    <StackLayout  visibility="{{ selectedScreen == 0 ? 'visible' : 'collapsed' }}"  >
+
+      <StackLayout orientation="vertical" horizontalAlign="center" style="text-align:center;padding:15%" >
+        <Label text="My Personal Health Record" style="width:100%;font-size:20" cssClass="subTitle"/>
+
+        <StackLayout id="lbltext1"  orientation="horizontal">
+          <Label   textWrap="true" style="width:100%;text-align:center;margin:20 0 0 0" >
+            <Label.formattedText>
+              <FormattedString>
+                <FormattedString.spans>
+                  <Span text="Please select your health record login below." />
+                </FormattedString.spans>
+              </FormattedString>
+            </Label.formattedText>
+          </Label>
+        </StackLayout>
+
+        <StackLayout id="lbltext1"  orientation="horizontal">
+          <Label   textWrap="true" style="width:100%;text-align:center;margin:20 0 0 0" >
+            <Label.formattedText>
+              <FormattedString>
+                <FormattedString.spans>
+                  <Span text="If you are unsure which to select, contact your physician/provider office." />
+                </FormattedString.spans>
+              </FormattedString>
+            </Label.formattedText>
+          </Label>
+        </StackLayout>
+        <Button text="UH Elyria" style="color:white; background-color: #bf0d32;" cssClass="button" tap="tileElyriaPHR"/>
+        <Button text="UH Parma" style="color:white; background-color: #bf0d32;" cssClass="button" tap="tileParmaPHR"/>
+        <Button text="UH Portage" style="color:white; background-color: #bf0d32;" cssClass="button" tap="tilePortagePHR"/>
+        <Button text="UH St. John" style="color:white; background-color: #bf0d32;" cssClass="button" tap="tileStJohnPHR"/>
+        <Button text="All Other Locations" style="color:white; background-color: #513f3c;" cssClass="button" tap="tilePHRTap"/>
+      </StackLayout>
+    </StackLayout>
+
+
+    <StackLayout row="0" visibility="{{ selectedScreen === 1 ? 'visible' : 'collapsed' }}" >
+      <access-uh:explore-health />
+    </StackLayout>
+  </StackLayout>
+</ios>

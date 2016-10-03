@@ -1,0 +1,34 @@
+#iconPHR,
+#iconFindProvider,
+#iconFindLocation,
+#iconFindER, #iconReferralEase, #iconScheduleReferral, #iconScheduleOnline, #iconCalltoSchedule {
+    background-repeat: no-repeat;
+    background-position: center;
+    height:100%;
+    vertical-align:center;
+}
+
+#iconFindProvider,
+#iconFindLocation,
+#iconFindER, #iconCalltoSchedule, #iconScheduleOnline {
+    background-color: #f9f9f9;
+}
+
+#iconPHR {
+    background-size: 178 132;
+}
+
+#iconFindProvider {
+    background-size: 86 124;
+  }
+
+#iconFindLocation {
+    background-size: 108 126;
+  }
+
+#iconFindER {
+    background-size: 284 62;
+}
+.findImage {
+    horizontal-align:center;
+}

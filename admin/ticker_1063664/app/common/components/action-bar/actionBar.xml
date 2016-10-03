@@ -1,0 +1,29 @@
+<action-bar cssClass="custom-action-bar" id="actionBar">
+    <android:NavigationButton id="drawerButton" icon="res://ic_menu_black" tap="toggleSideDrawer" />
+    <!--<android:NavigationButton id="drawerButton" icon="res://ic_stackmenu" tap="toggleSideDrawer" />-->
+    <ActionBar.titleView>
+        <GridLayout rows="*,*" id="titleView" >
+            <StackLayout orientation="horizontal" horizontalAlignment="right">
+                <!--<Button id="drawerButton" />-->
+                <StackLayout id="logo">
+                    <Image id="tappableLogo" src="~/images/logo.png" />
+                </StackLayout>
+                <!--<Label text="{{ pageTitle }}" class="pageTitle" />-->
+                <StackLayout id="contactUH" >
+                    <Label text="CONTACT UH" />
+                    <Label text="1-866-UH4-CARE" class="contactUHNumber" />
+                </StackLayout>
+            </StackLayout>
+        </GridLayout>
+    </ActionBar.titleView>
+    <action-bar.actionItems>
+        <!--<android>
+            <ActionItem icon="res://ic_phone_white" android.position="right" tap="callUH" />
+        </android>-->
+        <iOS>
+            <ActionItem icon="res://ic_menu_black" ios.position="left" tap="toggleSideDrawer" />
+            <!--<ActionItem icon="res://ic_stackmenu" ios.position="left" tap="toggleSideDrawer" />-->
+            <!--<ActionItem icon="res://ic_phone_white" ios.position="right" tap="callUH" />-->
+        </iOS>
+    </action-bar.actionItems>
+</action-bar>

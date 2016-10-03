@@ -1,0 +1,37 @@
+<page loaded="loaded"
+      codeFile="~/views/disclaimer/disclaimer-view.js"
+      xmlns:action-bar="~/components/action-bar">
+  <page.actionBar>
+    <action-bar:actionBarNoNav />
+  </page.actionBar>
+
+    <GridLayout rows="*" id="main-content" class="pageContent">
+      <ActivityIndicator busy="{{ isLoading }}" row="0" rowSpan="2" />
+      <StackLayout>
+        <GridLayout rows="auto">
+          <Image row ="0" id="imgWelcome" src="~/images/common/welcomeimg.png"  />
+
+        </GridLayout>
+        <!--<Label id="disclaimerHeading" class="heading" text="Welcome to UH Now" />-->
+     
+        <StackLayout id="disclaimerContent"  backgroundImage="~/images/common/bottomimg.png" >
+          
+          <Label id="disclaimerText" textWrap="true" text="In order to satisfy legal &amp; compliance we need you to accept the terms of use before you can use the UH Now mobile app."></Label>
+          <StackLayout orientation="horizontal" class="disclaimerCheckItem" tap="onTapUnderstandItem">
+            <Image id="understandCheck" src="~/images/common/unchecked.png" class="checkbox" tap="onTapUnderstandItem" />
+            <Label class="checkboxLabel" textWrap="true" text="I understand that the health conditions &amp; symptom checker do not constitue medical advice or replace my doctor." tap="onTapUnderstandItem" />
+          </StackLayout>
+          <StackLayout orientation="horizontal" class="disclaimerCheckItem" id="acceptItem" tap="onTapAcceptItem">
+            <Image id="acceptCheck" src="~/images/common/unchecked.png" class="checkbox" tap="onTapAcceptItem" />
+            <WrapLayout class="checkboxLabel">
+              <Label text="I accept the UH Now " tap="onTapAcceptItem" />
+              <Label id="termsLink" class="textLink" text="Terms &amp; Conditions" tap="onTapTermsLink" />
+            </WrapLayout>
+          </StackLayout>    
+        </StackLayout>
+        
+             
+      </StackLayout>
+  
+    </GridLayout>
+</page>

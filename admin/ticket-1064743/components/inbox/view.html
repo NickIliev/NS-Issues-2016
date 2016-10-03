@@ -1,0 +1,33 @@
+<div data-role="view" data-title="Inbox Screen" data-layout="main-nonav" data-model="app.inbox" data-show="app.inbox.onShow" data-after-show="app.inbox.afterShow">
+    <div id="inboxModel" class="form-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="form-content-item">
+
+
+                    <label>
+
+                        <span>Text field</span>
+
+                        <input data-bind="value: inboxModel.fields.textField1" placeholder="Type here ..." type="text">
+                    </label>
+
+                </li>
+            </ul>
+
+            <div class="button-group">
+                <a data-role="button" data-bind="events: { click: inboxModel.cancel }">Cancel</a>
+                <a class="primary" data-role="button" data-bind="events: { click: inboxModel.submit }">Confirm</a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_inboxModel -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+        <!-- END_CUSTOM_CODE_inboxModel -->
+    </div>
+
+    <!-- START_CUSTOM_CODE_inbox -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_inbox -->
+</div>

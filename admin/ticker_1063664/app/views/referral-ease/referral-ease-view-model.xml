@@ -1,0 +1,13 @@
+﻿<GridLayout rows="3*,1*" width="100%" style="padding:15%" id="scannerMdoule">
+  <ActivityIndicator busy="{{ isLoading }}" row="0" rowSpan="2" />
+  <Image src="~/images/scan.png" row="0" tap="scan" height="50%" />
+  <StackLayout row="1" width="100%" style="vertical-align:bottom" height="50%">
+    <Label id="referralCode" text="Scan or Type Referral Order Code" style="text-align:center; width:100%;"/>
+    <!--<Label text="&0xe198;" class="icon" />-->
+    <TextField hint="Type in Referral Code" autocorrect="false" keyboardType="number" text="{{ description }}" />
+    <StackLayout orientation="horizontal" width="100%" style="horizontal-align:center;text-align:center;margin:10 0 0 0">
+      <Button text="Scan" tap="scan" style="color:white;margin:0 5 0 0" cssClass="scanBtn" width="50%" propertyChange="onCheckChange" />
+      <Button text="Submit" tap="scan" style="color:white;margin:0 0 0 5" cssClass="scanBtnDisabled" width="50%" isEnabled="false"/>
+    </StackLayout>
+  </StackLayout>
+</GridLayout>

@@ -1,0 +1,19 @@
+#iconCalltoSchedule Image{
+    height: 32%
+}
+#iconScheduleOnline Image{
+    height: 42%
+}
+
+#iconScheduleReferral Image{
+    height: 45%
+}
+
+#iconScheduleReferral, #iconScheduleOnline, #iconCalltoSchedule {
+    width: 100%;
+    height: 100%;
+}
+.scheduleHeader{
+    font-size:20;
+    padding:20 0 20 15
+}

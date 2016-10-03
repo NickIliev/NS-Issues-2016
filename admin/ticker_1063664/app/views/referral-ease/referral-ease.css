@@ -1,0 +1,20 @@
+.scanBtn {
+    margin-top: 10;
+    background-image: none;
+    background-color: #bf0d32;
+    color: #fff;
+    border-radius:25
+}
+.scanBtnDisabled {
+    margin-top: 10;
+    background-image: none;
+    background-color: #cccccc;
+    color: #fff;
+    border-radius:25
+}
+TextField {
+    margin: 10 0 0 0;
+    padding-left: 30;
+    color: #9e0425;
+    background-color: #f9f9f9;
+}

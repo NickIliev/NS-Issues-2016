@@ -1,0 +1,7 @@
+@import url("~/views/schedule-appt/schedule-appt.common.css");
+@import url("~/components/access-uh/access-uh.common.css");
+#iconScheduleReferral,#iconScheduleOnline,#iconCalltoSchedule{
+    border-style: solid;
+    border-color:#e3e3e3;
+    border-width: 1;
+}

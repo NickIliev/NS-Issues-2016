@@ -1,0 +1,188 @@
+<StackLayout>
+
+  <android xmlns:RL="nativescript-ripple"
+      xmlns:lv="nativescript-telerik-ui/listview"
+      xmlns:dd="nativescript-drop-down"
+      xmlns:access-uh="~/components/access-uh">
+    <TabView id="mainTabs" selectedColor="#85dadf" tabsBackgroundColor="#f9f9f9" cssClass="tabView">
+      <TabView.items>
+
+        <TabViewItem title="Access UH">
+          <TabViewItem.view>
+            <GridLayout rows="auto, *" id="main-content">
+              <Label id="lblNoRecordsFound" text="There are no search results to display." row="1" visibility="{{ searchResults.Count == 0 && !loadingResults ? 'visible' : 'collapsed' }}" />
+              <StackLayout row="1" visibility="{{ searchResults.Count != 0 || loadingResults ? 'visible' : 'collapsed' }}">
+                <lv:RadListView items="{{ searchResults.Data }}" id="providers-list" itemTap="selectProvider" loadOnDemandMode="{{ listViewOnDemandMode }}" loadMoreDataRequested="{{ loadMoreResults }}">
+                  <lv:RadListView.listViewLayout>
+                    <lv:RadListView.ListViewLinearLayout scrollDirection="Vertical" itemHeight="50" />
+                  </lv:RadListView.listViewLayout>
+                  <lv:RadListView.itemTemplate>
+                    <StackLayout>
+                      <StackLayout class="searchResultItem" orientation="horizontal">
+                        <StackLayout cssClass="providerImage">
+                          <Image src="{{ Image != null ? ('data:image/png;base64,' + Image) : '~/images/profile.png' }}" horizontalAlignment="left" />
+                        </StackLayout>
+                        <StackLayout class="providerDetails" textwrap="true">
+                          <Label class="providerResultText" textWrap="true">
+                            <FormattedString>
+                              <Span text="{{ FullName }}" fontAttributes="Bold"></Span>
+                              <Span text=" - " visibility="{{ SpecialtiesText !== '' ? 'visible' : 'collapsed' }}"></Span>
+                              <Span text="{{ SpecialtiesText }}" class="providerSpecialtiesText"></Span>
+                            </FormattedString>
+                          </Label>
+                          <StackLayout orientation="horizontal" visibility="{{ PrimaryLocation.Distance != null ? 'visible' : 'collapsed' }}">-->
+                            <Label text="&#xf041;" class="icon infoIcon" />
+                            <Label class="locationDistance" text="{{ PrimaryLocation.Distance + 'm' }}" />
+                          </StackLayout>
+                        </StackLayout>
+                      </StackLayout>
+                      <StackLayout class="horizontalLine"></StackLayout>
+                    </StackLayout>
+                  </lv:RadListView.itemTemplate>
+                </lv:RadListView>
+              </StackLayout>
+              <StackLayout row="0" id="searchSection">
+                <StackLayout orientation="horizontal">
+                  <Label text="Find a Provider" width="50%" class="pageTitle" />
+                  <StackLayout id="chkPrimaryCare" width="50%" orientation="horizontal" tap="onTapPrimaryCare">
+                      <Label text="Primary Care" tap="onTapPrimaryCare" />
+                      <StackLayout class="checkbox">
+                          <Image src="~/images/common/checked.png" tap="onTapPrimaryCare" visibility="{{ isPrimaryCare ? 'visible' : 'collapsed' }}" />
+                          <Image src="~/images/common/unchecked.png" tap="onTapPrimaryCare" visibility="{{ !isPrimaryCare ? 'visible' : 'collapsed' }}" />
+                      </StackLayout>
+                  </StackLayout>
+                </StackLayout>
+                <StackLayout class="horizontalLine"></StackLayout>
+                <StackLayout cssClass="sortItem">
+                  <StackLayout class="dropDownContainer">
+                    <dd:DropDown id="ddlSearchBy" items="{{ searchBy.SearchTypes }}" selectedIndex="{{ searchBy.SelectedIndex }}" />
+                  </StackLayout>
+                </StackLayout>
+
+                <GridLayout rows="auto" cols="auto, *">
+                  <TextField row="0" col="1" colSpan="2" id="txtSearchBox" text="{{ searchTerm }}" hint="Search for a provider" returnKeyType="search" returnPress="onSearchBtnTap" />
+                  <RL:Ripple class="searchButtonRipple" row="0" col="2" rippleColor="#ff9999" onTap="onSearchBtnTap">
+                    <Button id="btnSearchIcon" color="#fff" class="icon" text="&#xf002;" />
+                  </RL:Ripple>
+                </GridLayout>
+                <StackLayout>
+                  <RL:Ripple rippleColor="#acacac" onTap="showFilters">
+                    <DockLayout width="100%" id="slBtnFilters" orientation="horizontal" onTap="showFilters">
+                      <Label dock="left" text="Filter and Sort" id="lblBtnFilters" onTap="showFilters" />
+                      <Label dock="right" text="+" id="lblBtnFiltersIcon" onTap="showFilters" />
+                    </DockLayout>
+                  </RL:Ripple>
+                  <StackLayout class="horizontalLine"></StackLayout>
+                  <Label id="lblResultsCount"
+                          visibility="{{ searchResults.Count === -1 ? 'collapsed' : 'visible' }}"
+                          text="{{ searchResults.Count + ' result' + (searchResults.Count === 1 ? '' : 's') + ' found' }}" />
+                  <StackLayout class="horizontalLine"></StackLayout>
+                </StackLayout>
+              </StackLayout>
+              <ActivityIndicator busy="{{ isSearching }}" row="1" />
+            </GridLayout>
+          </TabViewItem.view>
+        </TabViewItem>
+
+        <TabViewItem title="Explore Health Issues">
+          <TabViewItem.view>
+            <access-uh:explore-health />
+          </TabViewItem.view>
+        </TabViewItem>
+
+      </TabView.items>
+    </TabView>
+  </android>
+  <!-- TODO: modularize this menu -->
+  <ios xmlns:lv="nativescript-telerik-ui/listview"
+        xmlns:dd="nativescript-drop-down"
+        xmlns:access-uh="~/components/access-uh">
+    <StackLayout class="ContentHeight">
+
+      <StackLayout id="tabView" orientation="horizontal"  width="100%" >
+        <GridLayout rows="*,2"  id="TopLeft"   tap="showAccessUH">
+          <Label row="0" text="Access UH" />
+          <StackLayout row="1" class="horizontalLine" visibility="{{ selectedScreen === 0 ? 'visible' : 'collapsed' }}"></StackLayout>
+        </GridLayout>
+        <GridLayout rows="*,2"  id="TopRight" tap="showEHI"  >
+          <Label row="0" text="Explore Health Issues" textWrap="true" />
+          <StackLayout row="1" class="horizontalLine" visibility="{{ selectedScreen === 1 ? 'visible' : 'collapsed' }}"></StackLayout>
+        </GridLayout>
+      </StackLayout>
+
+
+      <StackLayout row="0" visibility="{{ selectedScreen == 0 ? 'visible' : 'collapsed' }}"  >
+        <GridLayout rows="auto, *" id="main-content">
+          <Label id="lblNoRecordsFound" text="There are no search results to display." row="1" visibility="{{ searchResults.Count == 0 && !loadingResults ? 'visible' : 'collapsed' }}" />
+          <StackLayout row="1" visibility="{{ searchResults.Count != 0 || loadingResults ? 'visible' : 'collapsed' }}">
+            <GridLayout>
+              <lv:RadListView items="{{ searchResults.Data }}" id="providers-list" itemTap="selectProvider" loadOnDemandMode="{{ listViewOnDemandMode }}" loadMoreDataRequested="{{ loadMoreResults }}">
+                <lv:RadListView.listViewLayout>
+                  <lv:ListViewLinearLayout scrollDirection="Vertical" itemHeight="50"  itemWidth="100%"/>
+                </lv:RadListView.listViewLayout>
+                <lv:RadListView.itemTemplate>
+                  <StackLayout class="space">
+                    <GridLayout columns="auto, *, auto" rows="auto, auto, auto, auto" >
+                      <StackLayout cssClass="providerImage" col="0" row="1" >
+                        <Image src="{{ Image != null ? ('data:image/png;base64,' + Image) : '~/images/profile.png' }}" horizontalAlignment="left" />
+                      </StackLayout>
+                      <StackLayout col="1" row="1" class="providerDetails" textwrap="true">
+                        <Label class="providerResultText" textWrap="true">
+                          <FormattedString>
+                            <Span text="{{ FullName }}" fontAttributes="Bold"></Span>
+                            <Span text=" - " visibility="{{ SpecialtiesText !== '' ? 'visible' : 'collapsed' }}"></Span>
+                            <Span text="{{ SpecialtiesText }}" class="providerSpecialtiesText"></Span>
+                          </FormattedString>
+                        </Label>
+                        <StackLayout orientation="horizontal"  visibility="{{ PrimaryLocation.Distance != null ? 'visible' : 'collapsed' }}">
+                          <Label text="&#xf041;" class="icon infoIcon" />
+                          <Label class="locationDistance" text="{{ PrimaryLocation.Distance + 'm' }}" />
+                        </StackLayout>
+                      </StackLayout>
+                    </GridLayout>
+                      <StackLayout class="horizontalLine"></StackLayout>
+                  </StackLayout>
+                </lv:RadListView.itemTemplate>
+              </lv:RadListView>
+            </GridLayout>
+          </StackLayout>
+          <StackLayout row="0" id="searchSection">
+            <Label text="Find a Provider" class="pageTitle" />
+            <GridLayout rows="auto" cols="auto, *">
+              <TextField row="0" col="1" colSpan="2" id="txtSearchBox" text="{{ searchTerm }}" hint="Search for a provider" returnKeyType="search" returnPress="onSearchBtnTap" />
+              <Button row="0" col="2" id="btnSearchIcon" class="icon" text="&#xf002;" onTap="onSearchBtnTap" />
+            </GridLayout>
+            <StackLayout>
+              <StackLayout orientation="horizontal" cssClass="sortItem">
+                <!--<StackLayout class="fieldLabel">
+                  <Label text="Search By: " class="plainLbl" />
+                </StackLayout>-->
+                <StackLayout class="dropDownContainer">
+                  <dd:DropDown id="ddlSearchBy" items="{{ searchBy.SearchTypes }}" selectedIndex="{{ searchBy.SelectedIndex }}"
+                      backgroundColor="#f9f9f9" />
+                </StackLayout>
+              </StackLayout>
+              <StackLayout class="horizontalLine"></StackLayout>
+              <DockLayout width="100%" id="slBtnFilters" orientation="horizontal" onTap="showFilters">
+                <Label dock="left" text="Filter and Sort Providers by" id="lblBtnFilters" />
+                <Label dock="right" text="+" id="lblBtnFiltersIcon" />
+              </DockLayout>
+              <StackLayout class="horizontalLine"></StackLayout>
+              <Label id="lblResultsCount"
+                      visibility="{{ searchResults.Count === -1 ? 'collapsed' : 'visible' }}"
+                      text="{{ searchResults.Count + ' result' + (searchResults.Count === 1 ? '' : 's') + ' found' }}" />
+              <StackLayout class="horizontalLine"></StackLayout>
+            </StackLayout>
+          </StackLayout>
+          <ActivityIndicator busy="{{ isSearching }}" row="1" />
+        </GridLayout>
+      </StackLayout>
+
+      <StackLayout row="0" visibility="{{ selectedScreen === 1 ? 'visible' : 'collapsed' }}" >
+        <access-uh:explore-health />
+      </StackLayout>
+
+    </StackLayout>
+  </ios>
+
+</StackLayout>

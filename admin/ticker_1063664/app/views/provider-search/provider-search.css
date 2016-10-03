@@ -1,0 +1,65 @@
+@import url("~/common/styles/search.css");
+
+#provider-list {
+    margin: 5;
+    opacity: 0;
+}
+
+.searchResultItem {
+    /*height: 59;*/
+    padding-top: 4;
+    padding-bottom: 7;
+    padding-left: 30;
+    padding-right: 30;
+}
+
+.providerResultText,
+.providerSpecialty,
+.providerGender,
+.providerImage {
+    margin: 0;
+}
+
+.providerImage {
+    width: 38;
+}
+
+.providerImage Image {
+    height: 48;
+}
+
+.providerDetails {
+    margin-left: 12;
+    vertical-align: center;
+}
+
+.providerResultText {
+    font-size: 14;
+}
+
+.sortItem {
+    padding: 6 17;
+}
+
+.space {
+   padding-left:12;
+}
+
+#chkPrimaryCare {
+    horizontal-align: right;
+    padding-right: 7;
+}
+
+.checkbox {
+    margin-left: 5
+}
+
+/*.dropDownContainer{
+
+   background-image: ~/images/ddlarrow.png;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-right:79;
+    width:100%;
+   margin-right:10;
+}*/

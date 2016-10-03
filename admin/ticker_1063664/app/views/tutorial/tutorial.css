@@ -1,0 +1,64 @@
+DockLayout{
+    background-size:cover
+}
+Button {
+    background-image: none;
+    background-color: transparent;
+    color: #bf0d32;
+    width:auto
+} 
+#slides Slide{
+    width:100%;
+    height:100%;
+    background-position:top center
+}
+.screen-1{
+    background-image:~/images/tutorial/screens-1.jpg;
+    background-size:cover;
+}
+.screen-2{
+    background-image:~/images/tutorial/screens-2.jpg;
+    background-size:cover;
+}
+.screen-3{
+    background-image:~/images/tutorial/screens-3.jpg;
+    background-size:cover;
+}
+.screen-4{
+    background-image:~/images/tutorial/screens-4.jpg;
+    background-size:cover;
+}
+.screen-5{
+    background-image:~/images/tutorial/screens-5.jpg;
+    background-size:cover;
+}
+.screen-6{
+    background-image:~/images/tutorial/screens-6.jpg;
+    background-size:cover;
+}
+.screen-7{
+    background-image:~/images/tutorial/screens-7.jpg;
+    background-size:cover;
+}
+.slide-indicator-inactive{
+    background-color: black;
+    opacity : 0.3;
+    width : 15;
+    height : 15;
+    margin-left : 2.5;
+    margin-right : 2.5;
+    margin-top : 10;
+    border-radius : 7.5;
+}
+ 
+.slide-indicator-active{
+    background-color: #bf0d32;
+    opacity : 1;
+    width : 15;
+    height : 15;
+    margin-left : 2.5;
+    margin-right : 2.5;
+    margin-top : 10;
+    border-radius : 7.5;
+}
+

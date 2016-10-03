@@ -1,0 +1,36 @@
+{
+  "nativescript": {
+    "id": "org.uhhospitals.uhnow",
+    "tns-android": {
+      "version": "2.1.1"
+    },
+    "tns-ios": {
+      "version": "2.1.1"
+    }
+  },
+  "dependencies": {
+    "email-validator": "1.0.4",
+    "nativescript-barcodescanner": "1.3.3",
+    "nativescript-cardview": "1.1.7",
+    "nativescript-drop-down": "1.3.2",
+    "nativescript-geolocation": "0.0.12",
+    "nativescript-google-maps-sdk": "^1.3.3",
+    "nativescript-maskedinput": "0.0.2",
+    "nativescript-ripple": "1.0.0",
+    "nativescript-slides": "^2.1.5",
+    "nativescript-splashscreen": "^2.1.0",
+    "nativescript-sqlite": "^1.1.1",
+    "nativescript-swiss-army-knife": "1.0.5",
+    "nativescript-telerik-analytics": "1.0.6",
+    "nativescript-telerik-ui": "1.3.1",
+    "nativescript-youtubesdk": "0.0.2",
+    "tns-core-modules": "2.1.0"
+  },
+  "devDependencies": {
+    "babel-traverse": "6.10.4",
+    "babel-types": "6.11.1",
+    "babylon": "6.8.4",
+    "filewalker": "0.1.3",
+    "lazy": "1.0.11"
+  }
+}

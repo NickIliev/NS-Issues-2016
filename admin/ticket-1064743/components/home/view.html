@@ -1,0 +1,43 @@
+<div data-role="view" data-title="Login Screen1" data-layout="main-nonav" data-model="app.home" data-show="app.home.onShow" data-after-show="app.home.afterShow">
+    <div id="homeModel" class="form-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="form-content-item">
+
+
+                    <label>
+
+                        <span>User Name:</span>
+
+                        <input data-bind="value: homeModel.fields.username" placeholder="....." type="text">
+                    </label>
+
+                </li>
+                <li class="form-content-item">
+
+
+                    <label>
+
+                        <span>Password:</span>
+
+                        <input data-bind="value: homeModel.fields.password" placeholder="...." type="password">
+                    </label>
+
+                </li>
+            </ul>
+
+            <div class="button-group">
+                <a class="primary" data-role="button" data-bind="events: { click: homeModel.submit }">Login</a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_homeModel -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+        <!-- END_CUSTOM_CODE_homeModel -->
+    </div>
+
+    <!-- START_CUSTOM_CODE_home -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_home -->
+</div>

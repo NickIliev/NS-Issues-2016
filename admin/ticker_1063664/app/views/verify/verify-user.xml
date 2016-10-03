@@ -1,0 +1,70 @@
+﻿<page loaded="loaded"
+      codeFile="~/views/verify/verify-user.js"
+      xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+      xmlns:customControls="~/components/drawer-menu"
+      xmlns:action-bar="~/components/action-bar"
+      xmlns:access-uh="~/components/access-uh"
+      xmlns:verify="~/views/verify"
+      navigatedTo="myNavigatedTo">
+  <page.actionBar>
+    <action-bar:actionBar />
+  </page.actionBar>
+
+  <drawer:rad-side-drawer id="drawer" drawerLocation="Left">
+    <drawer:rad-side-drawer.drawerTransition>
+      <drawer:SlideInOnTopTransition />
+    </drawer:rad-side-drawer.drawerTransition>
+
+    <drawer:rad-side-drawer.mainContent>
+      <android>
+        <TabView id="mainTabs" selectedColor="#85dadf" tabsBackgroundColor="#f9f9f9" cssClass="tabView">
+          <TabView.items>
+
+            <TabViewItem title="Access UH">
+              <TabViewItem.view>
+                <GridLayout rows="*" width="100%" style="padding:15%" id="verifyMdoule">
+                  <StackLayout orientation="vertical"  width="100%">
+                    <Label text="Verify your identity" style="width:100%;" cssClass="title"/>
+                    <Label text="{{ verifyText}}" style="width:100%;"/>
+                    <TextField id="dob" autocorrect="false" keyboardType="datetime" text="{{ dob }}"/>
+                    <TextField id="ssn" autocorrect="false" keyboardType="number" text="{{ ssn }}"/>
+                    <TextField id="addr" autocorrect="false" text="{{ addr}}"/>
+                  </StackLayout>
+                  <StackLayout style="vertical-align:bottom" orientation="horizontal">
+                    <Button text="Re-enter" tap="reenter" style="color:white; margin:0 5 0 0; horizontal-align:right" width="48%"/>
+                    <Button text="Verify" tap="authenticate" style="color:white; margin:0 0 0 5; horizontal-align:left" width="48%"/>
+                  </StackLayout>
+
+                </GridLayout>
+              </TabViewItem.view>
+            </TabViewItem>
+
+            <TabViewItem title="Explore Health Issues">
+              <TabViewItem.view>
+                <access-uh:explore-health />
+              </TabViewItem.view>
+            </TabViewItem>
+
+          </TabView.items>
+        </TabView>
+      </android>
+
+
+      <ios>
+        <StackLayout>
+
+          <StackLayout>
+            <ScrollView orientation="horizontal" id="horizontalScroll" backgroundColor="#f9f9f9" >
+              <!-- insert verify model -->
+            </ScrollView>
+          </StackLayout>
+        </StackLayout>
+      </ios>
+    </drawer:rad-side-drawer.mainContent>
+
+    <drawer:rad-side-drawer.drawerContent>
+      <customControls:drawer-menu />
+    </drawer:rad-side-drawer.drawerContent>
+
+  </drawer:rad-side-drawer>
+</page>

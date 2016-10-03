@@ -1,0 +1,32 @@
+<ScrollView xmlns:RL="nativescript-ripple">
+    <StackLayout class="pageContent">
+        <StackLayout class="ehiSection ehiTop">
+            <Label text="Tummy Ache?" class="ehiSectionTitle" />
+            <Label text="Try our easy to use symptom checker." textWrap="true" />
+            <android>
+                <RL:Ripple class="buttonRipple" rippleColor="#ff9999" tap="tileSymptomCheckerTap">
+                    <Button text="Visit Symptom Checker   &gt;" style="color:white;"/>
+                </RL:Ripple>
+            </android>
+            <ios>
+                <Button text="Visit Symptom Checker   &gt;" tap="tileSymptomCheckerTap"  style="color:white;"/>
+            </ios>
+        </StackLayout>
+
+        <StackLayout class="horizontalLine sectionDivider"></StackLayout>
+
+        <StackLayout class="ehiSection">
+            <Label text="Explore Conditions" class="ehiSectionTitle" />
+            <Label text="What is diabetes and how does it affect the body?" textWrap="true" />
+            <android>
+                <RL:Ripple class="buttonRipple" rippleColor="#ff9999" tap="tileExploreConditionsTap">
+                    <Button text="Staywell Health Library   &gt;" style="color:white;"/>
+                </RL:Ripple>
+            </android>
+            <ios>
+                <Button text="Staywell Health Library   &gt;" tap="tileExploreConditionsTap" style="color:white;"/>
+            </ios>
+        </StackLayout>
+
+    </StackLayout>
+</ScrollView>

@@ -1,0 +1,110 @@
+<page loaded="loaded"
+      codeFile="~/views/orders/orders.js"
+      xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+      xmlns:lv="nativescript-telerik-ui/listview"
+      xmlns:customControls="~/components/drawer-menu"
+      xmlns:action-bar="~/components/action-bar"
+       xmlns:card="nativescript-cardview"
+      xmlns:access-uh="~/components/access-uh">
+  <page.actionBar>
+    <action-bar:actionBar />
+  </page.actionBar>
+
+  <drawer:rad-side-drawer id="drawer" drawerLocation="Left">
+    <drawer:rad-side-drawer.drawerTransition>
+      <drawer:SlideInOnTopTransition />
+    </drawer:rad-side-drawer.drawerTransition>
+
+    <drawer:rad-side-drawer.mainContent>
+      <ActivityIndicator busy="{{ isLoading }}" />
+      <android xmlns:RL="nativescript-ripple">
+        <TabView id="mainTabs" selectedColor="#85dadf" tabsBackgroundColor="#f9f9f9" cssClass="tabView">
+          <TabView.items>
+
+            <TabViewItem title="Access UH">
+              <TabViewItem.view>
+
+                <StackLayout style="margin:20% 0 0 0">
+                  <StackLayout style="padding:15% 20%">
+                    <Label text="Referral Orders" cssClass="title"/>
+                    <Label text="{{ count }}" horizontalAlignment="left" verticalAlignment="center"/>
+                  </StackLayout>
+                  <StackLayout style="padding:15% 20%;background-color:#f9f9f9">
+                    <lv:RadListView items="{{ searchResults.Data }}"  itemTap="schedule">
+
+                      <lv:RadListView.listViewLayout>
+                        <lv:ListViewLinearLayout scrollDirection="Vertical"/>
+                      </lv:RadListView.listViewLayout>
+                      <lv:RadListView.itemTemplate >
+                        <card:CardView class="searchResultItem" style="margin:0 0 15 0" elevation="5" radius="12" shadowOffsetWidth="1" shadowOffsetHeight="20">
+                          <StackLayout orientation="horizontal" class="locationDetails" style="padding:17">
+                            <StackLayout orientation="vertical" width="65%">
+                              <Label fontSize="16" text="{{ 'Referral# : ' + OrderExtNumber }}"/>
+                              <Label fontSize="14" text="{{ 'Date: ' + ToBeDoneDate }}"/>
+                              <Label fontSize="14" text="{{ 'Type: ' + QOClassificationEntryName }}"/>
+                              <Label fontSize="14" text="{{ 'Ordering Provider: ' + OrderingProviderFirstName + ' ' + OrderingProviderLastName }}"/>
+                            </StackLayout>
+                            <StackLayout orientation="horizontal" style="text-align:right;width:35%">
+                              <Button text="Schedule" style="width:100; height:40; font-size:12;background-color:#bf0d32;color:#fff;text-align:center;border-radius:20;horizontal-align:right" />
+                            </StackLayout>
+                          </StackLayout>
+                        </card:CardView>
+                      </lv:RadListView.itemTemplate>
+                    </lv:RadListView>
+
+                  </StackLayout>
+                </StackLayout>
+
+              </TabViewItem.view>
+            </TabViewItem>
+
+            <TabViewItem title="Explore Health Issues">
+              <TabViewItem.view>
+                <access-uh:explore-health />
+              </TabViewItem.view>
+            </TabViewItem>
+
+          </TabView.items>
+        </TabView>
+      </android>
+      <!-- TODO: modularize this menu -->
+      <ios>
+        <StackLayout class="ContentHeight">
+
+          <StackLayout id="tabView" orientation="horizontal"  width="100%" >
+            <GridLayout rows="*,2"  id="TopLeft"   tap="showAccessUH">
+              <Label row="0" text="Access UH" />
+              <StackLayout row="1" class="horizontalLine" visibility="{{ selectedScreen === 0 ? 'visible' : 'collapsed' }}"></StackLayout>
+            </GridLayout>
+            <GridLayout rows="*,2"  id="TopRight" tap="showEHI"  >
+              <Label row="0" text="Explore Health Issues" textWrap="true" />
+              <StackLayout row="1" class="horizontalLine" visibility="{{ selectedScreen === 1 ? 'visible' : 'collapsed' }}"></StackLayout>
+            </GridLayout>
+          </StackLayout>
+
+          <!--<StackLayout id="tabView" orientation="horizontal"  width="100%" >
+                   <StackLayout orientation="horizontal" id="TopLeft"   tap="showAccessUH" backgroundColor="{{ selectedScreen ? '#f9f9f9' : '#85dadf' }}">
+                     <Label text="Access UH" />
+                   </StackLayout>
+                   <StackLayout orientation="horizontal" id="TopRight" tap="showEHI"   backgroundColor="{{ !selectedScreen ? '#f9f9f9' : '#85dadf' }}">
+                     <Label text="Explore Health Issues" textWrap="true" />
+                   </StackLayout>
+                 </StackLayout>-->
+
+          <StackLayout row="0" visibility="{{ selectedScreen == 0 ? 'visible' : 'collapsed' }}"  >
+            <access-uh:access-uh />
+          </StackLayout>
+          <StackLayout row="0" visibility="{{ selectedScreen === 1 ? 'visible' : 'collapsed' }}" >
+            <access-uh:explore-health />
+          </StackLayout>
+        </StackLayout>
+      </ios>
+
+    </drawer:rad-side-drawer.mainContent>
+
+    <drawer:rad-side-drawer.drawerContent>
+      <customControls:drawer-menu />
+    </drawer:rad-side-drawer.drawerContent>
+
+  </drawer:rad-side-drawer>
+</page>

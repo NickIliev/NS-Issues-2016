@@ -1,0 +1,36 @@
+
+@import url("~/views/provider/provider.common.css");
+
+#tabView > StackLayout {
+    vertical-align: bottom;
+    background-color:#f9f9f9;
+}
+
+#tabView StackLayout.horizontalLine {
+    border-color: #85dadf;
+    border-width:1;
+    height:2;
+}
+
+#tap1,#tap2,#tap3,#tap4,#tap5 {
+horizontal-align:center;
+padding: 0 10;
+  
+}
+/*#tabs {
+    border-color: black;
+    border-width: 1;
+    border-style: solid;
+}*/
+
+#bottomButtons {
+    height: auto;
+    width:auto;
+    vertical-align: bottom;
+   
+}
+
+.heightfull{
+    height:100%
+}
+
