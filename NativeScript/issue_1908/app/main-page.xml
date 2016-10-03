@@ -1,5 +1,5 @@
 <Page actionBarHidden="true" loaded="onLoaded">
   <GridLayout>
-    <Label id="name" text="Action Bar Hidden" tap="goToNextPage" />
+    <Button id="name" text="Action Bar Hidden" tap="goToNextPage" />
   </GridLayout>
 </Page>

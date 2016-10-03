@@ -2,14 +2,17 @@
 	"nativescript": {
 		"id": "org.nativescript.issue1908",
 		"tns-android": {
-			"version": "1.7.1"
+			"version": "2.3.0"
+		},
+		"tns-ios": {
+			"version": "2.3.0"
 		}
 	},
 	"dependencies": {
-		"tns-core-modules": "1.7.1"
+		"tns-core-modules": "2.3.0"
 	},
 	"devDependencies": {
 		"nativescript-dev-typescript": "^0.3.0",
-		"typescript": "^1.8.9"
+		"typescript": "^2.0.3"
 	}
 }
