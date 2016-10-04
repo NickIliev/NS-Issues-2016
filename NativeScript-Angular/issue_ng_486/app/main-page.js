@@ -1,25 +1,23 @@
 "use strict";
-var frame_1 = require("ui/frame");
-// Event handler for Page "navigatingTo" event attached in main-page.xml
-function navigatingTo(args) {
-    // Get the event sender
+var frameModule = require("ui/frame");
+var topmost = frameModule.topmost();
+function onNavigatingTo(args) {
     var page = args.object;
 }
-exports.navigatingTo = navigatingTo;
-function goToSub() {
-    var navigationEntry = {
-        moduleName: "sub-page",
-        clearHistory: true
-    };
-    frame_1.topmost().navigate(navigationEntry);
+exports.onNavigatingTo = onNavigatingTo;
+function onTap(args) {
+    var topmost = frameModule.topmost();
+    topmost.navigate({
+        moduleName: "sub-page"
+    });
 }
-exports.goToSub = goToSub;
-function goToThird() {
-    var navigationEntry = {
+exports.onTap = onTap;
+function goToThird(args) {
+    var topmost = frameModule.topmost();
+    topmost.navigate({
         moduleName: "third-page",
-        clearHistory: false
-    };
-    frame_1.topmost().navigate(navigationEntry);
+        clearHistory: true
+    });
 }
 exports.goToThird = goToThird;
 //# sourceMappingURL=main-page.js.map

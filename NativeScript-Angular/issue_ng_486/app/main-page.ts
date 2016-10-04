@@ -1,25 +1,21 @@
-import { EventData } from 'data/observable';
-import { Page } from 'ui/page';
-import { topmost } from "ui/frame";
+var frameModule = require("ui/frame");
+var topmost = frameModule.topmost();
 
-// Event handler for Page "navigatingTo" event attached in main-page.xml
-export function navigatingTo(args: EventData) {
-  // Get the event sender
-  let page = <Page>args.object;
+export function onNavigatingTo(args) {
+    var page = args.object;
 }
 
-export function goToSub() {
-  var navigationEntry = {
-      moduleName: "sub-page",
-      clearHistory: true
-  };
-  topmost().navigate(navigationEntry);
+export function onTap(args) {
+    var topmost = frameModule.topmost();
+    topmost.navigate({
+      moduleName: "sub-page"
+    });
 }
 
-export function goToThird() {
-  var navigationEntry = {
+export function goToThird(args) {
+    var topmost = frameModule.topmost();
+    topmost.navigate({
       moduleName: "third-page",
-      clearHistory: false
-  };
-  topmost().navigate(navigationEntry);
+      clearHistory: true
+    });
 }

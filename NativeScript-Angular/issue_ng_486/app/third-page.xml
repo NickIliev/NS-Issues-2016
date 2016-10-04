@@ -1,3 +1,8 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded" navigatedTo="onNavigatedTo">
-    <Label text="THIRD PAGE" textWrap="true" />  
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
+  <Page.actionBar>
+      <ActionBar title="THIRD Page"/>
+  </Page.actionBar>
+  <StackLayout>
+    <Label class="title" text="THIRD page" />
+  </StackLayout>
 </Page>

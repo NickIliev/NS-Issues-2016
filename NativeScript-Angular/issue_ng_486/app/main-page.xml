@@ -1,6 +1,11 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+navigatingTo="onNavigatingTo">
+  <Page.actionBar>
+      <ActionBar title="First Page"/>
+  </Page.actionBar>  
   <StackLayout>
-    <Button text="goToSub" tap="goToSub" />
-    <Button text="goToThird" tap="goToThird" />
+      <Button text="TAP" tap="onTap" />
+      <Button text="go to third" tap="goToThird" />
+      
   </StackLayout>
 </Page>
