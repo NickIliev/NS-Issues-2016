@@ -1,0 +1,22 @@
+@import url('~/components/action-bar/actionBar.css');
+
+
+#logo{
+    vertical-align: center;
+
+}
+#contactUH{
+     horizontal-align: right;
+    
+
+}
+#contactUH > label{
+      horizontal-align: right;
+         /*vertical-align:right;*/
+}
+.contactUHLabel{
+   padding-left:25; font-weight: bold;
+}
+#titleView{
+    width:100%;
+}

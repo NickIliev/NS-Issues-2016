@@ -1,0 +1,35 @@
+@import url("~/components/access-uh/access-uh.common.css");
+
+#iconPHR,
+#iconFindProvider,
+#iconFindLocation,
+#iconFindER {
+    border-style: solid;
+    border-color:#e3e3e3;
+    border-width: 1;
+}
+
+#iconPHR Image {
+    height: 28%;
+}
+
+#iconFindProvider Image,
+#iconFindLocation Image {
+    height: 50%
+}
+
+#iconFindER Image {
+    height: 25%;
+    
+}
+
+#iconReferralEase image{
+    height: 30%;
+}
+.verticalLine{
+     border-left: thick solid #ff0000;
+     margin-bottom:1;
+     border:2;
+
+
+}

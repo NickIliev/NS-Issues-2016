@@ -10,7 +10,7 @@
     }
   },
   "dependencies": {
-    "tns-core-modules": "^2.4.0-2016-09-21-4179"
+    "tns-core-modules": "^2.3.0"
   },
   "devDependencies": {
     "babel-traverse": "6.15.0",

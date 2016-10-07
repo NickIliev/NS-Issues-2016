@@ -1,0 +1,51 @@
+<android xmlns:access-uh="~/components/access-uh">
+    <TabView id="mainTabs" selectedColor="#85dadf" tabsBackgroundColor="#f9f9f9" cssClass="tabView">
+        <TabView.items>
+
+            <TabViewItem title="Access UH">
+                <TabViewItem.view>
+                    <access-uh:access-uh />
+                </TabViewItem.view>
+            </TabViewItem>
+
+            <TabViewItem title="Explore Health Issues">
+                <TabViewItem.view>
+                    <access-uh:explore-health />
+                </TabViewItem.view>
+            </TabViewItem>
+
+        </TabView.items>
+    </TabView>
+</android>
+<!-- TODO: modularize this menu -->
+<ios xmlns:access-uh="~/components/access-uh">
+    <StackLayout class="ContentHeight">
+
+        <StackLayout id="tabView" orientation="horizontal"  width="100%" >
+            <GridLayout rows="*,2"  id="TopLeft"   tap="showAccessUH">
+                <Label row="0" text="Access UH" />
+                <StackLayout row="1" class="horizontalLine" visibility="{{ selectedScreen === 0 ? 'visible' : 'collapsed' }}"></StackLayout>
+            </GridLayout>
+            <GridLayout rows="*,2"  id="TopRight" tap="showEHI"  >
+                <Label row="0" text="Explore Health Issues" textWrap="true" />
+                <StackLayout row="1" class="horizontalLine" visibility="{{ selectedScreen === 1 ? 'visible' : 'collapsed' }}"></StackLayout>
+            </GridLayout>
+        </StackLayout>
+
+        <!--<StackLayout id="tabView" orientation="horizontal"  width="100%" >
+              <StackLayout orientation="horizontal" id="TopLeft"   tap="showAccessUH" backgroundColor="{{ selectedScreen ? '#f9f9f9' : '#85dadf' }}">
+                <Label text="Access UH" />
+              </StackLayout>
+              <StackLayout orientation="horizontal" id="TopRight" tap="showEHI"   backgroundColor="{{ !selectedScreen ? '#f9f9f9' : '#85dadf' }}">
+                <Label text="Explore Health Issues" textWrap="true" />
+              </StackLayout>
+            </StackLayout>-->
+
+        <StackLayout row="0" visibility="{{ selectedScreen == 0 ? 'visible' : 'collapsed' }}"  >
+            <access-uh:access-uh />
+        </StackLayout>
+        <StackLayout row="0" visibility="{{ selectedScreen === 1 ? 'visible' : 'collapsed' }}" >
+            <access-uh:explore-health />
+        </StackLayout>
+    </StackLayout>
+</ios>

@@ -1,0 +1,17 @@
+﻿/*.title {
+    font-size: 30;
+    horizontal-align: center;
+    margin: 20;
+}*/
+
+    Label {
+        width: 200;
+        border-radius: 100;
+        background-color: aquamarine;
+        padding: 80;
+        font-size: 20;
+    }
+
+StackLayout {
+
+}

@@ -1,0 +1,54 @@
+Button {
+    border-width: 1;
+    border-style: solid;
+    border-color: #034793;
+    border-radius: 2;
+}
+
+TextField {
+    background-color: #FAFAFA;
+    border-width: 1;
+    border-style: solid;
+    border-color: #C7C7CC;
+    border-radius: 2;
+}
+
+.link {
+    border-width: 0;
+}
+
+.main-color {
+    background-color: #ad0f30;
+}
+
+.segmentedBar {
+    margin-top: 15;
+}
+
+#tabView > GridLayout {
+    vertical-align: bottom;
+    background-color: #f9f9f9;
+    height: 55;
+}
+
+#tabView StackLayout.horizontalLine {
+    border-color: #85dadf;
+    border-width: 1;
+    height: 2;
+}
+
+
+#tabView > GridLayout > Label {
+    horizontal-align: center;
+    text-align: center;
+    font-size: 20;
+}
+
+#logo{
+   width:100%;
+}
+#contactUH
+{
+    margin-right:20;
+}
+

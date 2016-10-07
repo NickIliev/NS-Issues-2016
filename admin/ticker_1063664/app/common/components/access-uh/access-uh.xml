@@ -1,0 +1,26 @@
+<GridLayout rows="*" id="main-content">
+  <ActivityIndicator busy="{{ isLoading }}" row="0" />
+  <DockLayout row="0" stretchLastChild="true">
+    <Image dock="top" src="~/images/welcome/welcomeImage.png" />
+    <StackLayout dock="bottom" orientation="horizontal" width="100%">
+      <StackLayout dock="left" id="iconPHR"   width="50%" onTap="findPHRTap" >
+        <Image dock="top" src="~/images/welcome/iconPHR.png" stretch="none"  cssClass="findImage"/>
+      </StackLayout>
+      <StackLayout width="50%">
+        <StackLayout orientation="horizontal" height="50%">
+          <StackLayout id="iconFindProvider"   width="50%" onTap="findProviderTap" >
+            <Image dock="top" src="~/images/welcome/iconFindProvider.png"  stretch="none" cssClass="findImage"/>
+          </StackLayout>
+          <StackLayout id="iconFindLocation"  width="50%" height="100%"  onTap="findLocationTap" >
+            <Image dock="top" src="~/images/welcome/iconFindLocation.png" stretch="none" cssClass="findImage "/>
+          </StackLayout>
+        </StackLayout>
+        <StackLayout height="50%">
+          <StackLayout id="iconFindER"  height="100%" onTap="test" >
+            <Image dock="top" src="~/images/welcome/iconFindER.png"  stretch="none" cssClass="findImage"/>
+          </StackLayout>
+        </StackLayout>
+      </StackLayout>
+    </StackLayout>
+  </DockLayout>
+</GridLayout>

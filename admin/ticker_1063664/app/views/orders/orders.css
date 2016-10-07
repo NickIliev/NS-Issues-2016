@@ -1,0 +1,17 @@
+Button {
+    margin: 18 0 0 0;
+    background-image: none;
+    background-color: #bf0d32;
+    color: #fff;
+}
+
+.searchResultItem {
+    /*border-width: 1;
+    border-style: solid;
+    border-color: #eeeae1;
+    border-radius: 12;*/
+    background-color: #fff;
+    margin: 10 17;
+    padding: 20 15;
+}
+

@@ -1,0 +1,206 @@
+<android xmlns:RL="nativescript-ripple"
+         xmlns:lv="nativescript-telerik-ui/listview"
+         xmlns:maps="nativescript-google-maps-sdk"
+         xmlns:card="nativescript-cardview"
+         xmlns:access-uh="~/components/access-uh">
+  <TabView id="mainTabs" selectedColor="#85dadf" tabsBackgroundColor="#f9f9f9" cssClass="tabView">
+    <TabView.items>
+
+      <TabViewItem title="Access UH">
+        <TabViewItem.view>
+          <GridLayout rows="auto, *, auto" id="main-content">
+            <Label id="lblNoRecordsFound" text="There are no search results to display." row="1" visibility="{{ searchResults.Count == 0 && !loadingResults ? 'visible' : 'collapsed' }}" />
+            <StackLayout id="listContainer" row="1" visibility="{{ searchResults.Count != 0 || loadingResults ? 'visible' : 'collapsed' }}">
+              <lv:RadListView items="{{ searchResults.Data }}" id="locations-list"
+                              loadOnDemandMode="{{ listViewOnDemandMode }}"
+                              loadMoreDataRequested="{{ loadMoreResults }}"
+                              backgroundColor="#f9f9f9"
+                              visibility="{{ showList ? 'visible' : 'collapsed' }}">
+                <lv:RadListView.listViewLayout>
+                  <lv:RadListView.ListViewLinearLayout scrollDirection="Vertical" itemHeight="50" />
+                </lv:RadListView.listViewLayout>
+                <lv:RadListView.itemTemplate>
+                  <StackLayout >
+                    <card:CardView class="searchResultItem" elevation="5" radius="12">
+                      <GridLayout columns="auto, *, auto" rows="auto, auto">
+                        <StackLayout col="1" row="0" class="locationDetails">
+                          <Label class="locationName bold" text="{{ DisplayName }}" textWrap="true" />
+                          <StackLayout class="locationAddress">
+                            <Label text="{{ Address1 + ', ' + (Address2 != null && Address2 != '' ? Address2 + ', ' : '') }}" textWrap="true" />
+                            <Label text="{{ City + ', ' + State + ' ' + PostalCode }}" />
+                            <Label class="lblMapIt" text="Map It" tap="launchMap" />
+                          </StackLayout>
+                          <StackLayout orientation="horizontal" visibility="{{ Phone != null && Phone != '' ? 'visible' : 'collapsed' }}">
+                            <Label class="locationPhone" text="{{ Phone }}" textWrap="true" tap="callLocation" />
+                          </StackLayout>
+                        </StackLayout>
+                        <StackLayout col="2" row="0" orientation="vertical" class="locationDistance" tap="launchMap">
+                          <Label class="bold" text="{{ Distance + ' mi' }}" visibility="{{ Distance != null ? 'visible' : 'collapsed' }}" />
+                          <Image src="~/images/ic_car.png" width="25" />
+                        </StackLayout>
+                      </GridLayout>
+                    </card:CardView>
+                  </StackLayout>
+                </lv:RadListView.itemTemplate>
+              </lv:RadListView>
+              <StackLayout visibility="{{ !showList && !loadingResults && searchResults.Count != -1 ? 'visible' : 'collapsed' }}">
+                <maps:mapView latitude="{{ mapView.latitude }}" longitude="{{ mapView.longitude }}"
+                            zoom="{{ mapView.zoom }}" bearing="{{ mapView.bearing }}"
+                            tilt="{{ mapView.tilt }}" padding="{{ mapView.padding }}" mapReady="onMapReady"
+                            markerSelect="onMarkerSelect" markerBeginDragging="onMarkerBeginDragging"
+                            markerEndDragging="onMarkerEndDragging" markerDrag="onMarkerDrag"
+                            cameraChanged="onCameraChanged"
+                            visibility="{{ isMapInitialized ? 'visible' : 'collapsed' }}" />
+              </StackLayout>
+            </StackLayout>
+            <ActivityIndicator busy="{{ isSearching }}" row="1" />
+            <StackLayout row="2" id="bottomButtons" visibility="{{ searchResults.Count != 0 && searchResults.Count != -1 && isMapInitialized ? 'visible' : 'collapsed' }}">
+              <StackLayout orientation="horizontal">
+                <StackLayout orientation="horizontal" id="bottomButtonLeft" tap="showListView" backgroundColor="{{ showList ? '#9e0425' : '#bf0d32' }}">
+                  <Label text="List View" tap="showListView" />
+                </StackLayout>
+                <StackLayout orientation="horizontal" id="bottomButtonRight" tap="showMapView" backgroundColor="{{ !showList ? '#9e0425' : '#bf0d32' }}">
+                  <Label text="Map View" tap="showMapView" />
+                </StackLayout>
+              </StackLayout>
+            </StackLayout>
+            <StackLayout row="0" id="searchSection">
+              <Label text="Find a Location" class="pageTitle" />
+              <GridLayout rows="auto" cols="auto, *">
+                <TextField row="0" col="1" colSpan="2" id="txtSearchBox" text="{{ searchTerm }}" hint="Search by City State or Zip" returnKeyType="search" returnPress="search" />
+                <RL:Ripple class="searchButtonRipple" row="0" col="2" rippleColor="#ff9999" onTap="search">
+                  <Button id="btnSearchIcon" color="#fff" class="icon" text="&#xf002;" />
+                </RL:Ripple>
+              </GridLayout>
+              <StackLayout>
+                <RL:Ripple rippleColor="#acacac" onTap="showFilters" visibility="{{ hasPerformedSearch ? 'visible' : 'collapsed' }}">
+                  <DockLayout width="100%" id="slBtnFilters" orientation="horizontal" onTap="showFilters">
+                    <Label dock="left" text="Filter & Sort" id="lblBtnFilters" onTap="showFilters" />
+                    <Label dock="right" text="+" id="lblBtnFiltersIcon" onTap="showFilters" />
+                  </DockLayout>
+                </RL:Ripple>
+                <StackLayout class="horizontalLine"></StackLayout>
+                <Label id="lblResultsCount"
+                        visibility="{{ searchResults.Count === -1 ? 'collapsed' : 'visible' }}"
+                        text="{{ searchResults.Count + ' result' + (searchResults.Count === 1 ? '' : 's') + ' found' }}" />
+                <StackLayout class="horizontalLine"></StackLayout>
+              </StackLayout>
+            </StackLayout>
+          </GridLayout>
+        </TabViewItem.view>
+      </TabViewItem>
+
+      <TabViewItem title="Explore Health Issues">
+        <TabViewItem.view>
+          <access-uh:explore-health />
+        </TabViewItem.view>
+      </TabViewItem>
+
+    </TabView.items>
+  </TabView>
+</android>
+<!-- TODO: modularize this menu -->
+<ios xmlns:RL="nativescript-ripple"
+     xmlns:lv="nativescript-telerik-ui/listview"
+     xmlns:maps="nativescript-google-maps-sdk"
+     xmlns:card="nativescript-cardview"
+     xmlns:access-uh="~/components/access-uh">>
+  <StackLayout class="ContentHeight">
+
+    <StackLayout id="tabView" orientation="horizontal"  width="100%" >
+      <GridLayout rows="*,2"  id="TopLeft"   tap="showAccessUH">
+        <Label row="0" text="Access UH" />
+        <StackLayout row="1" class="horizontalLine" visibility="{{ selectedScreen === 0 ? 'visible' : 'collapsed' }}"></StackLayout>
+      </GridLayout>
+      <GridLayout rows="*,2"  id="TopRight" tap="showEHI"  >
+        <Label row="0" text="Explore Health Issues" textWrap="true" />
+        <StackLayout row="1" class="horizontalLine" visibility="{{ selectedScreen === 1 ? 'visible' : 'collapsed' }}"></StackLayout>
+      </GridLayout>
+    </StackLayout>
+
+    <StackLayout visibility="{{ selectedScreen === 0 ? 'visible' : 'collapsed' }}" >
+      <GridLayout rows="auto, *, auto" id="main-content">
+        <Label id="lblNoRecordsFound" text="There are no search results to display." row="1" visibility="{{ searchResults.Count == 0 && !loadingResults ? 'visible' : 'collapsed' }}" />
+        <StackLayout id="listContainer" row="1" visibility="{{ searchResults.Count != 0 || loadingResults ? 'visible' : 'collapsed' }}">
+          <GridLayout>
+            <lv:RadListView items="{{ searchResults.Data }}" id="locations-list"
+                            loadOnDemandMode="{{ listViewOnDemandMode }}"
+                            loadMoreDataRequested="{{ loadMoreResults }}"
+                            backgroundColor="#f9f9f9"
+                            visibility="{{ showList ? 'visible' : 'collapsed' }}">
+              <lv:RadListView.listViewLayout>
+                <lv:ListViewLinearLayout scrollDirection="Vertical" itemHeight="*"  itemWidth="100%" />
+              </lv:RadListView.listViewLayout>
+              <lv:RadListView.itemTemplate>
+                <GridLayout>
+                  <card:CardView class="searchResultItem"  radius="4" >
+                    <GridLayout columns="auto, *, auto" rows="auto, auto">
+                      <StackLayout col="1" row="0" >
+                        <Label class="locationName bold" text="{{ DisplayName }}" textWrap="true" />
+                        <StackLayout class="locationAddress">
+                          <Label text="{{ Address1 + ', ' + (Address2 != null && Address2 != '' ? Address2 + ', ' : '') }}" textWrap="true" />
+                          <Label text="{{ City + ', ' + State + ' ' + PostalCode }}" />
+                          <Label class="lblMapIt" text="Map It" tap="launchMap" />
+                        </StackLayout>
+                        <StackLayout orientation="horizontal" visibility="{{ Phone != null && Phone != '' ? 'visible' : 'collapsed' }}">
+                          <Label class="locationPhone" text="{{ Phone }}" textWrap="true" tap="callLocation" />
+                        </StackLayout>
+                      </StackLayout>
+                      <StackLayout col="2" row="0" orientation="vertical" class="locationDistance" tap="launchMap">
+                        <Label class="bold" text="{{ Distance + ' mi' }}" visibility="{{ Distance != null ? 'visible' : 'collapsed' }}" />
+                        <Image src="~/images/ic_car.png" width="25" />
+                      </StackLayout>
+                    </GridLayout>
+                  </card:CardView>
+                </GridLayout>
+              </lv:RadListView.itemTemplate>
+            </lv:RadListView>
+          <StackLayout visibility="{{ !showList && !loadingResults && searchResults.Count != -1 ? 'visible' : 'collapsed' }}">
+            <GridLayout>
+              <maps:mapView latitude="{{ mapView.latitude }}" longitude="{{ mapView.longitude }}"
+                          zoom="{{ mapView.zoom }}" bearing="{{ mapView.bearing }}"
+                          tilt="{{ mapView.tilt }}" padding="{{ mapView.padding }}" mapReady="onMapReady"
+                          markerSelect="onMarkerSelect" markerBeginDragging="onMarkerBeginDragging"
+                          markerEndDragging="onMarkerEndDragging" markerDrag="onMarkerDrag"
+                          cameraChanged="onCameraChanged"
+                          visibility="{{ isMapInitialized ? 'visible' : 'collapsed' }}" />
+            </GridLayout>
+          </StackLayout>
+          </GridLayout>
+        </StackLayout>
+        <ActivityIndicator busy="{{ isSearching }}" row="1" />
+        <StackLayout row="2" id="bottomButtons" visibility="{{ searchResults.Count != 0 && searchResults.Count != -1 && isMapInitialized ? 'visible' : 'collapsed' }}">
+          <StackLayout orientation="horizontal">
+            <StackLayout orientation="horizontal" id="bottomButtonLeft" tap="showListView" backgroundColor="{{ showList ? '#9e0425' : '#bf0d32' }}">
+              <Label text="List View" />
+            </StackLayout>
+            <StackLayout orientation="horizontal" id="bottomButtonRight" tap="showMapView" backgroundColor="{{ !showList ? '#9e0425' : '#bf0d32' }}">
+              <Label text="Map View" />
+            </StackLayout>
+          </StackLayout>
+        </StackLayout>
+        <StackLayout row="0" id="searchSection">
+          <Label text="Find a Location" class="pageTitle" />
+          <GridLayout rows="auto" cols="auto, *">
+            <TextField row="0" col="1" colSpan="2" id="txtSearchBox" text="{{ searchTerm }}" hint="Search by City State or Zip" returnKeyType="search" returnPress="search" />
+            <Button row="0" col="2" id="btnSearchIcon" class="icon" text="&#xf002;" onTap="search" />
+          </GridLayout>
+          <StackLayout>
+            <DockLayout width="100%" id="slBtnFilters" orientation="horizontal" onTap="showFilters" visibility="{{ hasPerformedSearch ? 'visible' : 'collapsed' }}">
+              <Label dock="left" text="Filter & Sort" id="lblBtnFilters" />
+              <Label dock="right" text="+" id="lblBtnFiltersIcon" />
+            </DockLayout>
+            <StackLayout class="horizontalLine"></StackLayout>
+            <Label id="lblResultsCount"
+                    visibility="{{ searchResults.Count === -1 ? 'collapsed' : 'visible' }}"
+                    text="{{ searchResults.Count + ' result' + (searchResults.Count === 1 ? '' : 's') + ' found' }}" />
+            <StackLayout class="horizontalLine"></StackLayout>
+          </StackLayout>
+        </StackLayout>
+      </GridLayout>
+    </StackLayout>
+    <StackLayout visibility="{{ selectedScreen === 1 ? 'visible' : 'collapsed' }}" >
+      <access-uh:explore-health />
+    </StackLayout>
+  </StackLayout>
+</ios>

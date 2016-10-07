@@ -1,2 +1,0 @@
-"# issues-NativeScript" 
-"# issues-NativeScript" 

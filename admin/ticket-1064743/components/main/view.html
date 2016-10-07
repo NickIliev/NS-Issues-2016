@@ -1,0 +1,33 @@
+<div data-role="view" data-title="Main Screen" data-layout="main-nonav" data-model="app.main" data-show="app.main.onShow" data-after-show="app.main.afterShow">
+    <div id="mainModel" class="form-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li class="form-content-item">
+
+
+                    <label>
+
+                        <span>Text field</span>
+
+                        <input data-bind="value: mainModel.fields.textField" placeholder="Type here ..." type="text">
+                    </label>
+
+                </li>
+            </ul>
+
+            <div class="button-group">
+                <a data-role="button" data-bind="events: { click: mainModel.cancel }">Cancel</a>
+                <a class="primary" data-role="button" data-bind="events: { click: mainModel.submit }">Confirm</a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_mainModel -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+        <!-- END_CUSTOM_CODE_mainModel -->
+    </div>
+
+    <!-- START_CUSTOM_CODE_main -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_main -->
+</div>

@@ -1,0 +1,10 @@
+@import url("~/views/request-an-appointment/request-an-appointment.common.css");
+
+.dropDownContainer{
+
+   background-image: ~/images/ddlarrow.png;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-right:79;
+
+}

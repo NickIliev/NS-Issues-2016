@@ -1,0 +1,180 @@
+<android
+      xmlns:lv="nativescript-telerik-ui/listview"
+      xmlns:dd="nativescript-drop-down"
+      xmlns:access-uh="~/components/access-uh"
+      xmlns:mi="nativescript-maskedinput">
+</android>
+<ios xmlns:lv="nativescript-telerik-ui/listview"
+      xmlns:dd="nativescript-drop-down"
+      xmlns:access-uh="~/components/access-uh"
+      xmlns:mi="nativescript-maskedinput">
+  <StackLayout class="ContentHeight">
+
+    <StackLayout id="tabView" orientation="horizontal"  width="100%" >
+      <GridLayout rows="*,2"  id="TopLeft"   tap="showAccessUH">
+        <Label row="0" text="Access UH" />
+        <StackLayout row="1" class="horizontalLine" visibility="{{ selectedScreen === 0 ? 'visible' : 'collapsed' }}"></StackLayout>
+      </GridLayout>
+      <GridLayout rows="*,2"  id="TopRight" tap="showEHI"  >
+        <Label row="0" text="Explore Health Issues" textWrap="true" />
+        <StackLayout row="1" class="horizontalLine" visibility="{{ selectedScreen === 1 ? 'visible' : 'collapsed' }}"></StackLayout>
+      </GridLayout>
+    </StackLayout>
+
+    <StackLayout row="0" visibility="{{ selectedScreen === 0 ? 'visible' : 'collapsed' }}" >
+
+      <ScrollView>
+        <StackLayout>
+          <GridLayout rows="auto, *" id="main-content">
+            <StackLayout id="stackContact" >
+              <Label row="0" id="lblcontact" text="Request an Appointment" class="pageTitle" />
+              <ActivityIndicator busy="{{ isLoading }}" row="1" />
+
+              <StackLayout id="mergencyCallContent">
+                <Label text="If you are experiencing a medical emergency, please call 9-1-1." textWrap="true"/>
+              </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout row="2" id="stackmedicalAdvice" >
+              <StackLayout class="indent">
+                <StackLayout id="lblstackConcern">
+                  <Label  text="Medical Advice or Concern" id="lblmedicalConcern" />
+                </StackLayout>
+                <Label textWrap="true">
+                  <Label.formattedText>
+                    <FormattedString>
+                      <FormattedString.spans>
+                        <Span text="Requesting appointments online for UH Elyria and Parma Medical Center physicians is currently unavailable. Please " />
+                        <Span text="call to schedule an appointment." foregroundColor="#bf0d32" fontAttributes="Bold" tap="ScheduleAppointment"/>
+                        <Span text="." />
+                      </FormattedString.spans>
+                    </FormattedString>
+                  </Label.formattedText>
+                </Label>
+              </StackLayout>
+
+              <StackLayout>
+                <StackLayout  id="backgroundRect"  class="indent">
+
+
+                  <StackLayout orientation="horizontal" id="validationfield1" >
+                    <Label text="* indicates required field" id="lblRequired" />
+                  </StackLayout>
+
+
+                  <StackLayout orientation="horizontal">
+                    <Label text="Patient Information"  class="pageTitle"/>
+                  </StackLayout>
+
+                  <StackLayout orientation="horizontal">
+                    <Label text="First Name"  class="Label"/>
+                    <Label text="*" style="color: #bf0d32;"/>
+                  </StackLayout>
+                  <TextField id="txtFirstName" hint="Enter First Name" class="textboxes" text ="{{ firstname }}" />
+                  <StackLayout orientation="horizontal">
+                    <Label text="Last Name"  class="Label"/>
+                    <Label text="*" style="color: #bf0d32;"/>
+                  </StackLayout>
+                  <TextField id="txtLastName" hint="Enter Last Name" class="textboxes" text ="{{ lastname }}" />
+
+                  <StackLayout orientation="horizontal">
+                    <Label text="Address Line 1"  class="Label"/>
+                    <Label text="*" style="color: #bf0d32;"/>
+                  </StackLayout>
+                  <TextField id="txtAddressLine1" hint="Address Line 1" class="textboxes" text ="{{ addressLine1 }}" />
+
+                  <StackLayout orientation="horizontal">
+                    <Label text="Address Line 2"  class="Label"/>
+                    <Label text="*" style="color: #bf0d32;"/>
+                  </StackLayout>
+                  <TextField id="txtAddressLine2" hint="Address Line 2" class="textboxes" text ="{{ addressLine2 }}" />
+
+                  <StackLayout orientation="horizontal">
+                    <Label text="City"  class="Label"/>
+                    <Label text="*" style="color: #bf0d32;"/>
+                  </StackLayout>
+                  <TextField id="txtCity" hint="City" class="textboxes" text ="{{ city }}" />
+
+                  <StackLayout orientation="horizontal">
+                    <Label text="State"  class="Label"/>
+                    <Label text="*" style="color: #bf0d32;"/>
+                  </StackLayout>
+                  <StackLayout class="dropDownContainer" >
+                    <dd:DropDown items="{{ states }}" selectedIndex="{{ selectedIndex }}" id="ddlClinicalArea" />
+                  </StackLayout>
+
+                  <StackLayout orientation="horizontal">
+                    <Label text="Zip Code"  class="Label"/>
+                    <Label text="*" style="color: #bf0d32;"/>
+                  </StackLayout>
+                  <TextField id="txtZipCode" hint="Zip Code" class="textboxes" text ="{{ zip }}" />
+
+
+                  <StackLayout orientation="horizontal">
+                    <Label text="Gender"  class="Label"/>
+                    <Label text="*" style="color: #bf0d32;"/>
+                  </StackLayout>
+                  <!-- radiobutton-->
+
+                  <StackLayout orientation="horizontal">
+                    <Label text="Birth Date"  class="Label"/>
+                    <Label text="*" style="color: #bf0d32;"/>
+                  </StackLayout>
+                  <mi:MaskedInput id="primaryphoneContact" mask="99-99-9999" hint="mm-dd-yyyy" placeholder="_" cssClass="textboxes" backgroundColor="#fff" text="{{ primaryphone }}"/>
+
+                  <StackLayout orientation="horizontal">
+                    <Label text="Contact Information" class="pageTitle"/>
+                  </StackLayout>
+
+                  <StackLayout orientation="horizontal">
+                    <Label text="First Name"  class="Label"/>
+                    <Label text="*" style="color: #bf0d32;"/>
+                  </StackLayout>
+                  <TextField id="txtFirstNameContact" hint="Enter First Name" class="textboxes" text ="{{ firstname }}" />
+                  <StackLayout orientation="horizontal">
+                    <Label text="Last Name"  class="Label"/>
+                    <Label text="*" style="color: #bf0d32;"/>
+                  </StackLayout>
+                  <TextField id="txtLastNameContact" hint="Enter Last Name" class="textboxes" text ="{{ lastname }}" />
+                  <StackLayout orientation="horizontal">
+                    <Label text="Phone Number"  class="Label"/>
+                    <Label text="*" style="color: #bf0d32;"/>
+                  </StackLayout>
+                  <mi:MaskedInput id="primaryphoneContact" mask="999-999-9999" hint="___-___-____" placeholder="_" cssClass="textboxes" backgroundColor="#fff" text="{{ primaryphone }}"/>
+
+                  <StackLayout orientation="horizontal">
+                    <Label text="Email Address"  class="Label"/>
+                    <Label text="*" style="color: #bf0d32;"/>
+                  </StackLayout>
+                  <TextField id="txtEmailContact" hint="Enter Last Name" class="textboxes" text ="{{ lastname }}" />
+
+                  <StackLayout orientation="horizontal">
+                    <Label text="Appointment Information" class="pageTitle"/>
+                  </StackLayout>
+
+                  <StackLayout orientation="horizontal">
+                    <Label text="Clinical Area/Speciality"  class="Label"/>
+                    <Label text="*" style="color: #bf0d32;"/>
+                  </StackLayout>
+                  <StackLayout class="dropDownContainer" >
+                    <dd:DropDown items="{{ items }}" selectedIndex="{{ selectedIndex }}" id="ddlClinicalArea" />
+                  </StackLayout>
+
+
+                  <Button id="submitButton" text="Submit  >"  tap="SubmitForm" />
+                </StackLayout>
+
+              </StackLayout>
+            </StackLayout>
+
+          </GridLayout>
+        </StackLayout>
+
+      </ScrollView>
+    </StackLayout>
+    <StackLayout row="0"  visibility="{{ selectedScreen === 1 ? 'visible' : 'collapsed' }}" >
+      <access-uh:explore-health />
+    </StackLayout>
+  </StackLayout>
+</ios>

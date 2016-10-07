@@ -1,0 +1,69 @@
+@import url('~/components/action-bar/actionBar.common.css');
+
+
+.custom-action-bar {
+    background-color: #fff;
+    border-width: 2;
+    height:100%;
+}
+
+#logo {
+    /*margin-top: 20;*/ vertical-align: center;
+}
+
+    #logo > Image {
+        width: 49%;
+       width: 153;
+        height: 28;
+    }
+
+.vlinecontent {
+    width: 1%;
+    height: 100%;
+}
+
+
+
+#contactUH {
+    width: 50%;
+    /*margin-top: 10;*/vertical-align: center;
+    height: 100%;
+    text-align: left;
+     /*/*horizontal-align: left;*/ 
+}
+
+    #contactUH .contactUHNumber {
+        height: 10;
+    }
+
+     #contactUH Label {
+
+        horizontal-align: right;
+         /*vertical-align:right;*/
+       
+    }
+
+  
+
+#titleView {
+    width: 100%;
+    padding-right: 50;
+    /*height:100%;*/
+    height:60;
+}
+
+    #titleView #logo {
+        width: 60%;
+    }
+
+#contactUH Label {
+    font-size: 11;
+    font-weight: bold;
+    padding-right: 7;
+    margin-left: 10%;
+  text-align:right;
+}
+#drawerButton {
+  
+    width: 60;
+}

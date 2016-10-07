@@ -1,0 +1,55 @@
+/*.tileList {
+    margin-top: 20;
+   width:100%
+}
+
+.tileList StackLayout {
+    horizontal-align: center;
+    width: 136;
+}
+
+.tileList  Image {
+    width: 136;
+}
+
+.tileList Label {
+     textWrap: true;
+}
+
+.tileList StackLayout.bottomRow {
+    margin-top: 50;
+}
+
+#pageTitle {
+    horizontal-align: center;
+}
+
+/*...............test*/
+/*#stackContact{
+    padding-bottom:10;
+}
+.tileLabel{
+    background-color:#980e2b;
+    color:#ffffff;
+}
+.tilePHR{
+   padding:40 40;
+}
+Image{
+    width:140;
+}*/
+.subTitle{
+    margin:5 0 0 0
+}
+Button, Label, Image{
+    text-align:center
+}
+.button {
+    horizontal-align:center;
+    margin:20 0 0 0;
+    background-image: none;
+    color: #fff;
+    text-transform: capitalize;
+    width: 75%;
+    border: 0
+}

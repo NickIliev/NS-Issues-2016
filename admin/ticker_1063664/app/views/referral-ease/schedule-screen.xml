@@ -1,0 +1,113 @@
+<page loaded="loaded"
+      xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+      xmlns:customControls="~/components/drawer-menu"
+      xmlns:action-bar="~/components/action-bar"
+      xmlns:access-uh="~/components/access-uh">
+  <page.actionBar>
+    <action-bar:actionBar />
+  </page.actionBar>
+
+  <drawer:rad-side-drawer id="drawer" drawerLocation="Left">
+    <drawer:rad-side-drawer.drawerTransition>
+      <drawer:SlideInOnTopTransition />
+    </drawer:rad-side-drawer.drawerTransition>
+
+    <drawer:rad-side-drawer.mainContent>
+      <ActivityIndicator busy="{{ isLoading }}" />
+
+
+      <android xmlns:RL="nativescript-ripple">
+        <TabView id="mainTabs" selectedColor="#85dadf" tabsBackgroundColor="#f9f9f9" cssClass="tabView">
+          <TabView.items>
+
+            <TabViewItem title="Access UH">
+              <TabViewItem.view>
+
+
+                  <GridLayout rows="*" id="main-content">
+                    <ActivityIndicator busy="{{ isLoading }}" row="0" />
+                    <DockLayout row="0" stretchLastChild="true">
+                      <Label dock="top" text="Schedule Your Appointment" cssClass="scheduleHeader"/>
+                      <Image dock="top" src="~/images/welcome/welcomeImage.jpg" />
+                      <StackLayout dock="bottom" orientation="horizontal" width="100%">
+                        <StackLayout width="50%" orientation="vertical">
+                          <RL:Ripple class="accessUHRipple" rippleColor="#acacac" onTap="launchReferralEase">
+                            <StackLayout id="iconScheduleReferral">
+                              <Image src="~/images/welcome/iconScheduleReferral.png" cssClass="findImage"/>
+                            </StackLayout>
+                          </RL:Ripple>
+                        </StackLayout>
+                        <StackLayout width="50%">
+                          <StackLayout orientation="vertical">
+                            <RL:Ripple class="accessUHRipple" rippleColor="#acacac" height="50%" onTap="findLocationTap">
+                              <StackLayout id="iconScheduleOnline">
+                                <Image src="~/images/welcome/iconScheduleOnline.png" cssClass="findImage rightTop"/>
+                              </StackLayout>
+                            </RL:Ripple>
+                            <RL:Ripple class="accessUHRipple" rippleColor="#acacac" height="50%" onTap="findERTap">
+                              <StackLayout id="iconCalltoSchedule">
+                                <Image src="~/images/welcome/iconCalltoSchedule.png" cssClass="findImage"/>
+                              </StackLayout>
+                            </RL:Ripple>
+                          </StackLayout>
+                        </StackLayout>
+                      </StackLayout>
+                    </DockLayout>
+                  </GridLayout>
+
+                
+              </TabViewItem.view>
+            </TabViewItem>
+
+            <TabViewItem title="Explore Health Issues">
+              <TabViewItem.view>
+                <access-uh:explore-health />
+              </TabViewItem.view>
+            </TabViewItem>
+
+          </TabView.items>
+        </TabView>
+      </android>
+
+      
+      <!-- TODO: modularize this menu -->
+      <ios>
+        <StackLayout>
+
+          <StackLayout id="tabView" orientation="horizontal"  width="100%" >
+            <GridLayout rows="*,2"  id="TopLeft"   tap="showAccessUH">
+              <Label row="0" text="Access UH" />
+              <StackLayout row="1" class="horizontalLine" visibility="{{ selectedScreen === 0 ? 'visible' : 'collapsed' }}"></StackLayout>
+            </GridLayout>
+            <GridLayout rows="*,2"  id="TopRight" tap="showEHI"  >
+              <Label row="0" text="Explore Health Issues" textWrap="true" />
+              <StackLayout row="1" class="horizontalLine" visibility="{{ selectedScreen === 1 ? 'visible' : 'collapsed' }}"></StackLayout>
+            </GridLayout>
+          </StackLayout>
+
+          <!--<StackLayout id="tabView" orientation="horizontal"  width="100%" >
+                   <StackLayout orientation="horizontal" id="TopLeft"   tap="showAccessUH" backgroundColor="{{ selectedScreen ? '#f9f9f9' : '#85dadf' }}">
+                     <Label text="Access UH" />
+                   </StackLayout>
+                   <StackLayout orientation="horizontal" id="TopRight" tap="showEHI"   backgroundColor="{{ !selectedScreen ? '#f9f9f9' : '#85dadf' }}">
+                     <Label text="Explore Health Issues" textWrap="true" />
+                   </StackLayout>
+                 </StackLayout>-->
+
+          <StackLayout row="0" visibility="{{ selectedScreen == 0 ? 'visible' : 'collapsed' }}"  >
+            <access-uh:access-uh />
+          </StackLayout>
+          <StackLayout row="0" visibility="{{ selectedScreen === 1 ? 'visible' : 'collapsed' }}" >
+            <access-uh:explore-health />
+          </StackLayout>
+        </StackLayout>
+      </ios>
+
+    </drawer:rad-side-drawer.mainContent>
+
+    <drawer:rad-side-drawer.drawerContent>
+      <customControls:drawer-menu />
+    </drawer:rad-side-drawer.drawerContent>
+
+  </drawer:rad-side-drawer>
+</page>

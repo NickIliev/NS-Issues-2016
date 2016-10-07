@@ -1,0 +1,54 @@
+<android xmlns:lv="nativescript-telerik-ui/listview"
+         xmlns:access-uh="~/components/access-uh">
+    <TabView id="mainTabs" selectedColor="#85dadf" tabsBackgroundColor="#f9f9f9" cssClass="tabView">
+        <TabView.items>
+
+            <TabViewItem title="Access UH">
+                <TabViewItem.view>
+                    <access-uh:access-uh />
+                </TabViewItem.view>
+            </TabViewItem>
+
+            <TabViewItem title="Explore Health Issues">
+                <TabViewItem.view>
+                    <GridLayout rows="*" id="main-content">
+                        <WebView id="wvStaywell" src="{{ url }}"
+                                visibility="{{ isLoading ? 'collapsed' : 'visible' }}"
+                                loadFinished="onWebViewLoadFinished" loadStarted="onWebViewLoadStarted" />
+                        <ActivityIndicator busy="{{ isLoading }}" />
+                    </GridLayout>
+                </TabViewItem.view>
+            </TabViewItem>
+
+        </TabView.items>
+    </TabView>
+</android>
+
+<ios xmlns:lv="nativescript-telerik-ui/listview"
+     xmlns:access-uh="~/components/access-uh">
+    <StackLayout class="ContentHeight">
+
+        <StackLayout id="tabView" orientation="horizontal"  width="100%" >
+        <GridLayout rows="*,2"  id="TopLeft"   tap="showAccessUH">
+            <Label row="0" text="Access UH" />
+            <StackLayout row="1" class="horizontalLine" visibility="{{ selectedScreen === 0 ? 'visible' : 'collapsed' }}"></StackLayout>
+        </GridLayout>
+        <GridLayout rows="*,2"  id="TopRight" tap="showEHI"  >
+            <Label row="0" text="Explore Health Issues" textWrap="true" />
+            <StackLayout row="1" class="horizontalLine" visibility="{{ selectedScreen === 1 ? 'visible' : 'collapsed' }}"></StackLayout>
+        </GridLayout>
+        </StackLayout>
+
+    <StackLayout visibility="{{ selectedScreen === 0 ? 'visible' : 'collapsed' }}" >
+        <access-uh:access-uh />
+    </StackLayout>
+    <StackLayout visibility="{{ selectedScreen === 1 ? 'visible' : 'collapsed' }}" >
+        <GridLayout rows="*" id="main-content">
+            <WebView id="wvStaywell" src="{{ url }}"
+                    visibility="{{ isLoading ? 'collapsed' : 'visible' }}"
+                    loadFinished="onWebViewLoadFinished" loadStarted="onWebViewLoadStarted" />
+            <ActivityIndicator busy="{{ isLoading }}" />
+        </GridLayout>
+    </StackLayout>
+    </StackLayout>
+</ios>

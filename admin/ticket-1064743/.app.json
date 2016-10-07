@@ -1,0 +1,122 @@
+{
+  "type": "kendo-ui-mobile",
+  "views": [
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "home",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "username",
+              "title": "User Name:",
+              "inputType": "text",
+              "titlePosition": "left",
+              "inputTextType": "text",
+              "placeholder": "....."
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "password",
+              "title": "Password:",
+              "inputType": "text",
+              "titlePosition": "left",
+              "inputTextType": "password",
+              "placeholder": "...."
+            }
+          ],
+          "name": "homeModel",
+          "submitButton": "Login"
+        }
+      ],
+      "title": "Login Screen1",
+      "addToNavigation": false
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "main",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "textField",
+              "title": "Text field",
+              "inputType": "text",
+              "titlePosition": "left",
+              "inputTextType": "text",
+              "placeholder": "Type here ..."
+            }
+          ],
+          "name": "mainModel",
+          "submitButton": "Confirm",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "title": "Main Screen",
+      "addToNavigation": false
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "inbox",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "textField1",
+              "title": "Text field",
+              "inputType": "text",
+              "titlePosition": "left",
+              "inputTextType": "text",
+              "placeholder": "Type here ..."
+            }
+          ],
+          "name": "inboxModel",
+          "submitButton": "Confirm",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "title": "Inbox Screen",
+      "addToNavigation": false
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "formView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "radio",
+              "title": "Label",
+              "inputType": "radio",
+              "group": "group1"
+            }
+          ],
+          "name": "formViewModel",
+          "submitButton": "Confirm",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "title": "Form",
+      "addToNavigation": true,
+      "icon": "bookmarks"
+    }
+  ],
+  "dataProviders": [],
+  "name": "kendoUiMobileApp",
+  "navigation": "tabstrip",
+  "view": "home",
+  "transition": "slide",
+  "showMoreTab": true,
+  "skin": "nova",
+  "skinMainColor": "#32364c",
+  "skinTextColor": "#ffffff",
+  "skinAccentColor": "#ff4350"
+}

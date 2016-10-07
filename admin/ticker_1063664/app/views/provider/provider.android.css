@@ -1,0 +1,44 @@
+@import url("~/views/provider/provider.common.css");
+
+#backToResults {
+    height: 61;
+    padding: 0;
+    z-index: 999;
+}
+
+#backToResults StackLayout {
+    width: 100%;
+}
+
+#backToResults > StackLayout > StackLayout,
+#backToResultsContent {
+    height: 30;
+    margin-left: 0;
+    padding: 0 17;
+    vertical-align: center;
+}
+
+#backToResults StackLayout.horizontalLine {
+    width: 100%;
+    height: 1;
+    margin: 0;
+}
+
+.providerEducation .horizontalLine {
+    margin: 10 0;
+}
+
+#bottomButtonLeftRipple {
+    width: 58%;
+    background-color: #bf0d32;
+}
+
+#bottomButtonRightRipple {
+    background-color: #9e0425;
+    width: 43%;
+}
+
+#bottomButtonLeft,
+#bottomButtonRight {
+    width: 100%;
+}

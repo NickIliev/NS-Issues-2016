@@ -1,7 +1,0 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
-  <StackLayout>
-    <Label text="asdasdasda" class="title"/>
-    <Button text="xxxxxx" tap="{{ onTap }}" />
-    <Label text="{{ message }}" class="message" textWrap="true"/>
-  </StackLayout>
-</Page>

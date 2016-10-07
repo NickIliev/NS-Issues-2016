@@ -1,0 +1,66 @@
+#searchSection {
+    background-color: #fff;
+}
+
+#txtSearchBox,
+#btnSearchIcon {
+    border-style: solid;
+    border-color: #ddd5cf;
+    border-width: 1;
+}
+
+#txtSearchBox {
+    margin: 0;
+    padding-left: 30;
+    color: #9e0425;
+    background-color: #f9f9f9;
+}
+
+.searchButtonRipple {
+    width: 50;
+    padding: 10;
+    horizontal-align: right;
+}
+
+#btnSearchIcon {
+    width: 50;
+    margin: 0;
+    padding: 10;
+    horizontal-align: right;
+    background-image: none;
+    background-color: #bf0d32;
+    color: #fff;
+}
+
+#slBtnFilters {
+    padding: 14 17;
+}
+
+#lblBtnFilters {
+    width: 70%;
+    horizontal-align: left;
+}
+
+#lblBtnFiltersIcon {
+    width: 30%;
+    text-align: right;
+    font-size: 16;
+}
+
+#lblResultsCount {
+    horizontal-align: right;
+    margin-right: 17;
+    margin-top: 2;
+}
+
+#lblNoRecordsFound {
+    horizontal-align: center;
+}
+
+.infoIcon {
+    margin-right: 5;
+}
+
+.dropDownContainer {
+    background-color: #f9f9f9;
+}

@@ -1,0 +1,9 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      xmlns:CheckBox="nativescript-checkbox" 
+      loaded="pageLoaded">
+  <StackLayout>
+    <CheckBox:CheckBox text="CheckBox Label" id="myCheckbox" checked="false" />
+    <Button text="on toggleCheck" tap="toggleCheck" />
+    <Button text="on getCheckProp" tap="getCheckProp" /> 
+  </StackLayout>
+</Page>

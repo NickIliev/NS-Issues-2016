@@ -1,0 +1,25 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onPageLoaded">
+        <ListView id="listview" items="{{ myItems }}" itemTap="listViewItemTap">
+            <ListView.itemTemplate>
+                <StackLayout>
+                  <Label text="{{ name }}" textWrap="true" />
+                  
+                  <Repeater items="{{ names }}" >
+                    <Repeater.itemsLayout>
+                      <WrapLayout />
+                    </Repeater.itemsLayout>
+                    <Repeater.itemTemplate>
+
+                        <StackLayout>
+                            <Label text="{{ $value.date }}" margin="10" />
+                            <Label text="{{ $value.dayType }}" margin="10" />
+                            <Label text="{{ $value.desc }}" margin="10" textWrap="true" />
+                        </StackLayout>
+                      
+                    </Repeater.itemTemplate>
+                  </Repeater>
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+</Page>
+

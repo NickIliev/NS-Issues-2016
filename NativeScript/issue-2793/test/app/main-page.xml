@@ -1,0 +1,30 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <GridLayout rows="auto, *, auto, auto, *">
+    <Label row="0" text="ListView" class="title" />
+
+    <!-- this WON'T work! -->
+    <ListView row="1" items="{{ options }}" id="listView">
+      <ListView.itemTemplate>
+        <GridLayout columns="*, auto" id="{{ index, 'option-' + index }}" class="item" tap="selectOption">
+          <Label col="0" text="{{ text }}" />
+          <StackLayout col="1" class="checkbox" visibility="{{ selected ? 'visible' : 'collapsed' }}" />
+        </GridLayout>
+      </ListView.itemTemplate>
+    </ListView>
+
+    <StackLayout row="2" class="border" />
+
+    <Label row="3" text="Repeater" class="title" />
+
+    <!-- this will work! -->
+    <Repeater row="4" items="{{ options }}" id="repeater">
+      <Repeater.itemTemplate>
+        <GridLayout columns="*, auto" id="{{ index, 'option-' + index }}" class="item" tap="selectOption">
+          <Label col="0" text="{{ text }}" />
+          <StackLayout col="1" class="checkbox" visibility="{{ selected ? 'visible' : 'collapsed' }}" />
+        </GridLayout>
+      </Repeater.itemTemplate>
+    </Repeater>
+
+  </GridLayout>
+</Page>
