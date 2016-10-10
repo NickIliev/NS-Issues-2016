@@ -16,7 +16,7 @@ export function onTap() {
     moduleName: "sub-page",
     // animated: true, // solution for the buggy transition when translucent set to false
     // transition: {
-    //   name: "curl" // iOS only transition
+    //   name: "curl" 
     // }
   });
 }
