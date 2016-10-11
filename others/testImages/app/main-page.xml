@@ -1,7 +1,9 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
     <StackLayout >
-          <Image src="~/images/NASA_Mars_Rover.jpg" height="200" stretch="none" />   
-          <Image src="~/images/cosmos.jpg" height="200" stretch="none" />    
-          <Image src="~/images/aste.jpg"  height="200" stretch="none" /> 
+          <!-- this image will break all -->
+          <!--<Image src="~/images/NASA_Mars_Rover.jpg" height="200" />   --> 
+          <Image src="~/images/opportuity.jpg" height="200" />   
+          <Image src="~/images/cosmos.jpg" height="200" />    
+          <Image src="~/images/aste.jpg" height="200" /> 
     </StackLayout>          
 </Page>
