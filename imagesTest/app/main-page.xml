@@ -1,0 +1,7 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <StackLayout >
+          <Image src="~/images/NASA_Mars_Rover.jpg"/>   
+          <Image src="~/images/aste.jpg"/> 
+          <Image src="~/images/cosmos.jpg"/>    
+    </StackLayout>          
+</Page>

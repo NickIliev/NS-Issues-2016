@@ -1,0 +1,7 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <GridLayout class="grid" rows="*" columns="*">
+        <Label text="Padding test" fontSize="48" /> 
+    </GridLayout>
+  </StackLayout>
+</Page>
