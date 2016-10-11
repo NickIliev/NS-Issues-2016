@@ -1,0 +1,7 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <Label text="Issue 2871 - new camera plugin" class="title"/>
+    <Button text="take photo" tap="onTap" />
+    
+  </StackLayout>
+</Page>

@@ -1,0 +1,17 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <Page.actionBar>
+        <ActionBar title="Title" icon="">
+            <NavigationButton text="Back" icon="" tap="" />
+            <ActionBar.actionItems>
+                <ActionItem icon="" text="Left" tap="" ios.position="left" />
+                <ActionItem icon="" text="Right" tap="" ios.position="right" />
+            </ActionBar.actionItems>
+        </ActionBar>
+    </Page.actionBar>
+    
+    <StackLayout>
+        <Label text="Issue 1657" class="title"/>
+        <Button text="go to subPage" tap="onTap" />
+        
+    </StackLayout>
+</Page>

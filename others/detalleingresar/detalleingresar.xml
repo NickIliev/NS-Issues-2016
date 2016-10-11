@@ -1,0 +1,69 @@
+<page backgroundColor="White" navigatedTo="NavigatedTo">
+    <Page.actionBar>
+        <ActionBar title="Registro de piezas" backgroundColor="#2C3E52" color="White">
+	        <NavigationButton text="Volver" android.systemIcon = "ic_menu_back" tap="volver"/>
+            <ActionItem text="Guardar" android.systemIcon = "ic_menu_save" tap="guardar"  />
+            <ActionItem text="Foto" android.systemIcon = "ic_menu_camera" tap="tomafoto"/>
+        </ActionBar>
+    </Page.actionBar>
+    <ScrollView orientation="vertical">
+
+    <StackLayout>
+        <image src= "~/images/LOGOIMPEL.png" height="174" horizontalAlignment="center"/>
+        <grid-layout columns="*, *" rows="auto,auto,auto,auto,auto" cssClass="form-item">
+            <label text="Peso Recibido"  class="listado" col="0" row="0" textAlignment="left"></label>
+            <text-field id="peso" col="1" row="0" hint="1"/>
+            <label text="Piezas Recibidas"  class="listado" col="0" row="1" textAlignment="left"></label>
+            <text-field id="partes" col="1" row="1" hint="2"/>
+            <label text="Ubicación"  class="listado" col="0" row="2" textAlignment="left"></label>
+            <text-field id="ubicacion" col="1" row="2" hint="Bodega"/>
+            <label text="Comentarios"  class="listado" col="0" row="3" textAlignment="left"></label>
+            <text-field id="comentarios" col="1" row="3" hint="Comentarios"/>
+        </grid-layout>
+        
+        <grid-layout columns="*,*,*,*,*,*" rows="30,auto,auto,auto,auto,auto,auto" cssClass="form-item">
+            <label text="Novedades" horizontalAlignment="center" verticalAlignment="center" colSpan="6"></label>
+            
+            <label text="Maderos" class="listado" col="0" row="2" textAlignment="center"></label>
+            <Switch id="maderos" col="1" row="2"/>
+            <label text="Abollado"  class="listado" col="0" row="3" textAlignment="center"></label>
+            <Switch id="abollado" col="1" row="3"/>
+            <label text="Humedo"  class="listado" col="0" row="4" textAlignment="center"></label>
+            <Switch id="humedo" col="1" row="4"/>
+            <label text="Recintado"  class="listado" col="0" row="5" textAlignment="center"></label>
+            <Switch id="recintado" col="1" row="5"/>
+            <label text="Recintados Dian" textWrap="true" class="listado" col="0" row="6" textAlignment="center"></label>
+            <Switch id="recintadosdian" col="1" row="6"/>
+            
+            <label text="Abierto"  class="listado" col="2" row="2" textAlignment="center"></label>
+            <Switch id="abierto" col="3" row="2"/>
+            <label text="Rotos"  class="listado" col="2" row="3" textAlignment="center"></label>
+            <Switch id="rotos" col="3" row="3"/>
+            <label text="Mal estado embalaje" textWrap="true" class="listado" col="2" row="4" textAlignment="center"></label>
+            <Switch id="malestadoembalaje" col="3" row="4"/>
+            <label text="Aparentemente huellas de saqueo" textWrap="true" class="listado" col="2" row="5" textAlignment="center"></label>
+            <Switch id="aparentementehuellasdesaqueo" col="3" row="5"/>
+            <label text="Destilando contenido" textWrap="true" class="listado" col="2" row="6" textAlignment="center"></label>
+            <Switch id="destilandocontenido" col="3" row="6"/>
+            
+			<label text="Mostrando contenido" textWrap="true" class="listado" col="4" row="2" textAlignment="center"></label>
+            <Switch id="mostrandocontenido" col="5" row="2"/>
+            <label text="Piezas rayadas" textWrap="true" class="listado" col="4" row="3" textAlignment="center"></label>
+            <Switch id="piezasrayadas" col="5" row="3"/>
+            <label text="Maquinas abolladas" textWrap="true" class="listado" col="4" row="4" textAlignment="center"></label>
+            <Switch id="maquinasabolladas"  col="5" row="4"/>
+        </grid-layout>
+        
+        <grid-layout margin="20">
+            <list-view  items="{{ reddit }}" itemTap="selecciona" id="imagenes">
+                <list-view.itemTemplate>      
+                    <GridLayout>
+                        <Image imageSource="{{ foto }}"/>
+                    </GridLayout>
+                </list-view.itemTemplate>
+            </list-view>
+        </grid-layout>
+        
+    </StackLayout>
+    </ScrollView>
+</page>
