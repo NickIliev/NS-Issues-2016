@@ -1,0 +1,8 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <Image src="~/images/logo_new.png" stretch="none" />
+    <Image src="~/images/ninja.png" stretch="none" />
+    <Image src="~/images/pixel.png" stretch="none" />
+    
+  </StackLayout>
+</Page>
