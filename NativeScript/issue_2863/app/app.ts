@@ -7,7 +7,7 @@ class Activity extends android.app.Activity {
     private _callbacks: AndroidActivityCallbacks;
 
     public onUserInteraction(): void {
-        console.log("onUserInteraction"); // OVERWRITTEN BEHAVIOUR
+        console.log("onUserInteraction overwritten from app.ts"); // OVERWRITTEN BEHAVIOUR
     }
 
     protected onCreate(savedInstanceState: android.os.Bundle): void {

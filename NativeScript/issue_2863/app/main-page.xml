@@ -2,5 +2,7 @@
  <!-- The original activity behaviour is overrided in app.ts-->
   <StackLayout>
       <Label text="The original activity behaviour is overrided in app.ts" textWrap="true" />
+      <Button text="Tap" tap="onTap" />
+      
   </StackLayout>
 </Page>
