@@ -7,7 +7,7 @@ var Activity = (function (_super) {
         _super.apply(this, arguments);
     }
     Activity.prototype.onUserInteraction = function () {
-        console.log("onUserInteraction"); // OVERWRITTEN BEHAVIOUR
+        console.log("onUserInteraction overwritten from app.ts"); // OVERWRITTEN BEHAVIOUR
     };
     Activity.prototype.onCreate = function (savedInstanceState) {
         if (!this._callbacks) {

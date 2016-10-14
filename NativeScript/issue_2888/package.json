@@ -1,0 +1,17 @@
+{
+  "description": "NativeScript Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "readme": "NativeScript Application",
+  "repository": "<fill-your-repository-here>",
+  "nativescript": {
+    "id": "org.nativescript.issue2888"
+  },
+  "dependencies": {
+    "nativescript-socketio": "^2.2.7",
+    "tns-core-modules": "2.3.0"
+  },
+  "devDependencies": {
+    "nativescript-dev-typescript": "^0.3.2",
+    "typescript": "^2.0.3"
+  }
+}
