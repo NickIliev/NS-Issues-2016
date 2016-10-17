@@ -1,0 +1,10 @@
+﻿.tab-title-class {
+    font-size: 18;
+    horizontal-align: center;
+    margin: 20;
+}
+
+.selected {
+    font-size: 30;
+    color: red;
+}

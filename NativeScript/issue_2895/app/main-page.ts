@@ -10,12 +10,12 @@ export function navigatingTo(args: EventData) {
   // Get the event sender
   let page = <Page>args.object;
 
-  imageSource.fromUrl("https://www.google.com/images/errors/logo_sm_2.png")
-      .then(function (res: imageSource.ImageSource) {
+  imageSource.fromUrl("https://res.cloudinary.com/demo/image/upload/Sample.jpg")
+      .then(res => {
       vm.set("img", res);
-  }, function (error) {
-          //console.log("Error loading image: " + error);
-      });
+  }).catch(err => {
+      console.log(err.stack);
+  })
 
   page.bindingContext = vm;
 }

@@ -6,11 +6,11 @@ var vm = new main_view_model_1.HelloWorldModel();
 function navigatingTo(args) {
     // Get the event sender
     var page = args.object;
-    imageSource.fromUrl("https://www.google.com/images/errors/logo_sm_2.png")
+    imageSource.fromUrl("https://res.cloudinary.com/demo/image/upload/Sample.jpg")
         .then(function (res) {
         vm.set("img", res);
-    }, function (error) {
-        //console.log("Error loading image: " + error);
+    }).catch(function (err) {
+        console.log(err.stack);
     });
     page.bindingContext = vm;
 }
