@@ -11,6 +11,8 @@ var AppComponent = (function () {
     AppComponent.prototype.onTap = function () {
         var timePicker = this.tp.nativeElement;
         console.log(timePicker.hour + " : " + timePicker.minute);
+        this.hour = timePicker.hour.toString();
+        this.minutes = timePicker.minute.toString();
     };
     __decorate([
         core_1.ViewChild("timePicker"), 
