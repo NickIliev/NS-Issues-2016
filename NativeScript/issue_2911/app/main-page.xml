@@ -1,0 +1,8 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+
+  <StackLayout>
+      <Button class="btn" />
+      <Button class="btn-scaled" />
+  </StackLayout>
+
+</Page>

@@ -1,0 +1,14 @@
+﻿.btn {
+    background-color: orange;
+    background-image: url("res://icon");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.btn-scaled {
+    background-color: orange;
+    background-image: url("res://icon");
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(0.5, 0.5);
+}

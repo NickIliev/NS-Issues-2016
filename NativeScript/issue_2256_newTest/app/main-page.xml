@@ -1,0 +1,15 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <Page.actionBar>
+    <ActionBar>
+      <ActionItem ios.position="right" tap="change">
+        <Button text="{{ text }}"  class="font-awesome"  style="font-size: 26; color: rgba(0,0,0,.2); background-color: transparent; width: 50px; text-align: right;" />
+      </ActionItem>
+    </ActionBar>
+    <!--<ActionBar>
+      <ActionItem ios.position="right"> 
+        <Button #backicon text="&#xf053;"  class="font-awesome" /> 
+      </ActionItem>
+    </ActionBar>-->
+  </Page.actionBar>
+</Page>
+
