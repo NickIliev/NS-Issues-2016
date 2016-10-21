@@ -8,7 +8,20 @@ function navigatingTo(args) {
     // Get the event sender
     var page = args.object;
     var tp = page.getViewById("tp");
+    tp.on("propertyChangeEvent", function (args) {
+        console.log(args.eventName);
+        console.log(args.object);
+        console.log(args.propertyName);
+        console.log(args.value);
+    });
     page.bindingContext = vm;
 }
 exports.navigatingTo = navigatingTo;
+function onCheckChange(args) {
+    console.log(args.eventName);
+    console.log(args.object);
+    console.log(args.propertyName);
+    console.log(args.value);
+}
+exports.onCheckChange = onCheckChange;
 //# sourceMappingURL=main-page.js.map

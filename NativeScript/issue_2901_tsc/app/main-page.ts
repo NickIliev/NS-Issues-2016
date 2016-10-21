@@ -1,4 +1,4 @@
-import { EventData, Observable } from 'data/observable';
+import { EventData, Observable, PropertyChangeData } from 'data/observable';
 import { Page } from 'ui/page';
 import { TimePicker } from "ui/time-picker";
 
@@ -11,7 +11,20 @@ export function navigatingTo(args: EventData) {
   // Get the event sender
   let page = <Page>args.object;
 
-  var tp = <TimePicker>page.getViewById("tp");  
+  var tp = <TimePicker>page.getViewById("tp");
+  tp.on("propertyChangeEvent", function (args:PropertyChangeData) {
+    console.log(args.eventName);
+    console.log(args.object);
+    console.log(args.propertyName);
+    console.log(args.value);
+  })
 
   page.bindingContext = vm;
+}
+
+export function onCheckChange(args:PropertyChangeData) {
+    console.log(args.eventName);
+    console.log(args.object);
+    console.log(args.propertyName);
+    console.log(args.value);
 }
