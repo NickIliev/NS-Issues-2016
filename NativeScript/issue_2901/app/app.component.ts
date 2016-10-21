@@ -16,14 +16,12 @@ export class AppComponent implements OnInit {
         let timePicker: TimePicker = <TimePicker>this.tp.nativeElement;
         timePicker.hour = 9;
         timePicker.minute = 25;  
-
-
     }
 
     onTap() {
         let timePicker: TimePicker = <TimePicker>this.tp.nativeElement;
         console.log(timePicker.hour + " : " + timePicker.minute);
-        
+
         this.hour = timePicker.hour.toString();
         this.minutes = timePicker.minute.toString();
     }
