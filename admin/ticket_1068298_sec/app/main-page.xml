@@ -1,0 +1,10 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+  <StackLayout>
+ <StackLayout height="auto">
+   <WebView id="my-web-view"  url="{{url}}" width="*" height="520"/>
+ </StackLayout>
+  <StackLayout>
+ 	<Label text="Copy Right @ Design 4 You" textWrap="false"/>
+  </StackLayout>
+</StackLayout>
+</Page>

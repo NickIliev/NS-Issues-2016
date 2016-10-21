@@ -1,0 +1,11 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <ListView items="{{ source }}"  loaded="onLoaded" itemLoading="onItemLoading" itemTap="onItemTap">
+      <ListView.itemTemplate>
+        <StackLayout>
+                    <Label text="pre" textWrap="true" />
+                    <TextField hint="some hint" text="" />
+                    <Label text="post" textWrap="true" />
+        </StackLayout>
+      </ListView.itemTemplate>
+  </ListView>
+</Page>
