@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "nativescript-cardview": "^1.2.0",
-    "tns-core-modules": "2.3.0"
+    "tns-core-modules": "next"
   },
   "devDependencies": {
     "babel-traverse": "6.16.0",
