@@ -1,0 +1,9 @@
+<ListView [items]="items" (itemTap)="onItemTap($event)">
+	<template let-item="item" let-odd="odd" let-even="even">
+		<StackLayout>
+			<Label text="pre" textWrap="true"></Label>
+			<TextField hint="some hint" text="some initial text"></TextField>
+			<Label text="post" textWrap="true"></Label>
+		</StackLayout>
+	</template>
+</ListView>

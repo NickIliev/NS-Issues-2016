@@ -1,0 +1,8 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <GridLayout row="0" id="header" class="header" columns="200,200,200,200">
+      <Label col="0" text="First Name"></Label>
+      <Label col="1" text="Last Name"></Label>
+      <Label col="2" text="Company"></Label>
+      <Label col="3" text="Phone Number"></Label>
+  </GridLayout>
+</Page>

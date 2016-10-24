@@ -1,0 +1,10 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+<StackLayout>
+  <StackLayout height="auto">
+    <WebView src="~/views/index.html" id="wv" width="*"/>
+  </StackLayout>
+  <StackLayout>
+    <TextField text="Peniel Designs" textWrap="false"/>
+  </StackLayout>
+</StackLayout>
+</Page>

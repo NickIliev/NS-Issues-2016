@@ -1,0 +1,8 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <Label text="issue 2901" class="title"/>
+    <TimePicker id="tp" hour="{{ hour }}" minute="{{ minute }}" propertyChange="onCheckChange"></TimePicker>
+    <Label text="{{ hour + ':' + minute }}" textWrap="true" />
+    
+  </StackLayout>
+</Page>
