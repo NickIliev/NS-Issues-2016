@@ -1,0 +1,43 @@
+<GridLayout height="70%" columns="*,*,*,*" rows="auto,*">
+	<StackLayout class="stackLayout" orientation="vertical" row="0" col="0">
+		<Label class="fa h3 icon-income text-center" text="{{ incomeIcon }}" (tap)="changeIncomeStatus()"></Label>
+		<Label class="label h4 text-center" text="收入"></Label>
+	</StackLayout>
+	<StackLayout class="stackLayout" orientation="vertical" row="0" col="1">
+		<Label class="fa h3 icon-expense text-Фcenter" text="{{ expenseIcon }}" (tap)="changeExpenseStatus()"></Label>
+		<Label class="label h4 text-center" text="支出"></Label>
+	</StackLayout>
+	<StackLayout class="stackLayout" orientation="vertical" row="0" col="2">
+		<Label class="fa h3 icon-balance text-center" text="{{ balanceIcon }}" (tap)="changeBalanceStatus()"></Label>
+		<Label class="label h4 text-center" text="月收支差"></Label>
+	</StackLayout>
+	<StackLayout class="stackLayout" orientation="vertical" row="0" col="3">
+		<Label class="fa h3 icon-totalbalance text-center" text="{{ totalbalanceIcon }}" (tap)="changeTotalBalanceStatus()"></Label>
+		<Label class="label h4 text-center" text="总收支差"></Label>
+	</StackLayout>
+	<GridLayout class="m-t-10" row="1" col="0" colSpan="4" width="300">
+		<!-- >> chart-angular-spline-series -->
+		<RadCartesianChart >
+			<CategoricalAxis tkCartesianHorizontalAxis labelTextColor="#cb4b16" labelSize="14" lineThickness="3" lineColor="Red"></CategoricalAxis>
+			<LinearAxis tkCartesianVerticalAxis labelTextColor="#cb4b16" labelSize="14" lineThickness="3" lineColor="Red"></LinearAxis>
+			<SplineSeries tkCartesianSeries seriesName="income" [items]="categoricalSource" categoryProperty="Country" valueProperty="Amount"></SplineSeries>
+			<SplineSeries tkCartesianSeries seriesName="expense" [items]="categoricalSource" categoryProperty="Country" valueProperty="SecondVal"></SplineSeries>
+			<SplineSeries tkCartesianSeries seriesName="balance" [items]="categoricalSource" categoryProperty="Country" valueProperty="ThirdVal"></SplineSeries>
+			<SplineSeries tkCartesianSeries seriesName="totalbalance" [items]="categoricalSource" categoryProperty="Country" valueProperty="Impact"></SplineSeries>
+			<Palette tkCartesianPalette seriesName="income">
+				<PaletteEntry tkCartesianPaletteEntry strokeWidth="5" strokeColor="red"></PaletteEntry>
+			</Palette>
+			<Palette tkCartesianPalette seriesName="expense">
+				<PaletteEntry tkCartesianPaletteEntry strokeWidth="5" strokeColor="green"></PaletteEntry>
+			</Palette>
+			<Palette tkCartesianPalette seriesName="balance">
+				<PaletteEntry tkCartesianPaletteEntry strokeWidth="5" strokeColor="yellow"></PaletteEntry>
+			</Palette>
+			<Palette tkCartesianPalette seriesName="totalbalance">
+				<PaletteEntry tkCartesianPaletteEntry strokeWidth="5" strokeColor="blue"></PaletteEntry>
+			</Palette>
+			<Trackball tkCartesianTrackball snapMode="AllClosestPoints" showIntersectionPoints="true"></Trackball>
+			<!--<PointLabelStyle tkLineLabelStyle  margin="10"  fillcolor="blue" ></PointLabelStyle>-->
+		</RadCartesianChart>
+	</GridLayout>
+</GridLayout>
