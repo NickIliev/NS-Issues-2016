@@ -1,0 +1,21 @@
+<Page loaded="onPageLoaded">
+  <ScrollView>
+      <StackLayout>
+          <StackLayout>
+              <Image src="res://icon" stretch="none" />
+              <Label text="sample text to create scrolling space" textWrap="true" />
+              <Image src="res://icon" stretch="none" />
+              <Label text="sample text" textWrap="true" />
+              <Image src="res://icon" stretch="none" />
+              <Label text="sample text" textWrap="true" />
+              <Image src="res://icon" stretch="none" />
+              <Label text="sample text" textWrap="true" />
+              <Button cssClass="test" text="ADD NEW ITEM" tap="add"></Button>
+          </StackLayout>
+
+          <StackLayout id="container" backgroundColor="green" color="white">
+          </StackLayout>
+
+      </StackLayout>
+  </ScrollView>
+</Page>
