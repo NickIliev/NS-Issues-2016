@@ -1,0 +1,10 @@
+﻿.session-favorite-selected {
+    animation-name: example;
+    animation-duration: 3;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+@keyframes example {
+    from { transform: translate(0, 0); }
+    to { transform: translate(0, 200); }
+}
