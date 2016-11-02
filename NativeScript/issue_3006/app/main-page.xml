@@ -1,5 +1,7 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
-  <GridLayout width="300" height="400" backgroundColor="red" touch="onTouch">
-    <Label text="Tap the label" tap="onTap" backgroundColor="green" />
-  </GridLayout>
+  <StackLayout id="st" backgroundColor="red" touch="onStackTouch">
+    <GridLayout rows="auto" columns="auto">
+        <Label text="Tap the label" tap="onTap" backgroundColor="green" />
+    </GridLayout>
+  </StackLayout>
 </Page>
