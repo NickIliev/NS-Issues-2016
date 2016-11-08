@@ -1,0 +1,7 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <Button text="Request Permission" tap="requestPermission" />
+    <Button text="Take Photo" tap="takePhoto" />
+    <Image src="" id="img" stretch="none" />   
+  </StackLayout>
+</Page>
