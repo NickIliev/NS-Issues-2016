@@ -1,0 +1,31 @@
+{
+	"name": "leaf-150-ios-app",
+	"main": "app.js",
+	"version": "2.0.0",
+	"author": "Rento <admin@rentoinnovations.fi>",
+	"description": "Mobile application for Leaf 150 Air Cleaning System",
+	"license": "CLOSED SOURCE",
+	"keywords": [
+		"Aavi",
+		"mobile",
+		"air",
+		"clean",
+		"particle",
+		"quality",
+		"remote"
+	],
+	"repository": {
+		"type": "git",
+		"url": "TBD"
+	},
+	"bugs": {
+		"url": "TBD"
+	},
+	"homepage": "TBD",
+	"android": {
+		"v8Flags": "--expose_gc"
+	},
+	"devDependencies": {
+		"nativescript-dev-typescript": "^0.3.2"	
+	}
+}

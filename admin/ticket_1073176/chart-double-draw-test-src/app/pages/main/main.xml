@@ -1,0 +1,10 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"                
+      xmlns:sb="nativescript-statusbar" 
+      xmlns:widgets="common/widgets"
+      navigatingTo="navigatingTo"
+      navigatedTo="navigatedTo"
+      navigatingFrom="navigatingFrom">
+          
+  <Label text="Show chart" class="h1" horizontalAlignment="center" tap="showTemperatureChart"/>
+    
+</Page>

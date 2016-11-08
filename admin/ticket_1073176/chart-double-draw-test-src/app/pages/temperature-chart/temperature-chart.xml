@@ -1,0 +1,29 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"                
+      xmlns:sb="nativescript-statusbar"
+      xmlns:widgets="common/widgets"
+      xmlns:chart="nativescript-telerik-ui-pro/chart" 
+      navigatingTo="navigatingTo"
+      navigatingFrom="navigatingFrom"
+      >
+
+  <Page.actionBar>
+    <ActionBar title="Temperature History"></ActionBar>
+  </Page.actionBar>
+  <sb:status-bar ios:barStyle="opague" />
+
+    <chart:RadCartesianChart id="temperatureChart">
+        <chart:RadCartesianChart.trackball>
+            <chart:Trackball snapMode="ClosestPoint" />
+        </chart:RadCartesianChart.trackball>
+        <chart:RadCartesianChart.series>            
+            <chart:LineSeries items="{{ chartDataSource }}" categoryProperty="ts" valueProperty="temperature" showLabels="false">
+                <chart:LineSeries.horizontalAxis>
+                    <chart:DateTimeContinuousAxis majorStep="day" dateFormat="dd.MM  HH:mm" labelFitMode="Rotate" labelRotationAngle="1.2" allowZoom="true" allowPan="true" plotMode="OnTicks" labelLayoutMode="Outer" />
+                </chart:LineSeries.horizontalAxis>
+                <chart:LineSeries.verticalAxis>
+                    <chart:LinearAxis labelLayoutMode="Inner"/>
+                </chart:LineSeries.verticalAxis>
+            </chart:LineSeries>
+        </chart:RadCartesianChart.series>
+    </chart:RadCartesianChart>
+</Page>

@@ -1,0 +1,23 @@
+{
+  "description": "Example project about chart drawing twice",
+  "license": "MIT",
+  "readme": "",
+  "repository": "",
+  "nativescript": {
+    "id": "fi.rentoinnovations.leaf",
+    "tns-ios": {
+      "version": "2.4.0-2016-9-28-1"
+    }
+  },
+  "dependencies": {
+    "moment": "^2.14.1",
+    "nativescript-slides": "^1.7.1",
+    "nativescript-statusbar": "^1.0.0",
+    "nativescript-telerik-ui-pro": "^1.4.1",
+    "tns-core-modules": "2.3.0"
+  },
+  "devDependencies": {
+    "nativescript-dev-typescript": "^0.3.2",
+    "typescript": "^2.0.3"
+  }
+}
