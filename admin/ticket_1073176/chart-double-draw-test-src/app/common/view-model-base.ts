@@ -10,7 +10,7 @@ import * as enumsModule from 'ui/enums'
 import * as dialogsModule from 'ui/dialogs'
 import * as connectivity from 'connectivity'
 
-let stringsModule = require("../resources/strings")
+// let stringsModule = require("../resources/strings")
 
 export class ViewModelBase extends observableModule.Observable {
     _loadingCount: number;
@@ -49,7 +49,7 @@ export class ViewModelBase extends observableModule.Observable {
     }
 
     get strings(): any {
-        return stringsModule.strings
+        return "strings";
     }
 
     beginLoading(): boolean {

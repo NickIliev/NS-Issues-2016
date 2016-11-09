@@ -6,7 +6,7 @@
   "nativescript": {
     "id": "fi.rentoinnovations.leaf",
     "tns-ios": {
-      "version": "2.4.0-2016-9-28-1"
+      "version": "2.3.0"
     }
   },
   "dependencies": {
