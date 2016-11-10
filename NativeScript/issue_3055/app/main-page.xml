@@ -1,0 +1,10 @@
+<Page xmlns:CV="./custom-view">
+  <StackLayout>
+        <CV:CustomView tap="customTap" backgroundColor="green" height="200">
+          <Label text="Custom Component" textWrap="true" />
+        </CV:CustomView>
+        <StackLayout tap="tapTest" backgroundColor="gray" height="200">
+          <Label text="Stack" textWrap="true" />
+        </StackLayout>
+  </StackLayout>
+</Page>
