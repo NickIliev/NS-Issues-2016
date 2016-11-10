@@ -17,7 +17,7 @@
         </chart:RadCartesianChart.trackball>
         <chart:RadCartesianChart.series>            
             <chart:LineSeries items="{{ chartDataSource }}" categoryProperty="ts" valueProperty="temperature" showLabels="false">
-                <chart:LineSeriespwd.horizontalAxis>
+                <chart:LineSeries.horizontalAxis>
                     <chart:DateTimeContinuousAxis majorStep="day" dateFormat="dd.MM  HH:mm" labelFitMode="Rotate" labelRotationAngle="1.2" allowZoom="true" allowPan="true" plotMode="OnTicks" labelLayoutMode="Outer" />
                 </chart:LineSeries.horizontalAxis>
                 <chart:LineSeries.verticalAxis>
