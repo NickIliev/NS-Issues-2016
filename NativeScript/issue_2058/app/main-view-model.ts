@@ -7,7 +7,7 @@ export class HelloWorldModel extends Observable {
   constructor() {
     super();
 
-    this.items = ["res://icon", "res://logo",null,null,null,null,null,null,null,null,null,null, "res://logo","res://icon"];
+    this.items = ["res://icon", "res://logo", "res://icon", "res://logo",null,null,null,null,null,null,null,null,null,null, "res://logo","res://icon"];
   }
 
 }
