@@ -1,6 +1,10 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
-  <GridLayout width="300" height="400" backgroundColor="gray" >
-    <GridLayout width="50" height="50" backgroundColor="red" class="session-favorite-selected"> 
-    </GridLayout>
+<Page loaded="loaded">
+  <GridLayout>
+      <Label text="{{ price }}"  horizontalAlignment="left" verticalAlignment="center"/>
+      <ListView items="{{ modelList }}" >
+        <ListView.itemTemplate>
+          <Label text="{{ model }}"  horizontalAlignment="left" verticalAlignment="center" tap="display"  />  
+        </ListView.itemTemplate>
+      </ListView>    
   </GridLayout>
 </Page>

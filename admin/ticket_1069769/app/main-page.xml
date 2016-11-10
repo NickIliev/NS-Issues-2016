@@ -1,0 +1,3 @@
+<Page>
+  <WebView src="{{ url }}" id="wv" />
+</Page>

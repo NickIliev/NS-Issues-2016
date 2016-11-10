@@ -1,0 +1,31 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:chart="nativescript-telerik-ui-pro/chart" navigatingTo="onNavigatingTo">
+  <GridLayout>
+     <chart:RadCartesianChart id="cartesianChart" >
+              <chart:RadCartesianChart.series>    
+                <chart:SplineSeries seriesName="Bar" items="{{ GraphSource }}" categoryProperty="Time" valueProperty="Celsius">
+                  <chart:SplineSeries.horizontalAxis>
+                    <chart:DateTimeContinuousAxis majorStep="Hour" id="horBarAxis" dateFormat="HH:mm" plotMode="OnTicks" android:labelSize="25" ios:labelSize="10" labelTextColor="#898e91" lineColor="#898e91"/>
+                  </chart:SplineSeries.horizontalAxis>
+                  <chart:SplineSeries.verticalAxis>
+                    <chart:LinearAxis id="verBarAxis" labelLayoutMode="Outer" android:labelSize="25" ios:labelMargin="4" ios:labelFormat="%@°" lineThickness="1" android:labelFormat="%.0f°" ios:labelSize="10" labelTextColor="#898e91" lineColor="#898e91"/>
+                  </chart:SplineSeries.verticalAxis>
+                </chart:SplineSeries>  
+              </chart:RadCartesianChart.series>
+              <!-- plot-band-annotations-->
+              <chart:RadCartesianChart.annotations>
+                <chart:ChartGridLineAnnotation axisId="verBarAxis" hidden="false" value="300" zPosition="BelowSeries" strokeWidth="2" strokeColor="#65ff00" strokeDashPattern="5,5,5,5"/>
+                <chart:ChartGridLineAnnotation axisId="verBarAxis" hidden="false" value="400" zPosition="BelowSeries" strokeWidth="2" strokeColor="#FF0040" strokeDashPattern="5,5,5,5"/>
+              </chart:RadCartesianChart.annotations>
+              <!-- plot-band-annotations -->
+              <chart:RadCartesianChart.palettes>
+                <chart:Palette seriesName="Bar">
+                  <chart:Palette.entries>
+                    <chart:PaletteEntry strokeColor="black" strokeWidth="2"/>
+                  </chart:Palette.entries>
+                </chart:Palette>
+              </chart:RadCartesianChart.palettes>
+            </chart:RadCartesianChart>
+      
+  </GridLayout>
+     
+</Page>

@@ -1,0 +1,131 @@
+//Notes:
+/*
+EntityGroups - an array with Group infos
+PropertyGroup - instance of TKEntityPropertyGroup
+    GroupProperties - an array of properties in TKEntityPropertyGroup
+Property - instance of TKEntityProperty
+Editor - a concrete editor of given type
+Validator - instance of predefined validators (not available in iOS yet) or cusotm validator, implementation of TKDataFormValidator protocol
+
+available types for editors:
+
+"Text"            : TKDataFormTextFieldEditor   : DataFormTextEditor
+"Email"           : TKDataFormEmailEditor       : DataFormEmailEditor
+"Password"        : TKDataFormPasswordEditor    : DataFormPasswordEditor
+"Phone"           : TKDataFormPhoneEditor       : DataFormPhoneEditor
+"Decimal"         : TKDataFormDecimalEditor     : DataFormDecimalEditor
+"Number"          : TKDataFormNumberEditor      : DataFormIntegerEditor
+"Switch"          : TKDataFormSwitchEditor      : DataFormSwitchEditor
+"Stepper"         : TKDataFormStepperEditor     : DataFormNumberPickerEditor
+"Slider"          : TKDataFormSliderEditor      : DataFormSeekbarEditor
+"SegmentedEditor" : TKDataFormSegmentedEditor   : DataFormSegmentedEditor
+"DatePicker"      : TKDataFormDatePickerEditor  : DataFormDateEditor
+"TimePicker"      : TKDataFormTimePickerEditor  : DataFormTimeEditor
+"Picker"          : TKDataFormPickerViewEditor  : DataFormSpinnerEditor
+"List"            : TKDataFormOptionsEditor     : DataFormListViewEditor
+
+*/
+{
+	"title": "annotations",
+	"type": "object",
+	"properties": {
+		"isReadOnly": {
+			"type": "boolean"
+		},
+		"commitMode": {
+			"enum" : ["immediate", "onLostFocus", "manual"]
+		},
+		"validationMode": {
+			"emum": ["immediate", "onLostFocus", "manual"]
+		},
+		"propertyAnnotations": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"type": {
+					 	"type": "string"
+					},
+					"displayName": {
+						"type": "string"
+					},
+					"groupName": {
+						"type": "string"
+					},
+					"index": {
+						"type": "integer",
+						"minimum" : 0
+					},
+					"ignore": {        //note: hidden for iOS & skip for Android
+						"type": "boolean"
+					},
+					"readOnly": {
+						"type": "boolean"
+					},
+					"required": {
+						"type": "boolean"
+					},
+					"errorMessage": {
+						"type": "string"
+					},
+					"successMessage": {
+						"type": "string"
+					},
+					"hintText": {      //note: not implemented for Android
+						"type": "string"
+					},
+					"editor": {        
+						"type": "string"
+					},
+					"valuesProvider": {     
+						"type": "array"
+					},
+					// "defaultValue": {  //removed
+					// 	"type": "string"
+					// },
+					"validator": {
+						"type": "string"
+					},
+					"validatorParams": { // TODO: no predefined validators in iOS
+						"type": "object",
+						"properties": {
+							"length": {
+								"type": "integer"
+							},
+							"minimum": {
+								"type": "integer"
+							},
+							"maximum": {
+								"type": "integer"
+							},
+							"errorMessage": {
+								"type": "string"
+							}
+						}
+					},
+					"editorParams": { // note: iOS doesn't support 
+						"type": "object",
+						"properties": {
+							"minimum": {
+								"type": "number"
+							},
+							"maximum": {
+								"type": "number"
+							},
+							"step": {
+								"type": "number"
+							}
+						}
+					}
+				}
+                //TODO: will be added global validator method 
+				// "dependencies": {   
+				// 	"defaultValue": ["type"]
+				// }
+			}
+		}
+	}	
+}

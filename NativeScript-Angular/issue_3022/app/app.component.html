@@ -1,0 +1,17 @@
+<TabView [selectedIndex]="selectedIndex" (selectedIndexChange)="selectedIndex=$event.value" >
+	<template tabItem [iconSource]="selectedIndex == 0 ? 'res://icon' : 'res://logo'" title="tab 1">
+		<StackLayout>
+			<Label text="My Tab 1"></Label>
+		</StackLayout>
+	</template>
+	<template tabItem [iconSource]="selectedIndex == 1 ? 'res://icon' : 'res://logo'" title="tab 2">
+		<StackLayout>
+			<Label text="My Tab 2"></Label>
+		</StackLayout>
+	</template>
+	<template tabItem [iconSource]="selectedIndex == 2 ? 'res://icon' : 'res://logo'" title="tab 3">
+		<StackLayout>
+			<Label text="My Tab 3"></Label>
+		</StackLayout>
+	</template>
+</TabView>

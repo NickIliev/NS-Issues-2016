@@ -20,22 +20,19 @@
 		<RadCartesianChart >
 			<CategoricalAxis tkCartesianHorizontalAxis labelTextColor="#cb4b16" labelSize="14" lineThickness="3" lineColor="Red"></CategoricalAxis>
 			<LinearAxis tkCartesianVerticalAxis labelTextColor="#cb4b16" labelSize="14" lineThickness="3" lineColor="Red"></LinearAxis>
-			<SplineSeries tkCartesianSeries seriesName="income" [items]="categoricalSource" categoryProperty="Country" valueProperty="Amount"></SplineSeries>
-			<SplineSeries tkCartesianSeries seriesName="expense" [items]="categoricalSource" categoryProperty="Country" valueProperty="SecondVal"></SplineSeries>
-			<SplineSeries tkCartesianSeries seriesName="balance" [items]="categoricalSource" categoryProperty="Country" valueProperty="ThirdVal"></SplineSeries>
-			<SplineSeries tkCartesianSeries seriesName="totalbalance" [items]="categoricalSource" categoryProperty="Country" valueProperty="Impact"></SplineSeries>
-			<Palette tkCartesianPalette seriesName="income">
+			<SplineSeries tkCartesianSeries seriesName="seriesTag" [items]="categoricalSource" categoryProperty="Country" valueProperty="Amount"></SplineSeries>
+			<SplineSeries tkCartesianSeries seriesName="seriesTag" [items]="categoricalSource" categoryProperty="Country" valueProperty="SecondVal"></SplineSeries>
+			<SplineSeries tkCartesianSeries seriesName="seriesTag" [items]="categoricalSource" categoryProperty="Country" valueProperty="ThirdVal"></SplineSeries>
+			<SplineSeries tkCartesianSeries seriesName="seriesTag" [items]="categoricalSource" categoryProperty="Country" valueProperty="Impact"></SplineSeries>
+			<Palette tkCartesianPalette seriesName="seriesTag">
 				<PaletteEntry tkCartesianPaletteEntry strokeWidth="5" strokeColor="red"></PaletteEntry>
+                <PaletteEntry tkCartesianPaletteEntry strokeWidth="5" strokeColor="blue"></PaletteEntry>
+                <PaletteEntry tkCartesianPaletteEntry strokeWidth="5" strokeColor="green"></PaletteEntry>      
+                <PaletteEntry tkCartesianPaletteEntry strokeWidth="5" strokeColor="yellow"></PaletteEntry>                              
 			</Palette>
-			<Palette tkCartesianPalette seriesName="expense">
-				<PaletteEntry tkCartesianPaletteEntry strokeWidth="5" strokeColor="green"></PaletteEntry>
-			</Palette>
-			<Palette tkCartesianPalette seriesName="balance">
-				<PaletteEntry tkCartesianPaletteEntry strokeWidth="5" strokeColor="yellow"></PaletteEntry>
-			</Palette>
-			<Palette tkCartesianPalette seriesName="totalbalance">
+			<!--<Palette tkCartesianPalette seriesName="totalbalance">
 				<PaletteEntry tkCartesianPaletteEntry strokeWidth="5" strokeColor="blue"></PaletteEntry>
-			</Palette>
+			</Palette>-->
 			<Trackball tkCartesianTrackball snapMode="AllClosestPoints" showIntersectionPoints="true"></Trackball>
 			<!--<PointLabelStyle tkLineLabelStyle  margin="10"  fillcolor="blue" ></PointLabelStyle>-->
 		</RadCartesianChart>

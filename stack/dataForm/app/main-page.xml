@@ -1,0 +1,17 @@
+<Page loaded="onPageLoaded"
+    xmlns:df="nativescript-telerik-ui-pro/dataform">
+
+    <StackLayout>
+        <df:RadDataForm id="myDataForm" source="{{ model }}">
+            <df:RadDataForm.properties>
+                <df:EntityProperty name="text" displayName="Text" index="0" />
+                <df:EntityProperty name="value" displayName="Value" index="1" valuesProvider="VALUE 0, VALUE 1, VALUE 2">
+                    <df:EntityProperty.editor>
+                        <df:PropertyEditor type="Picker" />
+                    </df:EntityProperty.editor>
+                </df:EntityProperty>
+            </df:RadDataForm.properties>
+        </df:RadDataForm>
+    </StackLayout>
+
+</Page>

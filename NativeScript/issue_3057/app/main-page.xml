@@ -1,0 +1,7 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <StackLayout>
+        <!-- local image works here *** remote url is blue-->
+        <Image src="~/images/icon.png" stretch="none" />
+        <Image src="https://cnet4.cbsistatic.com/hub/i/2011/10/27/a66dfbb7-fdc7-11e2-8c7c-d4ae52e62bcc/android-wallpaper5_2560x1600_1.jpg" stretch="none" />
+    </StackLayout>
+</Page>

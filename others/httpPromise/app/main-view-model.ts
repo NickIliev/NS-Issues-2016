@@ -1,7 +1,7 @@
 import {Observable} from 'data/observable';
 import * as httpModule from 'http';
 
-export class HelloWorldModel extends Observable {
+export class MyViewModel extends Observable {
 
   constructor() {
     super();
