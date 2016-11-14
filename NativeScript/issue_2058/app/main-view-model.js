@@ -4,7 +4,7 @@ var HelloWorldModel = (function (_super) {
     __extends(HelloWorldModel, _super);
     function HelloWorldModel() {
         _super.call(this);
-        this.items = ["res://icon", "res://logo", null, null, null, null, null, null, null, null, null, null, "res://logo", "res://icon"];
+        this.items = ["res://icon", "res://logo", "res://icon", "res://logo", null, null, null, null, null, null, null, null, null, null, "res://logo", "res://icon"];
     }
     return HelloWorldModel;
 }(observable_1.Observable));

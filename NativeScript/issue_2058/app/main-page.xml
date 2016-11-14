@@ -6,5 +6,5 @@
               <Image src="{{ $value }}" stretch="none" />
           </StackLayout>
       </ListView.itemTemplate>
-  </ListView>>
+  </ListView>
 </Page>
