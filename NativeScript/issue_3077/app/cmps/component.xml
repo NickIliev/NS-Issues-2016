@@ -1,0 +1,10 @@
+<GridLayout xmlns:Card="nativescript-cardview" rows="*" columns="*">
+    <Card:CardView row="0" class="cardStyle" margin="10" elevation="40" radius="5">
+        <GridLayout rows="200, auto, auto, auto" columns="auto, auto, *">
+            <image src="res://icon" stretch="aspectFill" colSpan="3" row="0" />
+            <label text="Batman wants to be friends?" class="info" textWrap="true" row="1" colSpan="3" />          
+            <Label row="2" text="{{ level }}" color="red"/>
+            <Label row="3" text="{{ $parents['CardView'].parentTest }}" color="blue"/>
+        </GridLayout> 
+    </Card:CardView>
+</GridLayout>
