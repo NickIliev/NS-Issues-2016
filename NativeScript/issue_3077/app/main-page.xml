@@ -1,0 +1,4 @@
+<Page xmlns:Card="nativescript-cardview" 
+      loaded="onPageLoaded">
+      <!-- content loaded from loader -->
+</Page>
