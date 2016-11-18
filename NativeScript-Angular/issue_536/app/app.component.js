@@ -2,7 +2,7 @@
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
-        this.myDate = new Date("Tue Nov 15 2016 21:02:49 GMT-0300 (UYT)");
+        this.myDate = new Date(2016, 10, 15, 22, 0);
     }
     AppComponent = __decorate([
         core_1.Component({
