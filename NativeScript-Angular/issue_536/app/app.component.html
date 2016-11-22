@@ -1,17 +1,14 @@
 <StackLayout>
-        <Label [text]="myDate | date"></Label><!-- output is 'Jun 15, 2015' -->
-        <Label [text]="myDate | date:'medium'"></Label><!-- output is 'Jun 15, 2015, 9:43:11 PM' equivalent to 'yMMMdjms' (e.g. Sep 3, 2010, 12:05:08 PM for en-US)-->
-        <Label [text]="myDate | date:'short'"></Label><!-- output is '9:43 PM' equivalent to 'yMdjm' (e.g. 9/3/2010, 12:05 PM for en-US) -->
-        <Label [text]="myDate | date:'shortTime'"></Label><!-- output is '9:43 PM' equivalent to 'jm' (e.g. 12:05 PM for en-US)-->
-        <Label [text]="myDate | date:'fullDate'"></Label><!-- equivalent to 'yMMMMEEEEd' (e.g. Friday, September 3, 2010 for en-US)-->
-        <Label [text]="myDate | date:'longDate'"></Label><!-- equivalent to 'yMMMMd' (e.g. September 3, 2010 for en-US) -->
-        <Label [text]="myDate | date:'mediumDate'"></Label><!-- equivalent to 'yMMMd' (e.g. Sep 3, 2010 for en-US)-->
-        <Label [text]="myDate | date:'shortDate'"></Label><!--  equivalent to 'yMd' (e.g. 9/3/2010 for en-US) -->
-        <Label [text]="myDate | date:'mediumTime'" ></Label><!-- equivalent to 'jms' (e.g. 12:05:08 PM for en-US) -->
-
-        <Label [text]="myDate | date:'mmss'"></Label><!--  output is '43:11' -->
-        <Label [text]="myDate | date:'dMMMyyHm'"></Label><!--  your example -->
-        <!-- and the same with formatting-->
-        <Label [text]="myDate | date:'d/MMM/yy j:m'"></Label><!--  your example -->
-          <Label [text]="myDate | date:'d/MMM/yy H:MM'"></Label><!--  your example -->
+    <Label [text]="myDate | date"></Label><!-- output is 'Jun 15, 2015' -->
+    <Label [text]="myDate | date:'medium'"></Label><!-- output is 'Jun 15, 2015, 9:43:11 PM' equivalent to 'yMMMdjms' (e.g. Sep 3, 2010, 12:05:08 PM for en-US)-->
+    <Label [text]="myDate | date:'short'"></Label><!-- output is '9:43 PM' equivalent to 'yMdjm' (e.g. 9/3/2010, 12:05 PM for en-US) -->
+    <Label [text]="myDate | date:'shortTime'"></Label><!-- output is '9:43 PM' equivalent to 'jm' (e.g. 12:05 PM for en-US)-->
+    <Label [text]="myDate | date:'fullDate'"></Label><!-- equivalent to 'yMMMMEEEEd' (e.g. Friday, September 3, 2010 for en-US)-->
+    <Label [text]="myDate | date:'longDate'"></Label><!-- equivalent to 'yMMMMd' (e.g. September 3, 2010 for en-US) -->
+    <Label [text]="myDate | date:'mediumDate'"></Label><!-- equivalent to 'yMMMd' (e.g. Sep 3, 2010 for en-US)-->
+    <Label [text]="myDate | date:'shortDate'"></Label><!--  equivalent to 'yMd' (e.g. 9/3/2010 for en-US) -->
+    <Label [text]="myDate | date:'mediumTime'" ></Label><!-- equivalent to 'jms' (e.g. 12:05:08 PM for en-US) -->
+    <Label [text]="myDate | date:'mmss'"></Label><!--  output is '43:11' -->
+    <Label [text]="myDate | date:'d/MMM/yy H:m'"></Label><!--  your example -->
+    <Label [text]="myDate | date:'d/MMM/yy j:m'"></Label><!--  your example -->
 </StackLayout>

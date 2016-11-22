@@ -1,0 +1,27 @@
+<!--
+The markup in NativeScript apps contains a series of user interface components, each
+of which NativeScript renders with a platform-specific iOS or Android native control.
+You can find a full list of user interface components you can use in your app at
+https://docs.nativescript.org/ui/components.
+-->
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <!--
+    The StackLayout stacks UI components on the screen—either vertically or horizontally.
+    In this case, the StackLayout does vertical stacking; you can change the stacking to
+    horizontal by applying a orientation="horizontal" attribute to the <StackLayout> element.
+    You can learn more about NativeScript layouts at
+    https://docs.nativescript.org/ui/layout-containers.
+
+    These components make use of several CSS class names that are part of the NativeScript
+    core theme, such as p-20, btn, h2, and text-center. You can view a full list of the
+    class names available for styling your app at https://docs.nativescript.org/ui/theme.
+    -->
+        <ListView row="1" width="100%" id="contractsListView" items="{{ contractItems }}" itemTap="tapItem" style="background-color: #e5e6da; padding: 0; margin: 0;">
+            <ListView.itemTemplate>
+<GridLayout rows="100" columns="100, *" style="background-color: #e5e6da;">
+    <Label row="0" col="0"  text="aktiv" visibility="{{ status_on }}" style="text-align: center; vertical-align: stretch; color: #fff; font-size: 20; background-color: #00853e;" id="activeLabel" />
+    <Label row="0" col="1" text="{{ name }}" textWrap="true" style="text-align: center; vertical-align: stretch; font-size: 20; padding: 20; background-color: #e5e6da;" />
+</GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+</Page>

@@ -5,5 +5,5 @@ import {Component} from "@angular/core";
     templateUrl: "app.component.html",
 })
 export class AppComponent {
-    public myDate = new Date("Tue Nov 15 2016 21:02:49 GMT-0300 (UYT)");
+    public myDate = new Date(2016,10,15,22,0);
 }
