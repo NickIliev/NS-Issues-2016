@@ -25,9 +25,9 @@ export function navigatingTo(args: EventData) {
     appSettings.setNumber('dNow', dNow);
     console.log(appSettings.getNumber('dNow')); // => 1479390396416
 
-    var dNumber = 1479390381732;
+    var dNumber = 12345678901234;
     appSettings.setNumber('dNumber', dNumber);
-    console.log("dNumber:" + appSettings.getNumber('dNumber'));
+    console.log("dNumber" + appSettings.getNumber('dNumber'));
 
     /*
     A page’s bindingContext is an object that should be used to perform

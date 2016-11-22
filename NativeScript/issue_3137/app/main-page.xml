@@ -1,0 +1,9 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <SegmentedBar selectedBackgroundColor="red">
+      <SegmentedBar.items>
+          <SegmentedBarItem title="Yesterday" />
+          <SegmentedBarItem title="Today" />
+          <SegmentedBarItem title="Tomorrow" />
+      </SegmentedBar.items>
+  </SegmentedBar>
+</Page>
