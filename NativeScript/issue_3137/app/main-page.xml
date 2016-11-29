@@ -1,5 +1,5 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
-  <SegmentedBar selectedBackgroundColor="red">
+  <SegmentedBar >
       <SegmentedBar.items>
           <SegmentedBarItem title="Yesterday" />
           <SegmentedBarItem title="Today" />

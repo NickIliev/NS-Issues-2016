@@ -1,0 +1,54 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd"
+     loaded="pageLoaded"
+     id="dashboardScreen"
+     cssClass="screen"
+     actionBarHidden="true"
+     xmlns:widgets="utils/widgets"
+     xmlns:dpg="nativescript-telerik-ui/sidedrawer/drawerpage"
+     xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+     xmlns:nav="navigation">
+    <dpg:DrawerPage.sideDrawer>
+        <drawer:RadSideDrawer id="sideDrawer">
+            <drawer:RadSideDrawer.drawerContent>
+                <nav:navigation />
+            </drawer:RadSideDrawer.drawerContent>
+            <drawer:RadSideDrawer.mainContent>
+                <GridLayout rows="80, *">
+                    <widgets:action-bar title="App Design" />
+                    <AbsoluteLayout row="1">
+                        <Image src="res://shadow_below_4dp" stretch="fill" class="action-bar-shadow" />
+                        <TabView class="tab-view" color="#EBEBEB" selectedColor="#EBEBEB">
+                            <TabView.items>
+                                <TabViewItem title="Overview">
+                                    <TabViewItem.view>
+                                        <Label text="Overview content" />
+                                    </TabViewItem.view>
+                                </TabViewItem>
+                                <TabViewItem title="Functions">
+                                    <TabViewItem.view>
+                                        <Label text="Functions content" />
+                                    </TabViewItem.view>
+                                </TabViewItem>
+                                <TabViewItem title="Graphics">
+                                    <TabViewItem.view>
+                                        <Label text="Graphics content" />
+                                    </TabViewItem.view>
+                                </TabViewItem>
+                                <TabViewItem title="Releases">
+                                    <TabViewItem.view>
+                                        <Label text="Releases content" />
+                                    </TabViewItem.view>
+                                </TabViewItem>
+                                <TabViewItem title="Issues">
+                                    <TabViewItem.view>
+                                        <Label text="Issues content" />
+                                    </TabViewItem.view>
+                                </TabViewItem>
+                            </TabView.items>
+                        </TabView>
+                    </AbsoluteLayout>
+                </GridLayout>
+            </drawer:RadSideDrawer.mainContent>
+        </drawer:RadSideDrawer>
+    </dpg:DrawerPage.sideDrawer>
+</Page>

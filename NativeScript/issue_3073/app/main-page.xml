@@ -18,10 +18,11 @@ https://docs.nativescript.org/ui/components.
     -->
         <ListView row="1" width="100%" id="contractsListView" items="{{ contractItems }}" itemTap="tapItem" style="background-color: #e5e6da; padding: 0; margin: 0;">
             <ListView.itemTemplate>
-<GridLayout rows="100" columns="100, *" style="background-color: #e5e6da;">
-    <Label row="0" col="0"  text="aktiv" visibility="{{ status_on }}" style="text-align: center; vertical-align: stretch; color: #fff; font-size: 20; background-color: #00853e;" id="activeLabel" />
-    <Label row="0" col="1" text="{{ name }}" textWrap="true" style="text-align: center; vertical-align: stretch; font-size: 20; padding: 20; background-color: #e5e6da;" />
+<GridLayout rows="*" columns="100, *" style="background-color: #00853e;">
+    <Label row="0" col="0" text="aktiv" visibility="{{ status_on }}" style="text-align: center; vertical-align: center; color: #fff; font-size: 20; background-color: #00853e;" id="activeLabel" />
+    <Label row="0" col="1" text="some texxt that can be long text in order to wrap it" textWrap="true" style="text-align: center; vertical-align: stretch; font-size: 20; padding: 20; background-color: #e5e6da;" />
 </GridLayout>
+
             </ListView.itemTemplate>
         </ListView>
 </Page>

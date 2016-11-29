@@ -1,0 +1,6 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:my="my_repeater" navigatingTo="navigatingTo">
+  <GridLayout rows="*" columns="*">
+    <my:CustomRepeater id="cust" items="{{ list }}">
+    </my:CustomRepeater>
+  </GridLayout>
+</Page>

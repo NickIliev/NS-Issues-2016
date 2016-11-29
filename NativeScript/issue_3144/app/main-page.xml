@@ -1,0 +1,7 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <Label text="Tap the button" class="title"/>
+    <Image src="res://icon" id="res" stretch="none" />
+    <Image src="{{ src }}" id="res" stretch="none" />
+  </StackLayout>
+</Page>
