@@ -1,0 +1,9 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <StackLayout class="p-20">
+        <Label text="App setting on simulator iOS" class="h1 text-center"/>
+        <Button text="setalue to TRUE" tap="save" class="btn btn-primary btn-active"/>
+        <Button text="get current value" tap="getValue" class="btn btn-primary btn-active"/>
+        <Button text="resetValue to FALSE" tap="reset" />
+        
+    </StackLayout>
+</Page>
