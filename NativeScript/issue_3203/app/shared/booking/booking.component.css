@@ -1,0 +1,36 @@
+.small-appointmentscreen-item .ap-screen-item-label-sub {
+    vertical-align: top;
+    margin-top: -5;
+}
+
+.ap-appointment-screen-item-container {
+    padding: 0;
+}
+
+.small-appointmentscreen-item .ap-screen-item-label-utility-bottom {
+    vertical-align: top;
+    margin-top: -5;
+}
+
+.ap-screen-item-mask {
+    padding: 10;
+}
+
+.ap-appointment-screen-item-container .ap-screen-item-mask {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-left: 5;
+}
+
+.small-appointmentscreen-item.ap-appointment-screen-item-container {
+    padding: 0;
+}
+
+.small-appointmentscreen-item.ap-appointment-screen-item-container .ap-screen-item-mask {
+    padding: 5 10;
+}
+
+.booking-container {
+    background-color: red;
+    margin-left: 60;
+    width: 100%
+}
