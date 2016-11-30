@@ -1,0 +1,9 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="onLoaded">
+  <StackLayout id="st">
+    <Label text="ImageSource" class="title"/>
+    <Button text="takePhoto" tap="takePhoto" />
+    <Image id="img" stretch="none" />
+    <Button text="save" tap="saveToFile" />
+    
+  </StackLayout>
+</Page>

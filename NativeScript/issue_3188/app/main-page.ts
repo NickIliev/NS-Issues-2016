@@ -32,6 +32,7 @@ export function onTap() {
               var folder = fs.knownFolders.documents();
               var path = fs.path.join(folder.path, "Test.png");
               var saved = res.saveToFile(path,"png");
+              console.log(saved);
           });
       }).catch((err) => {
           console.log("Error -> " + err.message);

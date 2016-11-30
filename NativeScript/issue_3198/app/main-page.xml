@@ -1,0 +1,6 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+    <Label text="issue 3198" class="title"/>
+    <Button text="showDialog" tap="showDialog" />
+  </StackLayout>
+</Page>
