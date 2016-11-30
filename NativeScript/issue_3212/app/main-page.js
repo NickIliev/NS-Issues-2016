@@ -3,6 +3,7 @@ var appSettings = require("application-settings");
 var dialogs_1 = require("ui/dialogs");
 function navigatingTo(args) {
     var page = args.object;
+    appSettings.setBoolean("switched", false);
 }
 exports.navigatingTo = navigatingTo;
 function save() {
@@ -18,4 +19,8 @@ function getValue() {
     dialogs_1.alert(options).then(function () { });
 }
 exports.getValue = getValue;
+function reset() {
+    appSettings.setBoolean("switched", false);
+}
+exports.reset = reset;
 //# sourceMappingURL=main-page.js.map

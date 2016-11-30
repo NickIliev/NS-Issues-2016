@@ -4,6 +4,7 @@
         <Button text="setalue to TRUE" tap="save" class="btn btn-primary btn-active"/>
         <Button text="get current value" tap="getValue" class="btn btn-primary btn-active"/>
         <Button text="resetValue to FALSE" tap="reset" />
+        <Button text="testa" tap="" />
         
     </StackLayout>
 </Page>
