@@ -1,0 +1,42 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+     loaded="pageLoaded"
+     id="dashboardScreen"
+     cssClass="screen"
+     actionBarHidden="true"
+     xmlns:widgets="utils/widgets"
+     xmlns:fab="nativescript-floatingactionbutton"
+     xmlns:dpg="nativescript-telerik-ui/sidedrawer/drawerpage"
+     xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+     xmlns:nav="navigation">
+
+    <dpg:DrawerPage.sideDrawer>
+        <drawer:RadSideDrawer id="sideDrawer">
+            <drawer:RadSideDrawer.drawerContent>
+                <nav:navigation />
+            </drawer:RadSideDrawer.drawerContent>
+            <drawer:RadSideDrawer.mainContent>
+                <GridLayout rows="80, *">
+                    <widgets:action-bar title="Dashboard" />
+                    <StackLayout row="1" horizontalAlignment="center" verticalAlignment="center">
+                        <Label text="" class="no-projects-label" />
+                        <Image src="res://sad_phone" class="sad-phone" />
+                        <Label text="You have no projects" class="no-projects-label" />
+                    </StackLayout>
+                    <ListView row="1" items="{{ myItems }}">
+                        <ListView.itemTemplate>
+                            <StackLayout orientation="horizontal" class="notification-item">
+                                <Image src="res://warning_40dp" class="notification-icon" />
+                                <Label text="{{ title }}" class="notification-label" />
+                            </StackLayout>
+                        </ListView.itemTemplate>
+                    </ListView>
+                    <fab:fab row="1" tap="fabTap" icon="res://ic_add_white_18dp" rippleColor="#f1f1f1" class="fab-button" />
+                    <AbsoluteLayout row="1">
+                        <Image src="res://shadow_below_4dp" stretch="fill" class="action-bar-shadow" />
+                    </AbsoluteLayout>
+                </GridLayout>
+            </drawer:RadSideDrawer.mainContent>
+        </drawer:RadSideDrawer>
+    </dpg:DrawerPage.sideDrawer>
+
+</Page>

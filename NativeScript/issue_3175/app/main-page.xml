@@ -1,0 +1,9 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <StackLayout>
+
+    <Label text="css style" class="weight"  textWrap="true" /><!-- not working -->
+    <Label text="css style" class="weight800"  textWrap="true" /><!-- not working -->
+    <Label text="style.fontWeight" style.fontWeight="500"  textWrap="true" /><!-- throwing -->
+  
+  </StackLayout>
+</Page>

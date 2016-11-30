@@ -1,0 +1,12 @@
+<StackLayout>
+    <RadCartesianChart tkExampleTitle tkToggleNavButton>
+        <DateTimeCategoricalAxis  tkCartesianHorizontalAxis dateTimeComponent="Hour" dateTimeFormat="dd.MMM HH:mm" labelFitMode="Rotate" labelRotationAngle="0.7">
+         <LinearAxis tkCartesianVerticalAxis></LinearAxis>
+        <SplineSeries tkCartesianSeries [items]="humiditesSource" categoryProperty="datetime" valueProperty="value"></SplineSeries>
+    </RadCartesianChart>
+    <!--<RadCartesianChart >
+        <DateTimeContinuousAxis tkCartesianHorizontalAxis [majorStep]="graphsStep" dateFormat="dd.MMM HH:mm" labelFitMode="Rotate" labelRotationAngle="1.1"></DateTimeContinuousAxis>
+        <LinearAxis tkCartesianVerticalAxis></LinearAxis>
+        <LineSeries tkCartesianSeries [items]="humiditesSource" categoryProperty="datetime" valueProperty="value"></LineSeries>
+    </RadCartesianChart>-->
+</StackLayout>

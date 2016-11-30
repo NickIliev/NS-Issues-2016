@@ -1,0 +1,263 @@
+﻿.km-icon {
+    font-family: 'kendoui';
+    vertical-align: center;
+    horizontal-align: center;
+}
+
+page {
+    background-color: #fff;
+}
+
+button {
+    horizontal-align: stretch;
+}
+
+image,
+activityindicator {
+    horizontal-align: center;
+    vertical-align: center;
+}
+
+label,
+textfield,
+searchbar,
+switch {
+    vertical-align: center;
+}
+
+switch {
+    horizontal-align: right;
+}
+
+.form-item {
+    padding: 0 12;
+}
+
+.form-label {
+    margin-left: 12;
+}
+
+.form-field {
+    margin: 6 12 6 0;
+}
+
+.form-buttons {
+    padding: 0 6;
+}
+
+.form-link {
+    horizontal-align: center;
+    font-size: 18;
+    margin-top: 10;
+}
+
+.form-item-border {
+    background-color: #ccc;
+    vertical-align: bottom;
+    height: 1;
+}
+
+.ios-form-button {
+    margin: 12 6;
+}
+
+.title {
+    font-size: 30;
+    horizontal-align: center;
+    margin: 20;
+}
+
+.message {
+    font-size: 20;
+    color: #284848;
+    horizontal-align: center;
+}
+
+.padded-label {
+    padding: 0 12;
+}
+
+.padded-label-stack {
+    padding: 12;
+}
+
+.title-label {
+    padding: 0 0 12 0;
+    font-weight: bold;
+}
+
+.about-image {
+    horizontal-align: left;
+    vertical-align: top;
+    height: 100;
+    margin-right: 10;
+}
+
+.list-item {
+    padding: 10 16;
+}
+
+.list-icon {
+    width: 36;
+    text-align: center;
+}
+
+.h1 {
+    font-size: 32;
+}
+
+.h2 {
+    font-size: 26;
+}
+
+.h3 {
+    font-size: 20;
+}
+
+.h4 {
+    font-size: 16;
+}
+
+.h5 {
+    font-size: 12;
+}
+
+.h6 {
+    font-size: 8;
+}
+
+
+/*Alignment*/
+
+.image-field {
+    height: 50;
+    vertical-align: center;
+}
+
+.alignment-left {
+    horizontal-align: left;
+}
+
+.alignment-center {
+    horizontal-align: center;
+}
+
+.alignment-right {
+    horizontal-align: right;
+}
+
+
+/* START_CUSTOM_CODE_nativeScriptApp */
+
+
+/* Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes */
+.fab-button {
+    height: 70;
+    margin: 15;
+    background-color: #E12121; 
+    horizontal-align: right; 
+    vertical-align: bottom; 
+}
+
+.action-bar {
+    height: 80;
+    padding-top: 40;
+    padding-bottom: 14;
+    padding-left: 72;
+    font-size: 18;
+    background-color: #DA2324;
+    color: White;
+}
+
+.action-bar-shadow {
+    height: 8;
+    width: 100%;
+    z-index: 100;
+}
+
+.tab-view {
+    width: 100%;
+    height: 100%;
+}
+
+.notification-icon {
+    height: 32;
+    width: 40;
+}
+
+.notification-item {
+    padding-left: 32;
+    vertical-align: center;
+}
+
+.notification-label {
+    padding-left: 24;
+    padding-top: 24;
+    height: 64;
+    vertical-align: center;
+}
+
+.sad-phone {
+    height: 210;
+    width: 112;
+}
+
+.no-projects-label {
+    padding-top: 32;
+    font-size: 24;
+}
+
+.drawer-content {
+    width: 368;
+    background-color: #efefef;
+}
+
+.drawer-header {
+    width: 100%;
+    height: 192;
+    background-color: #262626;
+}
+
+.drawer-username {
+    height: 152;
+    padding-top: 120;
+    padding-left: 16;
+    color: White;
+    font-weight: bold;
+    font-size: 20;
+}
+
+.drawer-email {
+    height: 40;
+    padding-left: 18;
+    color: White;
+}
+
+.drawer-item-icon {
+    width: 24;
+    height: 24;
+    padding: 12 12 12 24;
+}
+
+.drawer-list {
+    margin-top: 16;
+}
+
+.drawer-list-item {
+    border: 0;
+    padding: 12 16;
+}
+
+.drawer-list-item-title {
+    padding-left: 24;
+    font-weight: bold;
+}
+
+.drawer-list-separator {
+    width: 100%;
+    height: 1;
+    background-color: #ccc;
+    margin-top: 7;
+    margin-bottom: 8;
+}
+/* END_CUSTOM_CODE_nativeScriptApp */

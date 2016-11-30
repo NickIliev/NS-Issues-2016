@@ -1,0 +1,8 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <SegmentedBar>
+            <SegmentedBar.items>
+                <SegmentedBarItem title="1" />
+                <SegmentedBarItem title="2" />
+            </SegmentedBar.items>
+    </SegmentedBar>
+</Page>

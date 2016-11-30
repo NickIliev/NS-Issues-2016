@@ -1,0 +1,13 @@
+<ScrollView class="appointment-screen-scroll-container">
+    <AbsoluteLayout class="appointmentscreen-container">
+        <StackLayout #intervalscontainer class="intervals-container" marginTop="0" left="0" width="100%" orientation="vertical">
+            <GridLayout columns="60, *" width="100%" backgroundColor="orange" *ngFor="let interval of intervals">
+                <Label col="0" horizontalAlignment="left" height="40" textAlignment="right" width="100%" class="interval-time-label" text="{{interval.time}}"></Label>
+                <GridLayout col="1" rows="1, *, 1" class="interval" width="100%">
+                    <StackLayout class="interval-seperator" row="0" width="100%"> </StackLayout>
+                </GridLayout>
+            </GridLayout>
+        </StackLayout>
+        <ap-booking marginLeft="60" *ngFor="let booking of bookings" [data]="booking"></ap-booking>
+    </AbsoluteLayout>
+</ScrollView>

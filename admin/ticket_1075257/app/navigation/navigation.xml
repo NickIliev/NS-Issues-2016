@@ -1,0 +1,17 @@
+<StackLayout loaded="viewLoaded" cssClass="drawer-content">
+    <StackLayout cssClass="drawer-header">
+        <Label text="{{ username }}" cssClass="drawer-username" />
+        <Label text="{{ email }}" cssClass="drawer-email" />
+    </StackLayout>
+    <ListView class="list" cssClass="drawer-list" items="{{ menuItems }}" itemTap="menuItemTap" separatorColor="Transparent">
+        <ListView.itemTemplate>
+            <StackLayout>
+                <GridLayout cssClass="drawer-list-item" columns="auto, *" visibility="{{ separator ? 'collapsed' : 'visible' }}">
+                    <Image src="{{ icon }}" cssClass="drawer-item-icon" />
+                    <Label cssClass="drawer-list-item-title" col="1" text="{{ title }}" textWrap="true" />
+                </GridLayout>
+                <Label text="" cssClass="drawer-list-separator" visibility="{{ separator ? 'visible' : 'collapsed' }}" />
+            </StackLayout>
+        </ListView.itemTemplate>
+    </ListView>
+</StackLayout>

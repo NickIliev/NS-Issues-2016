@@ -1,0 +1,57 @@
+.interval {
+    height: 40;
+    color: #c1c1c1;
+    font-size: 12;
+}
+
+.interval-seperator {
+    height: 0.5;
+    background-color: #ddd;
+}
+
+.interval-unavailable {
+    background-color: rgba(210, 210, 210, 0.5);
+}
+
+.columnHeader {
+    height: 50;
+    width: 100%;
+}
+
+.bookings-container {
+    height: 100%;
+    width: 100%;
+}
+
+.appointment-screen-scroll-container {
+    background-color: white;
+}
+
+.interval-times-container {
+    background-color: #fff;
+}
+
+.interval-time-label {
+    color: #bbb;
+    font-size: 11;
+    background-color: #fff;
+}
+
+.interval-time-label-container {
+    height: 40;
+    padding-left: 10;
+}
+
+.interval-time-label-container.first-interval .interval-time-label {
+    margin-top: 5;
+}
+
+.appointmentscreen-container {
+    width: 100%
+}
+
+.intervals-container {
+    left: 0;
+    width: 100%;
+    orientation: vertical;
+}

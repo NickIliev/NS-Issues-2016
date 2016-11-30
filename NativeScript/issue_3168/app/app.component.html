@@ -1,0 +1,21 @@
+
+
+<GridLayout (touch)="onMainGridTouch($event)" rows="100, *" columns="*">
+    <StackLayout row="0" backgroundColor="gray">
+        <Label text="TITLE" textWrap="true"></Label>
+    </StackLayout>
+    <TabView row="1" #tabView>
+        <TabViewItem title="Tab 1">
+            <ListView [items]="source"class="list-group">
+                <template let-item="item" let-odd="odd" let-even="even">
+                <StackLayout>
+                    <Label [text]="item.title" class="list-group-item"></Label>
+                </StackLayout>
+                </template>
+            </ListView>
+        </TabViewItem>
+        <TabViewItem title="Tab 2">
+            <Label text="This is Label in Tab 2"></Label>
+        </TabViewItem>
+    </TabView>
+</GridLayout>
