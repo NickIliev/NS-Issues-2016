@@ -1,0 +1,6 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <StackLayout class="p-20">
+        <Label text="issue 3179" class="h1 text-center"/>
+        <Image src="res://icon" id="img" stretch="none" />
+    </StackLayout>
+</Page>
