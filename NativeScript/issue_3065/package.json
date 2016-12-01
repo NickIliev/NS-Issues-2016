@@ -1,0 +1,16 @@
+{
+  "description": "NativeScript Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "readme": "NativeScript Application",
+  "repository": "<fill-your-repository-here>",
+  "nativescript": {
+    "id": "org.nativescript.issue3065"
+  },
+  "dependencies": {
+    "nativescript-theme-core": "^0.2.1",
+    "tns-core-modules": "2.4.0"
+  },
+  "devDependencies": {
+    "nativescript-dev-android-snapshot": "^0.*.*"
+  }
+}
