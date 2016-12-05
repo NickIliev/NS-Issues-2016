@@ -1,0 +1,16 @@
+
+<TabView>
+    <StackLayout *tabItem="{title: 'Profile', iconSource: 'res://icon'}" >
+        <ListView [items]='items'>
+            <template let-item='item'>
+                <Label [text]='item.itemDesc' ></Label>
+            </template>
+        </ListView>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Stats'}">
+        <Label text="Second tab item"></Label>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Settings'}">
+        <Label text="Third tab item"></Label>
+    </StackLayout>
+</TabView>
