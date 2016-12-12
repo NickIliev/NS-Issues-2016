@@ -11,9 +11,5 @@ export function navigatingTo(args: EventData) {
 }
 
 export function onItemTap() {
-    console.log("onItemTap");
-}
-
-export function onTap() {
-    console.log("onTap");
+    console.log("onItemTap"); // on iOS triggers only once or never
 }

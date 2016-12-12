@@ -7,11 +7,7 @@ function navigatingTo(args) {
 }
 exports.navigatingTo = navigatingTo;
 function onItemTap() {
-    console.log("onItemTap");
+    console.log("onItemTap"); // on iOS triggers only once or never
 }
 exports.onItemTap = onItemTap;
-function onTap() {
-    console.log("onTap");
-}
-exports.onTap = onTap;
 //# sourceMappingURL=main-page.js.map
