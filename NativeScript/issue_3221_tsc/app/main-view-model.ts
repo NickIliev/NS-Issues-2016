@@ -17,13 +17,7 @@ export class HelloWorldModel extends Observable {
     }
 
     set myClass(calue: string) {
-        if (this.pingFlag) {
-            this._myClass = "correct";
-            this.notifyPropertyChange('myClass', "correct")
-        } else {
-            this._myClass = "incorrect";
-            this.notifyPropertyChange('myClass', "incorrect")
-        }
+
 
         
     }

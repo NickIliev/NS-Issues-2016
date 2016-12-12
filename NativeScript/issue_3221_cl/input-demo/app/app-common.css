@@ -1,11 +1,9 @@
 .correct {
     color: green;
-    font-size:20;
 }
 
 .incorrect {
     color:#f00;
-    font-size:20;
 }
 
 TextField {

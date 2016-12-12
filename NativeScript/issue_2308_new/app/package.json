@@ -1,0 +1,140 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "tns-template-hello-world-ts@2.4.0",
+        "scope": null,
+        "escapedName": "tns-template-hello-world-ts",
+        "name": "tns-template-hello-world-ts",
+        "rawSpec": "2.4.0",
+        "spec": "2.4.0",
+        "type": "version"
+      },
+      "/Users/niliev/Desktop/git-nick/NativeScript-issues/NativeScript/issue_2308_new"
+    ]
+  ],
+  "_from": "tns-template-hello-world-ts@2.4.0",
+  "_id": "tns-template-hello-world-ts@2.4.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/tns-template-hello-world-ts",
+  "_nodeVersion": "6.7.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/tns-template-hello-world-ts-2.4.0.tgz_1479302647141_0.5012668129056692"
+  },
+  "_npmUser": {
+    "name": "tns-bot",
+    "email": "nativescript@telerik.com"
+  },
+  "_npmVersion": "3.10.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "tns-template-hello-world-ts@2.4.0",
+    "scope": null,
+    "escapedName": "tns-template-hello-world-ts",
+    "name": "tns-template-hello-world-ts",
+    "rawSpec": "2.4.0",
+    "spec": "2.4.0",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/tns-template-hello-world-ts/-/tns-template-hello-world-ts-2.4.0.tgz",
+  "_shasum": "2229b3fa50034532aa21b15643a937a9bd7a4a4f",
+  "_shrinkwrap": null,
+  "_spec": "tns-template-hello-world-ts@2.4.0",
+  "_where": "/Users/niliev/Desktop/git-nick/NativeScript-issues/NativeScript/issue_2308_new",
+  "android": {
+    "v8Flags": "--expose_gc"
+  },
+  "author": {
+    "name": "Telerik",
+    "email": "support@telerik.com"
+  },
+  "bugs": {
+    "url": "https://github.com/NativeScript/template-hello-world-ts/issues"
+  },
+  "dependencies": {
+    "nativescript-theme-core": "^0.2.1"
+  },
+  "description": "Nativescript hello-world-ts project template",
+  "devDependencies": {
+    "nativescript-dev-android-snapshot": "^0.*.*",
+    "nativescript-dev-typescript": "^0.3.2"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "2229b3fa50034532aa21b15643a937a9bd7a4a4f",
+    "tarball": "https://registry.npmjs.org/tns-template-hello-world-ts/-/tns-template-hello-world-ts-2.4.0.tgz"
+  },
+  "homepage": "https://github.com/NativeScript/template-hello-world-ts",
+  "keywords": [
+    "telerik",
+    "mobile",
+    "nativescript",
+    "{N}",
+    "tns",
+    "appbuilder",
+    "template"
+  ],
+  "license": "Apache-2.0",
+  "main": "app.js",
+  "maintainers": [
+    {
+      "name": "enchev",
+      "email": "vladimir.enchev@gmail.com"
+    },
+    {
+      "name": "erjangavalji",
+      "email": "erjan.gavalji@gmail.com"
+    },
+    {
+      "name": "fatme",
+      "email": "hfatme@gmail.com"
+    },
+    {
+      "name": "hamorphis",
+      "email": "rossen.hristov@progress.com"
+    },
+    {
+      "name": "hdeshev",
+      "email": "hristo@deshev.com"
+    },
+    {
+      "name": "kerezov",
+      "email": "d.kerezov@gmail.com"
+    },
+    {
+      "name": "nsndeck",
+      "email": "nedyalko.nikolov@telerik.com"
+    },
+    {
+      "name": "rosen-vladimirov",
+      "email": "rosen.vladimirov.91@gmail.com"
+    },
+    {
+      "name": "teobugslayer",
+      "email": "teobugslayer@gmail.com"
+    },
+    {
+      "name": "tns-bot",
+      "email": "nativescript@telerik.com"
+    },
+    {
+      "name": "valio.stoychev",
+      "email": "valio.stoychev@gmail.com"
+    }
+  ],
+  "name": "tns-template-hello-world-ts",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/NativeScript/template-hello-world-ts.git"
+  },
+  "scripts": {},
+  "version": "2.4.0"
+}

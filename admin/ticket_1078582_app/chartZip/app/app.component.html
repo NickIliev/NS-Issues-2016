@@ -1,12 +1,11 @@
-<StackLayout>
-	<StackLayout>
+
 		<RadCartesianChart height="300" width="300">
 			<DateTimeContinuousAxis tkCartesianHorizontalAxis majorStep="Hour" dateFormat="HH:mm dd-MMM" labelFitMode="Rotate" labelRotationAngle="0.8"></DateTimeContinuousAxis>
 			<LinearAxis tkCartesianVerticalAxis minimum="16.5" maximum="17.5"></LinearAxis>
 			<AreaSeries tkCartesianSeries [items]="LiveStock" categoryProperty="dateTime" valueProperty="indexPrice" selectionMode="DataPoint"></AreaSeries>
 		</RadCartesianChart>
-	</StackLayout>
 
+	<!-- the same case but WITHOUT minimum and maximum for tkCartesianVerticalAxis-->
 	<!--<StackLayout>
 		<RadCartesianChart height="300" width="200">
 			<DateTimeContinuousAxis tkCartesianHorizontalAxis majorStep="Hour" dateFormat="HH:mm dd-MMM" labelFitMode="Rotate" labelRotationAngle="0.8"></DateTimeContinuousAxis>
@@ -14,4 +13,3 @@
 			<AreaSeries tkCartesianSeries [items]="LiveStock" categoryProperty="dateTime" valueProperty="indexPrice" selectionMode="DataPoint"></AreaSeries>
 		</RadCartesianChart>
 	</StackLayout>-->
-</StackLayout>
