@@ -16,10 +16,9 @@ https://docs.nativescript.org/ui/components.
     core theme, such as p-20, btn, h2, and text-center. You can view a full list of the
     class names available for styling your app at https://docs.nativescript.org/ui/theme.
     -->
-<AbsoluteLayout>
-    <GridLayout top="50" backgroundColor="red" width="350" height="350">
-        <Label text="Delivered" textWrap="true" row="1" col="1"></Label>
-    </GridLayout>
-    <Image src="res://icon" width="80" height="80" left="85" top="10"></Image>
-</AbsoluteLayout>
+    <StackLayout class="p-20">
+        <Switch checked="{{ pingFlag }}" />
+        <TextField hint="Enter 6-digit pin" class="{{ myClass }}" secure="true" text="123456" />
+    
+    </StackLayout>
 </Page>
