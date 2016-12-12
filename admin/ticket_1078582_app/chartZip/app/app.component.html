@@ -1,17 +1,17 @@
 <StackLayout>
-<StackLayout>
-  	<RadCartesianChart height="200" width="200">
-		<DateTimeContinuousAxis tkCartesianHorizontalAxis majorStep="Hour" dateFormat="HH:mm dd-MMM" labelFitMode="Rotate" labelRotationAngle="0.8"></DateTimeContinuousAxis>
-		<LinearAxis tkCartesianVerticalAxis minimum="16.5" maximum="17.5"></LinearAxis>
-		<AreaSeries tkCartesianSeries [items]="LiveStock" categoryProperty="dateTime" valueProperty="indexPrice" selectionMode="DataPoint"></AreaSeries>
-	</RadCartesianChart>
-</StackLayout>
+	<StackLayout>
+		<RadCartesianChart height="300" width="300">
+			<DateTimeContinuousAxis tkCartesianHorizontalAxis majorStep="Hour" dateFormat="HH:mm dd-MMM" labelFitMode="Rotate" labelRotationAngle="0.8"></DateTimeContinuousAxis>
+			<LinearAxis tkCartesianVerticalAxis minimum="16.5" maximum="17.5"></LinearAxis>
+			<AreaSeries tkCartesianSeries [items]="LiveStock" categoryProperty="dateTime" valueProperty="indexPrice" selectionMode="DataPoint"></AreaSeries>
+		</RadCartesianChart>
+	</StackLayout>
 
-<StackLayout>
-  	<RadCartesianChart height="200" width="200">
-		<DateTimeContinuousAxis tkCartesianHorizontalAxis majorStep="Hour" dateFormat="HH:mm dd-MMM" labelFitMode="Rotate" labelRotationAngle="0.8"></DateTimeContinuousAxis>
-		<LinearAxis tkCartesianVerticalAxis ></LinearAxis>
-		<AreaSeries tkCartesianSeries [items]="LiveStock" categoryProperty="dateTime" valueProperty="indexPrice" selectionMode="DataPoint"></AreaSeries>
-	</RadCartesianChart>
-</StackLayout>
+	<!--<StackLayout>
+		<RadCartesianChart height="300" width="200">
+			<DateTimeContinuousAxis tkCartesianHorizontalAxis majorStep="Hour" dateFormat="HH:mm dd-MMM" labelFitMode="Rotate" labelRotationAngle="0.8"></DateTimeContinuousAxis>
+			<LinearAxis tkCartesianVerticalAxis ></LinearAxis>
+			<AreaSeries tkCartesianSeries [items]="LiveStock" categoryProperty="dateTime" valueProperty="indexPrice" selectionMode="DataPoint"></AreaSeries>
+		</RadCartesianChart>
+	</StackLayout>-->
 </StackLayout>
