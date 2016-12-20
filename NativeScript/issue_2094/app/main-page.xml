@@ -1,0 +1,35 @@
+<!--
+The markup in NativeScript apps contains a series of user interface components, each
+of which NativeScript renders with a platform-specific iOS or Android native control.
+You can find a full list of user interface components you can use in your app at
+https://docs.nativescript.org/ui/components.
+-->
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+
+        xmlns:drawer="nativescript-telerik-ui/sidedrawer"
+        xmlns="http://www.nativescript.org/tns.xsd"
+        navigatingTo="navigatingTo">
+    <drawer:RadSideDrawer id="sideDrawer" drawerLocation="Bottom" drawerContentSize="280">
+
+        <drawer:RadSideDrawer.drawerTransition>
+        <drawer:RevealTransition/>
+        </drawer:RadSideDrawer.drawerTransition>
+
+        <drawer:RadSideDrawer.drawerContent>
+        </drawer:RadSideDrawer.drawerContent>
+
+        <drawer:RadSideDrawer.mainContent>
+            <StackLayout cssClass="mainContent">
+                <Label text="{{drawerPositionText}}" textWrap="true" cssClass="drawerContentText"/>
+                <ScrollView>
+                    <StackLayout>
+                        <Button text="Left" tap="{{ onLeftLocationTap }}" cssClass="drawerContentButton"/>
+                        <Button text="Top" tap="{{ onTopLocationTap }}" cssClass="drawerContentButton"/>
+                        <Button text="Right" tap="{{ onRightLocationTap }}" cssClass="drawerContentButton"/>
+                        <Button text="Bottom" tap="{{ onBottomLocationTap }}" cssClass="drawerContentButton"/>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </drawer:RadSideDrawer.mainContent>
+    </drawer:RadSideDrawer>
+</Page>
