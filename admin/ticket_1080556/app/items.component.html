@@ -1,0 +1,15 @@
+<!--<ListView [items]="items" class="list-group">
+    <template let-item="item">
+        <Label [nsRouterLink]="['/item', item.id]" [text]="item.name"
+            class="list-group-item"></Label>
+    </template>
+</ListView>-->
+<ActionBar title="RadListView" icon="" class="action-bar">
+</ActionBar>
+<GridLayout rows="*" columns="*">
+    <RadListView row="0" [items]="items" class="list-group">
+        <template tkListItemTemplate let-item="item">
+                <Label [nsRouterLink]="['/item', item.id]" [text]="item.name" class="list-group-item"></Label>
+        </template>
+    </RadListView>
+</GridLayout>
