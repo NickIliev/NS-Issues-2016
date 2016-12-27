@@ -1,0 +1,80 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd"
+      xmlns:rc="nativescript-telerik-ui-pro/calendar"
+      xmlns:drawer="nativescript-telerik-ui-pro/sidedrawer"
+      loaded="pageLoaded">
+    <ActionBar title="" >
+ <StackLayout orientation="horizontal"
+    ios:horizontalAlignment="center"
+    android:horizontalAlignment="left">
+    <Label text="{{ kalenderName, kalenderName  + ': ' }}"  class="action-label"></Label>
+    <Label text="{{ selectedPlatz }}"  class="action-label"></Label>
+  </StackLayout>
+
+<NavigationButton visibility="collapsed"/>
+
+  <android>
+    <NavigationButton icon="~/images/ic_menu.png" tap="showSideDrawer" />
+  </android>
+  <ios>
+    <ActionItem icon="~/images/ic_menu.png" tap="showSideDrawer" ios.position="right"/>
+  </ios>
+</ActionBar>
+
+
+<drawer:RadSideDrawer id="sideDrawer" drawerLocation="Left" drawerClosing="onDrawerClosing" drawerOpened="onDrawerOpened">
+    
+    <drawer:RadSideDrawer.mainContent>
+      <GridLayout rows="350, *" columns="*" margin="0, 10, 0, 10">
+      
+        <!-- Add UI declaration here -->
+      <rc:RadCalendar row="0" height="350" id="calendar" horizontalTransition="false" eventSource="{{ items }}" viewMode="{{ viewmode }}" eventsViewMode ="None" navigatedToDate="onNavigatedToDate" dateSelected ="onDateSelected"  visibility="{{ isVisibleKalender ? 'visible' : 'collapse'}}">
+       </rc:RadCalendar>
+        <ActivityIndicator id="act1" busy="isLoading" visibility="{{ isVisibleKalenderActivity ? 'visible' : 'collapse'}}" row="0" width="50"/>
+<ActivityIndicator id="act2" busy="isLoading" visibility="{{ isVisibleDateActivity ? 'visible' : 'collapse'}}" row="1" width="50"/>
+           <ListView items="{{ itemsdate }}"  row="1"  col="1" itemTap="listViewItemTap">
+      
+<ListView.itemTemplate>
+        <GridLayout rows="auto, auto, *" columns="auto, auto, *">
+            <Label text="{{ zeit }}" class="cZeit" row="0" col="0" />
+        	<Label text="{{ Title }}" class="cTitel" row="0" col="1" />
+            <Label text=" {{ AnlageNamen }}" class="cAnlage" row="1" col="1" />
+<StackLayout row="2" col="1">
+                <Label text="{{ Description }}" class="cInfo"  visibility="{{ showDescription ? 'visible' : 'collapsed' }}" /> 
+                <Label text="{{ Menge }}" class="cInfo" visibility="{{ showMenge ? 'visible' : 'collapsed' }}" />
+                <Label text="{{ KabineName }}" class="cInfo" visibility="{{ showKabineName ? 'visible' : 'collapsed' }}"/>
+                <Label text="{{ FlaecheName }}" class="cInfo" visibility="{{ showFlaecheName ? 'visible' : 'collapsed' }}" />
+            </StackLayout>
+            <ios>
+            <Switch tap="switchTap" checked="{{ checkedStatus }}"  rowspan="3" col="2" row="0" horizontalAlignment="right" /></ios>
+        </GridLayout>
+      </ListView.itemTemplate>
+    </ListView>
+    
+      </GridLayout>
+    </drawer:RadSideDrawer.mainContent>
+    <drawer:RadSideDrawer.drawerContent>
+      <StackLayout cssClass="drawerContent">
+        <StackLayout cssClass="headerContent">
+          <Label text="Filter"/>
+        </StackLayout>
+        <StackLayout cssClass="drawerMenuContent">
+            <GridLayout rows="50, auto, 50, auto, 50, auto, 50, 50, auto, auto, auto" columns="*, *" >
+            <Label text="Plan:" class="listItem" row="0" col="0" horizontalAlignment="left" tap="togglePlanPickerListe"/>
+            <Label text="{{ selectedPlan }}"  class="listItem" style="color: red;" row="0" col="1" horizontalAlignment="right"/>
+            <ListPicker id="picker" verticalAlignment="center" horizontalAlignment="center" class="picker" items="{{ itemsplan }}" selectedIndex="{{ selectedIndex }}" visibility="{{ showPlanPicker ? 'visible' : 'collapsed' }}" verticalAlignment="center" horizontalAlignment="center" row="1" colSpan="2" width="100%"></ListPicker>
+            <Label text="Platz:" class="listItem" row="2" col="0" horizontalAlignment="left" tap="togglePlatzPickerListe"/>
+            <Label text="{{ selectedPlatz }}"  class="listItem" style="color: red;" row="2" col="1" horizontalAlignment="right"/>
+            <ListPicker class="picker" items="{{ itemsplatz }}" selectedIndex="{{ selectedPlatzIndex }}" visibility="{{ showPlatzPicker ? 'visible' : 'collapsed' }}" verticalAlignment="center" horizontalAlignment="center" row="3" colSpan="2"  width="100%"></ListPicker>
+            <Label text="Zuständig:" class="listItem" row="4" col="0" horizontalAlignment="left" tap="toggleMbPickerListe"/>
+            <Label text="{{ selectedMb }}" class="listItem" style="color: red;" row="4" col="1" horizontalAlignment="right"/>
+            <ListPicker class="picker" items="{{ itemsmb }}" selectedIndex="{{ selectedMbIndex }}" visibility="{{ showMbPicker ? 'visible' : 'collapsed' }}" verticalAlignment="center" horizontalAlignment="center"  row="5" colSpan="2"  width="100%"></ListPicker>
+            <Label text="Neuer Event" class="listItem" row="6" colspan="2"  tap="neuerEvent" horizontalAlignment="left"/>
+            <Label text="Gemeinde/Firmen auswahl" class="listItem" row="7" colspan="2"  tap="homeNav" horizontalAlignment="left"/>
+            <Label text="Logout" class="listItem" row="8" colspan="2"  tap="logoutNav" horizontalAlignment="left"/>       
+            </GridLayout>
+      </StackLayout>
+      </StackLayout>
+    </drawer:RadSideDrawer.drawerContent>
+  </drawer:RadSideDrawer>
+
+</Page>

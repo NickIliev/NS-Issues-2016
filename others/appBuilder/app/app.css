@@ -1,0 +1,141 @@
+Page {
+    background-color: white;
+    font-size: 17;
+
+}
+
+ListView {
+    margin: 0 10 0 10;
+}
+
+
+
+.detail-title {
+    margin: 10;
+    font-size: 26;
+    color: #3c3c3c;
+}
+.cTitel {
+	margin: 0 5 0 5; 
+    color: #808080;
+    font-size: 15;
+    font-weight: bold;
+}
+.cAnlage {
+	margin: 0 5 0 5; 
+    color: #808080;
+    font-size: 12;
+    font-weight: bold;
+}
+.cInfo {
+	margin: 0 5 0 5; 
+    color: #808080;
+    font-size: 12;
+    font-weight: bold;
+}
+.cZeit {
+	margin: 5 0 5 5; 
+    color: #808080;
+    font-size: 12;
+    font-weight: bold;
+}
+.listItem {
+    margin: 10; 
+    color: #808080;
+    font-size: 20;
+}
+
+.info {
+    margin: 10;
+    font-size: 20;
+    color: #808080;
+}
+.title {
+    font-size: 20;
+    horizontal-align: center;
+    margin:20;
+}
+
+Button {
+    margin: 10;
+    padding: 10;
+    border-width:1;
+}
+TextField {
+    margin: 10;
+    padding: 10;
+    background-color: silver;
+}
+
+.message {
+    font-size: 20;
+    color: #284848;
+    horizontal-align: center;
+}
+
+.mainContent{
+    background-color: white;
+}
+
+.drawerContent {
+    background-color: white;
+}
+
+.drawerContentText {
+    font-size: 13;
+    padding: 10;
+}
+
+.drawerContentButton {
+    margin: 10;
+    horizontal-align: left;
+}
+
+.headerContent {
+    padding:10;
+    text-align: center;
+}
+
+.drawerSectionHeader {
+    padding-left: 10;
+    background-color: lightgray;
+}
+
+.drawerSectionItem {
+    padding: 10;
+}
+
+.listViewCellLabel {
+    margin-left: 15
+}
+
+.listView{
+    background-color: #ffffff;
+}
+
+.example-title{
+    color: #555555;
+    font-size: 17;
+    margin: 0;
+    padding: 10;
+}
+
+.control-title{
+    color: #FFFFFF;
+    background-color: #284848;
+    font-size: 22;
+    margin: 0;
+    padding: 5;
+}
+
+.example-group-title{
+    color: #555555;
+    background-color: #808080;
+    font-size: 20;
+    margin: 0;
+    padding: 5;
+}
+.link {
+    border-width: 0;
+}
+

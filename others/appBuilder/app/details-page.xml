@@ -1,0 +1,13 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      xmlns:app="."
+      navigatedTo="pageNavigatedTo">
+  <app:details-view />
+<ActionBar title="">
+<StackLayout orientation="horizontal"
+    ios:horizontalAlignment="center"
+    android:horizontalAlignment="left">
+    <Label text="{{ kalenderName, kalenderName  + ': ' }}"  class="action-label"></Label>
+    <Label text="{{ selectedPlatz }}"  class="action-label"></Label>
+  </StackLayout>
+</ActionBar>
+</Page>
