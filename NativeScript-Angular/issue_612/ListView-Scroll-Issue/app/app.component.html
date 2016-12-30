@@ -1,0 +1,5 @@
+<ListView [items]="myItems | async" class="list-group">
+    <template let-myItem="item">
+        <list-item-component [myItem]="myItem"></list-item-component>
+    </template>
+</ListView>
