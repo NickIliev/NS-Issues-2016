@@ -1,19 +1,17 @@
 "use strict";
 var core_1 = require("@angular/core");
-var item_service_1 = require("./item.service");
+var router_1 = require('@angular/router');
 var ItemsComponent = (function () {
-    function ItemsComponent(itemService) {
-        this.itemService = itemService;
+    function ItemsComponent(route) {
     }
     ItemsComponent.prototype.ngOnInit = function () {
-        this.items = this.itemService.getItems();
     };
     ItemsComponent = __decorate([
         core_1.Component({
             selector: "ns-items",
             templateUrl: "items.component.html",
         }), 
-        __metadata('design:paramtypes', [item_service_1.ItemService])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute])
     ], ItemsComponent);
     return ItemsComponent;
 }());
