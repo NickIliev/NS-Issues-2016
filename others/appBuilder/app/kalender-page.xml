@@ -1,0 +1,27 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      
+      loaded="pageLoaded">  
+<ActionBar title="">
+ <StackLayout orientation="horizontal"
+    ios:horizontalAlignment="center"
+    android:horizontalAlignment="left">
+
+ <Label text="Logout" class="listItem" row="8" colspan="2"  tap="logoutNav" horizontalAlignment="left"/>
+  </StackLayout>
+<NavigationButton visibility="collapsed"/>
+</ActionBar>
+
+  <StackLayout>
+
+      <Label text="Firmen/Gemeinden" class="title" />
+<ActivityIndicator busy="isLoading" visibility="{{ isVisibleGemeindenActivity ? 'visible' : 'collapse'}}"  width="50"/>
+   <ListView items="{{ items }}" itemTap="listViewItemTap" visibility="{{ isVisibleGemeinden ? 'visible' : 'collapse'}}">
+      <ListView.itemTemplate>
+        <StackLayout>
+       		<Label text="{{ name }}" class="listItem" />
+        </StackLayout>
+      </ListView.itemTemplate>
+    </ListView>
+    
+  </StackLayout>
+</Page>

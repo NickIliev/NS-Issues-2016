@@ -1,0 +1,14 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoad">
+<ActionBar title="">
+<NavigationButton visibility="collapsed"/>
+
+</ActionBar>  
+<StackLayout orientation="vertical">
+    <Image src="~/images/sportplatzmanager_banner.jpg"  horizontalAlignment="center" />
+    <!-- Add UI declaration here -->
+      <TextField hint="Name" id="name" text="{{ name }}" />
+      <TextField hint="Passwort" id="passwort" text="{{ passwort }}" secure="true"/>  
+      <Button id="signUpButton" text="Log in" class="link"/>
+      <Label id="result" text=" " textWrap="true" class="detail-title"/>
+  </StackLayout>
+</Page>

@@ -1,0 +1,15 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" 
+      loaded="pageLoaded">  
+<ActionBar title="">
+</ActionBar>
+  <StackLayout orientation="vertical">
+      <Label text="Vorgabe Events" class="title" />
+   <ListView items="{{ items }}" itemTap="listViewItemTap">
+      <ListView.itemTemplate>
+        <StackLayout orientation="vertical">
+       		<Label text="{{ Title }}" class="listItem" />
+        </StackLayout>
+      </ListView.itemTemplate>
+    </ListView>   
+  </StackLayout>
+</Page>

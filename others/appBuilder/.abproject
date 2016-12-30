@@ -1,0 +1,28 @@
+{
+  "ProjectName": "spmanager",
+  "ProjectGuid": "d832f978-2b34-4810-a858-ff59454469f4",
+  "projectVersion": 1,
+  "AppIdentifier": "com.datenhaus.spmanager",
+  "DisplayName": "spmanager",
+  "Author": "",
+  "Description": "Sportplatz Manager",
+  "BundleVersion": "1.32",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{F0A65104-D4F4-4012-B799-F612D75820F6}",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait"
+  ],
+  "AndroidHardwareAcceleration": "true",
+  "iOSStatusBarStyle": "Default",
+  "FrameworkVersion": "2.3.0",
+  "Framework": "NativeScript",
+  "iOSDeploymentTarget": "8.0"
+}

@@ -1,0 +1,44 @@
+ <ScrollView>
+     <GridLayout rows="auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto" columns="*, *">
+        <Label text="Titel:" class="listItem" row="0" col="0" />
+        <TextView class="listItem" id="textviewtitle" text="{{ selectedItem.Title }}" row="0" col="1" editable="{{ TextViewTitleEditable }}" />
+        <Label text="Text:" class="listItem" row="1" col="0"  tap="toggleTextViewText"/>
+        <TextView class="listItem" id="textviewtext" text="{{ selectedItem.Description }}" row="1" col="1" editable="{{ TextViewTextEditable }}" style="color: red;"/>
+        <Label text="Datum:" class="listItem" row="2" col="0" tap="toggleDatePickerVon" /> 
+        <Label text="{{ vondate }}" class="listItem" row="2" col="1"  style="color: red;"/>
+        <DatePicker year="{{ vonyear }}" month="{{ vonmonth }}" day="{{ vonday }}" row="3" colSpan="2" visibility="{{ showDatePickerVon ? 'visible' : 'collapsed' }}" width="100%"></DatePicker>
+        <Label text="Von:" class="listItem" row="4" col="0" tap="toggleTimePickerVon"/> 
+        <Label text="{{ von }}" class="listItem" row="4" col="1" style="color: red;"/>
+        <TimePicker hour="{{ vonh }}" minute="{{ vonm}}" row="5" colSpan="2" visibility="{{ showTimePickerVon ? 'visible' : 'collapsed' }}" width="100%"></TimePicker>
+        <Label text="Bis:" class="listItem" row="6" col="0" tap="toggleTimePickerBis"/> 
+        <Label text="{{ bis }}" class="listItem" row="6" col="1" style="color: red;"/>
+        <TimePicker hour="{{ bish }}" minute="{{ bism }}" row="7"  colSpan="2" visibility="{{ showTimePickerBis ? 'visible' : 'collapsed' }}" width="100%"></TimePicker>
+        <Label text="Ganzer Tag" class="listItem" row="8" col="0" />
+        <Switch checked="{{ selectedItem.IsAllDay }}"  row="8" col="1" />
+        <Label text="Menge:" class="listItem" row="9" col="0" tap="toggleTextViewMenge"/>
+        <TextView class="listItem" id="textviewmenge" text="{{ selectedItem.Menge }}" row="9" col="1" editable="{{ TextViewMengeEditable }}" style="color: red;"/>        
+        <Label text="Plan:" class="listItem" row="10" col="0" horizontalAlignment="left" tap="togglePlanPickerListe"/>
+        <Label text="{{ selectedPlan }}"  class="listItem"  row="10" col="1" style="color: red;"/>
+        <ListPicker verticalAlignment="center" horizontalAlignment="center" class="picker" items="{{ itemsplan }}" selectedIndex="{{ selectedIndex }}" visibility="{{ showPlanPicker ? 'visible' : 'collapsed' }}" verticalAlignment="center" horizontalAlignment="center" row="11" colSpan="2" width="100%"></ListPicker>
+        <Label text="Platz:" class="listItem" row="12" col="0" horizontalAlignment="left" tap="togglePlatzPickerListe"/>
+        <Label text="{{ selectedPlatz }}"  class="listItem"  row="12" col="1" style="color: red;"/>
+        <ListPicker class="picker" items="{{ itemsplatz }}" selectedIndex="{{ selectedPlatzIndex }}" visibility="{{ showPlatzPicker ? 'visible' : 'collapsed' }}" verticalAlignment="center" horizontalAlignment="center" row="13" colSpan="2" width="100%"></ListPicker>
+        <Label text="Zuständig:" class="listItem" row="14" col="0" horizontalAlignment="left" tap="toggleMbPickerListe"/>
+        <Label text="{{ selectedMb }}" class="listItem"  row="14" col="1" style="color: red;"/>
+        <ListPicker class="picker" items="{{ itemsmb }}" selectedIndex="{{ selectedMbIndex }}" visibility="{{ showMbPicker ? 'visible' : 'collapsed' }}" verticalAlignment="center" horizontalAlignment="center"  row="15" colSpan="2" width="100%"></ListPicker>
+        <Label text="Status:" class="listItem" row="16" col="0" horizontalAlignment="left" tap="toggleStatusPickerListe"/>
+        <Label text="{{ selectedStatus }}"  class="listItem"  row="16" col="1" style="color: red;"/>
+        <ListPicker verticalAlignment="center" horizontalAlignment="center" class="picker" items="{{ itemsstatus }}" selectedIndex="{{ selectedStatusIndex }}" visibility="{{ showStatusPicker ? 'visible' : 'collapsed' }}" verticalAlignment="center" horizontalAlignment="center" row="17" colSpan="2" width="100%"></ListPicker>
+        <Label text="Kabine:" class="listItem" row="18" col="0" horizontalAlignment="left" tap="toggleKabinePickerListe"/>
+        <Label text="{{ selectedKabine }}"  class="listItem"  row="18" col="1" style="color: red;"/>
+        <ListPicker verticalAlignment="center" horizontalAlignment="center" class="picker" items="{{ itemskabinen }}" selectedIndex="{{ selectedKabineIndex }}" visibility="{{ showKabinePicker ? 'visible' : 'collapsed' }}" verticalAlignment="center" horizontalAlignment="center" row="19" colSpan="2" width="100%"></ListPicker>
+        <Label text="Fläche:" class="listItem" row="20" col="0" horizontalAlignment="left" tap="toggleFlaechePickerListe"/>
+        <Label text="{{ selectedFlaeche }}"  class="listItem"  row="20" col="1" style="color: red;"/>
+        <ListPicker verticalAlignment="center" horizontalAlignment="center" class="picker" items="{{ itemsflaechen }}" selectedIndex="{{ selectedFlaecheIndex }}" visibility="{{ showFlaechePicker ? 'visible' : 'collapsed' }}" verticalAlignment="center" horizontalAlignment="center" row="21" colSpan="2" width="100%"></ListPicker>
+    	<Button text="Speichern" row="22" colSpan="2"  tap="speichern"  visibility="{{ showSpeichern ? 'visible' : 'collapsed' }}"/>
+        <Button text="Bitte einen Platz auswählen" row="22" colSpan="2" visibility="{{ showPlatzAlert ? 'visible' : 'collapsed' }}"/>
+        <Button text="Löschen" row="23" colSpan="2"  tap="loeschen"/>
+     </GridLayout>
+</ScrollView>
+
+

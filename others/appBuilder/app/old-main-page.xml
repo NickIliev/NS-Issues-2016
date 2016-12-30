@@ -1,0 +1,16 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      loaded="pageLoaded">
+  <GridLayout rows="auto,*" columns="*">
+    <Label text="{{ mainTitle }}" class="title" row="0" col="0"/>
+    <ListView items="{{ items }}" itemTap="listViewItemTap" row="1" col="0">
+      <ListView.itemTemplate>
+        <GridLayout rows="auto, auto, auto" columns="auto, *">
+            <Label text="{{ zeit }}" class="cZeit" row="0" col="0" />
+        	<Label text="{{ title }}" class="cTitel" row="0" col="1" />
+            <Label text=" {{ anlage }}" class="cAnlage" row="1" col="1" />
+            <Label text="{{ info }}" class="cInfo" row="2" col="1" />          
+        </GridLayout>
+      </ListView.itemTemplate>
+    </ListView>
+  </GridLayout>
+</Page>

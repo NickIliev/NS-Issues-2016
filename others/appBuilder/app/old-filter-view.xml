@@ -1,0 +1,15 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+  <GridLayout rows="50, auto, 50, auto, 50, auto, 50, 50, auto, auto" columns="*, *" >
+    <Label text="Plan:" class="listItem" row="0" col="0" horizontalAlignment="left" tap="togglePlanPickerListe"/>
+    <Label text="{{ selectedPlan }}"  class="listItem" color="red" row="0" col="1" horizontalAlignment="right"/>
+    <ListPicker id="picker" verticalAlignment="center" horizontalAlignment="center" class="picker" items="{{ itemsplan }}" selectedIndex="{{ selectedIndex }}" visibility="{{ showPlanPicker ? 'visible' : 'collapsed' }}" verticalAlignment="center" horizontalAlignment="center" row="1" colSpan="2"></ListPicker>
+    <Label text="Platz:" class="listItem" row="2" col="0" horizontalAlignment="left" tap="togglePlatzPickerListe"/>
+    <Label text="{{ selectedPlatz }}"  class="listItem" color="red" row="2" col="1" horizontalAlignment="right"/>
+    <ListPicker class="picker" items="{{ itemsplatz }}" selectedIndex="{{ selectedPlatzIndex }}" visibility="{{ showPlatzPicker ? 'visible' : 'collapsed' }}" verticalAlignment="center" horizontalAlignment="center" row="3" colSpan="2"></ListPicker>
+    <Label text="Zuständig:" class="listItem" row="4" col="0" horizontalAlignment="left" tap="toggleMbPickerListe"/>
+    <Label text="{{ selectedMb }}" class="listItem" color="red" row="4" col="1" horizontalAlignment="right"/>
+    <ListPicker class="picker" items="{{ itemsmb }}" selectedIndex="{{ selectedMbIndex }}" visibility="{{ showMbPicker ? 'visible' : 'collapsed' }}" verticalAlignment="center" horizontalAlignment="center"  row="5" colSpan="2"></ListPicker>
+    <Label text="Neuer Event" class="listItem" row="6" colspan="2"  tap="neuerEvent" horizontalAlignment="center"/>
+    <Label text="Filter ANwenden" class="listItem" row="7" colspan="2"  tap="filterAnwenden" horizontalAlignment="center"/>
+  </GridLayout>
+</Page>

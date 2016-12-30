@@ -1,0 +1,7 @@
+{
+  "nativescript": {},
+  "dependencies": {
+    "tns-core-modules": "2.5.0-2016-12-07-4948"
+  },
+  "devDependencies": {}
+}

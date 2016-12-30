@@ -1,0 +1,20 @@
+{
+    "name": "tns-template-master-detail",
+    "main": "app.js",
+    "version": "1.7.0",
+    "author": "Telerik <support@telerik.com>",
+    "description": "Nativescript master-detail project template",
+    "license": "BSD",
+    "keywords": [
+        "telerik",
+        "mobile",
+        "nativescript",
+        "{N}",
+        "tns",
+        "appbuilder",
+        "template"
+    ],
+    "repository": {
+        "url": "https://github.com/NativeScript/NativeScript/commit/391f014232b382c91760bc5091d14333dbde93e3"
+    }
+}
