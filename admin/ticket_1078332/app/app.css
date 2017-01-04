@@ -1,0 +1,14 @@
+﻿
+.btn {
+    font-size: 18;
+}
+
+ActivityIndicator {
+    color: red
+}
+
+.page-indicator {
+    color: blue
+}
+
+@import 'nativescript-theme-core/css/core.light.css';

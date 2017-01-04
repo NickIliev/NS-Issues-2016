@@ -1,0 +1,7 @@
+<Page navigatedTo="pageMainNavigated">
+    <GridLayout rows="*, *">
+        <ActivityIndicator id="ind1" width="100" row="0" color="blue" busy="true" visibility="visible"/>
+
+        <ActivityIndicator id="ind2" width="200" row="1" color="green" busy="true" visibility="visible"/>
+    </GridLayout>
+</Page>
